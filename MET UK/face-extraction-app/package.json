@@ -1,0 +1,16 @@
+{
+  "name": "face-extraction-app",
+  "version": "11.1.0",
+  "description": "extract faces from video files",
+  "main": "faceExtractionRunner.js",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "logrotator": "^1.1.0",
+    "request": "^2.72.0",
+    "xml2js": "^0.4.5"
+  },
+  "author": "christopher.blanks@hpe.com",
+  "repository": "https://github.hpe.com/bdp-rich-media-apps/face-extraction-app.git"
+}

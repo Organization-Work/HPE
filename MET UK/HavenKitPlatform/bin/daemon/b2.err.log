@@ -1,0 +1,422 @@
+(node:13060) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+(node:11088) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+(node:5144) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+C:\HewlettPackardEnterprise\HavenKitPlatform\module\faceExtractionRunner.js:67
+				fs.mkdirSync(opts[params[i]]);
+				   ^
+
+Error: UNKNOWN: unknown error, mkdir '\\KRSARKAR1\FaceAppImages\faces'
+    at validateOptions (C:\HewlettPackardEnterprise\HavenKitPlatform\module\faceExtractionRunner.js:67:8)
+    at Object.<anonymous> (C:\HewlettPackardEnterprise\HavenKitPlatform\module\faceExtractionRunner.js:756:1)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (C:\HewlettPackardEnterprise\HavenKitPlatform\routes\index.js:5:11)
+    at Module._compile (module.js:571:32)
+C:\HewlettPackardEnterprise\HavenKitPlatform\module\faceExtractionRunner.js:67
+				fs.mkdirSync(opts[params[i]]);
+				   ^
+
+Error: UNKNOWN: unknown error, mkdir '\\KRSARKAR1\FaceAppImages\faces'
+    at validateOptions (C:\HewlettPackardEnterprise\HavenKitPlatform\module\faceExtractionRunner.js:67:8)
+    at Object.<anonymous> (C:\HewlettPackardEnterprise\HavenKitPlatform\module\faceExtractionRunner.js:756:1)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (C:\HewlettPackardEnterprise\HavenKitPlatform\routes\index.js:5:11)
+    at Module._compile (module.js:571:32)
+C:\HewlettPackardEnterprise\HavenKitPlatform\module\faceExtractionRunner.js:67
+				fs.mkdirSync(opts[params[i]]);
+				   ^
+
+Error: UNKNOWN: unknown error, mkdir '\\KRSARKAR1\FaceAppImages\faces'
+    at validateOptions (C:\HewlettPackardEnterprise\HavenKitPlatform\module\faceExtractionRunner.js:67:8)
+    at Object.<anonymous> (C:\HewlettPackardEnterprise\HavenKitPlatform\module\faceExtractionRunner.js:756:1)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (C:\HewlettPackardEnterprise\HavenKitPlatform\routes\index.js:5:11)
+    at Module._compile (module.js:571:32)
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+(node:12112) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+(node:3988) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+(node:11500) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:188:7)
+    at Signal.wrap.onsignal (internal/process.js:215:44)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+(node:14696) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+(node:2812) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+(node:15764) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:188:7)
+    at Signal.wrap.onsignal (internal/process.js:215:44)
+(node:18896) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:188:7)
+    at Signal.wrap.onsignal (internal/process.js:215:44)
+(node:19452) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:188:7)
+    at Signal.wrap.onsignal (internal/process.js:215:44)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+(node:11776) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+(node:13228) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+(node:12612) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:188:7)
+    at Signal.wrap.onsignal (internal/process.js:215:44)
+(node:15016) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:188:7)
+    at Signal.wrap.onsignal (internal/process.js:215:44)
+(node:15136) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:188:7)
+    at Signal.wrap.onsignal (internal/process.js:215:44)
+(node:17072) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:188:7)
+    at Signal.wrap.onsignal (internal/process.js:215:44)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Port 3000 is already in use
+Port 3000 is already in use
+Port 3000 is already in use
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitOne (events.js:96:13)
+    at process.emit (events.js:191:7)
+    at process.exit (internal/process.js:162:15)
+    at monitor (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:99:17)
+    at ChildProcess.<anonymous> (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:170:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:194:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:188:7)
+    at Signal.wrap.onsignal (internal/process.js:215:44)
+(node:1668) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177
+    child.send('shutdown');
+         ^
+
+TypeError: Cannot read property 'send' of null
+    at process.killkid (C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:177:10)
+    at emitNone (events.js:86:13)
+    at process.emit (events.js:188:7)
+    at Signal.wrap.onsignal (internal/process.js:215:44)

@@ -1,0 +1,96 @@
+2017-10-27 14:20:23 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-10-27 14:20:23 - Started 12540
+2017-10-27 14:25:46 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-10-27 14:25:46 - Started 2704
+2017-10-30 10:10:19 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-10-30 10:10:19 - Started 2740
+2017-10-30 19:17:08 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-10-30 19:17:08 - Started 2828
+2017-10-31 11:16:05 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-10-31 11:16:05 - Started 2720
+2017-11-01 10:22:14 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-01 10:22:14 - Started 2900
+2017-11-02 02:03:17 - Stopping c2.exe
+2017-11-02 02:03:17 - ProcessKill 2900
+2017-11-02 02:03:18 - Shutdown exception
+Message:
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementObjectCollection.ManagementObjectEnumerator.MoveNext()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2017-11-02 11:18:34 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-02 11:18:34 - Started 2756
+2017-11-03 11:22:31 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-03 11:22:31 - Started 2820
+2017-11-05 15:27:12 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-05 15:27:13 - Started 2884
+2017-11-05 18:57:07 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-05 18:57:07 - Started 2884
+2017-11-06 11:20:59 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-06 11:20:59 - Started 2720
+2017-11-06 20:58:37 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-06 20:58:37 - Started 2872
+2017-11-06 22:33:10 - Stopping c2.exe
+2017-11-06 22:33:10 - ProcessKill 2872
+2017-11-06 22:33:11 - Found child process: 3132 Name: node.exe
+2017-11-06 22:33:11 - Stopping process 3132
+2017-11-06 22:33:11 - Send SIGINT 3132
+2017-11-06 22:33:11 - SIGINT to 3132 failed - Killing as fallback
+2017-11-06 22:33:11 - Stopping process 2872
+2017-11-06 22:33:11 - Send SIGINT 2872
+2017-11-06 22:33:11 - SIGINT to2872 successful
+2017-11-06 22:33:11 - Finished c2.exe
+2017-11-06 22:33:57 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-06 22:33:57 - Started 2716
+2017-11-07 01:22:50 - Stopping c2.exe
+2017-11-07 01:22:50 - ProcessKill 2716
+2017-11-07 01:22:51 - Found child process: 3108 Name: node.exe
+2017-11-07 01:22:52 - Stopping process 3108
+2017-11-07 01:22:52 - Send SIGINT 3108
+2017-11-07 01:22:52 - SIGINT to 3108 failed - Killing as fallback
+2017-11-07 01:22:52 - Stopping process 2716
+2017-11-07 01:22:52 - Send SIGINT 2716
+2017-11-07 01:22:52 - SIGINT to2716 successful
+2017-11-07 01:22:52 - Finished c2.exe
+2017-11-07 11:38:19 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-07 11:38:19 - Started 2752
+2017-11-08 09:57:37 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-08 09:57:37 - Started 2752
+2017-11-10 18:04:40 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-10 18:04:40 - Started 2724
+2017-11-10 21:19:32 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-10 21:19:32 - Started 2788
+2017-11-11 02:10:42 - Stopping c2.exe
+2017-11-11 02:10:42 - ProcessKill 2788
+2017-11-11 02:10:43 - Found child process: 3168 Name: node.exe
+2017-11-11 02:10:45 - Stopping process 3168
+2017-11-11 02:10:45 - Send SIGINT 3168
+2017-11-11 02:10:45 - SIGINT to 3168 failed - Killing as fallback
+2017-11-11 02:10:45 - Stopping process 2788
+2017-11-11 02:10:45 - Send SIGINT 2788
+2017-11-11 02:10:45 - SIGINT to2788 successful
+2017-11-11 02:10:45 - Finished c2.exe
+2017-11-11 10:52:59 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-11 10:52:59 - Started 2904
+2017-11-13 10:16:29 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-13 10:16:29 - Started 2716
+2017-11-13 21:10:54 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-13 21:10:54 - Started 2876
+2017-11-13 21:32:35 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-13 21:32:35 - Started 2792
+2017-11-17 00:43:35 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-17 00:43:36 - Started 2372
+2017-11-23 15:04:15 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\krsarkar\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\HewlettPackardEnterprise\HavenKitPlatform\bin\www --log "C2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2017-11-23 15:04:16 - Started 2320
+2017-11-23 15:32:26 - Stopping c2.exe
+2017-11-23 15:32:26 - ProcessKill 2320
+2017-11-23 15:32:26 - Found child process: 2652 Name: node.exe
+2017-11-23 15:32:26 - Stopping process 2652
+2017-11-23 15:32:26 - Send SIGINT 2652
+2017-11-23 15:32:26 - SIGINT to 2652 failed - Killing as fallback
+2017-11-23 15:32:26 - Stopping process 2320
+2017-11-23 15:32:26 - Send SIGINT 2320
+2017-11-23 15:32:26 - SIGINT to2320 successful
+2017-11-23 15:32:26 - Finished c2.exe

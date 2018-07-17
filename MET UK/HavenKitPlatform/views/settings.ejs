@@ -1,0 +1,39 @@
+<% include header.ejs %>
+
+<div class="container">
+    <div class="row">
+		<div class="text-left" style="margin-left:15px;">
+			<h1 class="page-header row">
+                <img src="/images/mf_logo_blue_small.png" class="img mf_logo"/>
+					<small>
+						Face Extraction Runner
+					</small>
+			</h1>
+		</div>
+		<div class="banner-container">
+			<span class="banner-heading"><span class="glyphicon glyphicon-cog" style="margin-right: 2px;"></span>Settings</span>
+			<a class="pull-right" href="/">
+				<button type="button" style="background:none" class="btn mf-button-blue btn-circle btn-lg"><i class="glyphicon glyphicon-home"></i></button>
+			</a>
+		</div>
+    </div>
+	
+	<div class="row" style="margin-bottom:10px">
+        <div id="fn2"></div>
+    </div>
+	<div class="modal fade" id="myLoaderModal" role="dialog">
+		<div>
+			<div class="loader"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div id="validateConfig" style="display:none"></div>
+		<div>
+            <a id="browse_config" href="javascript:;" class="btn btn-default" style="width:98px;margin-left: 15px;">Browse...</a>&nbsp;&nbsp;
+            <a id="changeConfiguration" href="javascript:;" class="btn mf-button-blue">Save Changes&nbsp;<span class="glyphicon glyphicon-save-file"></span></a>
+        </div>
+		
+	</div>
+</div>
+
+<% include footer.ejs %>

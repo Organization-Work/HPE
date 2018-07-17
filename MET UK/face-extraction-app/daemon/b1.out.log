@@ -1,0 +1,2511 @@
+2017-10-26 19:35:43.301 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-26 19:37:50.869 [onRequest] GET request received.
+
+2017-10-26 19:37:50.876 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/Monika2.avi"
+}
+
+2017-10-26 19:37:51.298 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+2017-10-26 19:37:51.301 [getTotalFrames] Total frames: 351
+
+2017-10-26 19:37:51.303 [onRequest] Processing complete.
+
+2017-10-26 19:39:40.402 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-26 19:40:59.994 [onRequest] GET request received.
+
+2017-10-26 19:41:00.006 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor1.MP4"
+}
+
+2017-10-26 19:41:00.053 [onRequest] GET request received.
+
+2017-10-26 19:41:00.055 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor2.MP4"
+}
+
+2017-10-26 19:41:00.216 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-26 19:41:00.219 [getTotalFrames] Total frames: 756
+
+2017-10-26 19:41:00.224 [onRequest] Processing complete.
+
+2017-10-26 19:41:00.246 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-26 19:41:00.250 [getTotalFrames] Total frames: 756
+
+2017-10-26 19:41:00.254 [onRequest] Processing complete.
+
+2017-10-26 19:43:49.636 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-26 19:44:07.925 [onRequest] GET request received.
+
+2017-10-26 19:44:07.930 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/Monika2.avi"
+}
+
+2017-10-26 19:44:08.112 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+2017-10-26 19:44:08.114 [getTotalFrames] Total frames: 351
+
+2017-10-26 19:44:08.116 [onRequest] Processing complete.
+
+2017-10-27 05:41:51.083 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 05:41:52.799 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 05:41:54.453 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 06:21:48.586 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 06:22:04.134 [onRequest] GET request received.
+
+2017-10-27 06:22:04.140 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/Monika2.avi"
+}
+
+2017-10-27 06:22:04.314 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+2017-10-27 06:22:04.315 [getTotalFrames] Total frames: 351
+
+2017-10-27 06:22:04.317 [onRequest] Processing complete.
+
+2017-10-27 06:49:59.670 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 06:50:25.283 [onRequest] GET request received.
+
+2017-10-27 06:50:25.288 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/Monika2.avi"
+}
+
+2017-10-27 06:50:25.427 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+2017-10-27 06:50:25.429 [getTotalFrames] Total frames: 351
+
+2017-10-27 06:50:25.430 [onRequest] Processing complete.
+
+2017-10-27 07:08:08.996 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 08:01:56.699 [onRequest] GET request received.
+
+2017-10-27 08:01:56.706 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor1.MP4"
+}
+
+2017-10-27 08:01:56.739 [onRequest] GET request received.
+
+2017-10-27 08:01:56.741 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor2.MP4"
+}
+
+2017-10-27 08:01:56.904 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 128000,
+  "duration": "10.000000",
+  "bit_rate": "695073",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "250",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-27 08:01:56.909 [getTotalFrames] Total frames: 250
+
+2017-10-27 08:01:56.911 [onRequest] Processing complete.
+
+2017-10-27 08:01:56.924 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 256000,
+  "duration": "20.000000",
+  "bit_rate": "1056572",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "500",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-27 08:01:56.926 [getTotalFrames] Total frames: 500
+
+2017-10-27 08:01:56.929 [onRequest] Processing complete.
+
+2017-10-27 08:10:37.668 [onRequest] GET request received.
+
+2017-10-27 08:10:37.669 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor1.MP4"
+}
+
+2017-10-27 08:10:37.790 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 128000,
+  "duration": "10.000000",
+  "bit_rate": "695073",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "250",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-27 08:10:37.792 [getTotalFrames] Total frames: 250
+
+2017-10-27 08:10:37.793 [onRequest] Processing complete.
+
+2017-10-27 08:16:39.025 [onRequest] GET request received.
+
+2017-10-27 08:16:39.026 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor1.MP4"
+}
+
+2017-10-27 08:16:39.038 [onRequest] GET request received.
+
+2017-10-27 08:16:39.039 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor2.MP4"
+}
+
+2017-10-27 08:16:39.174 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 128000,
+  "duration": "10.000000",
+  "bit_rate": "695073",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "250",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-27 08:16:39.177 [getTotalFrames] Total frames: 250
+
+2017-10-27 08:16:39.180 [onRequest] Processing complete.
+
+2017-10-27 08:16:39.186 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 256000,
+  "duration": "20.000000",
+  "bit_rate": "1056572",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "500",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-27 08:16:39.188 [getTotalFrames] Total frames: 500
+
+2017-10-27 08:16:39.190 [onRequest] Processing complete.
+
+2017-10-27 08:55:48.016 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 08:55:49.872 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 08:55:51.542 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 21:46:30.098 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 21:46:52.375 [onRequest] GET request received.
+
+2017-10-27 21:46:52.380 [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+2017-10-27 21:46:52.532 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+2017-10-27 21:46:52.533 [getTotalFrames] Total frames: 351
+
+2017-10-27 21:46:52.535 [onRequest] Processing complete.
+
+2017-10-27 22:21:47.502 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 22:22:03.467 [onRequest] GET request received.
+
+2017-10-27 22:22:03.472 [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+2017-10-27 22:22:03.663 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+2017-10-27 22:22:03.665 [getTotalFrames] Total frames: 351
+
+2017-10-27 22:22:03.667 [onRequest] Processing complete.
+
+2017-10-27 22:23:08.388 [onRequest] GET request received.
+
+2017-10-27 22:23:08.391 [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+2017-10-27 22:23:08.559 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+2017-10-27 22:23:08.562 [getTotalFrames] Total frames: 351
+
+2017-10-27 22:23:08.563 [onRequest] Processing complete.
+
+10/29/2017, 12:13:00.369 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/29/2017, 12:13:16.817 PM [onRequest] GET request received.
+
+10/29/2017, 12:13:16.822 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+10/29/2017, 12:13:16.975 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+10/29/2017, 12:13:16.977 PM [getTotalFrames] Total frames: 351
+
+10/29/2017, 12:13:16.979 PM [onRequest] Processing complete.
+
+10/29/2017, 12:16:43.542 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/29/2017, 12:17:03.548 PM [onRequest] GET request received.
+
+10/29/2017, 12:17:03.553 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+10/29/2017, 12:17:03.796 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+10/29/2017, 12:17:03.799 PM [getTotalFrames] Total frames: 351
+
+10/29/2017, 12:17:03.802 PM [onRequest] Processing complete.
+
+10/29/2017, 12:20:18.412 PM [onRequest] GET request received.
+
+10/29/2017, 12:20:18.417 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika1.avi"
+}
+
+10/29/2017, 12:20:18.611 PM [getTotalFrames] exec error: Error: Command failed: C:\HewlettPackardEnterprise\face-extraction-app\ffprobe.exe -v quiet -print_format json -show_streams C:/HewlettPackardEnterprise/dropbox/videos/Monika1.avi
+
+
+10/29/2017, 12:20:18.614 PM [onRequest] Processing failed.
+
+10/29/2017, 12:23:13.984 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/29/2017, 12:23:29.785 PM [onRequest] GET request received.
+
+10/29/2017, 12:23:29.790 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+10/29/2017, 12:23:29.951 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+10/29/2017, 12:23:29.953 PM [getTotalFrames] Total frames: 351
+
+10/29/2017, 12:23:29.955 PM [onRequest] Processing complete.
+
+10/29/2017, 12:25:35.186 PM [onRequest] GET request received.
+
+10/29/2017, 12:25:35.188 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor1.MP4"
+}
+
+10/29/2017, 12:25:35.332 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+10/29/2017, 12:25:35.333 PM [getTotalFrames] Total frames: 756
+
+10/29/2017, 12:25:35.335 PM [onRequest] Processing complete.
+
+10/30/2017, 10:10:21.340 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 10:10:23.41 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 10:10:24.757 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 2:20:35.681 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 2:21:19.560 PM [onRequest] GET request received.
+
+10/30/2017, 2:21:19.564 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+10/30/2017, 2:21:19.700 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+10/30/2017, 2:21:19.703 PM [getTotalFrames] Total frames: 351
+
+10/30/2017, 2:21:19.705 PM [onRequest] Processing complete.
+
+10/30/2017, 2:46:14.831 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 2:47:11.839 PM [onRequest] GET request received.
+
+10/30/2017, 2:47:11.844 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+10/30/2017, 2:47:12.31 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+10/30/2017, 2:47:12.33 PM [getTotalFrames] Total frames: 351
+
+10/30/2017, 2:47:12.35 PM [onRequest] Processing complete.
+
+10/30/2017, 2:56:26.258 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 2:57:58.25 PM [onRequest] GET request received.
+
+10/30/2017, 2:57:58.30 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+10/30/2017, 2:57:58.224 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+10/30/2017, 2:57:58.226 PM [getTotalFrames] Total frames: 351
+
+10/30/2017, 2:57:58.227 PM [onRequest] Processing complete.
+
+10/30/2017, 3:02:00.937 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 3:09:04.387 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 3:10:35.717 PM [onRequest] GET request received.
+
+10/30/2017, 3:10:35.722 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+10/30/2017, 3:10:35.848 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+10/30/2017, 3:10:35.850 PM [getTotalFrames] Total frames: 351
+
+10/30/2017, 3:10:35.852 PM [onRequest] Processing complete.
+
+10/30/2017, 4:01:11.691 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 4:02:31.443 PM [onRequest] GET request received.
+
+10/30/2017, 4:02:31.448 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+10/30/2017, 4:02:31.596 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+10/30/2017, 4:02:31.598 PM [getTotalFrames] Total frames: 351
+
+10/30/2017, 4:02:31.601 PM [onRequest] Processing complete.
+
+10/30/2017, 7:17:10.951 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 7:17:13.338 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 7:17:15.69 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/31/2017, 11:16:07.270 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/31/2017, 11:16:09.142 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/31/2017, 11:16:10.904 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/1/2017, 10:22:17.97 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/1/2017, 10:22:19.484 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/1/2017, 10:22:21.793 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/2/2017, 11:18:36.41 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/2/2017, 11:18:38.131 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/2/2017, 11:18:39.816 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/3/2017, 11:22:33.293 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/5/2017, 2:29:38.587 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/5/2017, 2:30:11.355 PM [onRequest] GET request received.
+
+11/5/2017, 2:30:11.359 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+11/5/2017, 2:30:11.577 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/5/2017, 2:30:11.579 PM [getTotalFrames] Total frames: 351
+
+11/5/2017, 2:30:11.581 PM [onRequest] Processing complete.
+
+11/5/2017, 3:27:15.164 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/5/2017, 3:27:17.925 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/5/2017, 3:27:20.561 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/5/2017, 6:57:09.250 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 11:21:01.291 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 11:21:03.194 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 11:21:04.879 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 8:58:40.530 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 8:58:43.416 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 8:58:45.678 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 10:33:58.653 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/7/2017, 11:38:21.427 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/7/2017, 11:38:23.424 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/7/2017, 11:38:25.140 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/8/2017, 9:57:39.408 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/10/2017, 6:04:43.227 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/10/2017, 6:04:45.536 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/10/2017, 6:04:47.767 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/10/2017, 9:19:33.346 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/11/2017, 10:53:01.230 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/11/2017, 10:53:03.664 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/11/2017, 10:53:06.347 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 10:16:31.831 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 3:27:22.776 PM [onRequest] GET request received.
+
+11/13/2017, 3:27:22.783 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+11/13/2017, 3:27:23.517 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/13/2017, 3:27:23.519 PM [getTotalFrames] Total frames: 351
+
+11/13/2017, 3:27:23.520 PM [onRequest] Processing complete.
+
+11/13/2017, 4:34:46.740 PM [onRequest] GET request received.
+
+11/13/2017, 4:34:46.742 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+11/13/2017, 4:34:46.866 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/13/2017, 4:34:46.868 PM [getTotalFrames] Total frames: 351
+
+11/13/2017, 4:34:46.870 PM [onRequest] Processing complete.
+
+11/13/2017, 5:26:32.444 PM [onRequest] GET request received.
+
+11/13/2017, 5:26:32.447 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor1.MP4"
+}
+
+11/13/2017, 5:26:32.470 PM [onRequest] GET request received.
+
+11/13/2017, 5:26:32.472 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor2.MP4"
+}
+
+11/13/2017, 5:26:32.504 PM [onRequest] GET request received.
+
+11/13/2017, 5:26:32.506 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor4.MP4"
+}
+
+11/13/2017, 5:26:32.522 PM [onRequest] GET request received.
+
+11/13/2017, 5:26:32.524 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor5.MP4"
+}
+
+11/13/2017, 5:26:32.546 PM [onRequest] GET request received.
+
+11/13/2017, 5:26:32.547 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor3.MP4"
+}
+
+11/13/2017, 5:26:32.633 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 5:26:32.636 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 5:26:32.639 PM [onRequest] Processing complete.
+
+11/13/2017, 5:26:32.643 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 5:26:32.645 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 5:26:32.647 PM [onRequest] Processing complete.
+
+11/13/2017, 5:26:32.708 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 5:26:32.710 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 5:26:32.711 PM [onRequest] Processing complete.
+
+11/13/2017, 5:26:32.735 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 5:26:32.738 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 5:26:32.741 PM [onRequest] Processing complete.
+
+11/13/2017, 5:26:32.757 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 5:26:32.761 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 5:26:32.765 PM [onRequest] Processing complete.
+
+11/13/2017, 5:52:28.250 PM [onRequest] GET request received.
+
+11/13/2017, 5:52:28.253 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika1.avi"
+}
+
+11/13/2017, 5:52:28.399 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 131,
+  "duration": "5.240000",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/13/2017, 5:52:28.401 PM [getTotalFrames] Total frames: 351
+
+11/13/2017, 5:52:28.402 PM [onRequest] Processing complete.
+
+11/13/2017, 5:55:28.708 PM [onRequest] GET request received.
+
+11/13/2017, 5:55:28.710 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika1.avi"
+}
+
+11/13/2017, 5:55:28.818 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 131,
+  "duration": "5.240000",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/13/2017, 5:55:28.823 PM [getTotalFrames] Total frames: 351
+
+11/13/2017, 5:55:28.824 PM [onRequest] Processing complete.
+
+11/13/2017, 5:56:55.959 PM [onRequest] GET request received.
+
+11/13/2017, 5:56:55.961 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+11/13/2017, 5:56:56.100 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/13/2017, 5:56:56.102 PM [getTotalFrames] Total frames: 351
+
+11/13/2017, 5:56:56.104 PM [onRequest] Processing complete.
+
+11/13/2017, 5:57:33.266 PM [onRequest] GET request received.
+
+11/13/2017, 5:57:33.268 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+11/13/2017, 5:57:33.393 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/13/2017, 5:57:33.394 PM [getTotalFrames] Total frames: 351
+
+11/13/2017, 5:57:33.396 PM [onRequest] Processing complete.
+
+11/13/2017, 5:58:29.260 PM [onRequest] GET request received.
+
+11/13/2017, 5:58:29.261 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+11/13/2017, 5:58:29.274 PM [onRequest] GET request received.
+
+11/13/2017, 5:58:29.276 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika1.avi"
+}
+
+11/13/2017, 5:58:29.398 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 131,
+  "duration": "5.240000",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/13/2017, 5:58:29.399 PM [getTotalFrames] Total frames: 351
+
+11/13/2017, 5:58:29.401 PM [onRequest] Processing complete.
+
+11/13/2017, 5:58:29.405 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/13/2017, 5:58:29.407 PM [getTotalFrames] Total frames: 351
+
+11/13/2017, 5:58:29.408 PM [onRequest] Processing complete.
+
+11/13/2017, 5:59:00.17 PM [onRequest] GET request received.
+
+11/13/2017, 5:59:00.20 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika1.avi"
+}
+
+11/13/2017, 5:59:00.34 PM [onRequest] GET request received.
+
+11/13/2017, 5:59:00.36 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+11/13/2017, 5:59:00.167 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 131,
+  "duration": "5.240000",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/13/2017, 5:59:00.169 PM [getTotalFrames] Total frames: 351
+
+11/13/2017, 5:59:00.172 PM [onRequest] Processing complete.
+
+11/13/2017, 5:59:00.177 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/13/2017, 5:59:00.179 PM [getTotalFrames] Total frames: 351
+
+11/13/2017, 5:59:00.181 PM [onRequest] Processing complete.
+
+11/13/2017, 6:26:17.385 PM [onRequest] GET request received.
+
+11/13/2017, 6:26:17.388 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor1.MP4"
+}
+
+11/13/2017, 6:26:17.408 PM [onRequest] GET request received.
+
+11/13/2017, 6:26:17.411 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+11/13/2017, 6:26:17.554 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 6:26:17.558 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 6:26:17.561 PM [onRequest] Processing complete.
+
+11/13/2017, 6:26:17.579 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "mpeg4",
+  "codec_long_name": "MPEG-4 part 2",
+  "profile": "Advanced Simple Profile",
+  "codec_type": "video",
+  "codec_time_base": "1/25",
+  "codec_tag_string": "FFDS",
+  "codec_tag": "0x53444646",
+  "width": 720,
+  "height": 576,
+  "coded_width": 720,
+  "coded_height": 576,
+  "has_b_frames": 0,
+  "sample_aspect_ratio": "0:1",
+  "display_aspect_ratio": "0:1",
+  "pix_fmt": "yuv420p",
+  "level": 5,
+  "chroma_location": "left",
+  "refs": 1,
+  "quarter_sample": "false",
+  "divx_packed": "false",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/25",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 351,
+  "duration": "14.040000",
+  "bit_rate": "3052396",
+  "nb_frames": "351",
+  "disposition": {
+    "default": 0,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  }
+}
+
+11/13/2017, 6:26:17.586 PM [getTotalFrames] Total frames: 351
+
+11/13/2017, 6:26:17.590 PM [onRequest] Processing complete.
+
+11/13/2017, 9:10:56.439 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 9:10:58.966 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 9:11:00.916 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 9:32:38.24 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 9:32:40.738 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 9:32:42.672 PM [videoActionsServer] videoActionsServer has started on port 14020.
+

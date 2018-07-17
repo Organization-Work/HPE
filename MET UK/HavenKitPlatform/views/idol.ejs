@@ -1,0 +1,172 @@
+<% include header.ejs %>
+<div class="container">
+    <div class="row" id="idol">
+		<div class="text-left" style="margin-left:15px;">
+			<h1 class="page-header row">
+                <img src="/images/mf_logo_blue_small.png" class="img mf_logo"/>
+					<small>
+						Face Extraction Runner
+					</small>
+			</h1>
+		</div>
+		<div class="banner-container">
+			<span class="banner-heading"><span class="glyphicon glyphicon-home" style="margin-right: 2px;"></span>  Home</span>
+			<a href="/settings" class="pull-right">
+		   <button id="configurationSettings" type="button" class="btn mf-button-blue btn-circle btn-lg" style="background:none"><i class="glyphicon glyphicon-cog"></i></button>
+         </a>
+		</div>
+    </div>
+
+    <div class="row">
+		<input type="hidden" id="hdDataSubFiles"/>
+		<input type="hidden" id="hdData1"/>
+        <input type="hidden" id="hdData"/>
+        <input type="hidden" id="hdTime"/>
+        <input type="hidden" id="hdToken"/>
+		
+        <div class="col-xs-12">
+			<div id="MissssingParamContainer" style="display:none"></div>
+            <div id="errorBlock"></div>
+            <div style="margin-bottom:10px">
+                <ui id="filelist" class="list-group"></ui>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <a id="browse" href="javascript:;" class="btn btn-default" style="width:98px;">Browse...</a>&nbsp;&nbsp;
+            <!--<a id="start-upload" href="javascript:;" class="btn btn-primary" disabled="disabled">Start Upload</a>-->
+			
+            <button type="button" class="btn" onclick="hpSelect();" style="display:none;">Select Files...</button>
+			<button type="button" class="btn mf-button-blue" onclick="hpAnalyze();" id="btnAnalyze" style="display:none;">Extract</button>
+        </div>
+    </div>
+	<div class="modal fade" id="myLoaderModal" data-keyboard="false" data-backdrop="static" role="dialog">
+		<div>
+			<div class="loader"></div>
+		</div>
+	</div>
+	
+	<a href="#" class="scrollToTop btn mf-button-blue btn-circle btn-lg">
+        <span class="glyphicon glyphicon-arrow-up" style="margin-top:6px"></span>
+    </a>
+	<!--Modal for display MetaData-->
+	<div class="modal" id="displayMetaData">
+	<div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header mf-background-png">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">All Faces</h4>
+        </div>
+        <div class="modal-body" style="background-color:#F6F6F6;">
+			<div id="videos"></div> 
+        </div>
+        <div class="modal-footer mf-background-png">
+          <button type="button" class="btn mf-button" data-dismiss="modal">Close <span class="glyphicon glyphicon-remove"></span></button>
+        </div>
+		</div>
+		</div>
+	</div>
+	
+	<!-- Modal For  Extarction of container file-->
+	<div class="modal fade" id="myExtractionModal" data-keyboard="false" data-backdrop="static" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header mf-background-png">
+          <button id="containerCloseX" type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Container Files</h4>
+        </div>
+        <div class="modal-body" style="background-color:#F6F6F6;">
+			<div id="fn1">
+			</div>
+        </div>
+        <div class="modal-footer mf-background-png">
+		  <button id="containerNext" type="button" class="btn mf-button" onclick="subfileExtraction();" disabled="disabled">Next <span class="glyphicon glyphicon-menu-right"></span></button>
+          <button id="containerClose" type="button" class="btn mf-button" data-dismiss="modal">Close <span class="glyphicon glyphicon-remove"></span></button>
+        </div>
+		</div>
+		</div>
+	</div>
+	
+	<!-- Modal For Subfile file-->
+	<div class="modal fade" id="subFileModal" data-keyboard="false" data-backdrop="static" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header mf-background-png">
+          <button id="extractedSubfilesCloseX" type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Extracted Subfiles</h4>
+        </div>
+        <div class="modal-body" style="background-color:#F6F6F6;">
+			<div id="fn2">
+			</div>
+        </div>
+        <div class="modal-footer subFilesFooter mf-background-png">
+		  <button id="selectNoneFiles" type="button" class="btn mf-button" style="float:left; display:none;">Select None <span class="glyphicon glyphicon-check"></span></button>
+		  <button id="extractedSubfilesNext" type="button" class="btn mf-button" style="display: none;">Next <span class="glyphicon glyphicon-menu-right"></span></button>
+          <button id="extractedSubfilesClose" type="button" class="btn mf-button" data-dismiss="modal">Close <span class="glyphicon glyphicon-remove"></span></button>
+        </div>
+		</div>
+		</div>
+	</div>
+	
+	
+	<!-- Modal For trim -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header trimHeader mf-background-png">
+        </div>
+        <div class="modal-body" style="background-color: #F6F6F6;">
+			<form id="trimForm">
+				<div class="form-group">
+					<label for="usr">Start Time:</label>
+						<input type="text" placeholder="HH:MM:SS" class="form-control" id="startTimeInput">
+						&nbsp;&nbsp;<span id="resultForStart"></span>
+				</div>
+				<div class="form-group">
+					<label for="usr">End Time:</label>
+						<input type="text" placeholder="HH:MM:SS" class="form-control" id="endTimeInput">
+						&nbsp;&nbsp;<span id="resultForEnd"></span>
+				</div>
+				</div>
+				<div class="modal-footer trimFooter mf-background-png">
+				</div>
+			</form>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Export Folder Name Modal -->
+  <div class="modal fade" id="exportFolderModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header mf-background-png">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Export Folder Name</h4>
+        </div>
+        <div class="modal-body">
+			<form id="trimForm">
+				<div class="form-group">
+					<input type="text" placeholder="Export Folder Name" class="form-control" id="exportFolderInput">
+				</div>
+			</form>
+        </div>
+        <div class="modal-footer mf-background-png">
+          <button type="button" class="btn mf-button" data-dismiss="modal">Close</button>
+		  <button id="exportFolderNameSubmit" type="button" class="btn mf-button">Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  
+</div>
+<% include footer.ejs %>

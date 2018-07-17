@@ -1,0 +1,3691 @@
+2017-10-27 08:50:25.468 [xmlClean] No old XML to clean.
+
+2017-10-27 08:50:25.483 [validateOptions] Setting default values for minFaceWidth
+
+2017-10-27 08:50:25.483 [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+2017-10-27 08:50:25.811 [removeFaceDatabase] SUCCESS
+
+2017-10-27 08:50:25.826 [createFaceDatabase] SUCCESS
+
+2017-10-27 08:50:25.826 [Main] Application started.
+
+[0mGET / [36m304 [0m40.480 ms - -[0m
+[0mGET /js/jquery.min.js [36m304 [0m8.862 ms - -[0m
+[0mGET /css/bootstrap.min.css [36m304 [0m18.377 ms - -[0m
+[0mGET /css/bootstrap-treeview.min.css [36m304 [0m15.231 ms - -[0m
+[0mGET /css/hp/typography.css [36m304 [0m14.884 ms - -[0m
+[0mGET /css/bootstrap-dialog.min.css [36m304 [0m16.431 ms - -[0m
+[0mGET /css/main.css [36m304 [0m16.298 ms - -[0m
+[0mGET /js/jquery.validate.min.js [36m304 [0m12.653 ms - -[0m
+[0mGET /js/bootstrap.min.js [36m304 [0m11.815 ms - -[0m
+[0mGET /js/bootstrap-treeview.min.js [36m304 [0m11.914 ms - -[0m
+[0mGET /js/bootstrap-dialog.min.js [36m304 [0m10.150 ms - -[0m
+[0mGET /js/main.js [36m304 [0m12.710 ms - -[0m
+[0mGET /js/trimScript.js [36m304 [0m12.060 ms - -[0m
+[0mGET /js/plupload/plupload.full.min.js [36m304 [0m4.052 ms - -[0m
+[0mGET /images/mf_logo_blue_small.png [36m304 [0m3.602 ms - -[0m
+[0mGET /fonts/latin-e-regular-ttf.ttf [36m304 [0m4.842 ms - -[0m
+[0mGET /fonts/latin-e-bold-ttf.ttf [36m304 [0m7.579 ms - -[0m
+[0mGET /fonts/glyphicons-halflings-regular.woff2 [36m304 [0m2.508 ms - -[0m
+[0mGET / [36m304 [0m13.970 ms - -[0m
+[0mGET /js/jquery.min.js [36m304 [0m3.858 ms - -[0m
+[0mGET /css/bootstrap.min.css [36m304 [0m21.987 ms - -[0m
+[0mGET /css/hp/typography.css [36m304 [0m12.730 ms - -[0m
+[0mGET /css/bootstrap-treeview.min.css [36m304 [0m24.371 ms - -[0m
+[0mGET /css/main.css [36m304 [0m19.331 ms - -[0m
+[0mGET /css/bootstrap-dialog.min.css [36m304 [0m25.124 ms - -[0m
+[0mGET /js/jquery.validate.min.js [36m304 [0m19.412 ms - -[0m
+[0mGET /js/bootstrap.min.js [36m304 [0m13.446 ms - -[0m
+[0mGET /js/bootstrap-treeview.min.js [36m304 [0m13.568 ms - -[0m
+[0mGET /js/bootstrap-dialog.min.js [36m304 [0m13.575 ms - -[0m
+[0mGET /js/main.js [36m304 [0m15.026 ms - -[0m
+[0mGET /js/trimScript.js [36m304 [0m15.195 ms - -[0m
+[0mGET /images/mf_logo_blue_small.png [36m304 [0m4.398 ms - -[0m
+[0mGET /js/plupload/plupload.full.min.js [36m304 [0m4.287 ms - -[0m
+[0mGET /fonts/glyphicons-halflings-regular.woff2 [36m304 [0m4.113 ms - -[0m
+[0mGET / [36m304 [0m8.697 ms - -[0m
+[0mGET /css/bootstrap.min.css [36m304 [0m11.407 ms - -[0m
+[0mGET /css/bootstrap-treeview.min.css [36m304 [0m11.662 ms - -[0m
+[0mGET /css/bootstrap-dialog.min.css [36m304 [0m10.249 ms - -[0m
+[0mGET /css/hp/typography.css [36m304 [0m6.883 ms - -[0m
+[0mGET /js/jquery.min.js [36m304 [0m3.832 ms - -[0m
+[0mGET /css/main.css [36m304 [0m7.965 ms - -[0m
+[0mGET /js/jquery.validate.min.js [36m304 [0m3.720 ms - -[0m
+[0mGET /js/bootstrap.min.js [36m304 [0m4.167 ms - -[0m
+[0mGET /js/bootstrap-treeview.min.js [36m304 [0m6.204 ms - -[0m
+[0mGET /js/bootstrap-dialog.min.js [36m304 [0m5.853 ms - -[0m
+[0mGET /js/main.js [36m304 [0m3.278 ms - -[0m
+[0mGET /js/trimScript.js [36m304 [0m3.144 ms - -[0m
+[0mGET /js/plupload/plupload.full.min.js [36m304 [0m2.504 ms - -[0m
+[0mGET /images/mf_logo_blue_small.png [36m304 [0m2.289 ms - -[0m
+[0mGET /fonts/glyphicons-halflings-regular.woff2 [36m304 [0m3.234 ms - -[0m
+[0mGET /checkFileExtension?fileExtension=avi [32m200 [0m4.937 ms - -[0m
+[0mPOST /upload [33m400 [0m168.244 ms - 247[0m
+2017-10-27 08:50:47.464 [startAnalysis] Processing Monika2.avi
+
+2017-10-27 08:50:47.464 [startAnalysis] //
+// HPE Face Extractor templated Media Server configuration.
+//
+
+
+// ======================= Ingest =======================
+[Ingest]
+IngestEngine = LibAV
+//IngestRate = 0
+
+[LibAV]
+Type = libav
+IngestTime = 0
+EnabledStreamTypes = video
+
+
+// ======================= Analysis =======================
+[Analysis]
+AnalysisEngine0 = FaceDetect
+AnalysisEngine1 = FaceRecognize
+
+[FaceDetect]
+Type = facedetect
+SampleInterval = 1000
+NumParallel = 1
+MinSize = 40
+SizeUnit = pixel
+DetectEyes = true
+ColorAnalysis = false
+DetectTilted = true
+FaceDirection = any
+Orientation = any
+
+[FaceRecognize]
+Type = facerecognize
+Input = FaceDetect.ResultWithSource
+Database = faceExtractor
+MaxRecognitionResults = 1
+RecognitionThreshold = 75
+
+
+// ======================= EventProcessing =======================
+[EventProcessing]
+EventProcessingEngine0 = RecognisedFace
+EventProcessingEngine1 = RecognisedFaceNoSource
+EventProcessingEngine2 = UnRecognisedFace
+EventProcessingEngine3 = DeduplicateDataTrack
+
+[RecognisedFace]
+Type = Filter
+Input = FaceRecognize.ResultWithSource
+LuaScript = C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/recognisedFaceResultWithSource.lua
+
+[RecognisedFaceNoSource]
+Type = Filter
+Input = FaceRecognize.Result
+LuaScript = C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/recognisedFaceResult.lua
+
+[UnRecognisedFace]
+Type = Filter
+Input = FaceRecognize.ResultWithSource
+LuaScript = C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/unRecognisedFaceResultWithSource.lua
+
+[DeduplicateDataTrack]
+Type = Deduplicate
+Input = FaceDetect.DataWithSource
+MinTimeInterval = 10
+PredicateType = lua
+LuaScript = C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/deduplicateFaceData.lua
+
+
+// ======================= Transform =======================
+[Transform]
+TransformEngine0 = CropUnRecognisedFace
+TransformEngine1 = CropRecognisedFace
+TransformEngine2 = CropAnyFace
+
+[CropRecognisedFace]
+Type = crop
+Border = 3
+BorderUnit = percent
+Input = RecognisedFace.Output
+
+[CropUnRecognisedFace]
+Type = crop
+Border = 3
+BorderUnit = percent
+Input = UnRecognisedFace.Output
+
+[CropAnyFace]
+Type = crop
+Border = 3
+BorderUnit = percent
+Input = DeduplicateDataTrack.Output
+
+
+// ======================= Encoding =======================
+[Encoding]
+EncodingEngine0 = StoreUnRecognisedCroppedFace
+EncodingEngine1 = StoreUnRecognisedFullFrame
+EncodingEngine2 = StoreRecognisedCroppedFace
+EncodingEngine3 = StoreRecognisedFullFrame
+EncodingEngine4 = StoreAllTrackFaces
+
+[StoreUnRecognisedCroppedFace]
+Type = imageencoder
+ImageInput = CropUnRecognisedFace.Output
+OutputPath = C:\HewlettPackardEnterprise\dropbox\faces/Monika2/%record.id.uuid%/%record.id.uuid%_%record.peaktime.hour%-%record.peaktime.minute%-%record.peaktime.second%_crop.jpg
+
+[StoreUnRecognisedFullFrame]
+Type = imageencoder
+ImageInput = UnRecognisedFace.Output
+OutputPath = C:\HewlettPackardEnterprise\dropbox\faces/Monika2/%record.id.uuid%/%record.id.uuid%_%record.peaktime.hour%-%record.peaktime.minute%-%record.peaktime.second%_full.jpg
+
+[StoreRecognisedCroppedFace]
+Type = imageencoder
+ImageInput = CropRecognisedFace.Output
+OutputPath = C:\HewlettPackardEnterprise\dropbox\faces/Monika2/%record.identity.identifier%/matched_%record.id.uuid%_%record.peaktime.hour%-%record.peaktime.minute%-%record.peaktime.second%_crop.jpg
+
+[StoreRecognisedFullFrame]
+Type = imageencoder
+ImageInput = RecognisedFace.Output
+OutputPath = C:\HewlettPackardEnterprise\dropbox\faces/Monika2/%record.identity.identifier%/matched_%record.id.uuid%_%record.peaktime.hour%-%record.peaktime.minute%-%record.peaktime.second%_full.jpg
+
+[StoreAllTrackFaces]
+Type = imageencoder
+ImageInput = CropAnyFace.Output
+OutputPath = C:\HewlettPackardEnterprise\dropbox\faces/Monika2/%record.id.uuid%/allFaces/%record.peaktime.hour%-%record.peaktime.minute%-%record.peaktime.second%_%uuid%.jpg
+
+
+// ======================= Output =======================
+[Output]
+OutputEngine0 = WriteRecognisedFaceMetadata
+OutputEngine1 = WriteUnrecognisedFaceMetadata
+OutputEngine2 = TrainNewFace
+OutputEngine3 = AddExtraFace
+OutputEngine6 = ResponseEngine
+OutputEngine4 = CreateClip
+OutputEngine5 = MoveDataCrops
+//OutputEngine4 = CreateClip
+//OutputEngine4 = MoveDataCrops
+
+[WriteRecognisedFaceMetadata]
+Type = xml
+Mode = SingleRecord
+Input = RecognisedFace.Output
+XMLOutputPath = C:\HewlettPackardEnterprise\dropbox\faces/Monika2/%record.identity.identifier%/matched_%record.id.uuid%_%record.peaktime.hour%-%record.peaktime.minute%-%record.peaktime.second%.txt
+XSLTemplate = C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/toFaceMetadata.xsl
+
+[WriteUnrecognisedFaceMetadata]
+Type = xml
+Mode = SingleRecord
+Input = UnRecognisedFace.Output
+XMLOutputPath = C:\HewlettPackardEnterprise\dropbox\faces/Monika2/%record.id.uuid%/%record.id.uuid%_%record.peaktime.hour%-%record.peaktime.minute%-%record.peaktime.second%.txt
+XSLTemplate = C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/toFaceMetadata.xsl
+
+[TrainNewFace]
+Type = httppost
+Mode = SingleRecord
+Input = StoreUnRecognisedCroppedFace.Proxy
+XMLOutputPath = C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed
+DestinationURL = http://localhost:14010/trainNewFace
+
+[AddExtraFace]
+Type = httppost
+Mode = SingleRecord
+Input = StoreRecognisedCroppedFace.Proxy
+XMLOutputPath = C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed
+DestinationURL = http://localhost:14010/addExtraFace
+
+[CreateClip]
+Type = httppost
+Mode = SingleRecord
+Input = StoreRecognisedCroppedFace.Proxy,StoreUnRecognisedCroppedFace.Proxy
+XMLOutputPath = C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed
+DestinationURL = http://localhost:14010/createClip
+
+[MoveDataCrops]
+Type = httppost
+Mode = Bounded
+Input = RecognisedFaceNoSource.Output,StoreAllTrackFaces.Proxy
+EventTrack = RecognisedFaceNoSource.OutputCropAnyFace.Output
+XMLOutputPath = C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed
+SavePreXML = true
+DestinationURL = http://localhost:14010/moveDataCrops
+
+[ResponseEngine]
+Type=Response
+Input=StoreAllTrackFaces.Proxy,StoreUnRecognisedCroppedFace.Proxy,StoreUnRecognisedFullFrame.Proxy,StoreRecognisedCroppedFace.Proxy,StoreRecognisedFullFrame.Proxy
+
+
+2017-10-27 08:50:47.580 [startAnalysis] Video frames to process: -1
+
+2017-10-27 08:50:47.582 [startAnalysis] video server return -1.
+
+{ currentVideoTotalFrames: -1, currentToken: 'testtoken' }
+[0mGET /analyze?videoName=Monika2.avi [32m200 [0m129.655 ms - -[0m
+2017-10-27 08:51:14.410 [xmlClean] No old XML to clean.
+
+2017-10-27 08:51:14.418 [validateOptions] Setting default values for minFaceWidth
+
+2017-10-27 08:51:14.423 [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+2017-10-27 08:51:14.793 [removeFaceDatabase] SUCCESS
+
+2017-10-27 08:51:14.807 [createFaceDatabase] SUCCESS
+
+2017-10-27 08:51:14.809 [Main] Application started.
+
+2017-10-27 08:55:50.340 [xmlClean] No old XML to clean.
+
+2017-10-27 08:55:50.356 [validateOptions] Setting default values for minFaceWidth
+
+2017-10-27 08:55:50.371 [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+2017-10-27 08:55:53.195 [xmlClean] No old XML to clean.
+
+2017-10-27 08:55:53.211 [validateOptions] Setting default values for minFaceWidth
+
+2017-10-27 08:55:53.211 [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+2017-10-27 08:55:56.175 [xmlClean] No old XML to clean.
+
+2017-10-27 08:55:56.175 [validateOptions] Setting default values for minFaceWidth
+
+2017-10-27 08:55:56.191 [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+10/30/2017, 10:10:23.259 AM [xmlClean] No old XML to clean.
+
+10/30/2017, 10:10:23.290 AM [validateOptions] Setting default values for minFaceWidth
+
+10/30/2017, 10:10:23.290 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+10/30/2017, 10:10:26.161 AM [xmlClean] No old XML to clean.
+
+10/30/2017, 10:10:26.177 AM [validateOptions] Setting default values for minFaceWidth
+
+10/30/2017, 10:10:26.177 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+10/30/2017, 10:10:29.187 AM [xmlClean] No old XML to clean.
+
+10/30/2017, 10:10:29.202 AM [validateOptions] Setting default values for minFaceWidth
+
+10/30/2017, 10:10:29.202 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+10/30/2017, 7:17:13.837 PM [xmlClean] No old XML to clean.
+
+10/30/2017, 7:17:13.869 PM [validateOptions] Setting default values for minFaceWidth
+
+10/30/2017, 7:17:13.884 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+10/30/2017, 7:17:17.4 PM [xmlClean] No old XML to clean.
+
+10/30/2017, 7:17:17.19 PM [validateOptions] Setting default values for minFaceWidth
+
+10/30/2017, 7:17:17.19 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+10/30/2017, 7:17:20.311 PM [xmlClean] No old XML to clean.
+
+10/30/2017, 7:17:20.327 PM [validateOptions] Setting default values for minFaceWidth
+
+10/30/2017, 7:17:20.342 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+10/31/2017, 11:16:09.937 AM [xmlClean] No old XML to clean.
+
+10/31/2017, 11:16:09.968 AM [validateOptions] Setting default values for minFaceWidth
+
+10/31/2017, 11:16:09.968 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+10/31/2017, 11:16:12.792 AM [xmlClean] No old XML to clean.
+
+10/31/2017, 11:16:12.807 AM [validateOptions] Setting default values for minFaceWidth
+
+10/31/2017, 11:16:12.807 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+10/31/2017, 11:16:15.772 AM [xmlClean] No old XML to clean.
+
+10/31/2017, 11:16:15.787 AM [validateOptions] Setting default values for minFaceWidth
+
+10/31/2017, 11:16:15.803 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/1/2017, 10:22:20.373 AM [xmlClean] No old XML to clean.
+
+11/1/2017, 10:22:20.404 AM [validateOptions] Setting default values for minFaceWidth
+
+11/1/2017, 10:22:20.404 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/1/2017, 10:22:22.183 AM [removeFaceDatabase] Cannot connect to HPE Media Server on localhost:14000
+
+11/2/2017, 11:18:38.521 AM [xmlClean] No old XML to clean.
+
+11/2/2017, 11:18:38.552 AM [validateOptions] Setting default values for minFaceWidth
+
+11/2/2017, 11:18:38.552 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/2/2017, 11:18:41.392 AM [xmlClean] No old XML to clean.
+
+11/2/2017, 11:18:41.407 AM [validateOptions] Setting default values for minFaceWidth
+
+11/2/2017, 11:18:41.423 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/2/2017, 11:18:44.387 AM [xmlClean] No old XML to clean.
+
+11/2/2017, 11:18:44.403 AM [validateOptions] Setting default values for minFaceWidth
+
+11/2/2017, 11:18:44.403 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/3/2017, 11:22:35.976 AM [xmlClean] No old XML to clean.
+
+11/3/2017, 11:22:36.38 AM [validateOptions] Setting default values for minFaceWidth
+
+11/3/2017, 11:22:36.54 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/3/2017, 11:22:39.299 AM [xmlClean] No old XML to clean.
+
+11/3/2017, 11:22:39.315 AM [validateOptions] Setting default values for minFaceWidth
+
+11/3/2017, 11:22:39.315 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/3/2017, 11:22:42.294 AM [xmlClean] No old XML to clean.
+
+11/3/2017, 11:22:42.325 AM [validateOptions] Setting default values for minFaceWidth
+
+11/3/2017, 11:22:42.325 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/5/2017, 3:27:19.485 PM [xmlClean] No old XML to clean.
+
+11/5/2017, 3:27:19.579 PM [validateOptions] Setting default values for minFaceWidth
+
+11/5/2017, 3:27:19.579 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/5/2017, 3:27:23.494 PM [xmlClean] No old XML to clean.
+
+11/5/2017, 3:27:23.525 PM [validateOptions] Setting default values for minFaceWidth
+
+11/5/2017, 3:27:23.525 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/5/2017, 3:27:27.82 PM [xmlClean] No old XML to clean.
+
+11/5/2017, 3:27:27.113 PM [validateOptions] Setting default values for minFaceWidth
+
+11/5/2017, 3:27:27.129 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/5/2017, 6:57:12.448 PM [xmlClean] No old XML to clean.
+
+11/5/2017, 6:57:12.479 PM [validateOptions] Setting default values for minFaceWidth
+
+11/5/2017, 6:57:12.495 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/5/2017, 6:57:15.990 PM [xmlClean] No old XML to clean.
+
+11/5/2017, 6:57:16.6 PM [validateOptions] Setting default values for minFaceWidth
+
+11/5/2017, 6:57:16.6 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/5/2017, 6:57:19.390 PM [xmlClean] No old XML to clean.
+
+11/5/2017, 6:57:19.406 PM [validateOptions] Setting default values for minFaceWidth
+
+11/5/2017, 6:57:19.406 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/6/2017, 11:21:03.693 AM [xmlClean] No old XML to clean.
+
+11/6/2017, 11:21:03.724 AM [validateOptions] Setting default values for minFaceWidth
+
+11/6/2017, 11:21:03.724 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/6/2017, 11:21:06.548 AM [xmlClean] No old XML to clean.
+
+11/6/2017, 11:21:06.564 AM [validateOptions] Setting default values for minFaceWidth
+
+11/6/2017, 11:21:06.564 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/6/2017, 11:21:09.481 AM [xmlClean] No old XML to clean.
+
+11/6/2017, 11:21:09.497 AM [validateOptions] Setting default values for minFaceWidth
+
+11/6/2017, 11:21:09.497 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/6/2017, 8:58:43.915 PM [xmlClean] No old XML to clean.
+
+11/6/2017, 8:58:43.946 PM [validateOptions] Setting default values for minFaceWidth
+
+11/6/2017, 8:58:43.946 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/6/2017, 8:58:45.740 PM [removeFaceDatabase] Cannot connect to HPE Media Server on localhost:14000
+
+11/6/2017, 10:34:01.196 PM [xmlClean] No old XML to clean.
+
+11/6/2017, 10:34:01.212 PM [validateOptions] Setting default values for minFaceWidth
+
+11/6/2017, 10:34:01.212 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/6/2017, 10:34:02.741 PM [removeFaceDatabase] Cannot connect to HPE Media Server on localhost:14000
+
+11/7/2017, 11:38:23.689 AM [xmlClean] No old XML to clean.
+
+11/7/2017, 11:38:23.720 AM [validateOptions] Setting default values for minFaceWidth
+
+11/7/2017, 11:38:23.720 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/7/2017, 11:38:26.544 AM [xmlClean] No old XML to clean.
+
+11/7/2017, 11:38:26.559 AM [validateOptions] Setting default values for minFaceWidth
+
+11/7/2017, 11:38:26.575 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/7/2017, 11:38:29.476 AM [xmlClean] No old XML to clean.
+
+11/7/2017, 11:38:29.492 AM [validateOptions] Setting default values for minFaceWidth
+
+11/7/2017, 11:38:29.508 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/8/2017, 9:57:41.795 AM [xmlClean] No old XML to clean.
+
+11/8/2017, 9:57:41.826 AM [validateOptions] Setting default values for minFaceWidth
+
+11/8/2017, 9:57:41.826 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/8/2017, 9:57:44.806 AM [xmlClean] No old XML to clean.
+
+11/8/2017, 9:57:44.822 AM [validateOptions] Setting default values for minFaceWidth
+
+11/8/2017, 9:57:44.822 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/8/2017, 9:57:47.785 AM [xmlClean] No old XML to clean.
+
+11/8/2017, 9:57:47.800 AM [validateOptions] Setting default values for minFaceWidth
+
+11/8/2017, 9:57:47.816 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/10/2017, 6:04:46.768 PM [xmlClean] No old XML to clean.
+
+11/10/2017, 6:04:46.800 PM [validateOptions] Setting default values for minFaceWidth
+
+11/10/2017, 6:04:46.800 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/10/2017, 6:04:50.138 PM [xmlClean] No old XML to clean.
+
+11/10/2017, 6:04:50.154 PM [validateOptions] Setting default values for minFaceWidth
+
+11/10/2017, 6:04:50.154 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/10/2017, 6:04:53.523 PM [xmlClean] No old XML to clean.
+
+11/10/2017, 6:04:53.539 PM [validateOptions] Setting default values for minFaceWidth
+
+11/10/2017, 6:04:53.554 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/10/2017, 9:19:35.920 PM [xmlClean] No old XML to clean.
+
+11/10/2017, 9:19:35.952 PM [validateOptions] Setting default values for minFaceWidth
+
+11/10/2017, 9:19:35.967 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/10/2017, 9:19:37.496 PM [removeFaceDatabase] Cannot connect to HPE Media Server on localhost:14000
+
+11/11/2017, 10:53:05.676 AM [xmlClean] No old XML to clean.
+
+11/11/2017, 10:53:05.722 AM [validateOptions] Setting default values for minFaceWidth
+
+11/11/2017, 10:53:05.722 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/11/2017, 10:53:09.529 AM [xmlClean] No old XML to clean.
+
+11/11/2017, 10:53:09.560 AM [validateOptions] Setting default values for minFaceWidth
+
+11/11/2017, 10:53:09.560 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/11/2017, 10:53:15.55 AM [xmlClean] No old XML to clean.
+
+11/11/2017, 10:53:15.102 AM [validateOptions] Setting default values for minFaceWidth
+
+11/11/2017, 10:53:15.102 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/13/2017, 10:16:34.343 AM [xmlClean] No old XML to clean.
+
+11/13/2017, 10:16:34.374 AM [validateOptions] Setting default values for minFaceWidth
+
+11/13/2017, 10:16:34.374 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/13/2017, 10:16:37.307 AM [xmlClean] No old XML to clean.
+
+11/13/2017, 10:16:37.322 AM [validateOptions] Setting default values for minFaceWidth
+
+11/13/2017, 10:16:37.338 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/13/2017, 10:16:40.754 AM [xmlClean] No old XML to clean.
+
+11/13/2017, 10:16:40.770 AM [validateOptions] Setting default values for minFaceWidth
+
+11/13/2017, 10:16:40.785 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/13/2017, 9:10:59.809 PM [xmlClean] No old XML to clean.
+
+11/13/2017, 9:10:59.840 PM [validateOptions] Setting default values for minFaceWidth
+
+11/13/2017, 9:10:59.840 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/13/2017, 9:11:03.100 PM [xmlClean] No old XML to clean.
+
+11/13/2017, 9:11:03.116 PM [validateOptions] Setting default values for minFaceWidth
+
+11/13/2017, 9:11:03.116 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/13/2017, 9:11:07.219 PM [xmlClean] No old XML to clean.
+
+11/13/2017, 9:11:07.266 PM [validateOptions] Setting default values for minFaceWidth
+
+11/13/2017, 9:11:07.266 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/13/2017, 9:32:41.487 PM [xmlClean] No old XML to clean.
+
+11/13/2017, 9:32:41.534 PM [validateOptions] Setting default values for minFaceWidth
+
+11/13/2017, 9:32:41.549 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/13/2017, 9:32:44.794 PM [xmlClean] No old XML to clean.
+
+11/13/2017, 9:32:44.809 PM [validateOptions] Setting default values for minFaceWidth
+
+11/13/2017, 9:32:44.809 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/13/2017, 9:32:48.210 PM [xmlClean] No old XML to clean.
+
+11/13/2017, 9:32:48.241 PM [validateOptions] Setting default values for minFaceWidth
+
+11/13/2017, 9:32:48.257 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/17/2017, 12:43:38.582 AM [xmlClean] No old XML to clean.
+
+11/17/2017, 12:43:38.614 AM [validateOptions] Setting default values for minFaceWidth
+
+11/17/2017, 12:43:38.614 AM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:/HewlettPackardEnterprise/dropbox/videos/subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/17/2017, 12:43:40.33 AM [removeFaceDatabase] Cannot connect to HPE Media Server on localhost:14000
+
+11/23/2017, 3:04:18.911 PM [xmlClean] No old XML to clean.
+
+11/23/2017, 3:04:18.942 PM [validateOptions] Setting default values for minFaceWidth
+
+11/23/2017, 3:04:18.942 PM [validateOptions] {
+  "mediaserver": {
+    "host": "localhost",
+    "port": 14000,
+    "db": "faceExtractor",
+    "failedPath": "C:/HewlettPackardEnterprise//IDOLServer-11.1.0/mediaserver/outputdata/failed"
+  },
+  "faceExtractorServer": {
+    "host": "localhost",
+    "port": 14010
+  },
+  "videoActionsServer": {
+    "host": "localhost",
+    "port": 14020
+  },
+  "dropboxDir": "C:/HewlettPackardEnterprise/dropbox",
+  "createClip": true,
+  "createClipFormat": ".mp4",
+  "clipBuffer": 500,
+  "videoPath": "",
+  "videoDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos",
+  "videoTypes": [
+    ".mp4",
+    ".avi"
+  ],
+  "containerTypes": [
+    ".zip",
+    ".rar",
+    ".tar",
+    ".tar.gz",
+    ".tar.z",
+    ".pptx",
+    ".pdf"
+  ],
+  "subfileDir": "C:\\HewlettPackardEnterprise\\dropbox\\videos\\subFiles",
+  "keyViewBinDir": "C:/HewlettPackardEnterprise/KeyviewFilterSDK-11.2.0/WINDOWS_X86_64/bin",
+  "faceDir": "C:\\HewlettPackardEnterprise\\dropbox\\faces",
+  "exportDir": "//KRSARKAR1/FaceAppImages/exportedFaces",
+  "configFEA": "C:/HewlettPackardEnterprise//face-extraction-app",
+  "configHKP": "C:/HewlettPackardEnterprise//HavenKitPlatform/module",
+  "cfgFile": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver/faceExtractor.cfg",
+  "luaDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "xslDir": "C:/HewlettPackardEnterprise//face-extraction-app/mediaserver",
+  "bestFaceOnly": false,
+  "faceOutputInterval": 10,
+  "realTime": true,
+  "sampleInterval": 1000,
+  "numParallel": 1,
+  "minSize": 40,
+  "colorAnalysis": false,
+  "detectTilted": true,
+  "faceDirection": "any",
+  "orientation": "any",
+  "recognitionThreshold": 75,
+  "minFaceWidth": 50
+}
+
+11/23/2017, 3:04:20.315 PM [removeFaceDatabase] Cannot connect to HPE Media Server on localhost:14000
+

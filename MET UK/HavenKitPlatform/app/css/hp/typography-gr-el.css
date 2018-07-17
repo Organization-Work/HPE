@@ -1,0 +1,115 @@
+/*typography-gr-el.css: Greece-Greek*/
+/*Importing hps-greek-core*/
+/*REGULAR*/
+@font-face {
+  font-family: 'HPSimplified';
+  src: url("/fonts/greek-regular-eot.eot");
+  /* IE9 compat */
+  src: url("/fonts/greek-regular-eot.eot?#iefix") format("embedded-opentype"), url("/fonts/greek-regular-woff.woff") format("-woff.woff"), url("/fonts/greek-regular-ttf.ttf") format("truetype");
+  /*iOS, Android, Safari*/
+  font-weight: normal;
+  font-style: normal; }
+
+/*BOLD*/
+@font-face {
+  font-family: 'HPSimplified';
+  src: url("/fonts/greek-bold-eot.eot");
+  /* IE9 compat */
+  src: url("/fonts/greek-bold-eot.eot?#iefix") format("embedded-opentype"), url("/fonts/greek-bold-woff.woff") format("-woff.woff"), url("/fonts/greek-bold-ttf.ttf") format("truetype");
+  /*iOS, Android, Safari*/
+  font-weight: bold;
+  font-style: normal; }
+
+/*LIGHT*/
+@font-face {
+  font-family: 'HPSimplifiedLight';
+  src: url("/fonts/greek-light-eot.eot");
+  /* IE9 compat */
+  src: url("/fonts/greek-light-eot.eot?#iefix") format("embedded-opentype"), url("/fonts/greek-light-woff.woff") format("-woff.woff"), url("/fonts/greek-light-ttf.ttf") format("truetype");
+  /*iOS, Android, Safari*/
+  font-weight: normal;
+  font-style: normal; }
+
+/*REGULAR ITALIC*/
+@font-face {
+  font-family: 'HPSimplified';
+  src: url("/fonts/greek-regular-italic-eot.eot");
+  /* IE9 compat */
+  src: url("/fonts/greek-regular-italic-eot.eot?#iefix") format("embedded-opentype"), url("/fonts/greek-regular-italic-woff.woff") format("-woff.woff"), url("/fonts/greek-regular-italic-ttf.ttf") format("truetype");
+  /*iOS, Android, Safari*/
+  font-weight: normal;
+  font-style: italic; }
+
+/*BOLD ITALIC*/
+@font-face {
+  font-family: 'HPSimplified';
+  src: url("/fonts/greek-bold-italic-eot.eot");
+  /* IE9 compat */
+  src: url("/fonts/greek-bold-italic-eot.eot?#iefix") format("embedded-opentype"), url("/fonts/greek-bold-italic-woff.woff") format("-woff.woff"), url("/fonts/greek-bold-italic-ttf.ttf") format("truetype");
+  /*iOS, Android, Safari*/
+  font-weight: bold;
+  font-style: italic; }
+
+/*LIGHT ITALIC*/
+@font-face {
+  font-family: 'HPSimplifiedLight';
+  src: url("/fonts/greek-light-italic-eot.eot");
+  /* IE9 compat */
+  src: url("/fonts/greek-light-italic-eot.eot?#iefix") format("embedded-opentype"), url("/fonts/greek-light-italic-woff.woff") format("-woff.woff"), url("/fonts/greek-light-italic-ttf.ttf") format("truetype");
+  /*iOS, Android, Safari*/
+  font-weight: normal;
+  font-style: italic; }
+
+/*Importing typography-western*/
+body, input {
+  font-family: HPSimplified, Arial; }
+
+body {
+  font-size: 100%; }
+
+h1, h2, h3 {
+  font-weight: bold; }
+
+h1 {
+  font-size: 32px;
+  font-size: 2rem;
+  /*=32px*/
+  line-height: 32px;
+  line-height: 2rem;
+  /*=32px*/
+  margin-bottom: 9px;
+  margin-bottom: 0.5625rem;
+  /*=9px*/ }
+
+h2 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  /*=24px*/
+  line-height: 30px;
+  line-height: 1.875rem;
+  /*=30px*/
+  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
+  /*=5px*/ }
+
+h3 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  /*=20px*/
+  line-height: 24px;
+  line-height: 1.5rem;
+  /*=24px*/
+  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
+  /*=5px*/ }
+
+h4, h5, h6 {
+  font-weight: normal;
+  font-size: 16px;
+  font-size: 1rem;
+  /*=16px*/
+  line-height: 18px;
+  line-height: 1.125rem;
+  /*=18px*/ }
+
+/*Locale Specific Settings*/

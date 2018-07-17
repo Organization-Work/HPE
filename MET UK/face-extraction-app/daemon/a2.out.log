@@ -1,0 +1,1739 @@
+2017-10-26 19:09:48.447 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-26 19:10:00.489 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-26 19:10:17.330 [onRequest] GET request received.
+
+2017-10-26 19:10:17.335 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor1.MP4"
+}
+
+2017-10-26 19:10:17.360 [onRequest] GET request received.
+
+2017-10-26 19:10:17.362 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor2.MP4"
+}
+
+2017-10-26 19:10:17.511 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-26 19:10:17.513 [getTotalFrames] Total frames: 756
+
+2017-10-26 19:10:17.515 [onRequest] Processing complete.
+
+2017-10-26 19:10:17.532 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-26 19:10:17.533 [getTotalFrames] Total frames: 756
+
+2017-10-26 19:10:17.535 [onRequest] Processing complete.
+
+2017-10-26 19:23:28.330 [onRequest] GET request received.
+
+2017-10-26 19:23:28.338 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor1.MP4"
+}
+
+2017-10-26 19:23:28.358 [onRequest] GET request received.
+
+2017-10-26 19:23:28.360 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor2.MP4"
+}
+
+2017-10-26 19:23:28.381 [onRequest] GET request received.
+
+2017-10-26 19:23:28.386 [onRequest] {
+  "videoPath": "//KRSARKAR1/FaceAppImages/videos/corridor3.MP4"
+}
+
+2017-10-26 19:23:28.590 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-26 19:23:28.593 [getTotalFrames] Total frames: 756
+
+2017-10-26 19:23:28.597 [onRequest] Processing complete.
+
+2017-10-26 19:23:28.603 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-26 19:23:28.606 [getTotalFrames] Total frames: 756
+
+2017-10-26 19:23:28.609 [onRequest] Processing complete.
+
+2017-10-26 19:23:28.613 [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+2017-10-26 19:23:28.617 [getTotalFrames] Total frames: 756
+
+2017-10-26 19:23:28.621 [onRequest] Processing complete.
+
+2017-10-27 05:41:50.709 [videoActionsServer] videoActionsServer has started on port 14020.
+
+2017-10-27 08:55:47.735 [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 10:10:21.75 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/30/2017, 7:17:10.93 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+10/31/2017, 11:16:07.285 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/1/2017, 10:22:17.144 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/2/2017, 11:18:36.41 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/3/2017, 11:22:33.309 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/3/2017, 11:22:35.243 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/3/2017, 11:22:37.505 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/5/2017, 3:27:14.930 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/5/2017, 6:57:09.250 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/5/2017, 6:57:11.559 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/5/2017, 6:57:13.774 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 11:21:00.948 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 8:58:40.155 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 10:33:59.59 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 10:34:00.947 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/6/2017, 10:34:02.600 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/7/2017, 11:38:21.458 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/8/2017, 9:57:39.486 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/8/2017, 9:57:41.686 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/8/2017, 9:57:43.402 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/10/2017, 6:04:43.118 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/10/2017, 9:19:33.378 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/10/2017, 9:19:35.421 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/10/2017, 9:19:37.122 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/11/2017, 10:53:01.261 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 10:16:31.831 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 10:16:33.984 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 10:16:35.700 AM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 9:10:55.831 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 9:32:37.587 PM [videoActionsServer] videoActionsServer has started on port 14020.
+
+11/13/2017, 9:44:12.47 PM [onRequest] GET request received.
+
+11/13/2017, 9:44:12.55 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor2.MP4"
+}
+
+11/13/2017, 9:44:12.940 PM [onRequest] GET request received.
+
+11/13/2017, 9:44:12.942 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor4.MP4"
+}
+
+11/13/2017, 9:44:12.960 PM [onRequest] GET request received.
+
+11/13/2017, 9:44:12.962 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor5.MP4"
+}
+
+11/13/2017, 9:44:13.105 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 9:44:13.107 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 9:44:13.112 PM [onRequest] Processing complete.
+
+11/13/2017, 9:44:13.132 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 9:44:13.135 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 9:44:13.135 PM [onRequest] Processing complete.
+
+11/13/2017, 9:44:13.142 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 9:44:13.145 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 9:44:13.147 PM [onRequest] Processing complete.
+
+11/13/2017, 9:55:23.720 PM [onRequest] GET request received.
+
+11/13/2017, 9:55:23.723 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor3.MP4"
+}
+
+11/13/2017, 9:55:23.743 PM [onRequest] GET request received.
+
+11/13/2017, 9:55:23.745 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor4.MP4"
+}
+
+11/13/2017, 9:55:23.760 PM [onRequest] GET request received.
+
+11/13/2017, 9:55:23.763 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor5.MP4"
+}
+
+11/13/2017, 9:55:23.863 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 9:55:23.865 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 9:55:23.870 PM [onRequest] Processing complete.
+
+11/13/2017, 9:55:23.875 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 9:55:23.880 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 9:55:23.883 PM [onRequest] Processing complete.
+
+11/13/2017, 9:55:23.898 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 9:55:23.903 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 9:55:23.905 PM [onRequest] Processing complete.
+
+11/13/2017, 9:58:34.711 PM [onRequest] GET request received.
+
+11/13/2017, 9:58:34.714 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor1.MP4"
+}
+
+11/13/2017, 9:58:34.731 PM [onRequest] GET request received.
+
+11/13/2017, 9:58:34.731 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor2.MP4"
+}
+
+11/13/2017, 9:58:34.751 PM [onRequest] GET request received.
+
+11/13/2017, 9:58:34.754 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor3.MP4"
+}
+
+11/13/2017, 9:58:34.866 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 9:58:34.869 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 9:58:34.871 PM [onRequest] Processing complete.
+
+11/13/2017, 9:58:34.879 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 64000,
+  "duration": "5.000000",
+  "bit_rate": "262241",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "125",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 9:58:34.884 PM [getTotalFrames] Total frames: 125
+
+11/13/2017, 9:58:34.889 PM [onRequest] Processing complete.
+
+11/13/2017, 9:58:34.894 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 9:58:34.904 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 9:58:34.906 PM [onRequest] Processing complete.
+
+11/13/2017, 10:13:49.994 PM [onRequest] GET request received.
+
+11/13/2017, 10:13:49.998 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor1.MP4"
+}
+
+11/13/2017, 10:13:50.26 PM [onRequest] GET request received.
+
+11/13/2017, 10:13:50.35 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor2.MP4"
+}
+
+11/13/2017, 10:13:50.65 PM [onRequest] GET request received.
+
+11/13/2017, 10:13:50.69 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor3.MP4"
+}
+
+11/13/2017, 10:13:50.290 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:13:50.294 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 10:13:50.298 PM [onRequest] Processing complete.
+
+11/13/2017, 10:13:50.310 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:13:50.313 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 10:13:50.317 PM [onRequest] Processing complete.
+
+11/13/2017, 10:13:50.324 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 64000,
+  "duration": "5.000000",
+  "bit_rate": "262241",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "125",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:13:50.326 PM [getTotalFrames] Total frames: 125
+
+11/13/2017, 10:13:50.330 PM [onRequest] Processing complete.
+
+11/13/2017, 10:16:47.768 PM [onRequest] GET request received.
+
+11/13/2017, 10:16:47.771 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor1.MP4"
+}
+
+11/13/2017, 10:16:47.786 PM [onRequest] GET request received.
+
+11/13/2017, 10:16:47.790 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor2.MP4"
+}
+
+11/13/2017, 10:16:47.806 PM [onRequest] GET request received.
+
+11/13/2017, 10:16:47.809 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor3.MP4"
+}
+
+11/13/2017, 10:16:48.75 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:16:48.76 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 10:16:48.90 PM [onRequest] Processing complete.
+
+11/13/2017, 10:16:48.120 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:16:48.122 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 10:16:48.123 PM [onRequest] Processing complete.
+
+11/13/2017, 10:16:48.175 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 64000,
+  "duration": "5.000000",
+  "bit_rate": "262241",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "125",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:16:48.177 PM [getTotalFrames] Total frames: 125
+
+11/13/2017, 10:16:48.178 PM [onRequest] Processing complete.
+
+11/13/2017, 10:20:57.758 PM [onRequest] GET request received.
+
+11/13/2017, 10:20:57.760 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor1.MP4"
+}
+
+11/13/2017, 10:20:57.776 PM [onRequest] GET request received.
+
+11/13/2017, 10:20:57.778 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor2.MP4"
+}
+
+11/13/2017, 10:20:57.832 PM [onRequest] GET request received.
+
+11/13/2017, 10:20:57.835 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor3.MP4"
+}
+
+11/13/2017, 10:20:58.87 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:20:58.89 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 10:20:58.91 PM [onRequest] Processing complete.
+
+11/13/2017, 10:20:58.106 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 64000,
+  "duration": "5.000000",
+  "bit_rate": "262241",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "125",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:20:58.108 PM [getTotalFrames] Total frames: 125
+
+11/13/2017, 10:20:58.110 PM [onRequest] Processing complete.
+
+11/13/2017, 10:20:58.120 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:20:58.122 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 10:20:58.124 PM [onRequest] Processing complete.
+
+11/13/2017, 10:39:17.692 PM [onRequest] GET request received.
+
+11/13/2017, 10:39:17.694 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor1.MP4"
+}
+
+11/13/2017, 10:39:17.706 PM [onRequest] GET request received.
+
+11/13/2017, 10:39:17.708 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor3.MP4"
+}
+
+11/13/2017, 10:39:17.721 PM [onRequest] GET request received.
+
+11/13/2017, 10:39:17.723 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor2.MP4"
+}
+
+11/13/2017, 10:39:17.814 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:39:17.816 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 10:39:17.818 PM [onRequest] Processing complete.
+
+11/13/2017, 10:39:17.820 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 64000,
+  "duration": "5.000000",
+  "bit_rate": "262241",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "125",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:39:17.822 PM [getTotalFrames] Total frames: 125
+
+11/13/2017, 10:39:17.823 PM [onRequest] Processing complete.
+
+11/13/2017, 10:39:17.827 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 387072,
+  "duration": "30.240000",
+  "bit_rate": "1316828",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "756",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:39:17.828 PM [getTotalFrames] Total frames: 756
+
+11/13/2017, 10:39:17.830 PM [onRequest] Processing complete.
+
+11/13/2017, 10:57:07.673 PM [onRequest] GET request received.
+
+11/13/2017, 10:57:07.675 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor1.MP4"
+}
+
+11/13/2017, 10:57:07.800 PM [getTotalFrames] {
+  "index": 0,
+  "codec_name": "h264",
+  "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+  "profile": "High",
+  "codec_type": "video",
+  "codec_time_base": "1/50",
+  "codec_tag_string": "avc1",
+  "codec_tag": "0x31637661",
+  "width": 800,
+  "height": 600,
+  "coded_width": 800,
+  "coded_height": 600,
+  "has_b_frames": 2,
+  "sample_aspect_ratio": "1:1",
+  "display_aspect_ratio": "4:3",
+  "pix_fmt": "yuv420p",
+  "level": 31,
+  "chroma_location": "left",
+  "refs": 1,
+  "is_avc": "true",
+  "nal_length_size": "4",
+  "r_frame_rate": "25/1",
+  "avg_frame_rate": "25/1",
+  "time_base": "1/12800",
+  "start_pts": 0,
+  "start_time": "0.000000",
+  "duration_ts": 64000,
+  "duration": "5.000000",
+  "bit_rate": "262241",
+  "bits_per_raw_sample": "8",
+  "nb_frames": "125",
+  "disposition": {
+    "default": 1,
+    "dub": 0,
+    "original": 0,
+    "comment": 0,
+    "lyrics": 0,
+    "karaoke": 0,
+    "forced": 0,
+    "hearing_impaired": 0,
+    "visual_impaired": 0,
+    "clean_effects": 0,
+    "attached_pic": 0
+  },
+  "tags": {
+    "language": "und",
+    "handler_name": "VideoHandler"
+  }
+}
+
+11/13/2017, 10:57:07.802 PM [getTotalFrames] Total frames: 125
+
+11/13/2017, 10:57:07.804 PM [onRequest] Processing complete.
+
+11/13/2017, 11:02:18.413 PM [onRequest] GET request received.
+
+11/13/2017, 11:02:18.414 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi"
+}
+
+11/13/2017, 11:02:18.524 PM [getTotalFrames] exec error: Error: Command failed: C:\HewlettPackardEnterprise\face-extraction-app\ffprobe.exe -v quiet -print_format json -show_streams C:/HewlettPackardEnterprise/dropbox/videos/Monika2.avi
+
+
+11/13/2017, 11:02:18.529 PM [onRequest] Processing failed.
+
+11/13/2017, 11:02:29.388 PM [onRequest] GET request received.
+
+11/13/2017, 11:02:29.390 PM [onRequest] {
+  "videoPath": "C:/HewlettPackardEnterprise/dropbox/videos/corridor1.MP4"
+}
+
+11/13/2017, 11:02:29.490 PM [getTotalFrames] exec error: Error: Command failed: C:\HewlettPackardEnterprise\face-extraction-app\ffprobe.exe -v quiet -print_format json -show_streams C:/HewlettPackardEnterprise/dropbox/videos/corridor1.MP4
+
+
+11/13/2017, 11:02:29.492 PM [onRequest] Processing failed.
+
