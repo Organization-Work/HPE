@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:hca="http://www.autonomy.com/find/fields"
+  targetNamespace="http://www.autonomy.com/find/fields"
+  elementFormDefault="qualified">
+  
+    <simpleType name="filterType">
+        <restriction base="string">
+            <enumeration value="date"/>
+            <enumeration value="documentfolder"/>
+            <enumeration value="match"/>
+            <enumeration value="numeric"/>
+            <enumeration value="pararanges"/>
+            <enumeration value="text"/>
+        </restriction>
+    </simpleType>
+    
+    <complexType name="filterField">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="displayName" type="string"/>
+            <element name="printable" type="boolean" minOccurs="0" default="true"/>
+            <element name="weight"  type="int" minOccurs="0" default="0"/>
+            <element name="aggregated" type="boolean" minOccurs="0" default="false"/>
+            <element name="filterDefaultSelect" type="boolean" minOccurs="0" default="false"/>
+            <element name="topicmapDefaultSelect" type="boolean" minOccurs="0" default="true"/>
+            <element name="referenceType" type="boolean" minOccurs="0" default="false"/>
+            <element name="popType" type="boolean" minOccurs="0" default="false"/>
+            <element name="popDefaultSelect" type="boolean" minOccurs="0" default="false"/>
+            <choice>
+                <sequence>
+                    <element name="indexed" type="hca:idolField" minOccurs="0"/>                            
+                    <element name="parametric" type="hca:paraField" minOccurs="0"/>                                    
+                </sequence>
+                <element name="custom" type="hca:customField"></element>
+            </choice>
+        </sequence>
+    </complexType>
+        
+    <simpleType name="whenTypes">
+        <restriction base="string">
+            <pattern value="WHEN\d*"></pattern>
+        </restriction>
+    </simpleType>
+    
+    <complexType name="groupMeta">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="whenOp" type="hca:whenTypes" minOccurs="0"/>   
+            <element name="ordinal" type="int" minOccurs="0" default="0"/>
+        </sequence>
+    </complexType>
+    
+    <complexType name="filtersGroup">
+        <complexContent>
+            <extension base="hca:groupMeta">
+                <sequence>
+                    <element name="filterField" type="hca:filterField" minOccurs="1" maxOccurs="unbounded"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="filtersCategory">
+        <complexContent>
+            <extension base="hca:groupMeta">
+                <choice minOccurs="0" maxOccurs="unbounded">
+                    <element name="group" type="hca:filtersGroup"/>                    
+                    <element name="filterField" type="hca:filterField"/>
+                </choice>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="idolField">
+        <sequence>
+            <element name="name" type="string" minOccurs="0"/>
+            <element name="type" type="hca:filterType" minOccurs="0" default="text"/>
+            <element name="format" type="string" minOccurs="0"/>
+            <element name="matchSpecifier" minOccurs="0">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="EQUAL"/>
+                        <enumeration value="MATCH"/>
+                        <enumeration value="TERM"/>
+                    </restriction>
+                </simpleType>                
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="paraField">
+        <complexContent>
+            <extension base="hca:idolField">
+                <sequence>
+                    <element name="ranges" minOccurs="0">
+                        <simpleType>
+                            <restriction base="string">
+                                <pattern value="\{(\.|\d+),(\d+,)*(\.|\d+)\}"></pattern>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="customField">
+        <sequence>
+            <element name="mappedField" type="string"/>
+            <element name="type" type="hca:filterType" fixed="documentfolder"/>
+            <element name="specifier" type="string" fixed="MATCH"/>
+        </sequence>                
+    </complexType>
+        
+     
+    <element name="filterFields">
+        <complexType>
+            <sequence>
+                <element name="category" type="hca:filtersCategory" minOccurs="1" maxOccurs="unbounded">
+                </element>
+            </sequence>
+        </complexType>
+    </element> 
+  
+</schema>
+

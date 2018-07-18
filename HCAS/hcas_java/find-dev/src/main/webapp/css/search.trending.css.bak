@@ -1,0 +1,376 @@
+#trending-totals {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
+
+#trending-filters {
+	position: absolute;
+	top: 30px;
+	right: 0;
+	z-index: 1;
+	margin-bottom: 40px;
+	max-width: 240px;
+}
+
+#trending-filters li {
+	list-style: none;
+	margin: 1px 2px;
+	padding: 5px 2px;
+	border-radius: 2px;
+	background: #E6DFCA;
+	text-align: center;
+	color: black;
+}
+
+#trending-filters li.active {
+	background: #94d2f7;
+}
+
+#trending-filters li:hover {
+	background: #66c3fb;
+}
+
+ul.tfield-group-list {
+	margin: 0;
+	height: auto;
+}
+
+button.tfield-group-header {
+	width: 100%;
+	/*    
+    background-color: #e21313;
+    
+background-color: #f5f5f5;
+*/
+	font-size: 15px;
+	line-height: 22px;
+	/*color: #fff;*/
+	background-image: -ms-linear-gradient(top,#929292, #575454);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff),
+		to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top, #929292, #575454);
+	background-image: -o-linear-gradient(top,#929292, #575454);
+	background-image: linear-gradient(top,#929292, #575454);
+	background-image: -moz-linear-gradient(top, #929292, #575454)
+}
+
+button.tfield-group-header:hover {
+	background-position: 0;
+}
+
+#trending-chart {
+	margin: auto;
+}
+
+.idolview-tooltip {
+	position: absolute;
+	text-align: center;
+	text-overflow: ellipsis;
+	pointer-events: none;
+}
+
+.idolview-tooltip-filter {
+	color: #eee;
+	font-size: smaller;
+}
+
+.idolview-tooltip-name {
+	color: white;
+	font-weight: bold;
+}
+
+.idolview-tooltip-size {
+	color: black;
+}
+
+.labels {
+	text-anchor: middle;
+	font-size: 12px;
+	pointer-events: none;
+}
+
+.trending-settings {
+	margin: 10px 10px 10px 10px;
+}
+
+.trending-settings input,.histogram-settings select {
+	width: 100px;
+}
+
+.results-range {
+	border-bottom: 2px solid #e1e1e8;
+}
+
+#trending-chart {
+	margin: 10px 10px 10px 10px;
+}
+#trending-focus {
+	margin: 10px 10px 10px 10px;
+	width:80%;
+}
+#trending-context {
+	margin: 10px 10px 10px 10px;
+	width:80%;
+}
+#histogram-include-parent {
+	float: left;
+	width: 60px;
+	margin-left: 100px;
+	margin-top: 10px;
+}
+.results-range-text{
+    font-weight: bold;
+    font-size: 14px;
+}
+.light-grey{
+    color: #bdbdbd;
+}
+.histogram{
+    margin-top: 25px;
+}
+
+#trending button.tmfield-group-header:hover {
+	background-position: 0;
+}
+
+
+#trending text.shadow {
+    stroke: #fff;
+    stroke-width: 2.5px;
+    opacity: 0.9;
+}
+#trending path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+#trending line {
+    stroke: grey;
+    opacity: 0.5;
+}
+#trending .axis path,
+#trending .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 3;
+    shape-rendering: crispEdges;
+}
+#trending .grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+#trending  .grid path {
+    stroke-width: 0;
+}
+#trending .area {
+    fill: lightsteelblue;
+    stroke-width: 0;
+  	clip-path: url(#clip);
+}
+#trending .overlay {
+    fill: none;
+    pointer-events: all;
+}
+#trending .focus circle {
+    fill: green;
+    stroke: steelblue;
+}
+
+
+
+
+#trending-chart {
+	margin: auto;
+}
+
+#trending_svg a.trending-interval-options {
+    padding-left: 10px;
+}
+
+#trending_svg .trending-interval-options:before {
+    content: "\3000";
+}
+
+#trending_svg .trending-interval-options.selected:before {
+    content: "\2713";
+}
+#trending_svg .grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+#trending_svg .grid path {
+      stroke-width: 0;
+}
+#trending_svg .grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+#trending_svg .grid path {
+      stroke-width: 0;
+}
+
+#trending_svg th.selected {
+    color: #DD0707;
+}
+
+#trending_svg .timeine-interval-label {
+    position: relative;
+    float: left;
+    margin-bottom: 0;
+    border: 1px solid;
+    text-align: center;
+    line-height: 14px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);    
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+}
+
+#formatSelector {
+    margin-right: 5px;
+}
+
+#trending_svg  .axis path,
+#trending_svg .axis line {
+  fill: none;
+  stroke: #011;
+  shape-rendering: crispEdges;
+}
+
+#trending_svg .x.axis path {
+  display: show;
+}
+
+#trending_svg .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+#trending-totals {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#trending_svg  .idolview-tooltip {
+	position: absolute;
+	text-align: center;
+	text-overflow: ellipsis;
+	pointer-events: none;
+}
+
+#trending_svg .idolview-tooltip-filter {
+	color: #eee;
+	font-size: smaller;
+}
+
+#trending_svg .idolview-tooltip-name {
+	color: white;
+	font-weight: bold;
+}
+
+#trending_svg .idolview-tooltip-size {
+	color: black;
+}
+#trending_svg .trending-tooltip {
+    color: white;
+    border: 1px solid white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 2px;
+    position:absolute;
+    pointer-events: none;
+    text-align: center;
+    z-index: 1;
+}
+
+#trending_svg .trending-btn {
+    margin: 0 5px 5px 0;
+    float: left;
+}
+
+#trending_svg .trending-tooltip-label {
+    font-weight: bold;
+}
+
+#trending_svg .trending-ul {
+    margin-bottom: 0;
+}
+
+
+#trending_svg .trending-header-input {
+    float: right;
+    margin-right: 5px !important;
+}
+
+#trending_svg .trending-input {
+    white-space: nowrap;
+}
+
+#trending_svg .trending-menu {
+    min-width: 350px;
+    max-width: 450px;
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#trending_svg .trending-menu label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#trending_svg.multiselect-group {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#trending_svg .trending-btn-left
+{
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    margin-left: -1px !important;
+}
+
+#trending_svg .trending-btn-right
+{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+#trending .extent {
+  stroke: #fff;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+
+#trending .clear-button {
+    font-size: 12px;
+    padding: 0 2px;
+    position:absolute;
+    text-align: center;
+    stroke: steelblue;
+   	z-index: 1;
+   	cursor: pointer;
+}
+
+#trending .zoom-button {
+    font-size: 12px;
+    padding: 0 2px;
+    position:absolute;
+    text-align: center;
+    stroke: steelblue;
+   	z-index: 1;
+   	cursor: pointer;
+}
+#trending .zoom-region {
+  fill-opacity: 0;
+}

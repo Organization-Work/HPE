@@ -1,0 +1,41 @@
+.thread-popup {
+    font: 8pt Tahoma,Arial,Helvetica,sans-serif;
+    max-height: 400px;
+}
+
+.msg {
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 4px;
+}
+
+.msg-meta-header {
+    font-weight: bold;
+}
+
+.msg-title {
+    margin-bottom: 2px;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+
+.msg-body {
+    cursor: pointer;
+    margin: 2px 2px 0 10px;
+    padding-top: 1px;
+    text-overflow: ellipsis;
+    min-height: 1.4em;
+}
+
+.msg-collapsed {
+    margin-left: 2px;
+    height: 1.4em;
+    overflow-y: hidden;
+    background: url(../images/magnifier.png) no-repeat transparent top left;
+    padding-left: 18px;
+}
+
+.msg-fetchmore {
+    cursor: pointer;
+    text-decoration: underline;
+}

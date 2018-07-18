@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+
+       xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/context
+              http://www.springframework.org/schema/context/spring-context.xsd
+              http://www.springframework.org/schema/tx
+              http://www.springframework.org/schema/tx/spring-tx.xsd
+              http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring
+              http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.2.xsd
+              http://www.springframework.org/schema/task
+              http://www.springframework.org/schema/task/spring-task.xsd
+              http://www.springframework.org/schema/util
+              http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--
+    <context:component-scan base-package="com.hpe"
+                            use-default-filters="false">
+        <context:include-filter type="annotation"
+                                expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>
+
+    <context:component-scan base-package="autn.voronoi" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+    </context:component-scan> -->
+
+    <!-- Vertica Inclusion-->
+      <!-- <bean id="vdataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"-->
+    <bean id="vdataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
+           <property name="driverClassName" value="com.vertica.jdbc.Driver"/>
+           <property name="url" value="jdbc:vertica://172.16.117.51:5433/mimic2"/>
+
+           <property name="username" value="dbadmin"/>
+           <property name="password" value="password"/>
+       </bean>
+
+       <bean id="filterTemplate" class="com.autonomy.vertica.templates.FilterTemplate">
+           <property name="dataSource" ref="vdataSource"/>
+       </bean>
+
+
+<!--
+       <bean id="idol.properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+           <property name="locations">
+               <list>
+                   <value>classpath:idol.properties</value>
+                   <value>classpath:/hca.properties</value>
+               </list>
+           </property>
+       </bean>
+       <bean id="processFactory" class="com.autonomy.aci.client.annotations.IdolAnnotationsProcessorFactoryImpl" p:properties-ref="idol.properties"/>
+-->
+
+
+   </beans>

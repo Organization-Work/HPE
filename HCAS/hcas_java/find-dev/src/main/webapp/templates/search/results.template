@@ -1,0 +1,86 @@
+<div class="squishable <%= item.classes || '' %> db-<%= item.database.toLowerCase() %>">
+
+    <h2>
+    	<%
+				var selectedView = SearchConfig.searchViews[view];
+                var showDocView = selectedView.docViewEnabled;
+                if(showDocView) {                
+		%>
+        <a class="lightbox" href="<%= item.url || item.reference %>&searchView=<%= view %><%= item.linksStr %>" rel="search-result"><%= item.title %></a>
+        <%} else {%>
+        <span><%= item.title %></span>
+        <%}%>
+        <% if (SearchConfig.showLinks && item.linkId) {
+            var incoming = {}, outgoing = {};
+            incoming[SearchConfig.linkToField] = [item.linkId];
+            outgoing[SearchConfig.linkIdField] = item.links;
+        %>
+            <div class="btn-group related-articles" data-reference="<%- item.reference%>">
+                <button type="button" class="btn btn-mini btn-primary getLinks" >Citations</button>
+                <button class="btn btn-mini btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="getLinks"><i class="icon-list"></i> List Citations</a></li>
+                    <li><a href="#<%-$.toJSON({query: '*', filters: incoming})%>"><i class="icon-arrow-down"></i> Find Incoming Citations</a></li>
+        <%  if (item.links && item.links.length) { %>
+                    <li><a href="#<%-$.toJSON({query: '*', filters: outgoing})%>"><i class="icon-share-alt"></i> Find Outgoing Citations</a></li>
+        <%  }%>
+                </ul>
+            </div>
+        <% }%>
+    </h2>
+
+    <p><%= item.summary %></p>
+
+<% if (SearchConfig.showScore) { %>
+    <table class="table table-bordered" style="width: auto;">
+        <tr>
+            <th>Weight:</th>
+            <td><%- item.weight %></td>
+        </tr>
+    </table>
+<% } %>
+
+<%  if (item.displayFields) { %>
+    <table class="display-fields">
+<%
+        _.each(item.displayFields, function(value, key) {
+            if (value && value.length) {
+%>
+                <tr>
+                    <td class="display-header">
+<%
+				var selectedView = SearchConfig.searchViews[view];
+                var conf = selectedView.displayFields[key];
+                if (conf && conf.icon) {
+                    %><i class="<%-conf.icon%>"></i> <%
+                }
+%>
+                    <%=key%>
+                    </td>
+                    <td><%-value.join(', ')%></td>
+                </tr>
+<%          }
+       })
+%>
+        </table>
+<%  } %>
+
+    <% if (item.meta) { %>
+    <div class="meta-data">
+<%      _.each(item.meta, function (value, key) {
+            if (value && value.length) { %>
+            <button
+                  class="btn btn-mini"
+                  data-meta-values="<%- JSON.stringify(value)%>"
+                  data-meta-key="<%- key %>"
+                  >
+                <%- key %> </button>
+<%          }
+        });
+%>
+    </div>
+    <% } %>
+
+</div>

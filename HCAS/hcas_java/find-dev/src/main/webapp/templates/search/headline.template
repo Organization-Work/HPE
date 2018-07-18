@@ -1,0 +1,34 @@
+<% var process = function (cls) { return function (item) { %>
+  <div class="<%= cls %>">
+    <% _.each(item.documents.slice(0, 1), function (post) { %>
+      <h3 class="clusterTitle">
+        <a class="lightbox cboxElement" href="<%= post.url || post.reference %>"><%= post.title %></a>
+      </h3>
+      <div class="clusterDocSummary"><%= post.summary %></div>
+      <ul class="clusterDoc otherDocs">
+        <% _.each(item.documents.slice(1), function (doc) { %>
+          <li><button class="btn btn-mini summary-expand">+</button>
+            <a class="clusterChildLink lightbox cboxElement" href="<%= doc.url || doc.reference %>"><%= doc.title %></a>
+            <div class="hiddenSummary"><%= doc.summary %></div>
+          </li>
+        <% }); %>
+      </ul>
+      <p class="moreAbout">More about:
+        <% _.each(item.title.split(/,\s*/g), function (link) { %>
+          <a class='setSearch label label-info' href="#<%= link %>"><%= link %></a>
+        <% }); %>
+      </p>
+    <% }); %>
+  </div>
+<% }; }; %>
+
+<% if (other.odd) { %><div class='first'>
+  <% _.each(items.slice(0, 1), process('span10 middle maxWidth800')); %>
+</div><% } %>
+
+<div class='pairs'>
+  <% _.chain(items.slice(other.odd ? 1 : 0)).partition(2).each(function (pair) { %>
+    <div class='pair row-fluid'><% _.each(pair, process('halfFull')); %></div>
+  <% }); %>
+</div>
+  

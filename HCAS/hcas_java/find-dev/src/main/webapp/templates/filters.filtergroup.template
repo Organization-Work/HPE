@@ -1,0 +1,38 @@
+
+
+<fieldset class="filter-group filter-contextmenu">
+    <legend class="filter-group">
+        <div class="input-prepend input-append">
+            <a class="filter-group group-collapse"> <i class="icon icon-chevron-up"></i> </a> 
+            <select class="input-small btn-inverse filter-group">
+                <option value="AND">All</option>
+                <option value="OR">Any</option>
+                <option value="NOT_AND">Not All</option>
+                <option value="NOT_OR">Not Any</option>
+                <option value="WHEN" class="hidden">When in</option>
+            </select> 
+            <a class="filter-group grouptag group-editable" data-toggle="tooltip" title="Add name"> <i class="icon icon-tag"></i> </a>
+            <input class="filter-group grouptag hidden" type="text" value=""></input> 
+            <a class="filter-group group-save group-editable" data-toggle="tooltip" title="Save filter set"> <i class="icon icon-hdd"></i> </a>
+           <!-- <div class="dropdown group-cohort" >
+                <a class="filter-group group-cohort group-editable" data-toggle="dropdown" href="#"><img class="icon icon-cohort" src="../img/cohort.png" data-toggle="tooltip" title="Set filter group as patient cohort"></img></a>
+                <ul class="dropdown-menu group-cohort" role="menu" aria-labelledby="dLabel">
+                    <li><a href="#" name="PT_MATCH" class="cohort-options" tabindex="-1" data-toggle="tooltip" title="Match filter group as patient cohort"> Match Patients</a></li>
+                    <li><a href="#" name="PT_EXCLUDE" class="cohort-options" tabindex="-1" data-toggle="tooltip" title="Exclude filter group as patient cohort"> Exclude Patients</a></li>
+                </ul>
+            </div> -->
+            <div class="dropdown group-close" >
+                <a class="filter-group group-close group-editable" data-toggle="dropdown" href="#"> <i class="icon icon-remove" data-toggle="tooltip" title="Remove or deactivate filter group"></i> </a>
+                <ul class="dropdown-menu group-close" role="menu" aria-labelledby="dLabel">
+                    <li><a href="#" name="GRP_DEACTIVATE" class="grpclose-options" tabindex="-1" data-toggle="tooltip" title="Deactivate filter group"> Deactivate</a></li>
+                    <li><a href="#" name="GRP_REMOVE" class="grpclose-options" tabindex="-1" data-toggle="tooltip" title="Remove filter group"> Remove</a></li>
+                </ul>
+            </div>
+            
+            
+        </div>
+    </legend>
+    <div class="group-loader hidden"><span>Loading...</span></div>
+    <div class="filters-list">
+    </div>
+</fieldset>

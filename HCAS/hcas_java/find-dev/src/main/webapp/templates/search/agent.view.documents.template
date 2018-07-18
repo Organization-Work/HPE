@@ -1,0 +1,15 @@
+<% _.each(documents, function (doc) { %>
+  <div class="agentDocument unread well">
+    <button class="btn-readstate btn pull-right <%=hideRead ? 'hide' : ''%>" data-ref="<%= doc.reference %>">
+      <span class='btn-text'>Mark as read</span>
+    </button>
+    <h2><a class="lightbox" href="<%= doc.url || doc.reference %>" rel="agent-doc"><%= doc.title %></a></h2>
+    <p class="summary"><%= doc.summary %></p>
+    <table class="table table-bordered" style="width: auto;">
+      <tr>
+        <th>Weight:</th>
+        <td><%= doc.weight %></td>
+      </tr>
+    </table>
+  </div>
+<% }); %>

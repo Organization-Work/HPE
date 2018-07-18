@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="false">
+
+    <!--<diskStore path="java.io.tmpdir/find"/>-->
+
+    <defaultCache eternal="false" maxElementsInMemory="200"
+                  overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="600"
+                  memoryStoreEvictionPolicy="LRU"/>
+
+    <!--Search caches - 10 minute expiry, no auto refreshing-->
+    <cache name="SearchService.search_results" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="SearchService.search_results_db" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="SearchService.search_suggestions" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="SearchService.search_suggestions_db" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="SearchService.search_top_titles" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="SearchService.search_top_titles_summaries" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="SearchService.related_concepts" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="SearchService.search_fields" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="SearchService.search_networkmap" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU"/>
+
+
+    <!--News caches - items kept in cache for up to 12 hours of inactivity, auto refreshed-->
+    <cache name="AppService.version_info" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="43200000" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="NewsService.categories" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="43200000" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="NewsService.cluster_terms" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="43200000" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="NewsService.term_cache_titles" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="43200000" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="NewsService.news" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="43200000" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="NewsService.theme_timeline" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="43200000" memoryStoreEvictionPolicy="LRU"/>
+
+    <!--History caches - items kept in cache for up to 2 hours of inactivity, auto refreshed-->
+    <cache name="HistoryService.top_search_concepts" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="7200000" memoryStoreEvictionPolicy="LRU"/>
+
+
+    <!--Taxonomy Hierarchy-->
+    <cache name="TaxonomyDocCountService.getCategoryDocCounts" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           memoryStoreEvictionPolicy="LRU" timeToIdleSeconds="86400" timeToLiveSeconds="86400"/>
+
+    <cache name="TaxonomyService.getCategoryData" eternal="false"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           memoryStoreEvictionPolicy="LRU" timeToIdleSeconds="86400" timeToLiveSeconds="86400"/>
+
+
+    <!--  Parametric  -->
+    <cache name="Parametric.getFieldValues_fieldNames" eternal="true"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="Parametric.getFieldValues_fileName" eternal="true"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="Parametric.getParaFieldNames_viewName" eternal="true"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="Parametric.getFilterFieldNames_viewName" eternal="true"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="Parametric.getCategorizedParaFieldNames_viewName" eternal="true"
+           maxElementsInMemory="200" overflowToDisk="false" diskPersistent="false"
+           memoryStoreEvictionPolicy="LRU"/>
+
+
+    <!-- Voronoi caches -->
+        <!-- It's unlikely that term distributions will change drastically, even in a week -->
+    <cache name="voronoi.findUnstemmedTerm" eternal="false" maxElementsInMemory="50000" overflowToDisk="false"
+           diskPersistent="false" timeToIdleSeconds="604800" memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="voronoi.nodegraph" eternal="false" maxElementsInMemory="200" overflowToDisk="false"
+           diskPersistent="false" timeToIdleSeconds="7200" memoryStoreEvictionPolicy="LRU" timeToLiveSeconds="86400"/>
+
+    <cache name="voronoi.query" eternal="false" maxElementsInMemory="200" overflowToDisk="false"
+           diskPersistent="false" timeToIdleSeconds="7200" memoryStoreEvictionPolicy="LRU" timeToLiveSeconds="86400"/>
+
+    <cache name="querytagvaluescache.getquerytagvalues" eternal="false" maxElementsInMemory="200" overflowToDisk="false"
+           diskPersistent="false" timeToIdleSeconds="86400" memoryStoreEvictionPolicy="LRU" timeToLiveSeconds="86400"/>
+
+    <cache name="docgraph.docgraph" eternal="false" maxElementsInMemory="200" overflowToDisk="false"
+           diskPersistent="false" timeToIdleSeconds="7200" memoryStoreEvictionPolicy="LRU" timeToLiveSeconds="86400"/>
+</ehcache>

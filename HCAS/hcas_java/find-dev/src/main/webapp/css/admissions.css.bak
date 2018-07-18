@@ -1,0 +1,325 @@
+head, body {
+    height:100%;
+    /*overflow-y: hidden;*/
+}
+
+.full-height {
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+#restricted {
+    text-align: center;
+    width: 100%;
+    /*height: 100%;*/
+}
+
+#restricted-text {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+}
+
+#record_container {
+    left: 20px;
+    right: 30%;
+}
+
+#record_container.has-admissions {
+    left: 10%;
+}
+
+
+
+#docview_rightpanel {
+    right: 0;
+    left: 70%;
+    padding: 10px 10px 20px 10px;
+	height:auto;
+	display:block;
+	position: absolute;
+	border-width:3px;
+	border-color:darkgray;
+}
+#agentstore-fields {
+	position:relative;
+	width:90%;
+	height:auto;
+ 	display:block;
+}
+#filters-viewer {
+	position:relative;
+	width:90%;
+	height:auto;
+ 	display:block;
+}
+
+/*
+#agentstore-fields {
+    right: 0;
+    left: 70%;
+    padding: 10px 10px 20px 10px;
+}
+#filters-viewer {
+    position: absolute;
+    right: 0;
+    left: 70%;
+    padding: 5px 5px 5px 5px;
+    overflow: auto;
+    top: 40px;
+    bottom:50%;
+    border: 1px solid #AAA;
+ }
+*/
+div.docview_iframe_content {
+	min-height:500px;
+	height:auto;
+	width:90%;
+	border-style:solid;
+	border-color:lightgray;
+	position:relative;
+	overflow:auto;
+}
+div.docview_iframe_content img {
+	border-style:dotted;
+	border-color:blue;
+	border-width:thin;
+	max-width:90%;
+}
+
+fieldset.filter-query {
+    padding: 0 5px 5px 5px !important;
+}
+
+fieldset.filter-query input {
+    width: 100%;
+}
+
+.hl-nav,
+#result-nav {
+    display: inline-block;
+    margin: 5px;
+}
+
+.hl-nav-link {
+    cursor: pointer;
+}
+
+.hl-nav-text,
+.hl-nav-link,
+.resultcount {
+    line-height: 20px;
+    margin: 4px;
+    vertical-align: -2px;
+}
+
+
+}
+#agentstore-fields.showing-filters-viewer {
+    top: 50%;
+    border: 1px solid #AAA;
+}
+
+
+#admissions-scroller {
+    left: 0;
+    right: 90%;
+    padding: 0 1px;
+    margin-right: 2px;
+    max-width: 150px;
+    text-align: center;
+}
+
+#agentstore-fields > h3 {
+    margin-top: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.scrolled-link {
+    font-weight: bold;
+}
+
+.docquery-highlight-link,
+.docquery-highlight,
+.docquery-highlight2 {
+    background: yellow;
+}
+
+.docquery-highlight.active,
+.docquery-highlight2.active {
+	 background: #f6b3ff;
+   /*  background: #f081ff;   */ 
+}
+
+.active-field {
+    background: yellow;
+}
+
+.indented {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.admission-date, .admission-link {
+    font-size: smaller;
+    color: gray;
+}
+
+.admission-date {
+    margin-left: 5px;
+}
+
+.admission {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+
+.admission:nth-child(even) {
+    background-color: #f7f4e8;
+}
+
+.admission:nth-child(odd) {
+    background-color: #eaede8;
+}
+
+.admission h4, .admission-link {
+    cursor: pointer;
+}
+
+.documentfolder.existing {
+    color: saddlebrown;
+}
+
+a.disabled,
+a.disabled:visited ,
+a.disabled:active,
+a.disabled:hover {
+    cursor: default;
+    opacity: .50;
+    filter: alpha(opacity=50);
+}
+
+.last-section-field {
+    margin-bottom: 15px;
+}
+
+.data-section {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.data-section.items-list {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.section-header {
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.sub-section-header {
+    font-weight: bold;
+}
+
+.horizontal-list ul{
+    list-style: none;
+    margin-bottom: 1px;
+    margin-left: 8px;
+    
+}
+
+.horizontal-list li,
+.horizontal-list div {
+    display: inline;
+    margin-right: 5px;
+}
+
+input.hlclicked {
+    background-color: yellow;
+}
+
+input.tt-input[style].hlclicked {
+    background-color: yellow !important;
+   
+}
+
+#queryTextInput {
+    cursor: pointer;
+}
+
+.no-selection {
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+
+div.hl-nav-label {
+    display: inline-block
+}
+
+div.hl-nav-label.zero-hit {
+    background: red;
+}
+
+.data-section.items-list div.external-content {
+    max-height: 150px;
+    overflow: auto;
+}
+
+htag.docquery-highlight {
+	cursor:pointer;
+}
+htag.docquery-highlight-active {
+	cursor:pointer;
+}
+div.external-content.loaded {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+div.external-content.loading:after {
+    content: url('../img/blue-loading.gif');
+}
+
+
+div.external-content.error {
+    color: red;
+}
+
+#link-menu {
+    display:none;
+   	margin:0; 
+    padding:0; 
+    width:200;
+    border: 1px solid black;
+    display: block;
+	background-color:#f6f6f6;			
+	position:absolute;
+}
+#link-menu li {
+	   	margin:0; 
+    	padding:0; 
+    	list-style:none;
+	    background-color:#f6f6f6;
+		width:auto;
+		display:block;
+}
+#link-menu li a {
+	   	margin:0; 
+    	padding:0; 
+}
+#docviewmessage {
+	color: red;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+
+
+

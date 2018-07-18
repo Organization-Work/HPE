@@ -1,0 +1,23 @@
+<decorators defaultdir="/WEB-INF/decorators">
+	<decorator name="main" page="master.jsp">
+        <pattern>/admin/*</pattern>
+		<pattern>/p/*</pattern>
+	</decorator>
+	<decorator name="navigation" page="navigation.jsp">
+		<pattern></pattern>
+	</decorator>
+    <decorator name="adminSubNav" page="adminSubNav.jsp">
+	</decorator>
+	<decorator name="search.settings" page="search.settings.jsp">
+		<pattern></pattern>
+	</decorator>
+    <decorator name="search.advanced" page="search.advanced.jsp">
+        <pattern></pattern>
+    </decorator>
+	<decorator name="search.agents" page="search.agents.jsp">
+		<pattern></pattern>
+	</decorator>
+	<decorator name="agent.edit" page="agent.edit.jsp">
+		<pattern></pattern>
+	</decorator>
+</decorators>

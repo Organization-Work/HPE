@@ -1,0 +1,72 @@
+#topicmap-totals {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.topicmap-tooltip {
+    color: white;
+    border: 1px solid white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 2px;
+    position:absolute;
+    pointer-events: none;
+    text-align: center;
+    z-index: 1;
+}
+
+.topicmap-btn {
+    margin: 0 5px 5px 0;
+    float: left;
+}
+
+.topicmap-tooltip-label {
+    font-weight: bold;
+}
+
+.topicmap-ul {
+    margin-bottom: 0;
+}
+
+.topicmap-header-input {
+    float: right;
+    margin-right: 5px !important;
+}
+
+.topicmap-input {
+    white-space: nowrap;
+}
+
+.topicmap-menu {
+    min-width: 350px;
+    max-width: 450px;
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.topicmap-menu label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.multiselect-group {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.topicmap-btn-left
+{
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    margin-left: -1px !important;
+}
+
+.topicmap-btn-right
+{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}

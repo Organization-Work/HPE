@@ -1,0 +1,18 @@
+<div class="btn-group" style="display:none" id="cohort-section">
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">Cohort <span class="caret"></span></button>
+
+           	  <ul class="dropdown-menu">
+                    <li>
+                        <div class="cohort-settings"> 
+                        	 <div class="control-group">
+    								<label class="control-label" for="cohort-query">Cohort Query<button class="btn btn-mini btn-info copy-clipboard pull-right" title="Copy to clipboard"><i class="icon-white icon-list-alt"></i> Copy</button></label>
+        					 </div>
+                        	 <div class="control-group">
+                                <div class="controls">
+                                    <textarea id="cohort-query" readonly></textarea>
+                                </div>
+                            </div>                          
+                        </div>
+                    </li>
+                </ul>
+</div>

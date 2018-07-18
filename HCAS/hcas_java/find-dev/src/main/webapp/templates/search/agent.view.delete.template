@@ -1,0 +1,10 @@
+<p>Are you sure you wish to delete agent:</p>
+<p><%= agent.name %></p>
+<p style="overflow: hidden; padding-top: 20px;">
+	<button data-aid="<%= agent.aid %>" class="reject-btn btn pull-left btn-primary">
+		<i class="icon-white icon-ban-circle"></i> Nope
+	</btn>
+	<button data-aid="<%= agent.aid %>" class="accept-btn btn btn-danger pull-right">
+		<i class="icon-white icon-warning-sign"></i> Yes
+	</btn>
+</p>

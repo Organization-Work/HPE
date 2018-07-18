@@ -1,0 +1,613 @@
+fieldset.filter-group {
+    border: 1px groove #ddd !important;
+    padding: 0 5px 5px 5px !important;
+    margin: 0 0 2px 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.filter-group {
+    width: inherit; /* Or auto */
+    padding: 0 10px; /* To give a bit of padding on the left and right */
+    border-bottom: none;
+    margin-bottom: 0;
+
+}
+
+legend.filter-group select {
+    font-size: 12px;
+    height: 20px;
+    padding: 1px 0px 0px 0px;
+    line-height: 24px;
+    width: auto;
+}
+
+.filter-item select.field-operator {
+    font-size: 12px;
+    height: 20px;
+    padding: 1px 0px 0px 0px;
+    line-height: 24px;
+    width: auto;
+}
+
+
+legend.filter-group input[type="text"] {
+    font-size: 12px;
+    height: 20px;
+    padding: 2px 0px 0px 0px;
+    line-height: 24px;
+    width: 100px;
+}
+
+legend.filter-group .dropdown {
+    display: inline-block;
+}
+
+fieldset.filter-group.cohortFilterGroup {
+    border: 1px dashed black !important;
+}
+
+ul.group-cohort a,
+ul.group-close a {
+    font-size: 12px;
+}
+
+.icon-cohort {
+    vertical-align: middle;
+}
+
+.dropdown-menu .cohort-options,
+.dropdown-menu .grpclose-options {
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+.cohort-options:before,
+.grpclose-options:before {
+    content: "\3000";
+}
+
+.cohort-options.selected:before,
+.grpclose-options.deactivated:before {
+    content: "\2713";
+}
+
+fieldset.deactivated {
+    background-color: #f3f3f3;
+    filter: contrast(70%);
+    -webkit-filter: contrast(70%);    
+}
+
+.result-view {
+    margin-right: 25px;
+    color: black;
+}
+
+.result-view select {
+    width: auto;
+    height: 22px;
+    line-height: 22px;
+    padding: 2px;
+    vertical-align: inherit;
+}
+
+.search-mode select {
+    width: auto;
+    height: 22px;
+    line-height: 22px;
+    padding: 1px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.search-mode h2 {
+    display: inline;
+}
+
+#searchGo {
+    margin-left: 0px;
+}
+
+#searchArea {
+    width: 100%;
+} 
+
+#filterSyncError {
+    margin-top: 10px;
+    color: red;
+    font-size: 12px;
+}
+
+.view-results-label {
+    vertical-align: top;
+    line-height: 28px;
+}
+
+.view-results-label.error,
+.view-results-label.loading {
+    text-decoration: line-through;
+    color: red;
+}
+
+.view-results-label.loading:before {
+    content: url('../img_logos/blue-loading.gif');
+}
+
+
+@media (min-width: 1500px) {
+    #searchArea {
+        width: 220px;
+    } 
+}
+
+input.grouptag.hidden,
+input.hidden,
+div.hidden,
+select.hidden,
+iframe.hidden {
+    display: none;
+}
+
+a.grouptag.hidden {
+    display: none;
+}
+
+input.grouptag-label {
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 5px;
+    border: none;
+}
+
+
+div.filter-container {
+    margin-top: 5px;
+}
+
+
+fieldset div.add-fieldset {
+    margin-top: 15px;
+}
+
+.filter-item.lastAdded,
+.filter-item.selected {
+    background: rgb(255, 255, 200);
+}
+
+.edit-disabled filter-item.lastAdded, 
+.edit-disabled .filter-item.selected {
+    background: inherit;
+}
+
+
+.filter-container button.close {
+    margin-left: 8px;
+}
+
+
+.filter-container a {
+    text-decoration: none;
+}
+
+.filter-group a {
+    text-decoration: none;
+}
+
+.filter-group i {
+    vertical-align: middle;
+}
+
+.group-highlight {
+    background-color: #e8FFFF;
+}
+
+.edit-disabled .group-highlight {
+    background-color: inherit;
+}
+
+a.fieldlist-control,
+a.docfolder-control {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+
+ul.grouping,
+ul.docimportexport,
+ul.result-actions,
+ul.context-menu,
+ul.group-cohort,
+ul.group-close {
+    min-width: 0;
+}
+
+ul.group-cohort,
+ul.group-close {
+    margin-top: -5px;
+}
+
+
+.foldercontent {
+    margin-bottom: 18px;
+    margin-top: 10px;
+    height: 145px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.filter-dialog-ui label,
+.dialogLabel {
+    width: 100px;
+    display: inline-block;
+    padding-left: 12px;
+}
+
+.filter-dialog-ui.modal {
+    width: 450px;
+}
+
+span.dropdown button.dropdown-toggle {
+    margin-left: -5px;
+}
+
+.dropdown-menu i {
+    margin-right: 5px;
+    margin-top: 1px;
+    vertical-align: text-top;
+}
+
+.folderselect span.dropdown {
+    display: inline-block;
+}
+
+.folderselect ul.dropdown-menu {
+    width: 220px;
+    height: 160px;
+    overflow: auto;
+}
+
+
+.filter-dialog-ui .tree.foldertree {
+    border: none;
+}
+
+
+.filterset-context-menu {
+    position: relative;
+    display: none;
+}
+
+.filters-contextmenu {
+	position: absolute;
+}
+
+.filterset-context-menu .dropdown-menu,
+.filters-contextmenu .dropdown-menu {
+    display: block;
+		margin-bottom: 5px;
+}
+
+.foldername-input {
+    display: none;
+}
+
+input.span35, textarea.span35 {
+    width: 230px;
+}
+
+.filter-dialog, .macro-dialog {
+    position: absolute;
+}
+
+.modal.confirm-dialog {
+    width: 350px;
+}
+
+.confirm-dialog.modal-body {
+    min-height: 50px;
+}
+
+.message-icon {
+    float: left;
+    margin-right: 20px;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+table.exporttableheader {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+td.exportfielddelete {
+    text-align: center;
+}
+
+div.exporttablescontainer {
+    border: 1px solid #ddd;
+}
+
+div.exporttablescontainer thead {
+    background-color: #aaa;
+}
+
+div.exporttablescontainer tr {
+    border-bottom: 1px solid #ddd;
+}
+
+form.fieldsexport .control-label {
+    padding-left: 10px;
+    text-align: left;
+    width: 100px;
+}
+
+form.fieldsexport.result-export .control-label {
+    width: 130px;
+}
+
+div.exportfieldvalue {
+    font-style: italic;
+}
+
+
+div.fieldsexporttable {
+    height: 120px;
+    overflow: auto;
+}
+
+div.exportfieldsselect ul.multiselect-container {
+    height: 185px;
+    overflow: auto;
+}
+
+div.exportFormatSelect select {
+    width: 100px;
+}
+
+div.fieldsexporttable th {
+    text-align: center;
+}
+
+.results-export-control div.checkbox {
+    margin-bottom: 5px;
+}
+
+#loadingPreloader {
+    margin-left: 65px;
+}
+
+#loadingDialog {
+    width: 250px;
+}
+
+#loadingDialog .modal-header {
+    background-color: rgba(43, 43, 49, 0.2);
+}
+
+#loadingDialog .modal-body {
+    background-color: rgba(38, 38, 38, 0.1);
+}
+
+div.date-input {
+    max-width: 280px;
+}
+
+
+span.filter-label:focus {
+    outline: 0;
+}
+
+span.filter-label:hover {
+    cursor: pointer;
+    /*color: #05c;*/
+}
+
+/* copy the outline style from bootstrap */
+.confirm-dialog .btn.primary {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+select.placeholder {
+    color: #d5d5d5;
+}
+
+select.placeholder option {
+    color: black;
+}
+
+#documentExportDialog .modal-body {
+    max-height: 420px;
+}
+
+input[type="radio"].filter-indicator {
+    cursor: auto;
+    margin-left: 3px;
+}
+
+.exportfieldsselect .multiselect-container.dropdown-menu {
+    max-width: 350px;
+}
+
+.multiselect-container.dropdown-menu {
+    max-width: 450px;
+}
+
+.multiselect-container.dropdown-menu label{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mini.badge {
+  display: inline-block;
+  padding: 1px 2px;
+  margin-bottom: 2px;
+  margin-left: 5px;
+  font-size: 9.475px;
+  font-weight: bold;
+  line-height: 10px;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #525252;
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+}
+
+.text-info {
+    color: #3a87ad;
+}
+
+.icon.disabled {
+	opacity: 0.4;
+}
+
+
+form.filters {
+	position: relative;
+}
+
+.in-filter-contextmenu {
+	border-top: 1px inset rgb(226, 228, 217);
+	border-left: 1px inset rgb(226, 228, 217);
+	border-right: 2px inset rgb(226, 228, 217);
+	border-bottom: 2px inset rgb(226, 228, 217);
+	
+}
+
+.selected.in-filter-contextmenu {
+	border: none;
+}
+
+.filter-item {
+	padding-top: 1px;
+	padding-left: 1px;
+}
+
+/*!
+ *  Bootstrap 2.3.2 css
+ */
+.dropdown-menu a.disabled,
+.dropdown-menu a:hover.disabled,
+.dropdown-menu a:focus.disabled {
+  color: #999999;
+}
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:focus > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"],
+.dropdown-submenu:focus > a > [class*=" icon-"] {
+  background-image: url("../img/glyphicons-halflings-white.png");
+}
+
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0081c2;
+  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+     -moz-border-radius: 0 6px 6px 6px;
+          border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropup .dropdown-submenu > .dropdown-menu {
+  top: auto;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: -2px;
+  -webkit-border-radius: 5px 5px 5px 0;
+     -moz-border-radius: 5px 5px 5px 0;
+          border-radius: 5px 5px 5px 0;
+}
+
+.dropdown-submenu > a:after {
+  display: block;
+  float: right;
+  width: 0;
+  height: 0;
+  margin-top: 5px;
+  margin-right: -10px;
+  border-color: transparent;
+  border-left-color: #cccccc;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  content: " ";
+}
+
+.dropdown-submenu:hover > a:after {
+  border-left-color: #ffffff;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+     -moz-border-radius: 6px 0 6px 6px;
+          border-radius: 6px 0 6px 6px;
+}
+
+.dropdown .dropdown-menu .nav-header {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+div.control-group {
+  margin-bottom: 5px;
+}
+
+form.filters.edit-disabled .group-editable {
+    display: none;
+}
+
+.filters.edit-disabled input[readonly] {
+    cursor: pointer;
+}
+
+.filters.edit-disabled input[type="text"] {
+    font-size: 12px;
+    padding: 2px;
+}
+
+.filters.edit-disabled .filter-label {
+    cursor: auto;
+}
+
+td.drag-handle {
+    cursor: pointer;
+}

@@ -1,0 +1,61 @@
+<%
+
+var bannerIcons = {
+	'Headline': 'icon-star',
+	'Breaking': 'icon-certificate',
+	'Popular': 'icon-fire'
+};
+
+var banner = function (category) { %>
+	<div class="<%= category %>">
+		<i class="<%= bannerIcons[category] %> icon-white"></i> <%= category %> News
+	</div>
+<% };
+
+var heading = function (post) { %>
+	<h3 class="clusterTitle">
+		<a class="lightbox cboxElement" href="<%= post.url || post.reference %>" rel="cluster-doc"><%= post.title %></a>
+	</h3>
+<% };
+
+var mainDocument = function (item) { %>
+	<ul class="otherDocs">
+    <% _.each(item.documents.slice(0, 1), function (post) {
+			heading(post); %>
+			<div><%= post.summary %></div>
+		<% }); %>
+	</ul>
+<% };
+
+var otherDocuments = function (item) { %>
+	<ul class="otherDocs">
+		<% _.each(item.documents.slice(1), function (doc) { %>
+			<li><button class="btn btn-mini summary-expand"><i class="icon-arrow-right"></i></button>
+				<a class="lightbox cboxElement" href="<%= doc.url || doc.reference %>"><%= doc.title %></a>
+				<div class="hiddenSummary"><%= doc.summary %></div>
+			</li>
+		<% }); %>
+	</ul>
+<% };
+
+var moreAbout = function (title) { %>
+	<p class="moreAbout">More about:<br>
+		<% _.each(title.split(/,\s*/g), function (link) { %>
+			<a class='setSearch label label-info' href="#<%= link %>"><%= link %></a>
+		<% }); %>
+	</p>
+<% };
+
+var process = function (item) { %>
+	<div class="para">
+		<% banner(item.category);
+			 mainDocument(item);
+			 otherDocuments(item);
+			 moreAbout(item.title); %>
+	</div>
+<% };
+
+//	Process each item
+_.each(items, process);
+
+%>

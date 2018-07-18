@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<docview xmlns="http://www.autonomy.com/find/docview"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.autonomy.com/find/docview hca_docview.xsd"
+    docRoot="DOCUMENT">
+    <viewtab name="Encounter Info">
+        <field name="ADMISSION/HADM_ID" label="Encounter ID"></field>
+        <field name="ADMISSION/PATIENT/ADMISSION_DATE" label="Admission Date"></field>
+        <field name="ADMISSION/PATIENT/DISCHARGE_DATE" label="Discharge Date"></field>
+        <field name="ADMISSION/PATIENT/ADMISSION_DATE_YRMON" label="Admission YearMonth"></field>
+        <field name="ADMISSION/PATIENT/ADMISSION_DATE_MON_GRP" label="Admission Month"></field>
+        <field name="ADMISSION/PATIENT/ADMISSION_DATE_WEEK_GRP" label="Admission Week"></field>
+    </viewtab>
+    <viewtab name="Patient Info">
+        <field name="ADMISSION/PATIENT/SUBJECT_ID" label="Patient ID"></field>        
+        <field name="ADMISSION/PATIENT/SEX" label="Gender"></field>
+        <field name="ADMISSION/PATIENT/DOB" label="Date of Birth"></field>
+        <field name="ADMISSION/PATIENT/DOD" label="Date of Death"></field>
+        <field name="ADMISSION/PATIENT/AGE_AT_ADMISSION" label="Age At Admission"></field>
+        <field name="ADMISSION/PATIENT/AGE_AT_ADMISSION_GRP" label="Admission Age Group"></field>
+        <field name="ADMISSION/PATIENT/AGE_AT_DEATH_GRP" label="Death Age Group"></field>
+        <field name="ADMISSION/PATIENT/HOSPITAL_EXPIRE" label="Expired in Hospital"></field>
+        <field name="ADMISSION/PATIENT/RELIGION" label="Religion"></field>
+        <field name="ADMISSION/PATIENT/ADMISSION_SOURCE" label="Admission Source"></field>
+        <field name="ADMISSION/PATIENT/ADMISSION_TYPE" label="Admission Type"></field>
+        <field name="ADMISSION/PATIENT/MARITAL_STATUS" label="Marital Status"></field>
+        <field name="ADMISSION/PATIENT/OVERALL_PAYOR_GROUP" label="Payer Group"></field>
+        <field name="ADMISSION/PATIENT/ETHNICITY" label="Ethnicity"></field>
+    </viewtab>
+    <viewtab name="Diagnosis Codes">
+        <section name="ADMISSION/ICD9_H" styleClass="data-section items-list" queryField="ADMISSION/ICD9" hlEmbeddedText="true" >
+            <sfield childName="." label="ICD9" queryField="ADMISSION/ICD9" outputEscape="false"></sfield>    
+        </section>
+    </viewtab>
+    <viewtab name="Procedures Codes">
+        <section name="ADMISSION/DRG" styleClass="list-section horizontal-list">
+            <sfield childName="DISPLAY" label="Code"></sfield>        
+            <sfield childName="ITEMID" label="ID"></sfield>        
+            <sfield childName="COST_WEIGHT_GRP" label="Cost Weight"></sfield>                    
+        </section>
+    </viewtab>
+    <viewtab name="ICU Visists">
+        <field name="ADMISSION/ICU/COUNT" label="ICU Admissions"></field>
+        <section name="ADMISSION/ICU/ICU" styleClass="data-section">
+            <header styleClass="section-header">ICU Visit</header>
+            <sfield childName="FIRST_CAREUNIT" label="First Care Unit"></sfield>
+            <sfield childName="LAST_CAREUNIT" label="Last Care Unit"></sfield>
+            <sfield childName="LOS" label="Length of Stay"></sfield>
+            <sfield childName="INTIME" label="In Time"></sfield>
+            <sfield childName="OUTTIME" label="Out Time"></sfield>
+            <section name="CENSUSEVENTS/EVENT" styleClass="list-section">                
+                <sfield childName="CENSUS_ID" label="ID"></sfield>
+                <list>
+                    <sfield childName="LOS" label="Length of Stay"></sfield>
+                    <sfield childName="DESTINATION" label="Destination"></sfield>
+                    <sfield childName="DISCHARGE_STATUS" label="Discharge Status"></sfield>
+                </list>
+            </section>            
+            <sectionheader styleClass="sub-section-header">Medications:</sectionheader>
+            <section name="MEDEVENTS/EVENT" styleClass="list-section horizontal-list">
+                <list>
+                    <sfield childName="NAME_H" label="Med" queryField="NAME" outputEscape="false" hlEmbeddedText="true"></sfield>
+                    <sfield childName="OCCURRENCES" label="Deliveries"></sfield>
+                </list>
+            </section>
+            
+        </section>
+    </viewtab>
+    <viewtab name="POE Events">
+        <section name="ADMISSION/POEEVENTS/EVENT" styleClass="list-section horizontal-list">
+            <list>
+                <sfield childName="NAME_H" label="Med" queryField="NAME" outputEscape="false" hlEmbeddedText="true"></sfield>
+                <sfield childName="OCCURRENCES" label="Deliveries"></sfield>
+            </list>
+        </section>
+    </viewtab>
+    <viewtab name="Lab Events">
+        <section name="ADMISSION/LABEVENTS/EVENT" styleClass="list-section horizontal-list">
+            <list>
+                <sfield childName="NAME_H" label="Lab" queryField="NAME" outputEscape="false"></sfield>
+                <sfield childName="OCCURRENCES" label="Ordered"></sfield>
+            </list>
+        </section>
+    </viewtab>
+    <viewtab name="Notes" defaultActive="true">
+        <section name="ADMISSION/NOTEEVENT" styleClass="data-section">
+            <sfield childName="TITLE" label="Title"></sfield>
+            <sfield childName="CATEGORY" label="Type"></sfield>
+            <sfield childName="CHARTTIME" label="Chart Time"></sfield>
+            <sfield childName="CAREUNIT" label="Care Unit"></sfield>
+            <sfield childName="CAREGIVER" label="Care Giver"></sfield>
+            <sfield childName="TEXT_H" label="Note" queryField="TEXT" outputEscape="false" styleClass="last-section-field" hlEmbeddedText="true"></sfield>
+        </section>
+    </viewtab>
+    
+</docview>    

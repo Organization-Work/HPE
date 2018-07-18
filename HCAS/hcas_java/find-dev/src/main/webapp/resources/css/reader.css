@@ -1,0 +1,38 @@
+.autndoc-popup {
+    font: 8pt Tahoma, Arial, Helvetica, sans-serif;
+    max-height: 550px;
+}
+
+.autndoc-numresults {
+    margin-left: 5px;
+    color: gray;
+    display: inline;
+}
+
+.autndoc {
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 4px;
+}
+
+.autndoc-header {
+    font-weight: bold;
+}
+
+.autndoc-title {
+    margin-bottom: 2px;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+
+.autndoc-body {
+    margin: 2px 2px 0 10px;
+    padding-top: 1px;
+    text-overflow: ellipsis;
+    min-height: 1.4em;
+}
+
+.autn-highlight {
+    color: #0A89EA;
+    font-weight: bold;
+}

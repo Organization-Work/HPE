@@ -1,0 +1,16 @@
+<span class="dropdown" style="float:right;margin-right: 10px;bottom: 1px;">
+    <button style="width:10px; height:15px" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="caret-right"></span></button>
+    <ul class="dropdown-menu" style="left:20px; top:4px">
+      <li><a class="loadCustomFilter" tabindex="-1"><i class="icon-filter"></i> Load Custom Filter</a></li>
+      <li><a class="customFilterdelete" tabindex="-1"><i class="icon-trash"></i> Delete</a></li>
+      <li><a class="customFilterEdit" tabindex="-1"><i class="icon-edit"></i> Edit</a></li>
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1"><i class="icon-tasks"></i> Misc. Action</a>
+        <ul class="dropdown-menu">
+          <li><a class="documentfolderCut" tabindex="-1"> Cut</a></li>
+      	  <li><a class="documentfolderCopy" tabindex="-1"> Copy</a></li>
+        </ul>
+      </li>
+    </ul>
+  </span>

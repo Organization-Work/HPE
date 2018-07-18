@@ -1,0 +1,28 @@
+
+<% var options = _.defaults(options || {}, {
+    expanded: false,
+    counts: false
+}); %>
+
+<% var treeMk = function (node, notRoot) { %>
+    <ul class="<%= notRoot ? ' tree-subtree ' : (' tree-root tree ' + (options.expanded ? ' expanded ' : ''))  %>">
+        <% _.each(node.children || [], nodeMk) %>
+    </ul>
+<% }; %>
+
+<% var nodeMk = function (node) { %>
+    <li class="tree-node">
+        <a class="node-label" data-id="<%- node.element %>">
+            <%- names[node.element] %>
+            <% if (options.counts && docCounts[node.element]) { %>
+                (<span class="related-counter" data-id="<%- node.element %>"></span><span class="full-counter"><%- docCounts[node.element] %></span>)
+            <% } %>
+        </a>
+        <% if (!options.expanded) { %>
+            <input type="checkbox" class="tree-handle" <%= (node.children.length > 0) ? '' : 'disabled' %>>
+        <% } %>
+        <% treeMk(node, true) %>
+    </li>
+<% }; %>
+
+<% treeMk(hier) %>

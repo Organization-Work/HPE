@@ -1,0 +1,27 @@
+.suggestionLabel {
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-ms-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+.display-header {
+    font-weight: bold;
+    padding-right: 1em;
+}
+
+.display-fields {
+    margin-bottom: 5px;
+}
+
+.related-articles {
+    font-size: 13px;
+    display: inline-block;
+    top: 3px;
+}
+.export-doc-slider,
+.tag-doc-slider {
+	width: 220px;
+	margin-top: 1px;
+}

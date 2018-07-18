@@ -1,0 +1,54 @@
+.tweet {
+    border-bottom: 1px solid #ebebeb;
+    padding: 10px 20px;
+    font-size: 15px;
+    position: relative;
+    margin: 0;
+    color: #444444;
+}
+
+.topTweet {
+    border-top: 1px solid #b3b3b3;
+}
+
+.tweet .image {
+    float: left;
+    margin-top: 3px;
+    height: 48px;
+    width: 48px;
+    overflow: hidden;
+}
+
+.tweet .content {
+    margin-left: 58px;
+    min-height: 48px;
+}
+
+.tweet .row {
+    display: block;
+    position: relative;
+    line-height: 15px;
+}
+
+.tweet .tweet-screen-name {
+    font-weight: bold;
+    color: #333333 !important;
+}
+
+.tweet .text {
+    font-family: 'Liberation Sans', Arial, "Helvetica Neue", sans-serif;
+    line-height: 19px;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+.tweet .timestamp {
+    color: #999999 !important;
+    font-size: 11px;
+}
+
+.tweet a {
+    color: #2fc2ef;
+    text-decoration: none;
+    font-weight: bold;
+}

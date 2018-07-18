@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:hcaview="http://www.autonomy.com/find/docview"
+  targetNamespace="http://www.autonomy.com/find/docview"
+  elementFormDefault="qualified">
+  
+  	<annotation>
+  		<appinfo>HPE Healthcare Analytics</appinfo>
+  		<documentation>
+  			This schema defines the supported data view of a document to be transformed by admissions.xsl.
+  		</documentation>
+  	</annotation>
+	
+	<attributeGroup name="linkedContentAttrs">
+		<attribute name="contentDb" type="string"/>
+		<attribute name="contentView" type="string"/>
+		<attribute name="contentQParams" type="string"/>
+		<attribute name="contentTemplate" type="string"/>		
+	</attributeGroup>
+
+	<attributeGroup name="fieldBaseAttributes">
+		<attribute name="label" type="string" use="required"/>
+		<attribute name="queryField" type="string"/>
+		<attribute name="outputEscape" type="boolean" default="true"/>	
+		<attribute name="styleClass" type="string"/>	
+		<attribute name="hlEmbeddedText" type="boolean" default="false"/>	
+		<attributeGroup ref="hcaview:linkedContentAttrs"/>
+	</attributeGroup>		
+	
+	
+	<complexType name="fieldItem">
+		<annotation>
+			<documentation>
+				Specify fields to be listed in the output as simple name: value pair
+			</documentation>
+		</annotation>
+		<attribute name="name" type="string" use="required"/>
+		<attributeGroup ref="hcaview:fieldBaseAttributes"/>
+	</complexType>
+
+	<complexType name="sectionItem">
+		<attribute name="childName" type="string" use="required"/>
+		<attributeGroup ref="hcaview:fieldBaseAttributes"/>
+	</complexType>
+	
+	<complexType name="headerItem">
+		<simpleContent>
+			<extension base="string">
+				<attribute name="styleClass" type="string"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	
+	<complexType name="fieldSection">
+		<annotation>
+			<documentation>
+				Specify fields that have multiple instances in the document.
+			</documentation>
+		</annotation>
+		<sequence>
+			<element name="header" type="hcaview:headerItem" minOccurs="0"/>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element name="sfield" type="hcaview:sectionItem" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="sectionheader" type="hcaview:headerItem" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="section" type="hcaview:fieldSection" minOccurs="0" maxOccurs="unbounded"/>				
+				<element name="list" type="hcaview:fieldList" minOccurs="0" maxOccurs="unbounded"/>
+			</choice>
+		</sequence>
+		<attribute name="name" type="string" use="required"/>
+		<attribute name="styleClass" type="string"/>
+		<attribute name="hlEmbeddedText" type="boolean" default="false"/>
+		<attribute name="queryField" type="string"/>
+	</complexType>
+	
+	<complexType name="fieldList">
+		<annotation>
+			<documentation>
+				Specify fields to be rendered as a list.
+			</documentation>
+		</annotation>
+		<sequence>
+			<element name="sfield" type="hcaview:sectionItem" maxOccurs="unbounded"/>		
+		</sequence>
+		<attribute name="styleClass" type="string"/>
+	</complexType>
+		
+	<element name="docview">
+		<complexType>
+			<sequence>
+				<element name="viewtab" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="header" type="string" minOccurs="0"/>
+							<choice minOccurs="0" maxOccurs="unbounded">
+								<element name="field" type="hcaview:fieldItem" minOccurs="0" maxOccurs="unbounded"/>
+								<element name="section" type="hcaview:fieldSection" minOccurs="0" maxOccurs="unbounded"/>								
+							</choice>
+						</sequence>
+						<attribute name="name" type="string" use="required"/>
+						<attribute name="defaultActive" type="boolean" default="false"/>
+						<attribute name="header" type="string"/>
+						<attribute name="styleClass" type="string"/>
+					</complexType>
+				</element>				
+			</sequence>
+			<attribute name="baseFieldXml" type="string"/>
+			<attribute name="docRoot" type="string" use="required"/>
+		</complexType>
+	</element>
+		
+	
+
+</schema>

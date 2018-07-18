@@ -1,0 +1,48 @@
+<div>
+    <form>
+        <div class="btn-toolbar">
+            <div class="btn-group">
+                <button class="btn btn-mini btn-info timeline-refresh"><i class="icon-white icon-refresh"></i> Refresh</button>
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span></button>
+    
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="timeline-settings form-horizontal">
+
+                        <div class="control-group">
+                        	<label class="control-label" for="timeline-charttype">Chart Type</label>
+                            <div class="controls">
+                            	<select id="timeline-charttype" value='Line'>
+                                   	<option value="Bar Chart">Totals Bar Chart</option>
+                                	<option value="Line Chart">Totals Comparison Chart</option>
+                                	<option value="Daily Change">Daily Change Chart</option>
+                                 </select>
+                            </div>
+                       	</div>
+ 
+                            <div class="control-group">
+                                <label class="control-label" for="timeline-grids">Show Grid</label>
+                                <div class="controls">
+                                    <input type="checkbox" id="timeline-grids" checked></input>   
+                            	</div>    
+                        	</div>
+                            <div class="control-group">
+                                <label class="control-label" for="timeline-grid-x">X-Axis Grid Lines</label>
+                                <div class="controls">
+                                    <input type="number" id="timeline-grid-x" value="5" min="1" step="1"></input>
+                                </div>
+                            </div>
+                           <div class="control-group">
+                                <label class="control-label" for="timeline-grid-y">Y-Axis GridLines</label>
+                                <div class="controls">
+                                    <input type="number" id="timeline-grid-y" value="5" min="1" step="1"></input>
+                                </div>
+                            </div>
+                        
+                        </div>                   
+                    </li>
+                </ul>
+          </div>
+  
+  </form>
+</div>

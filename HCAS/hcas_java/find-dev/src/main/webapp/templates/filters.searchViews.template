@@ -1,0 +1,17 @@
+<!--[if IE]>
+<style>
+    input[type='radio']{margin-top: 0px;}
+</style>
+<![endif]-->
+<% if (searchViews && searchViews.length > 0) {%>
+	<div class="transcript">
+	    <% _.each(searchViews, function (item, key) { %>	                        
+	             	<label class="radio inline">
+	          			<input type="radio" name="searchView" value="<%= item.name %>"><%- item.displayName %>        			
+	        		</label>
+	        	 
+	    <% }); %>
+    </div>  
+<% } else { %>
+    <span class="search-error" title="User has not been assigned to access any search view.">NO Search View Access Granted.</span>
+<% } %>

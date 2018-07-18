@@ -1,0 +1,29 @@
+<% if (fields && fields.length >0) { %>
+	<% _.each(fields, function (entry, key) {
+	    var fieldId = entry.displayName.replace(/\s+/g,'_');
+	%>
+	    <div class="tfield-group">
+    		<button type="button" class="btn btn-inverse tfield-group-header" data-toggle="collapse" data-target="#accTBody_<%-fieldId%>"><%-entry.displayName%></button>
+            <ul id="accTBody_<%-fieldId%>" class="collapse tfield-group-list">
+
+            <% _.each(entry.groups, function (items, key) { %>
+	            <% _.each(items.values, function (item, key) { %>
+	                <li <%- item.activeClass %> data-timelinefield="<%-item.name%>">
+	                    <span data-toggle="tooltip" title="<%-item.displayName%>" class="tfilter-indicator"><%=item.displayLabel%><input data-toggle="tooltip" title="Field is used in the query" class="filter-indicator pull-right hide" type="radio" checked></input></span>
+	                </li>
+	            <% }); %>
+			
+            <% }); %>
+
+
+            <% _.each(entry.values, function (item, key) { %>
+                <li <%- item.activeClass %> data-timelinefield="<%-item.name%>">
+                    <span data-toggle="tooltip" title="<%-item.displayName%>" class="tfilter-indicator"><%=item.displayLabel%><input data-toggle="tooltip" title="Field is used in the query" class="filter-indicator pull-right hide" type="radio" checked></input></span>
+                </li>
+            <% }); %>
+
+
+            </ul>
+        </div>
+    <% }); %>
+<% } %>

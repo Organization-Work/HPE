@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<docview xmlns="http://www.autonomy.com/find/docview"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.autonomy.com/find/docview hca_docview.xsd"
+    docRoot="DOCUMENT">
+    <viewtab name="Encounter Info">
+        <section name="PATIENT/ADMISSION" styleClass="data-section items-list" >
+            <sfield childName="HADM_ID" label="Encounter ID" contentView="admissions" contentQParams="print=fields&amp;printfields=ADMISSION/NOTEEVENT/TEXT"></sfield> 
+        </section>
+    </viewtab>
+    <viewtab name="Patient Info">
+        <field name="PATIENT/SUBJECT_ID" label="Patient ID"></field>        
+        <field name="PATIENT/SEX" label="Gender"></field>
+        <field name="PATIENT/DOB" label="Date of Birth"></field>
+        <field name="PATIENT/DOD" label="Date of Death"></field>
+        <field name="PATIENT/AGE_AT_ADMISSION" label="Age At Admission"></field>
+        <field name="PATIENT/AGE_AT_ADMISSION_GRP" label="Admission Age Group"></field>
+        <field name="PATIENT/AGE_AT_DEATH_GRP" label="Death Age Group"></field>
+        <field name="PATIENT/HOSPITAL_EXPIRE" label="Expired in Hospital"></field>
+        <field name="PATIENT/RELIGION" label="Religion"></field>
+        <field name="PATIENT/ADMISSION_SOURCE" label="Admission Source"></field>
+        <field name="PATIENT/ADMISSION_TYPE" label="Admission Type"></field>
+        <field name="PATIENT/MARITAL_STATUS" label="Marital Status"></field>
+        <field name="PATIENT/OVERALL_PAYOR_GROUP" label="Payer Group"></field>
+        <field name="PATIENT/ETHNICITY" label="Ethnicity"></field>
+    </viewtab>
+    
+</docview>    

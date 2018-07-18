@@ -1,0 +1,3870 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOCUMENTS>
+<DOCUMENT>
+  <ADMISSION>
+    <HADM_ID>880</HADM_ID>
+    <PATIENT>
+      <SUBJECT_ID>869031</SUBJECT_ID>
+      <SEX>M</SEX>
+      <AGE_AT_ADMISSION>55</AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP>35-64</AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE>2013-10-20 08:10:32</ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON>2013_10</ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP>10</ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP>20</ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP>0-Sun</ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP>42</ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE>2013-10-23 21:10:32</DISCHARGE_DATE>
+      <DOB>1958-07-11</DOB>
+      <HOSPITAL_EXPIRE>N</HOSPITAL_EXPIRE>
+      <ETHNICITY>WHITE</ETHNICITY>
+      <ADMISSION_TYPE>EMERGENCY</ADMISSION_TYPE>
+      <RELIGION>CATHOLIC</RELIGION>
+      <ADMISSION_SOURCE>TRANSFER FROM HOSP/EXTRAM</ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP>OTHER</OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS>SINGLE</MARITAL_STATUS>
+      <DOD>None</DOD>
+      <AGE_AT_DEATH>(N/A)</AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP>(N/A)</AGE_AT_DEATH_GRP>
+    </PATIENT>
+    <DRG>
+      <CODE>107</CODE>
+      <ITEMID>60175</ITEMID>
+      <DESC>CORONARY BYPASS W CARDIAC CATH</DESC>
+      <COST_WEIGHT>5.31</COST_WEIGHT>
+      <COST_WEIGHT_GRP>5.0+</COST_WEIGHT_GRP>
+      <DISPLAY>(107)CORONARY BYPASS W CARDIAC CATH</DISPLAY>
+    </DRG>
+    <ICD9>(456.20)ESOPHAGEAL VARICES IN DISEASES CLASSIFIED ELSEWHER</ICD9>
+    <ICD9>(585.6)None</ICD9>
+    <ICD9>(557.0)AC VASC INSUFF INTESTINE</ICD9>
+    <ICD9>(255.4)CORTICOADRENAL INSUFFICIENCY</ICD9>
+    <ICD9>(825.0)FRACTURE OF CALCANEUS CLOSED</ICD9>
+    <ICD9>(070.32)CHRONIC VIRAL HEPATITIS B WITHOUT HEPATIC COMA WIT</ICD9>
+    <ICD9>(441.01)DISSECTION OF AORTA THORACIC</ICD9>
+    <ICD9>(251.8)OTHER SPECIFIED DISORDERS OF PANCREATIC INTERNAL S</ICD9>
+    <ICD9>(440.21)ATHEROSCLE EXTR W/CLAUDI</ICD9>
+    <ICD9>(496)CHR AIRWAY OBSTRUCT NEC</ICD9>
+    <ICD9>(412)OLD MYOCARDIAL INFARCTION</ICD9>
+    <ICD9>(263.0)MALNUTRITION OF MODERATE DEGREE</ICD9>
+    <ICD9>(571.1)AC ALCOHOLIC HEPATITIS</ICD9>
+    <ICD9>(567.2)OTHER SUPPURATIVE PERITONITIS</ICD9>
+    <ICU>
+      <COUNT>1</COUNT>
+      <ICU>
+        <ICUSTAY_ID>562983</ICUSTAY_ID>
+        <FIRST_CAREUNIT>FICU</FIRST_CAREUNIT>
+        <LAST_CAREUNIT>FICU</LAST_CAREUNIT>
+        <INTIME>2013-10-20 08:10:32</INTIME>
+        <OUTTIME>2013-10-23 21:10:32</OUTTIME>
+        <LOS>5760</LOS>
+        <LOS_GRP>05000-&lt;07500</LOS_GRP>
+        <MEDEVENTS>
+          <EVENT>
+            <NAME>Neosynephrine-k</NAME>
+            <OCCURRENCES>17</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Vasopressin</NAME>
+            <OCCURRENCES>28</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Nitroglycerine-k</NAME>
+            <OCCURRENCES>12</OCCURRENCES>
+          </EVENT>
+        </MEDEVENTS>
+      </ICU>
+    </ICU>
+    <POEEVENTS>
+      <EVENT>
+        <NAME>Aluminum-Magnesium Hydrox.-Simethicone</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Simethicone</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Miconazole Powder 2 percent</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Metronidazole</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Chloride</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Heparin Flush CVL  100 units per ml</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Chlorothiazide Sodium</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Fentanyl Citrate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ondansetron</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Dexamethasone</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nitroprusside Sodium</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Chloride</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lactulose</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Furosemide</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+    </POEEVENTS>
+    <LABEVENTS>
+      <EVENT>
+        <NAME>Collection duration of Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.segmented per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Phosphate Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hematocrit Volume Fraction of Blood</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Blood</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Eosinophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Cerebral spinal fluid</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Appearance of Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Presence in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Chloride Moles per volume in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>IgM Mass per volume in Serum</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Monocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lactate Moles per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Calcium Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte distribution width Ratio</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Urea nitrogen Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen saturation in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular volume Entitic volume</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspartate aminotransferase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Albumin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Eosinophils Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT>
+      <CAREUNIT>CCU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>IMPRESSION: Normal brain MRA. Patchy consolidation in left lower lobe. currently on bipap. with sats 94-95%. Pt required several doses of MS, Fentanyl, and fentanyl gtt started. Neurologic: -mental status: Alert, regards examiner. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RN5</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>No definite pleural effusion is seen. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>csru admit note:</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Pulmonary parenchymal consolidation is present within the dependent portion of both lung bases suggestive of aspiration. Cr decreased to 1.1 from 1.3 Integ: See carevu for details;  GU: Foley draining adequate urine. Hard copy pre- and post-puncture images by ultrasound were obtained. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>T-SICU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>DISCHARGE_SUMMARY</CATEGORY>
+      <TEXT>skin fragile with skin tears rt arm swollen elevated on apillow team thought that showed some improvement groin wound red min drainage vac changed to ns w-d dsd bid. Resolves without additional intervention. Nonvisualization of the left common femoral artery and proximal superficial femoral artery due to metallic artifact,  PERRL 4mm brisk; calm &amp; cooperative; off propofol CV: Afebrile; SR 70's-low 100's with rare PVC's;  It is unclear whether this large fluid collection actually communicates with retroperitoneal fluid described above. HCT STABLE AT 35.7. There is a right IJ central venous line with SG catheter with tip in the main pulmonary artery. No deficits in strenght, coordination, sensation or gait. heme=hct &lt;30-tx w 1urbc. Multiplanar reconstructions confirm the above findings, and were essential for diagnosis. endo: insulin ss no coverage needed. Furosemide 40 mg Tablet Sig: One (1) Tablet PO DAILY (Daily). Physical Exam: Vitals: T: 98F P: 58 R: 16 BP: 146/79 SaO2: 100% RA General: Lying in bed with eyes open, NAD. </TEXT>
+    </NOTEEVENT>
+  </ADMISSION>
+</DOCUMENT>
+<DOCUMENT>
+  <ADMISSION>
+    <HADM_ID>881</HADM_ID>
+    <PATIENT>
+      <SUBJECT_ID>526082</SUBJECT_ID>
+      <SEX>F</SEX>
+      <AGE_AT_ADMISSION>75</AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP>65+</AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE>2012-05-08 22:46:47</ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON>2012_05</ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP>05</ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP>08</ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP>2-Tue</ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP>19</ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE>2012-05-16 18:46:47</DISCHARGE_DATE>
+      <DOB>1937-02-23</DOB>
+      <HOSPITAL_EXPIRE>N</HOSPITAL_EXPIRE>
+      <ETHNICITY>WHITE</ETHNICITY>
+      <ADMISSION_TYPE>EMERGENCY</ADMISSION_TYPE>
+      <RELIGION>PROTESTANT QUAKER</RELIGION>
+      <ADMISSION_SOURCE>PHYS REFERRAL/NORMAL DELI</ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP>MEDICARE</OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS>MARRIED</MARITAL_STATUS>
+      <DOD>None</DOD>
+      <AGE_AT_DEATH>(N/A)</AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP>(N/A)</AGE_AT_DEATH_GRP>
+    </PATIENT>
+    <DRG>
+      <CODE>107</CODE>
+      <ITEMID>60175</ITEMID>
+      <DESC>CORONARY BYPASS W CARDIAC CATH</DESC>
+      <COST_WEIGHT>5.37</COST_WEIGHT>
+      <COST_WEIGHT_GRP>5.0+</COST_WEIGHT_GRP>
+      <DISPLAY>(107)CORONARY BYPASS W CARDIAC CATH</DISPLAY>
+    </DRG>
+    <ICD9>(715.96)OSTEOARTHROSIS UNSPECIFIED WHETHER GENERALIZED OR</ICD9>
+    <ICD9>(599.0)URINARY TRACT INFECTION SITE NOT SPECIFIED</ICD9>
+    <ICD9>(427.81)SINOATRIAL NODE DYSFUNCTION</ICD9>
+    <ICD9>(414.01)CORONARY ATHEROSCLEROSIS OF NATIVE CORONARY ARTERY</ICD9>
+    <ICD9>(294.10)DEMENTIA IN CONDITIONS CLASSIFIED ELSEWHERE WITHOU</ICD9>
+    <ICD9>(276.51)DEHYDRATION</ICD9>
+    <ICU>
+      <COUNT>1</COUNT>
+      <ICU>
+        <ICUSTAY_ID>451143</ICUSTAY_ID>
+        <FIRST_CAREUNIT>MICU</FIRST_CAREUNIT>
+        <LAST_CAREUNIT>MICU</LAST_CAREUNIT>
+        <INTIME>2012-05-08 22:46:47</INTIME>
+        <OUTTIME>2012-05-16 18:46:47</OUTTIME>
+        <LOS>11520</LOS>
+        <LOS_GRP>10000-&lt;15000</LOS_GRP>
+        <MEDEVENTS/>
+      </ICU>
+    </ICU>
+    <POEEVENTS>
+      <EVENT>
+        <NAME>Neutra-Phos</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Octreotide Acetate</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspirin EC</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ranitidine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Phosphate</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Humulin-R Insulin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Dextrose 5 percent</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lansoprazole Oral Suspension</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Magnesium Sulfate</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Pantoprazole Sodium</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Methylprednisolone Na Succ</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Miconazole Powder 2 percent</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Cefpodoxime Proxetil</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Pantoprazole Sodium</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>NS</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sterile Water</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lisinopril</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Haloperidol</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Syringe IV Room</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Golytely</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Amlodipine Besylate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Docusate Sodium Liquid</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Levofloxacin</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Diltiazem</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hydrocortisone Na Succ.</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bisacodyl</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nitroglycerin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Acetaminophen</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lansoprazole</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lorazepam</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>NS</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspirin</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Vancomycin HCl</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Pantoprazole Sodium</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Epoetin Alfa</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>NS</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Chloride</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Docusate Sodium</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Xopenex</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Allopurinol</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Senna</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Magnesium Oxide</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>MetFORMIN Glucophage</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ipratropium Bromide MDI</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Levofloxacin</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Clotrimazole</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Midazolam</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Vancomycin</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Dextrose 5 percent</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nitroglycerin</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Dipyridamole-Aspirin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Chl 20 mEq  per  1000 mL D5 half NS</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+    </POEEVENTS>
+    <LABEVENTS>
+      <EVENT>
+        <NAME>Erythrocyte distribution width Ratio</NAME>
+        <OCCURRENCES>10</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>9</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Urobilinogen Mass per volume in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.segmented per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin Entitic mass</NAME>
+        <OCCURRENCES>25</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen Partial pressure in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Platelets  per volume in Blood</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Presence in Urine</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Moles per volume in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bacteria Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Moles per volume in Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bacteria Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nitrite Presence in Urine by Test strip</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Yeast Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Epithelial cells  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Presence in Urine</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>INR in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Activated partial thrombplastin time aPTT in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>FibrinplusFibrinogen fragments Mass per volume in Platelet poor plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Acetone Presence in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatinine Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Macrocytes Presence in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspartate aminotransferase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.segmented per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes Presence in Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular volume Entitic volume</NAME>
+        <OCCURRENCES>9</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes Presence in Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lactate dehydrogenase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.segmented per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Tidal volume setting Ventilator</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Amylase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Epithelial cells  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Blood</NAME>
+        <OCCURRENCES>9</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Urine</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Basophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Base excess in Blood</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Chloride Moles per volume in Blood</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Calcium.ionized Moles per volume in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Platelets Presence in Blood by Manual count</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatine kinase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>9</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Iron Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte distribution width Ratio</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Urine</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Blood</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Cobalamin Mass per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Urea nitrogen Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>10</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.segmented per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Elliptocytes Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Phosphate Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte distribution width Ratio</NAME>
+        <OCCURRENCES>9</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>9</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>11</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatinine Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>10</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Color of Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Activated partial thrombplastin time aPTT in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT>
+      <CAREUNIT>MICU</CAREUNIT>
+      <CAREGIVER>RRT2</CAREGIVER>
+      <TITLE>impaired respiratory function</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>IMPRESSION: 1. This was communicated to Dr.  2. Patchy left-sided opacities consistent with atelectasis or consolidation. Vascular calcifications are seen in the aorta, IVC, splenic and renal arteries. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>CSRU</CAREUNIT>
+      <CAREGIVER>RN3</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Abd is soft with good bowel sounds. PAIN: 650MG ACETAMINOPHEN GIVEN AND TOLERATED. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RN4</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>CTA. Pt was on Plavix and Heparin for EF of 30%. LUMGS CLEAR/COARSE BILAT. 7.36/48/150, see carevu. FINDINGS: A single AP supine view. CT torso to evaluate for occult malignancy was negative. ?CHF. Skin- intact on backside. CSL ON. Resp: Unable to wean off O2. Hydrocortisone weaning was begun and the patient was transferred to the VICU for continued monitoring and care. heparin gtt started today. Temp stabilized. A large amount of perihepatic ascites is identified. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>CSRU</CAREUNIT>
+      <CAREGIVER>RN8</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Then settled at 109. AM labs K+ 5.1. (R) FOSSA AREA FREE OF BLEEDING. Vent settings: 650x18/40%/5 PEEP; overbreathing settings by several breathes. Lungs diminished throughout both bases. episode passed, HO aware. FINDINGS: There are no aneurysms. CPT TOLERATED WELL. He was also started on albumin. keep pt comfortable. +BS. GI: ABD-SD,+BSX4,S,NT. pm continue with pulmonary toilet follow up on ct scan results. Moderate, fixed anterior wall defect. Bone windows show no evidence of fracture or dislocation. gi status: taking sm amts po flds. Social History: Not married. No children. Not working; used to be a welder.  copd-home o2 2l. htn. Next sugar 74 treated with Oj. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>CSRU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>Respiratory Care:</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>cont with generalized edema. Mg repleted successfully current Mg 2.0. Qulatity of pain is not burning, numbness, or tingling On detailed review of symtpoms, she mentions an episode of SSCP lasting several minutes, releived with Sl NTG. gi status: taking sm amts po flds. Patient beginning to not tolerated uncomfortable mask BIPAP as well as earlier in that she is more alert. ID: KEFZOL PER ORDERS. renal=foley. PT.NODS HEAD "YES" OR "NO" TO SIMPLE QUESTIONS, ATTEMPTS TO SPEAK AROUND ETT, LEFT SIDE NOTICEABLE MORE WEAK THAN RIGHT-  APPETITE FAIR. TECHNIQUE: Non-contrast head CT. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RRT0</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>DISCHARGE_SUMMARY</CATEGORY>
+      <TEXT>The patient's INR was elevated to 5 at outside hospital. Foley draining clear yellow 25-160cc/hr. FINAL REPORT PICC LINE PLACEMENT INDICATION: Left temporal astrocytoma, hemorrhage, bradycardia, need for IV therapy, failed bedside attempt. The patient was extubated on postoperative day two. HEMATOMA FEELS MORE FIRM ON R SIDE OF ABD. HO aware, will evaluate. Family meeting held after the OR, and pt updated by Dr. Inconsistently follows commands. ? free h2o secondary to increased Na and osmo. Now with diffuse intense abdominal pain and palpable pelvic mass while on IV heparin. Social: Family visited. PROCEDURE/FINDINGS: The procedure was performed by Drs. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>CCU</CAREUNIT>
+      <CAREGIVER>RN2</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>The peel-away sheath and wire were then removed. A-LINE WNL DSG CDI. +GAG, +COUGH- RESPIRATORY RATE CURRENTLY 15. REASON FOR THIS EXAMINATION: picc line placement. CVP 4-6. Also unchanged is slight thickening and enhancement to the posterior margin of this cystic region and small nodule off the superior margin, both concerning for tumor recurrence. TECHNIQUE: Multiplanar angiographic sequences of the abdominal aorta and lower extremities were obtained. 5 L of fluid, epi iv, and monitored overnight on floor. Mild left white matter edema is noted. The right lung is clear. Per wife reports pt w hx of confusion/agitation when not on psych meds(paxil&amp; klonopin). FINDINGS: Again seen is a rim enhancing fluid collection in the left parietal lobe with an enhancing peripheral nodule. IV therapy failed. (Pt developed PE post-operatively, for which he was placed on warfarin). No diagnostic abnormalities. ABLE TO SPEAK IN SENTANCES,SLOW SPEECH. ABD sutures site intact. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>TSICU Nursing Progress Note</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>Social: Daughter called &amp; updated  GI/GU: Abd softly distended. labs=am pending. </TEXT>
+    </NOTEEVENT>
+  </ADMISSION>
+</DOCUMENT>
+<DOCUMENT>
+  <ADMISSION>
+    <HADM_ID>882</HADM_ID>
+    <PATIENT>
+      <SUBJECT_ID>514368</SUBJECT_ID>
+      <SEX>F</SEX>
+      <AGE_AT_ADMISSION>46</AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP>35-64</AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE>2012-08-09 12:46:17</ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON>2012_08</ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP>08</ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP>09</ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP>4-Thu</ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP>32</ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE>2012-08-12 04:46:17</DISCHARGE_DATE>
+      <DOB>1966-03-15</DOB>
+      <HOSPITAL_EXPIRE>Y</HOSPITAL_EXPIRE>
+      <ETHNICITY>WHITE</ETHNICITY>
+      <ADMISSION_TYPE>ELECTIVE</ADMISSION_TYPE>
+      <RELIGION>EPISCOPALIAN</RELIGION>
+      <ADMISSION_SOURCE>EMERGENCY ROOM ADMIT</ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP>MEDICARE</OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS>DIVORCED</MARITAL_STATUS>
+      <DOD>2012-08-12 04:46:17</DOD>
+      <AGE_AT_DEATH>46</AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP>35-64</AGE_AT_DEATH_GRP>
+    </PATIENT>
+    <DRG>
+      <CODE>542</CODE>
+      <ITEMID>60778</ITEMID>
+      <DESC>TRACH W MV 96+ HRS OR PDX EXC FACE, MOUT</DESC>
+      <COST_WEIGHT>11.64</COST_WEIGHT>
+      <COST_WEIGHT_GRP>5.0+</COST_WEIGHT_GRP>
+      <DISPLAY>(542)TRACH W MV 96+ HRS OR PDX EXC FACE, MOUT</DISPLAY>
+    </DRG>
+    <ICD9>(785.0)TACHYCARDIA UNSPECIFIED</ICD9>
+    <ICD9>(599.0)URINARY TRACT INFECTION SITE NOT SPECIFIED</ICD9>
+    <ICD9>(276.52)HYPOVOLEMIA</ICD9>
+    <ICD9>(507.0)PNEUMONITIS DUE TO INHALATION OF FOOD OR VOMITUS</ICD9>
+    <ICD9>(272.4)OTHER AND UNSPECIFIED HYPERLIPIDEMIA</ICD9>
+    <ICD9>(801.10)CLOSED FRACTURE OF BASE OF SKULL WITH CEREBRAL LAC</ICD9>
+    <ICU>
+      <COUNT>1</COUNT>
+      <ICU>
+        <ICUSTAY_ID>594354</ICUSTAY_ID>
+        <FIRST_CAREUNIT>CSRU</FIRST_CAREUNIT>
+        <LAST_CAREUNIT>CSRU</LAST_CAREUNIT>
+        <INTIME>2012-08-09 12:46:17</INTIME>
+        <OUTTIME>2012-08-12 04:46:17</OUTTIME>
+        <LOS>4320</LOS>
+        <LOS_GRP>04000-&lt;05000</LOS_GRP>
+        <MEDEVENTS>
+          <EVENT>
+            <NAME>Epinephrine-k</NAME>
+            <OCCURRENCES>20</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Midazolam</NAME>
+            <OCCURRENCES>25</OCCURRENCES>
+          </EVENT>
+        </MEDEVENTS>
+      </ICU>
+    </ICU>
+    <POEEVENTS>
+      <EVENT>
+        <NAME>Docusate Sodium</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Methylprednisolone Na Succ.</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glipizide</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Senna</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Acetaminophen w per Codeine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>CycloSPORINE Modified Neoral</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>HydrOXYzine HCl</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Diphenhydramine HCl</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Captopril</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Fentanyl Citrate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Multivitamin 12</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Chlorhexidine Gluconate 0.12 percent Oral Rinse</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Docusate Sodium Liquid</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Levofloxacin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Quetiapine Fumarate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Acetazolamide</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Salmeterol</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>DiphenhydrAMINE HCl</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>CeftriaXONE</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>SW</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Timolol Maleate 0.5 percent</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hydrocortisone Na Succ.</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Methylprednisolone Na Succ</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Magnesium Sulfate</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Iso-Osmotic Dextrose</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Acetaminophen</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Fentanyl Citrate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspirin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Guaifenesin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspirin EC</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Chloride 0.9 percent  Flush</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Pantoprazole Sodium</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Furosemide</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Insulin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Phenytoin Sodium</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ibuprofen</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Fexofenadine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+    </POEEVENTS>
+    <LABEVENTS>
+      <EVENT>
+        <NAME>Sirolimus Mass per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatinine Mass per volume in Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Presence in Urine by Test strip</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Yeast Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes Presence in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lactate Moles per volume in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Poikilocytosis Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Amylase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Activated partial thrombplastin time aPTT in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Myelocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte distribution width Ratio</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Myelocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Acanthocytes Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Reticulocytes per 100 erythrocytes in Red Blood Cells by Automated count</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Epithelial cells  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Microcytes Presence in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per volume in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Color of Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Specific gravity of Urine by Test strip</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspartate aminotransferase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Yeast Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Osmolality of Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Alkaline phosphatase Enzymatic activity per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>INR in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Iron Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>INR in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen saturation in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lactate dehydrogenase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Prothrombin time PT in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Base excess in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.band form per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Mucus Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Urea nitrogen Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Osmolality of Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Metamyelocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Reticulocytes per 100 erythrocytes in Red Blood Cells by Automated count</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Urea nitrogen Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nitrite Presence in Urine by Test strip</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatine kinase.MB Mass per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Metamyelocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Triglyceride Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular volume Entitic volume</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte distribution width Ratio</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatinine Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Methemoglobin per Hemoglobin.total in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT>
+      <CAREUNIT>CCU</CAREUNIT>
+      <CAREGIVER>RN4</CAREGIVER>
+      <TITLE>CSRU NSG ADDENDUM:</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>The liver is diffusely echogenic consistent with fatty infiltration. TECHNIQUE: Non-contrast head CT. DSD OVER WOUNDS INTACT ACCESS; CORDIS D/C'D AND PERIPH 18 G IN LT HAND. Received pt on bipap. Abdominal examination is unremarkable. cva x2 w sl r sided residual weakness-shunt/patch l carotid to ascending aorta The right hepatic artery is patent with normal waveforms. Bone piece removed from L frontal/parietal area and mod to large bloody drainage from wound. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>NPN-MICU</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Family aware of potential for second family meeting today to address plan of care. This contains a few air bronchograms. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RN5</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>The line was then aspirated, flushed, capped, and heplocked. no breakdown noted on back side. CARDIAC: NS WITHOUT. Pt awake at 0930, crushed plavix and mixed w/ custard. ID: MRSA AND VRE IN WOUND- AFEBRILE. Suctioned for no secretions. Pt appears tachypneic and c/o sob when cpap is removed. no bs. IMPRESSION: Status post catheter device placement within the left parietal cystic structure. </TEXT>
+    </NOTEEVENT>
+  </ADMISSION>
+</DOCUMENT>
+<DOCUMENT>
+  <ADMISSION>
+    <HADM_ID>883</HADM_ID>
+    <PATIENT>
+      <SUBJECT_ID>987991</SUBJECT_ID>
+      <SEX>F</SEX>
+      <AGE_AT_ADMISSION>76</AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP>65+</AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE>2011-09-15 14:53:23</ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON>2011_09</ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP>09</ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP>15</ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP>4-Thu</ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP>37</ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE>2011-09-21 10:53:23</DISCHARGE_DATE>
+      <DOB>1935-08-26</DOB>
+      <HOSPITAL_EXPIRE>N</HOSPITAL_EXPIRE>
+      <ETHNICITY>OTHER</ETHNICITY>
+      <ADMISSION_TYPE>EMERGENCY</ADMISSION_TYPE>
+      <RELIGION>JEWISH</RELIGION>
+      <ADMISSION_SOURCE>TRANSFER FROM HOSP/EXTRAM</ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP>MEDICARE</OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS>UNKNOWN (DEFAULT)</MARITAL_STATUS>
+      <DOD>None</DOD>
+      <AGE_AT_DEATH>(N/A)</AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP>(N/A)</AGE_AT_DEATH_GRP>
+    </PATIENT>
+    <DRG>
+      <CODE>002</CODE>
+      <ITEMID>60004</ITEMID>
+      <DESC>CRANIOTOMY AGE &amp;gt;17 W/O CC</DESC>
+      <COST_WEIGHT>1.95</COST_WEIGHT>
+      <COST_WEIGHT_GRP>1.5-&lt;2.0</COST_WEIGHT_GRP>
+      <DISPLAY>(002)CRANIOTOMY AGE &amp;gt;17 W/O CC</DISPLAY>
+    </DRG>
+    <ICD9>(V44.1)GASTROSTOMY STATUS</ICD9>
+    <ICD9>(E849.7)ACCIDENTS OCCURRING IN RESIDENTIAL INSTITUTION</ICD9>
+    <ICD9>(196.2)SECONDARY AND UNSPECIFIED MALIGNANT NEOPLASM OF IN</ICD9>
+    <ICD9>(995.92)SYSTEMIC INFLAMMATORY RESPONSE SYNDROME DUE TO INF</ICD9>
+    <ICD9>(535.40)OTHER SPECIFIED GASTRITIS (WITHOUT HEMORRHAGE)</ICD9>
+    <ICD9>(458.9)HYPOTENSION UNSPECIFIED</ICD9>
+    <ICD9>(410.91)ACUTE MYOCARDIAL INFARCTION OF UNSPECIFIED SITE IN</ICD9>
+    <ICD9>(599.0)URINARY TRACT INFECTION SITE NOT SPECIFIED</ICD9>
+    <ICD9>(053.9)HERPES ZOSTER NOS</ICD9>
+    <ICU>
+      <COUNT>1</COUNT>
+      <ICU>
+        <ICUSTAY_ID>102908</ICUSTAY_ID>
+        <FIRST_CAREUNIT>MICU</FIRST_CAREUNIT>
+        <LAST_CAREUNIT>MICU</LAST_CAREUNIT>
+        <INTIME>2011-09-15 14:53:23</INTIME>
+        <OUTTIME>2011-09-21 10:53:23</OUTTIME>
+        <LOS>8640</LOS>
+        <LOS_GRP>07500-&lt;10000</LOS_GRP>
+        <MEDEVENTS>
+          <EVENT>
+            <NAME>Fentanyl</NAME>
+            <OCCURRENCES>46</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Propofol</NAME>
+            <OCCURRENCES>41</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Propofol</NAME>
+            <OCCURRENCES>29</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Levophed-k</NAME>
+            <OCCURRENCES>46</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Insulin</NAME>
+            <OCCURRENCES>18</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Heparin</NAME>
+            <OCCURRENCES>25</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Neosynephrine-k</NAME>
+            <OCCURRENCES>45</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Amiodarone</NAME>
+            <OCCURRENCES>6</OCCURRENCES>
+          </EVENT>
+        </MEDEVENTS>
+      </ICU>
+    </ICU>
+    <POEEVENTS>
+      <EVENT>
+        <NAME>Metoprolol</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Albumin 5 percent 12.5g  per  250mL</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lisinopril</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>D5W</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>CeftriaXONE</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Syringe IV Room</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Heparin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Calcium Gluconate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Clonidine Patch 0.2 mg per 24 hr</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutra-Phos</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nitroglycerin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neostigmine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspirin EC</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Heparin Sodium</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Acetaminophen</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>D5W</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nystatin Oral Suspension</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Norepinephrine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ketorolac</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+    </POEEVENTS>
+    <LABEVENTS>
+      <EVENT>
+        <NAME>Erythrocyte distribution width Ratio</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Magnesium Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Serum</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Carbon dioxide Partial pressure in Blood</NAME>
+        <OCCURRENCES>10</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Base excess in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bacteria Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Presence in Urine by Test strip</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin Entitic mass</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular volume Entitic volume</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatine kinase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Alanine aminotransferase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular volume Entitic volume</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Specific gravity of Urine by Test strip</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Platelets  per volume in Blood</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Monocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per volume in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatine kinase.MB Mass per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Activated partial thrombplastin time aPTT in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Cerebral spinal fluid</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen saturation in Blood</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen Partial pressure in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspartate aminotransferase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glomerular filtration rate per 1.73 sq M.predicted by Creatinine-based formula MDRD</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Cholesterol.in HDL Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>INR in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspartate aminotransferase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Moles per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>None</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Presence in Urine by Test strip</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Serum</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Chloride Moles per volume in Blood</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin Entitic mass</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Blood</NAME>
+        <OCCURRENCES>9</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Basophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatine kinase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per volume in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Phosphate Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.band form per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Poikilocytosis Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Alanine aminotransferase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Protein Mass per volume in Urine by Test strip</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen Partial pressure in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Calcium Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Urobilinogen Mass per volume in Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular volume Entitic volume</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Eosinophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Mass per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Eosinophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lactate Moles per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Amylase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Platelets Presence in Blood by Manual count</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Carbon dioxide Partial pressure in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anisocytosis Presence in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Magnesium Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin Entitic mass</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Platelets  per volume in Blood</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Specific gravity of Urine by Test strip</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatine kinase.MB Mass per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular volume Entitic volume</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Prothrombin activity actual per normal in Platelet poor plasma by Coagulation assay</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Appearance of Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RN9</CAREGIVER>
+      <TITLE>nsg progress note</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>7a-7p Neuro: Pt lightly sedated on propofol 5-10mcg/kg/min. difficulty picking up o2 sat readijng 76-86 with poor wave form abg sent shoeing resp acidosis with ppo2 of 42  Unilateral Severe RAS: Pt has chronic kidney disease. IMPRESSION: A left temporal lobe subacute hematoma. There is a thin rim of marginal enhancement present, which could represent residual or recurrent tumor. pt coughing and raising small amounts yellow secretions. C/O back pain. SKIN--RASH OVER UPPER ARMS . There is increased density at the left lung base with loss of the left hemidiaphragm contour. This is bright on the pre-gadolinium images and demonstrates only mild marginal enhancement. If detailed arterial anatomical information within the feet is required, dedicated MR angiogram of the feet could be performed. No movement to extremities. There are no pleural effusions. CALM,PLEASANT,COOPERATIVE WITH CARE. MAE. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RT8</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>Pt had good respiratory drive and a sufficient cuff leak. ABG AT 0230 SHOWED RESP ACIDOSIS, RATE INCREASED TO 22. stress dose steroid given, benadryl given. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>FICU</CAREUNIT>
+      <CAREGIVER>RN9</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>LS ARE CLEAR, MAINTAINING SP02 &gt; 95% ON NC. GU; Foley to gravity with low urine output. Next labs to be done at 2100. Small pleural effusions are present bilaterally. RESP: CPT X1. The line was then secured to the skin with a StatLock device and a sterile transparent dressing applied. a:sever reaction to fent, bp stable throughout shift. Pt developed more acute abd pain. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>CCU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>SICU NPN</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>medications to STOP Stop taking the following medications: felodepine, coumadin, benicar. Requiring 6L NC and 40% face tent for sats of 94-95%. HR 50'S-60'S NSR, AM LOPRESSOR HELD. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RN0</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>O: See careview for additional objective data  " CARDIAC--HR ST 110-120. The patient was treated with NS and fluid restriction, and sodium has improved to 125. FINDINGS: INFLOW: An aortobifemoral graft is identified, which is widely patent throughout its course. Coumadin and all anticoagulation were held secondary to patient's bleed risk. Coughing and raising thick tan sputum. Continue current support. NGT DC'D THIS AM, +BS, DIET NOT ADVANCED YET. discussed w dr. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>MICU</CAREUNIT>
+      <CAREGIVER>RN3</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>renal=foley. no bm. NO BLECHING/FLATUS. NEURO: CONFUSED THIS AM TO PLACE. Resolves without additional intervention. Dulcolax tabs 10 mg q.d.prn, Lopressor 50 mg b.i.d., Prednisone 15 mg q.d. INTEG: PT TURNS/RP INDEPENDENTLY, NO AREAS SKIN BREAKDOWN NOTED. C/O chest heaviness which resolved spontaneously. GI/GU: Abd soft, +BS. NO BM-&gt; PT. TRANSFER TO FLOOR WHEN BED AVAILABLE. Cr decreased to 1.1 from 1.3 Integ: See carevu for details;  BP SOMEWHAT LABILE, 88-160. Plan: Continue cardiopulmonary monitoring. IMPRESSION: AP chest reviewed in the absence of prior chest radiographs: There is a relatively mild region of right infrahilar consolidation which could be atelectasis. </TEXT>
+    </NOTEEVENT>
+  </ADMISSION>
+</DOCUMENT>
+<DOCUMENT>
+  <ADMISSION>
+    <HADM_ID>884</HADM_ID>
+    <PATIENT>
+      <SUBJECT_ID>388291</SUBJECT_ID>
+      <SEX>M</SEX>
+      <AGE_AT_ADMISSION>60</AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP>35-64</AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE>2013-04-23 09:11:03</ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON>2013_04</ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP>04</ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP>23</ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP>2-Tue</ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP>16</ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE>2013-04-25 07:11:03</DISCHARGE_DATE>
+      <DOB>1953-03-27</DOB>
+      <HOSPITAL_EXPIRE>N</HOSPITAL_EXPIRE>
+      <ETHNICITY>WHITE</ETHNICITY>
+      <ADMISSION_TYPE>EMERGENCY</ADMISSION_TYPE>
+      <RELIGION>CATHOLIC</RELIGION>
+      <ADMISSION_SOURCE>EMERGENCY ROOM ADMIT</ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP>PRIVATE</OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS>SEPARATED</MARITAL_STATUS>
+      <DOD>None</DOD>
+      <AGE_AT_DEATH>(N/A)</AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP>(N/A)</AGE_AT_DEATH_GRP>
+    </PATIENT>
+    <DRG>
+      <CODE>316</CODE>
+      <ITEMID>60490</ITEMID>
+      <DESC>RENAL FAILURE</DESC>
+      <COST_WEIGHT>1.28</COST_WEIGHT>
+      <COST_WEIGHT_GRP>1.0-&lt;1.3</COST_WEIGHT_GRP>
+      <DISPLAY>(316)RENAL FAILURE</DISPLAY>
+    </DRG>
+    <ICD9>(496)CHR AIRWAY OBSTRUCT NEC</ICD9>
+    <ICD9>(412)OLD MYOCARDIAL INFARCTION</ICD9>
+    <ICD9>(579.3)OTHER AND UNSPECIFIED POSTSURGICAL NONABSORPTION</ICD9>
+    <ICD9>(405.91)UNSPECIFIED RENOVASCULAR HYPERTENSION</ICD9>
+    <ICU>
+      <COUNT>1</COUNT>
+      <ICU>
+        <ICUSTAY_ID>249395</ICUSTAY_ID>
+        <FIRST_CAREUNIT>CSRU</FIRST_CAREUNIT>
+        <LAST_CAREUNIT>CSRU</LAST_CAREUNIT>
+        <INTIME>2013-04-23 09:11:03</INTIME>
+        <OUTTIME>2013-04-25 07:11:03</OUTTIME>
+        <LOS>2880</LOS>
+        <LOS_GRP>02000-&lt;03000</LOS_GRP>
+        <MEDEVENTS/>
+      </ICU>
+    </ICU>
+    <POEEVENTS>
+      <EVENT>
+        <NAME>Clonazepam</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bisacodyl</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Morphine Sulfate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>LR</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Fentanyl Patch</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>SW</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Chloride</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>MethylPREDNISolone Sodium Succ</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Methadone HCl</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ipratropium Bromide Neb</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Syringe IV Room</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Chloride 0.9 percent  Flush</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Atorvastatin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Iso-Osmotic Dextrose</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Fentanyl Citrate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Phenytoin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxycodone Sustained Release</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Soln.</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Milk of Magnesia</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxazepam</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Artificial Tear Ointment</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ciprofloxacin HCl</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Docusate Sodium</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Heparin</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Docusate Sodium</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Senna</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Magnesium Sulfate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Levothyroxine Sodium</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Morphine Sulfate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ferrous Gluconate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Chloride</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Chloride 0.9 percent  Flush</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ferrous Sulfate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Pantoprazole</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Loperamide HCl</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Octreotide Acetate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>D5W</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Promethazine HCl</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+    </POEEVENTS>
+    <LABEVENTS>
+      <EVENT>
+        <NAME>Lactate dehydrogenase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin Entitic mass</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Osmolality of Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Cortisol Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Basophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes Variant per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Eosinophils Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Moles per volume in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Inhaled oxygen flow rate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Color of Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>None</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Color of Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anisocytosis Presence in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Microcytes Presence in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatine kinase.MB Mass per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Urate Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hematocrit Volume Fraction of Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes Variant per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anisocytosis Presence in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen Partial pressure in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Calcium oxalate crystals Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Monocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Urobilinogen Mass per volume in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ketones Mass per volume in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen Partial pressure in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Serum</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.segmented per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hypochromia Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen Partial pressure in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin Entitic mass</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Mass per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Activated partial thrombplastin time aPTT in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Amylase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Protein Mass per volume in Pleural fluid</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin concentration Mass per volume</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Serum</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Alkaline phosphatase Enzymatic activity per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.segmented per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Presence in Urine by Test strip</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Albumin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anisocytosis Presence in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Osmolality of Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatine kinase.MB Mass per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT>
+      <CAREUNIT>MICU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>The patient's heparin was discontinued. Managing as indicated per RISS. There are patchy opacities in the left upper and left lower lung zones consistent with atelectasis or consolidation. He was intubated emergently without incident. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>MICU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>NURING NOTE 0700-1900 HRS 06/16/08</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Update O: cv status: sr rare pac. Laboratory studies were notable for creatinine of 1.5 (unknown baseline) and INR of 5.15. Updated on pt's status. IMPRESSION: 1. This was communicated to Dr.  2. Patchy left-sided opacities consistent with atelectasis or consolidation. s/b icu team and by vasc team initial difficulty in doing ct due to difficulty in getting adequate i.v placed for contrast. Multiplanar reconstructions confirm the above findings, and were essential for diagnosis. Afebrile, but skin is hot to touch. Cardiac enzymes are negative x3 ##ENDO: DM II and hypothyroid. </TEXT>
+    </NOTEEVENT>
+  </ADMISSION>
+</DOCUMENT>
+<DOCUMENT>
+  <ADMISSION>
+    <HADM_ID>885</HADM_ID>
+    <PATIENT>
+      <SUBJECT_ID>531208</SUBJECT_ID>
+      <SEX>F</SEX>
+      <AGE_AT_ADMISSION>0</AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP> &lt;01</AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE>2011-06-19 02:08:48</ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON>2011_06</ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP>06</ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP>19</ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP>0-Sun</ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP>25</ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE>2011-06-24 17:08:48</DISCHARGE_DATE>
+      <DOB>2011-06-19</DOB>
+      <HOSPITAL_EXPIRE>N</HOSPITAL_EXPIRE>
+      <ETHNICITY>WHITE</ETHNICITY>
+      <ADMISSION_TYPE>NEWBORN</ADMISSION_TYPE>
+      <RELIGION>NOT SPECIFIED</RELIGION>
+      <ADMISSION_SOURCE>PHYS REFERRAL/NORMAL DELI</ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP>PRIVATE</OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS>NONE</MARITAL_STATUS>
+      <DOD>None</DOD>
+      <AGE_AT_DEATH>(N/A)</AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP>(N/A)</AGE_AT_DEATH_GRP>
+    </PATIENT>
+    <DRG>
+      <CODE>385</CODE>
+      <ITEMID>60572</ITEMID>
+      <DESC>NEONATES, DIED OR TRANSFERRED TO ANOTHER</DESC>
+      <COST_WEIGHT>1.41</COST_WEIGHT>
+      <COST_WEIGHT_GRP>1.3-&lt;1.5</COST_WEIGHT_GRP>
+      <DISPLAY>(385)NEONATES, DIED OR TRANSFERRED TO ANOTHER</DISPLAY>
+    </DRG>
+    <ICD9>(V05.3)NEED FOR PROPHYLACTIC VACCINATION AND INOCULATION</ICD9>
+    <ICU>
+      <COUNT>1</COUNT>
+      <ICU>
+        <ICUSTAY_ID>105137</ICUSTAY_ID>
+        <FIRST_CAREUNIT>NICU</FIRST_CAREUNIT>
+        <LAST_CAREUNIT>NICU</LAST_CAREUNIT>
+        <INTIME>2011-06-19 02:08:48</INTIME>
+        <OUTTIME>2011-06-24 17:08:48</OUTTIME>
+        <LOS>8640</LOS>
+        <LOS_GRP>07500-&lt;10000</LOS_GRP>
+        <MEDEVENTS/>
+      </ICU>
+    </ICU>
+    <POEEVENTS/>
+    <LABEVENTS>
+      <EVENT>
+        <NAME>Spherocytes Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Monocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Chloride Moles per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Serum</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Eosinophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Indirect bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hematocrit Volume Fraction of Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Myelocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Basophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin concentration Mass per volume</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen per Inspired gas setting Volume Fraction Ventilator</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Basophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte distribution width Ratio</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen per Inspired gas setting Volume Fraction Ventilator</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Eosinophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.band form per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Monocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>None</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Metamyelocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Protein Mass per volume in Cerebral spinal fluid</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Macrocytes Presence in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>None</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Platelets Presence in Blood by Manual count</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Eosinophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Triglyceride Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Base excess in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes Variant per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Polychromasia Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Monocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin concentration Mass per volume</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte distribution width Ratio</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.band form per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>MD2</CAREGIVER>
+      <TITLE>NICU Fellow PN</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Speaks fluently with normal prosody, but speech is non-sensical. Extremities: No C/C/E bilaterally, 2+ radial, DP and PT pulses bilaterally. Disp:*100 Tablet(s)* Refills:*0* 6. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>rn5</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Global hypokinesis with a left ventricular ejection fraction of 39%. Has not been hypotensive since arrival. No stool this shift. The posterior tibial artery occludes at the level of the midcalf. glycemic control w insulin gtt at 8u/hr. bp 103/54-160/50 . Disp:*30 Tablet(s)* Refills:*2* 9. The posterior tibial artery occludes at the level of the midcalf. ABD sutures site intact. 1600: 7.35, 52, 90, 30, 1, 97, 96%. Local anesthesia was achieved with subcutaneous injection of 2 cc of 1% lidocaine. Cath report w LAD TO which was stented. General, asleep, drowsy, white male. RESP: BREATHING ON O2 6L/O2 MASK AND O2 SATS 90-92%. Family meeting held after the OR, and pt updated by Dr. Will d/c patient on decadron 1. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RN1</CAREGIVER>
+      <TITLE>NPN 7p-7a</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>labile bp w persistent tachycardia,low fp's responded well to volume. episode passed, HO aware. CV: Both lower extremities were mottled now this am has minimal mottling. HO AWARE OF THE ABOVE AND WILL INFORM WITH ANY CHANGES. There is periventricular white matter digitiform hypodensity, significantly worse on the left, suggestive of persistent tumor-related. Brain perfusion study done in nuclear med which showed flow to R hemisphere. A/P: SBP &lt;140 on labetolol gtt; neuro exam unchanged overnoc. Skin: Vac dsg in left groin intact. GI/GU/ENDO: PT. They reviewed the patient s catheterization films and felt he was not a candidate for coronary artery bypass graft surgery. Portably AP chest radiograph has been reviewed. last BM before admission to hospital per pt - MD notify (no new order). Pt pleasant and cooperative with care. Pt pulling at cpap mask at times stating she can't breathe. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RN2</CAREGIVER>
+      <TITLE>Nursing Progress Note</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>travelled to ct on cpap 10 preliminary read neg awaiting official read. Qulatity of pain is not burning, numbness, or tingling On detailed review of symtpoms, she mentions an episode of SSCP lasting several minutes, releived with Sl NTG. The cardiac and mediastinal contours are unchanged, allowing for differences in projection. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RN8</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>RESP: LS CLEAR THROUGHOUT. tolerating po's. ? establish aggressiveness of treatment given number of compromised systems. SKIN--RASH OVER UPPER ARMS . NGT should be advanced so that side ports are all below the diaphragm. Also noted to have severe right RAS. A central catheter is present, terminating in the superior vena cava. Discharge Medications: 1.Aspirin 325 mg Tablet Sig: One (1) Tablet PO DAILY (Daily). tolerated well. PT COMPLAINING OF ABDOMINAL/INCISIONAL PAIN, TEAM AWARE AND FENT GTT INCREASED TO 150 MCG. Hepatofugal in the main and right anterior portal veins consistent with underlying portal hypertension. Family in to visit patient, in room for approx. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RN7</CAREGIVER>
+      <TITLE>NPN/0700-1900</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>CT OF THE PELVIS WITH CONTRAST: The urinary bladder is unremarkable with a Foley catheter in place. As no suitable superficial veins were identified, ultrasound evaluation of the right upper extremity was performed which revealed the brachial vein to be patent and compressible. Pedal pulses via doppler, difficult to find but present. There is no hydronephrosis. Mild caliectasis of the left upper pole was seen. Tolerating diet well. Tx'd to FICU for further management and closer monitoring of his anaphylactic reaction to gent. </TEXT>
+    </NOTEEVENT>
+  </ADMISSION>
+</DOCUMENT>
+<DOCUMENT>
+  <ADMISSION>
+    <HADM_ID>886</HADM_ID>
+    <PATIENT>
+      <SUBJECT_ID>478655</SUBJECT_ID>
+      <SEX>M</SEX>
+      <AGE_AT_ADMISSION>41</AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP>35-64</AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE>2011-06-13 21:45:15</ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON>2011_06</ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP>06</ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP>13</ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP>1-Mon</ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP>24</ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE>2011-07-03 17:45:15</DISCHARGE_DATE>
+      <DOB>1970-06-19</DOB>
+      <HOSPITAL_EXPIRE>N</HOSPITAL_EXPIRE>
+      <ETHNICITY>UNKNOWN/NOT SPECIFIED</ETHNICITY>
+      <ADMISSION_TYPE>EMERGENCY</ADMISSION_TYPE>
+      <RELIGION>NOT SPECIFIED</RELIGION>
+      <ADMISSION_SOURCE>EMERGENCY ROOM ADMIT</ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP>MEDICARE</OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS>MARRIED</MARITAL_STATUS>
+      <DOD>None</DOD>
+      <AGE_AT_DEATH>(N/A)</AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP>(N/A)</AGE_AT_DEATH_GRP>
+    </PATIENT>
+    <DRG>
+      <CODE>107</CODE>
+      <ITEMID>60175</ITEMID>
+      <DESC>CORONARY BYPASS W CARDIAC CATH</DESC>
+      <COST_WEIGHT>5.37</COST_WEIGHT>
+      <COST_WEIGHT_GRP>5.0+</COST_WEIGHT_GRP>
+      <DISPLAY>(107)CORONARY BYPASS W CARDIAC CATH</DISPLAY>
+    </DRG>
+    <ICD9>(788.42)POLYURIA</ICD9>
+    <ICD9>(414.01)CORONARY ATHEROSCLEROSIS OF NATIVE CORONARY ARTERY</ICD9>
+    <ICD9>(251.8)OTHER SPECIFIED DISORDERS OF PANCREATIC INTERNAL S</ICD9>
+    <ICD9>(518.84)ACUTE &amp;amp; CHR RESP FAILURE</ICD9>
+    <ICD9>(276.52)HYPOVOLEMIA</ICD9>
+    <ICD9>(427.5)CARDIAC ARREST</ICD9>
+    <ICD9>(412)OLD MYOCARDIAL INFARCTION</ICD9>
+    <ICD9>(596.0)BLADDER NECK OBSTRUCTION</ICD9>
+    <ICD9>(276.51)DEHYDRATION</ICD9>
+    <ICU>
+      <COUNT>1</COUNT>
+      <ICU>
+        <ICUSTAY_ID>831582</ICUSTAY_ID>
+        <FIRST_CAREUNIT>CSRU</FIRST_CAREUNIT>
+        <LAST_CAREUNIT>CSRU</LAST_CAREUNIT>
+        <INTIME>2011-06-13 21:45:15</INTIME>
+        <OUTTIME>2011-07-03 17:45:15</OUTTIME>
+        <LOS>28800</LOS>
+        <LOS_GRP>20000-&lt;50000</LOS_GRP>
+        <MEDEVENTS>
+          <EVENT>
+            <NAME>Sandostatin</NAME>
+            <OCCURRENCES>177</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Propofol</NAME>
+            <OCCURRENCES>5</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Lasix</NAME>
+            <OCCURRENCES>9</OCCURRENCES>
+          </EVENT>
+        </MEDEVENTS>
+      </ICU>
+    </ICU>
+    <POEEVENTS/>
+    <LABEVENTS>
+      <EVENT>
+        <NAME>Anisocytosis Presence in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Methemoglobin per Hemoglobin.total in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Macrophages per 100 leukocytes in Cerebral spinal fluid</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Schistocytes Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin concentration Mass per volume</NAME>
+        <OCCURRENCES>19</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Urine</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Urine</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Serum</NAME>
+        <OCCURRENCES>12</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Poikilocytosis Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Calcium.ionized Moles per volume in Blood</NAME>
+        <OCCURRENCES>10</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte distribution width Ratio</NAME>
+        <OCCURRENCES>20</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Carboxyhemoglobin per Hemoglobin.total in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Phenytoin Free per Phenytoin.total in Serum or Plasma</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Granulocytes  per volume in Blood</NAME>
+        <OCCURRENCES>14</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Collection duration of Urine</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Epithelial cells  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>10</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.segmented per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Pleural fluid</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hypochromia Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>16</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes Presence in Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Macrocytes Presence in Blood</NAME>
+        <OCCURRENCES>20</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatinine Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>16</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Poikilocytosis Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Indirect bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per volume in Blood</NAME>
+        <OCCURRENCES>20</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Thyrotropin Units per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatine kinase.MB Mass per volume in Blood</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Monocytes per 100 leukocytes in Cerebral spinal fluid</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen.alveolar - arterial Partial pressure Respiratory system</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Blood</NAME>
+        <OCCURRENCES>47</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Moles per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>21</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Blood</NAME>
+        <OCCURRENCES>61</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>13</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Creatine kinase.MB Mass per volume in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin Entitic mass</NAME>
+        <OCCURRENCES>20</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Protein Mass per volume in Urine by Test strip</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>None</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>CD5 cells per 100 cells in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Amylase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lactate dehydrogenase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per volume in Cerebral spinal fluid</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Protein Mass per volume in Urine by Test strip</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Polychromasia Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Granulocytes  per volume in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Calcium Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>18</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per volume in Blood</NAME>
+        <OCCURRENCES>24</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Fibrin D-dimer FEU Mass per volume in Platelet poor plasma</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lactate Moles per volume in Blood</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Burr cells Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Moles per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>31</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Phosphate Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>23</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>10</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bacteria Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen Partial pressure in Blood</NAME>
+        <OCCURRENCES>11</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Positive end expiratory pressure setting Ventilator</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose-6-Phosphate dehydrogenase Enzymatic activity per mass in Red Blood Cells</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Mass per volume in Blood</NAME>
+        <OCCURRENCES>26</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Platelets  per volume in Blood</NAME>
+        <OCCURRENCES>24</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Presence in Urine by Test strip</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen Partial pressure in Blood</NAME>
+        <OCCURRENCES>16</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Chloride Moles per volume in Blood</NAME>
+        <OCCURRENCES>39</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Spherocytes Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per volume in Blood</NAME>
+        <OCCURRENCES>17</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Troponin I.cardiac Mass per volume in Blood</NAME>
+        <OCCURRENCES>9</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes Presence in Urine</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular volume Entitic volume</NAME>
+        <OCCURRENCES>24</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per volume in Blood</NAME>
+        <OCCURRENCES>17</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Monocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>16</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ketones Mass per volume in Urine</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen Partial pressure in Blood</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>INR in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>14</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Blood</NAME>
+        <OCCURRENCES>14</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hypochromia Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nitrite Presence in Urine by Test strip</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Presence in Urine</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen saturation in Blood</NAME>
+        <OCCURRENCES>37</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Magnesium Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>24</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Benzodiazepines Presence in Urine</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Alanine aminotransferase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Blood</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Color of Urine</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Albumin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>6</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.segmented per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Monocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>1 PLAN: MONITOR FOR S/S HEMORRHAGE, AIRWAY SWELLING/STRIDOR. Pt did well with reassurance. BP HYPERTENSIVE AT 170-180'S. PaCo2 51- see carevu for additional ABG's. Picc-line. A--UNSTABLE ABD REQUIRING SURGERY. to start incentive spirometry. Per family request patient to be organ donor after withdrawl of care. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>CSRU</CAREUNIT>
+      <CAREGIVER>RN8</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>B/S dim sx'd nothing. GI/GU/ENDO: PT. NGT should be advanced so that side ports are all below the diaphragm. most tender along hallux, no point tenderness at dorsum. FINAL REPORT INDICATION: Hypoxia. 5 RESP: EXTUBATED @ 0900 WITHOUT INCIDENT. CONGESTED COUGH WITHOUT RAISING. OOB to chair, humidified O2, continued Neb treatments and aggressive chest pt. Skin intact. ALSO ELEVATED GLUCOSE. to start incentive spirometry. Ph has improved from 7.21 to 7.28. 1600 ABG: 7.38,45,137,1,28,98%. See Carevu flowsheet for specifics. RESP--RA SAO2 97%. There is no significant intracranial atherosclerotic disease. No adventitious movements noted. GI/GU~OGT LCS. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>MICU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Hard copy pre- and post-puncture images by ultrasound were obtained. HOSPITAL COURSE: The Liver Service was consulted, because the patient has undergone a liver transplant six years ago for alcohol induced cirrhosis. They reviewed the patient s catheterization films and felt he was not a candidate for coronary artery bypass graft surgery. Shallow breaths associated only with CP. CV: HR ST/NSR 80-101. ABD SOFT, BM X2 (SOFT, BROWN STOOL), TUBE FEEDS AT 40CC/HR AND NO RESIDUALS, FOLEY DRAINING CLEAR, YELLOW URINE. GI: TOLERATING IMPACT WITH FIBER TUBE FEED ADVANCEMENT, NO RESIDUALS, OGT PLACEMENT CHECKED Q4H. IMPRESSION: Large fluid collection in the space of Retzius, with fluid-fluid level is indicative of a hematoma. Periventricular white matter hypodensity is present and is notably greater on the left than the right, likely representing persistent peritumoral edema. PLAN: CONTINUE TO CLOSELY MONITOR RESP STATUS. REASON FOR THIS EXAMINATION: r/o PNA, CHF, ILD CONTRAINDICATIONS for IV CONTRAST: dye induced nephropathy   Improving pulmonary edema. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RN5</CAREGIVER>
+      <TITLE>T/SICU Nsg Note</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>Lungs clear, but very decreased in bases - ? crackles. sign for pulm. stating that it does not itch nearly as bad. No straight line flow to the foot. IMPRESSION: Normal brain MRA. HYDRALAZINE 10MG IV GIVEN AND TOLERATED WITH DECREASE IN SBP. A/P- pt neurologically unchanged, family mtg today. IMPRESSION: 1. Improving congestive heart failure. 2. Continuing left lower lobe pneumonia. 1600 ABG: 7.24, 54, 100. No studies available for comparison. BS remain coarse, diminished in bases. Distribution of bowel gas is unremarkable. On interview the patient is mildly confused and states that he came to the hospital because of "back pain" but cannot give further details. The extreme right lung base has been excluded from the exam. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>CSRU</CAREUNIT>
+      <CAREGIVER>RN8</CAREGIVER>
+      <TITLE>CCU Nursing Progress Note 1900-0700</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT></TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RN1</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>TF at goal w/ no residuals. GUAIAC NEGATIVE. Shallow breaths associated only with CP. CV: Both lower extremities were mottled now this am has minimal mottling. f/c irrigated, no obstruction. Slight left sided facial droop, neuro consulted pt today. REASON FOR THIS EXAMINATION: picc line placement. VIDEO OROPHARYNGEAL SWALLOW: There is normal oral bolus control. nonproductive cough. Updated per plan by RN and reinforced by NP. CV- BP as above, HR sinus, Hct slightly lower at 24.9 from 28.8. LFTs sent. Continues to trend downward O/N am draw 1246. Lopressor to be ^ to 75mg/bid today. MAPs generally &gt;60. remains on ventilator with no changes made this shift. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>stress dose steroid given, benadryl given. PO would not register. ID: Temp 99.5, WBC 12.1. Further followup studies recommended. returned from ct scan pt initally aoox3 c/o of severe back pain then became increasingly somulent  PLACED BACK ON RATE TO REST RESOLVED. FINAL REPORT CLINICAL INDICATION: Increased oxygen requirement in patient with coronary artery disease and CHF. s/p exp lap for retroperitoneal bleed and fluid shifts. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>MICU</CAREUNIT>
+      <CAREGIVER>RN0</CAREGIVER>
+      <TITLE>NPN T/SICU 7P-7A</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>Improving pulmonary edema. Nodular hepatic contour is consistent with underlying cirrhosis. A central catheter is present, terminating in the superior vena cava. NURSING ADMIT TO CCU NOTE PT is 56 yr.old male with history DM, heroin abuse on methadone maintenance,  episode passed, HO aware. RESPIRATORY CARE: 53 yo m admitted to icu intubated, placed on full vent support. ID: tmax 100.1. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>TRACH/PEG/R leg Revision</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Resp: Remains on 6L n/p w/ 40% face tent w/ 02sats = 88=95, depending if 02 is on well or not. Endocrine - glucoses labile req insulin gtt to be resumed. BREATHING EVEN/UNLABORED @ REST. GLUCOSE ELEVATED &gt;200 A: WEANING PROPOFOL &amp; VENT. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>FICU</CAREUNIT>
+      <CAREGIVER>RN0</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Serial hematocrits were followed. CV: NSR WITH OCC PVC'S. Retained barium is present throughout the colon from the prior video oropharyngogram. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Limited pulse doppler and color flow examination demonstrates hepatofugal flow in the main and right anterior portal veins. No priors. PACER A DEMAND A WIRES DO NOT CAPTURE 100% OF THE TIME, SENSING, V WIRES OFF THEY DO SENSE AND CAPTURE APPROPRIATELY. GU/GI: Foley draining good amounts of clear yellow urine. Pupils fixed, 6mm, non-reactive. Pt improved slightly then tmax of 100.7. There is also dependent atelectasis running along the major fissures bilaterally and in the lung adjacent to the effusions. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>MICU</CAREUNIT>
+      <CAREGIVER>RRT6</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Social: Wife and sister called and spoke to family. Questions answered/support provided. Temperature currently 98.9 PO. The endotracheal tube appears in good position. There are no large pleural effusions. MOVING ALL EXTREMITIES, NO NEURO DEFICITS NOTED @ THIS TIME. WEAK COUGH DUE TO SORE THROAT. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>CSRU</CAREUNIT>
+      <CAREGIVER>RN2</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>DISCHARGE_SUMMARY</CATEGORY>
+      <TEXT>Gi/GU Foley to gravity Q.S. Hourly UOP. GU: FOELY DRAINING CLEAR YELLOW URINE. 4L-NC - &gt;95%. S: "NO I'M NOT HAVING ANY CHEST PAIN"  NPH 10u BID started yesterday with advancement in diet. There are no aneurysms. Remain sedated on vent overnight. Neuro: pt alert oriented following commands. He was found to have a sodium of 106. This contains a few air bronchograms. PERRL 2mm, brisk CV: SR/ST 70's-110's, occasional PVC's, lytes WNL; afebrile; SBP 80's-130's,  Continues to recieve nebs q 6. PT COMPLAINING OF ABDOMINAL/INCISIONAL PAIN, TEAM AWARE AND FENT GTT INCREASED TO 150 MCG. pt sister called no other family members contacted. 20mgm LASIX X1 WITH GOOD EFFECT. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RRT6</CAREGIVER>
+      <TITLE>Addedum to CCU Nursing Note:</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Recieving neb rx q6/hr. ALLERGIES: Talwin and Codeine, manifestations unknown. Will wean as tolerated. On interview the patient is mildly confused and states that he came to the hospital because of "back pain" but cannot give further details. REMAINS IN NSR WITHOUT ECTOPI. Upset by patient decline. also sputum induction done with usn/hypertonic saline. The heart size is normal. P02 has run aroun 90-110 on 30% fio2. The hepatic veins, left portal vein and main/left hepatic arteries were poorly visualized. Levothyroxine Sodium 88 mcg Tablet Sig: One (1) Tablet PO DAILY (Daily). Tolerating po meds and liquids overnight. Noted to have a junctional rythem interjecting within 2.6 seconds. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>MICU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>TECHNIQUE: Contiguous axial images were obtained from the lung apices through the lung bases and high resolution reconstructions were obtained. Lungs clear to dim at bases. PT IS MORE AWARE OF EVENTS AND @ PRESENT ALERT + ORIENTED X3; NEURO INTACT. Physical Exam: Gen: Pleasant.  NAD.  Speaking in complete sentences VS: 98. IMPRESSION: Successful placement of a 40 cm long single lumen PICC via the right brachial vein with the tip terminating in the SVC. Amlodipine 5 mg Tablet Sig: 0.5 Tablet PO DAILY (Daily). CT OF THE ABDOMEN WITH CONTRAST: Multiple sub-cm low attenuation lesions are scattered throughout the liver suggestive of simple cysts or hemangiomas. USING IS Q1HR. Pt also given alb neb and suct for thick creamy sput. returned from ct scan pt initally aoox3 c/o of severe back pain then became increasingly somulent  started on colace. Started on MDI's. HYPOACTIVE BOWEL SOUNDS. DSD OVER WOUNDS INTACT ACCESS; CORDIS D/C'D AND PERIPH 18 G IN LT HAND. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RN3</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>DISCHARGE_SUMMARY</CATEGORY>
+      <TEXT>HYPOACTIVE BS. no u/o Pt alert and oriented x3. Hct 27.3 (32.1) 1uprbc given. The NG tube has been removed. RR LOW TWENTIES, O2 SAT&gt;96%. Currently full code. GU: foley draining adequate clear yellow urine-faintly pink at times. He had stable vital signs and was alert and oriented complaining only of nausea after oral potassium replacement. His diet was advanced to clear liquids and then soft solids which he tolerated well. Presented with elevated INR. Neuro: Pt. remains sedated on propofol at 10mcg/kg/min. Pulmonary parenchymal consolidation is present within the dependent portion of both lung bases suggestive of aspiration. The heart size is within normal limits. eating dinner. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>MICU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>NURSING</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>HCT 24.9 this am and 23 when rechecked. First CK 2700, MB and trop pending. General, asleep, drowsy, white male. MOUTH: FOSSA AREA FREE OF BLEEDING. He was transfused for a hematocrit of 22. Pt intubated and CTscan showed frontal-parietal bleed and SDH with midline shift and numerous facial, sinus and skull fxs. Foley in place w/ uo &gt; 30 cc/hr. RR 12-18. Disp:*300 ML(s)* Refills:*0* 2. Large amount of perihepatic ascites. Resp- pt vent settings unchanged, suctioned for thick tan secretions, Pt satting at 96-100%. PAIN: PT.GIVEN 650 PO ACETAMINOPHEN FOR PAIN. No acute traumatic abnormality identified. Disp:*50 Lozenge(s)* Refills:*0*  </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>MICU</CAREUNIT>
+      <CAREGIVER>RRT0</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>gi status /endocrine:rx for anxiety. CV: Hemodynamically stable. also sputum induction done with usn/hypertonic saline. PLAN: CONTINUE TO REST ON VENT, CMV MODE, SEDATED ON PROPOFOL, CHEST PT, SX PRN, VAP. PULSES WEAK PALPABLE. His family also noted increased abdominal girth over the past few weeks. CVP 4-6. GU/GI: soft distend abd. A/P~ELECTROLYTES CURRENTLY WNL. Tibioperoneal trunk and peroneal artery are occluded. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RN1</CAREGIVER>
+      <TITLE>RESPIRATORY CARE:</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>PERRL 4mm brisk; calm &amp; cooperative; off propofol CV: Afebrile; SR 70's-low 100's with rare PVC's;  continues on nitro gtt at 0.8mcg/kg/min. HOSPITAL COURSE: The Liver Service was consulted, because the patient has undergone a liver transplant six years ago for alcohol induced cirrhosis. two good specimens obtained. Gi/Gu: tolerating po's, abd soft round and non tender, good bowel sounds, q 4 hr blood sugars, making low moderate u/o and is voiding. AND GLARGINE REGIME. Mg repleted successfully current Mg 2.0. 2ux of FFP, 2ux of Plts. IV therapy failed. uop yellow w brwn sediment. pt having break though pain on fentany gtt, bolus given gtt increased. Pt was awaiting transfer to rehab when she became lethargic and hypotensive in the afternoon. No enhancing nodules are identified. Status post retroperitoneal bleed. IV therapy failed. Neuro: Alert and oriented x 3, MAE. Pt is visibly frustrated by his inability to express his needs. Family meeting held. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>MICU nursing progress note 7P-7A</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>PT TOLERATING CLEAR LIQUIDS WITHOUT DIFFICULTY. Evaluate for aspiration. There are no pleural effusions. Requiring 6L NC and 40% face tent for sats of 94-95%. The heart is enlarged. neuro: A+OX3. There is no evidence of pleural effusion or pneumothorax. tolerating po's. Lungs diminished throughout both bases. A catheter device has been introduced and there is a moderate amount of air within the collection. and benadryl 25 mgs i.v. COPD: nightly home 02. No evidence of new hemorrhage or mass effect. </TEXT>
+    </NOTEEVENT>
+  </ADMISSION>
+</DOCUMENT>
+<DOCUMENT>
+  <ADMISSION>
+    <HADM_ID>887</HADM_ID>
+    <PATIENT>
+      <SUBJECT_ID>387318</SUBJECT_ID>
+      <SEX>F</SEX>
+      <AGE_AT_ADMISSION>22</AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP>18-35</AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE>2012-02-29 15:38:44</ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON>2012_02</ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP>02</ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP>29</ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP>3-Wed</ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP>09</ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE>2012-03-04 13:38:44</DISCHARGE_DATE>
+      <DOB>1989-12-29</DOB>
+      <HOSPITAL_EXPIRE>N</HOSPITAL_EXPIRE>
+      <ETHNICITY>BLACK/AFRICAN AMERICAN</ETHNICITY>
+      <ADMISSION_TYPE>EMERGENCY</ADMISSION_TYPE>
+      <RELIGION>NOT SPECIFIED</RELIGION>
+      <ADMISSION_SOURCE>EMERGENCY ROOM ADMIT</ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP>PRIVATE</OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS>SINGLE</MARITAL_STATUS>
+      <DOD>None</DOD>
+      <AGE_AT_DEATH>(N/A)</AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP>(N/A)</AGE_AT_DEATH_GRP>
+    </PATIENT>
+    <DRG>
+      <CODE>144</CODE>
+      <ITEMID>60229</ITEMID>
+      <DESC>OTHER CIRCULATORY SYSTEM DIAGNOSES W CC</DESC>
+      <COST_WEIGHT>1.27</COST_WEIGHT>
+      <COST_WEIGHT_GRP>1.0-&lt;1.3</COST_WEIGHT_GRP>
+      <DISPLAY>(144)OTHER CIRCULATORY SYSTEM DIAGNOSES W CC</DISPLAY>
+    </DRG>
+    <ICD9>(338.18)None</ICD9>
+    <ICD9>(664.01)FIRST-DEGREE PERINEAL LACERATION WITH DELIVERY</ICD9>
+    <ICD9>(865.01)HEMATOMA OF SPLEEN WITHOUT RUPTURE OF CAPSULE WITH</ICD9>
+    <ICD9>(567.29)OTH SUPPURATIVE PERITONI</ICD9>
+    <ICD9>(305.50)NONDEPENDENT OPIOID ABUSE UNSPECIFIED USE</ICD9>
+    <ICU>
+      <COUNT>1</COUNT>
+      <ICU>
+        <ICUSTAY_ID>340721</ICUSTAY_ID>
+        <FIRST_CAREUNIT>FICU</FIRST_CAREUNIT>
+        <LAST_CAREUNIT>FICU</LAST_CAREUNIT>
+        <INTIME>2012-02-29 15:38:44</INTIME>
+        <OUTTIME>2012-03-04 13:38:44</OUTTIME>
+        <LOS>5760</LOS>
+        <LOS_GRP>05000-&lt;07500</LOS_GRP>
+        <MEDEVENTS>
+          <EVENT>
+            <NAME>Fentanyl</NAME>
+            <OCCURRENCES>13</OCCURRENCES>
+          </EVENT>
+        </MEDEVENTS>
+      </ICU>
+    </ICU>
+    <POEEVENTS>
+      <EVENT>
+        <NAME>Potassium Chloride</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>HYDROmorphone Dilaudid</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bisacodyl</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Promethazine HCl</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Vial</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Fentanyl Citrate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Chloride</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Magnesium Sulfate</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Metronidazole</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Famotidine PO</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Fluconazole</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>LR</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>PredniSONE</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+    </POEEVENTS>
+    <LABEVENTS>
+      <EVENT>
+        <NAME>Yeast Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Macrocytes Presence in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nitrite Presence in Urine by Test strip</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Calcium Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Reticulocytes per 100 erythrocytes in Red Blood Cells by Automated count</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Myelocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>DNA double strand Ab Units per volume in Serum</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Moles per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Magnesium Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Calcium oxalate crystals Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hematocrit Volume Fraction of Blood</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Epithelial cells  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Presence in Urine by Test strip</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Potassium Moles per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophil cytoplasmic Ab Presence in Serum by Immunofluorescence</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Presence in Urine</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular volume Entitic volume</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Haptoglobin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Mass per volume in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Urea nitrogen Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Serum</NAME>
+        <OCCURRENCES>7</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Amylase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin concentration Mass per volume</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin Entitic mass</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Blasts per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hematocrit Volume Fraction of Blood</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes Variant per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RN2</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>Slept most of the night. No pleural effusion, cardiomegaly, or evidence of central adenopathy. Resp Care Pt taken off NIPPV this am and has remained off for the remainder of the shift with stable ABGs and spo2s on 1L NC. Insulin Regular Human 100 unit/mL Solution Sig: as dir Injection ASDIR (AS DIRECTED): as dir. Evaluation of the intra-abdominal organs is limited by the absence of IV contrast. BILATERAL LS COARSE, CRACKLES ON LT BASE AND DIMINISHED AT THE RT BASE. CV: NSR, SBP 90-110, NA 119, STARTED ON NS 60ML/HR AND 4HRLY LABS,AND AM LAB 120,CONTINUED NS SAME,MD AWARE, NEXT LAB DUE AT 0800. CT showed intercerebral hemorrhage. IMPRESSION: A left temporal lobe subacute hematoma. There is increased density at the left lung base with loss of the left hemidiaphragm contour. Local anesthesia was achieved with subcutaneous injection of 2 cc of 1% lidocaine. No definite pleural effusion is seen. pm continue with pulmonary toilet follow up on ct scan results. (R) FOSSA AREA FREE OF BLEEDING. CVS; TMAX 100.1 PO NSR BP TO 170 CONDISTENTLY STARTED ON CAPTOPROL WITH BP 125-145/60,  </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>RN1</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>P: MONITOR COMFORT, HR AND RYTHYM, SBP, CT DRAINAGE, PP, DSGS, RESP STATUS-PULM TOILET, NEURO STATUS, I+O-UO, LABS, CLOSELY MONITOR K.  PT.NODS HEAD "YES" OR "NO" TO SIMPLE QUESTIONS, ATTEMPTS TO SPEAK AROUND ETT, LEFT SIDE NOTICEABLE MORE WEAK THAN RIGHT-  Cont plan of care. Stable overnight. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>monitor neuro and hem dynamic status, continues monitor improves withpain repositioning and heat packs. USING IS Q1HR. Imaging of the organs of the upper abdomen is limited without intravenous contrast. DID NOT RECEIVE ANY NPH INSULIN THIS AM. CV: nsr with bbb 70-80's. LASIX GIVEN AND GOOD U/O RESPONSE. PHYSICAL EXAMINATION: Vital signs blood pressure 117/70. O2 sats labile. The patient was placed supine on the angiography table. PLAN: PULMONARY TOILETING. No evidence of pneumonia. Changed with ns w-d dsg. There is no significant intracranial atherosclerotic disease. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>MICU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>tolerated well. NEURO: PT.LIGHTLY SEDATED, MAE AND OBEYS COMMANDS. +FEMORAL/PT/DP'S X2. Breath sounds slightly coarse in the bases no wheezes heard at time. There is a bleed on the head CT. PT IS MORE AWARE OF EVENTS AND @ PRESENT ALERT + ORIENTED X3; NEURO INTACT. No focal stenoses are seen throughout the course of the graft. IMPRESSION: Improving pulmonary edema. The urinary bladder is collapsed around the balloon of a Foley catheter. Hanging feet over edge of bed does not help. cxr shows pos infiltrate inrt lobes. </TEXT>
+    </NOTEEVENT>
+  </ADMISSION>
+</DOCUMENT>
+<DOCUMENT>
+  <ADMISSION>
+    <HADM_ID>888</HADM_ID>
+    <PATIENT>
+      <SUBJECT_ID>288844</SUBJECT_ID>
+      <SEX>M</SEX>
+      <AGE_AT_ADMISSION>50</AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP>35-64</AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE>2012-02-20 00:09:48</ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON>2012_02</ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP>02</ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP>20</ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP>1-Mon</ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP>08</ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE>2012-02-22 23:09:48</DISCHARGE_DATE>
+      <DOB>1961-12-08</DOB>
+      <HOSPITAL_EXPIRE>N</HOSPITAL_EXPIRE>
+      <ETHNICITY>WHITE</ETHNICITY>
+      <ADMISSION_TYPE>EMERGENCY</ADMISSION_TYPE>
+      <RELIGION>PROTESTANT QUAKER</RELIGION>
+      <ADMISSION_SOURCE>EMERGENCY ROOM ADMIT</ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP>PRIVATE</OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS>SINGLE</MARITAL_STATUS>
+      <DOD>None</DOD>
+      <AGE_AT_DEATH>(N/A)</AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP>(N/A)</AGE_AT_DEATH_GRP>
+    </PATIENT>
+    <DRG>
+      <CODE>327</CODE>
+      <ITEMID>60498</ITEMID>
+      <DESC>STOMACH, ESOPHAGEAL &amp;amp; DUODENAL PROC W CC</DESC>
+      <COST_WEIGHT>3.29</COST_WEIGHT>
+      <COST_WEIGHT_GRP>2.0-&lt;4.0</COST_WEIGHT_GRP>
+      <DISPLAY>(327)STOMACH, ESOPHAGEAL &amp;amp; DUODENAL PROC W CC</DISPLAY>
+    </DRG>
+    <ICD9>(427.5)CARDIAC ARREST</ICD9>
+    <ICD9>(414.01)CORONARY ATHEROSCLEROSIS OF NATIVE CORONARY ARTERY</ICD9>
+    <ICD9>(276.51)DEHYDRATION</ICD9>
+    <ICD9>(433.10)OCCL CAROTID W/O INFARCT</ICD9>
+    <ICD9>(567.2)OTHER SUPPURATIVE PERITONITIS</ICD9>
+    <ICD9>(412)OLD MYOCARDIAL INFARCTION</ICD9>
+    <ICD9>(E816.0)MOTOR VEHICLE TRAFFIC ACCIDENT DUE TO LOSS OF CONT</ICD9>
+    <ICD9>(255.4)CORTICOADRENAL INSUFFICIENCY</ICD9>
+    <ICU>
+      <COUNT>1</COUNT>
+      <ICU>
+        <ICUSTAY_ID>749562</ICUSTAY_ID>
+        <FIRST_CAREUNIT>CSRU</FIRST_CAREUNIT>
+        <LAST_CAREUNIT>CSRU</LAST_CAREUNIT>
+        <INTIME>2012-02-20 00:09:48</INTIME>
+        <OUTTIME>2012-02-22 23:09:48</OUTTIME>
+        <LOS>4320</LOS>
+        <LOS_GRP>04000-&lt;05000</LOS_GRP>
+        <MEDEVENTS>
+          <EVENT>
+            <NAME>Propofol</NAME>
+            <OCCURRENCES>1</OCCURRENCES>
+          </EVENT>
+          <EVENT>
+            <NAME>Insulin</NAME>
+            <OCCURRENCES>12</OCCURRENCES>
+          </EVENT>
+        </MEDEVENTS>
+      </ICU>
+    </ICU>
+    <POEEVENTS/>
+    <LABEVENTS>
+      <EVENT>
+        <NAME>Lactate dehydrogenase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Magnesium Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Serum</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Activated partial thrombplastin time aPTT in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Serum</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspartate aminotransferase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Cobalamin Mass per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin Entitic mass</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Osmolality of Serum or Plasma</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.band form per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Eosinophils Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Polymorphonuclear cells per 100 leukocytes in Peritoneal fluid</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocytes  per volume in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anion gap in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Myelocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per area in Urine sediment by Microscopy high power field</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspartate aminotransferase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>None</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>None</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>pH of Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nitrite Presence in Urine by Test strip</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>INR in Blood by Coagulation assay</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Barbiturates Presence in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Base excess in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Barbiturates Presence in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Calcium Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Aspartate aminotransferase Enzymatic activity per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Sodium Moles per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Mass per volume in Blood</NAME>
+        <OCCURRENCES>4</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Mass per volume in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Oxygen per Inspired gas setting Volume Fraction Ventilator</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Poikilocytosis Presence in Blood by Light microscopy</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lactate Moles per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Urobilinogen Mass per volume in Urine</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Granulocytes  per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Leukocytes  per volume in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Troponin I.cardiac Mass per volume in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Chloride Moles per volume in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Magnesium Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Platelets Presence in Blood by Manual count</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Basophils per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bicarbonate Moles per volume in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Ethanol Mass per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Alkaline phosphatase Enzymatic activity per volume in Blood</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Specific gravity of Urine by Test strip</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Phenytoin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bacteria Presence in Urine sediment by Light microscopy</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Glucose Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Neutrophils.band form per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT>
+      <CAREUNIT>CSRU</CAREUNIT>
+      <CAREGIVER>RN0</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>The patient's family consented. Abd is soft with good bowel sounds. BILATERAL LS COARSE, CRACKLES ON LT BASE AND DIMINISHED AT THE RT BASE. Evaluate for bleed. ABG RESULTS: 1000: 7.36,50,73,29,94,97%. Pan cultured yesterday. Resp Care Pt intermittintly wearing bipap t/o shift for hypercarbic resp failure and remains on NIPPV since 3pm. GOOD URINE OUTS NO ISSUES PLAN: WILL FOLLOW SERIAL HCTS AND TREAT AS NEEDED, MONITOR HEMODYNAMICS AND KEEP INTUBATED AND SEDATED. DOBHOFF PLACED IN STOMACH- CURRENTLY CLAMPED DUE TO 60CC RESIDUAL AT 1600. endo- sugars gradually increased as TF's increased, Insulin gtt titrated accordingly, please see flow sheet. Belongings given to fire chief in ER, family aware. EKG done - no changes noted. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>FICU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>NPN 1900-0700:</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>OSM 308-311. Local anesthesia was achieved with subcutaneous injection of 2 cc of 1% lidocaine. He became asystolic at 9:55, and remained asystolic for a total of five minutes confirming the criteria that were met for proceeding with a donation after cardiac death. No evidence of pneumonia. P--CON'T TO MONITOR. SOCIAL WORK SW met with family members throughout day for support. SOCAIL: S.O. IN TO VISIT ALL MORNING AND UPDATED REGARDING POC. Stable left lower lobe atelectasis/infiltrates and layering left-sided effusion. He was also started on albumin. glycemic control w insulin gtt at 8u/hr. GI/GU: bs + 4. HYDRALAZINE 10MG IV GIVEN AND TOLERATED WITH DECREASE IN SBP. Med brown guiac negative stool x1. He landed on his head suffering severe closed head injury. URINE OUTPUT 15-35ML/HR,MD AWARE. continues on po lopressor and captopril. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>None</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>No evidence of new hemorrhage or mass effect. The patient was pronounced dead as noted at 9:55 by myself. WILL ATTEMPT VENT WEAN AGAIN THIS AM. CT showed intercerebral hemorrhage. As no suitable superficial veins were identified, ultrasound evaluation of the right upper extremity was performed which revealed the brachial vein to be patent and compressible. Monitor resp. </TEXT>
+    </NOTEEVENT>
+  </ADMISSION>
+</DOCUMENT>
+<DOCUMENT>
+  <ADMISSION>
+    <HADM_ID>889</HADM_ID>
+    <PATIENT>
+      <SUBJECT_ID>388861</SUBJECT_ID>
+      <SEX>F</SEX>
+      <AGE_AT_ADMISSION>0</AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP> &lt;01</AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE>2011-09-03 06:38:54</ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON>2011_09</ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP>09</ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP>03</ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP>6-Sat</ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP>35</ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE>2011-09-16 01:38:54</DISCHARGE_DATE>
+      <DOB>2011-09-03</DOB>
+      <HOSPITAL_EXPIRE>N</HOSPITAL_EXPIRE>
+      <ETHNICITY>WHITE</ETHNICITY>
+      <ADMISSION_TYPE>NEWBORN</ADMISSION_TYPE>
+      <RELIGION>NOT SPECIFIED</RELIGION>
+      <ADMISSION_SOURCE>PHYS REFERRAL/NORMAL DELI</ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP>OTHER</OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS>NONE</MARITAL_STATUS>
+      <DOD>None</DOD>
+      <AGE_AT_DEATH>(N/A)</AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP>(N/A)</AGE_AT_DEATH_GRP>
+    </PATIENT>
+    <DRG>
+      <CODE>385</CODE>
+      <ITEMID>60572</ITEMID>
+      <DESC>NEONATES, DIED OR TRANSFERRED TO ANOTHER</DESC>
+      <COST_WEIGHT>1.38</COST_WEIGHT>
+      <COST_WEIGHT_GRP>1.3-&lt;1.5</COST_WEIGHT_GRP>
+      <DISPLAY>(385)NEONATES, DIED OR TRANSFERRED TO ANOTHER</DISPLAY>
+    </DRG>
+    <ICD9>(V05.3)NEED FOR PROPHYLACTIC VACCINATION AND INOCULATION</ICD9>
+    <ICD9>(770.89)OTHER RESPIRATORY PROBLEMS AFTER BIRTH</ICD9>
+    <ICD9>(765.25)29-30 COMPLETED WEEKS OF GESTATION</ICD9>
+    <ICU>
+      <COUNT>1</COUNT>
+      <ICU>
+        <ICUSTAY_ID>884586</ICUSTAY_ID>
+        <FIRST_CAREUNIT>NICU</FIRST_CAREUNIT>
+        <LAST_CAREUNIT>NICU</LAST_CAREUNIT>
+        <INTIME>2011-09-03 06:38:54</INTIME>
+        <OUTTIME>2011-09-16 01:38:54</OUTTIME>
+        <LOS>18720</LOS>
+        <LOS_GRP></LOS_GRP>
+        <MEDEVENTS/>
+      </ICU>
+    </ICU>
+    <POEEVENTS/>
+    <LABEVENTS>
+      <EVENT>
+        <NAME>Lymphocytes Variant per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Anisocytosis Presence in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nucleated Erythrocytes per 100 erythrocytes in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular volume Entitic volume</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nucleated Erythrocytes per 100 erythrocytes in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Indirect bilirubin Mass per volume in Serum or Plasma</NAME>
+        <OCCURRENCES>8</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Hemoglobin Mass per volume in Blood</NAME>
+        <OCCURRENCES>2</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular hemoglobin Entitic mass</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Lymphocytes per 100 leukocytes in Blood</NAME>
+        <OCCURRENCES>3</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Erythrocyte mean corpuscular volume Entitic volume</NAME>
+        <OCCURRENCES>1</OCCURRENCES>
+      </EVENT>
+      <EVENT>
+        <NAME>Nucleated Erythrocytes per 100 erythrocytes in Blood</NAME>
+        <OCCURRENCES>5</OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RN9</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Plan: monitor bood sugars, orient as needed, keep sitter at bedside, ? increase in lopressor dose, ? f2 later today if pt remains stable. HCT down to 21, pt transfused with 8ux additional units of PRBC's,infused via level 1 fluid warmer. Resp Care, Pt.remains intubated on IPS 10 overnoc. Will cont to follow as needed. pt coughing and raising small amounts yellow secretions. The line is ready for use. Labs sent at 18:00. Speaks fluently with normal prosody, but speech is non-sensical. The cardiac silhouette is within normal limits for size. Social History: Not married. No children. Not working; used to be a welder.  RECEIVED 1U PRBCS FOR HCT 27. IMPRESSION: 1) Patent aortobifemoral graft. Significant, multifocal, bilateral occlusive disease affecting the outflow vessels. The right brachial vein was then accessed using a 21-gauge micropuncture needle. Slept most of the night. Relief with neb rx. Sats 99-100%. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RN3</CAREGIVER>
+      <TITLE>PCA Progress Note 7a-7p</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>See written note in papaer chart, carevu down  No definite pleural effusions are identified but there may be some posteriorly layering of effusion, particularly on the right side. DSD NOT CHANGED. labs=am pending. Plan: Continue to monitor. He was brought in by ambulance. Both iliac limbs of the graft are likewise patent. Neuro: Easily arouse by voice, MAE's except cannot move L toes; following commands consistently;  Laboratory studies were notable for creatinine of 1.5 (unknown baseline) and INR of 5.15. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RN9</CAREGIVER>
+      <TITLE>Admission Note</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Cont. to monitor resp status, place on NIV as indicated. PTCA and stent x4 to LAD, (80% mRCA not intervened at this time) c/b dissection in distal LAD. Conts. protonix for GI prophylaxis. BS present. Has intermittent episodes of trembling(normal per pt) more pronounced than yesterday. ABDOMINAL US: 1.Diffuse fatty infiltration of the liver. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RN2</CAREGIVER>
+      <TITLE>NICU nursing note</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Levothyroxine Sodium 88 mcg Tablet Sig: One (1) Tablet PO DAILY (Daily). There is no pulmonary edema or any focal abnormality elsewhere in the lungs. If the right- sided diffuse density on the base is a result of posteriorly located pleural effusion in the supine patient STARTED ON NEO @ 0100 CURRENTLY @ .5 UCG/KG/MIN. ENDO: BS 200s. As no suitable superficial veins were identified, ultrasound evaluation of the right upper extremity was performed which revealed the brachial vein to be patent and compressible. GLUCOSE ELEVATED &gt;200 A: WEANING PROPOFOL &amp; VENT. GOAL RATE FOR TUBE FEEDS AT 40CC/HR- WILL RESUME AT 1700. There is no definite intraparenchymal mass or biliary ductal dilatation. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>NNP9</CAREGIVER>
+      <TITLE>NPN 0700-1900</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>TO 91-91% WHILE SLEEPING NC REAAPLIED. He does report noticing increasing abdominal girth and weight gain over several weeks. There is slight mucosal thickening in the right maxillary sinus. No evidence of pneumothorax. +GAG, +COUGH- RESPIRATORY RATE CURRENTLY 15. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>MD9</CAREGIVER>
+      <TITLE>Neonatology Attending</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>cv=sheaths (a &amp; pa lines) dced. Procedures: Chest CT done at 1730. +FEMORAL/PT/DP'S X2. Nods "no" to ?pain. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>None</CAREGIVER>
+      <TITLE>Neonatology note</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>FINDINGS: Lung excursion has improved and no focal consolidation is evident. see above labs: 5.1 K+, 41=bun creat 1 id: afebrile. NGT should be advanced so that side ports are all below the diaphragm. A negative FAST exam was recorded. Endo: RISS. reported to MD. endo- sugars gradually increased as TF's increased, Insulin gtt titrated accordingly, please see flow sheet. In the left temporal lobe, there is a 3.2 x 2.9 x 2.1 cm subacute hematoma. Monitor U/O. DC'd at 0300. CV: PT. NSR, RARE PVC'S, HR BETWEEN 90-108, SBP 95- 115, 5MG IV LOPRESSOR GIVEN ONCE FOR RATE CONTROL. No enhancing nodules are identified. +GAG, +COUGH- RESPIRATORY RATE CURRENTLY 15. BS 153 treated with 5 units reg insulin sq. See flowsheet for further data. Improving pulmonary edema. REASON FOR THIS EXAMINATION: Comparison and decreased PaO2 with A-a gradient. A/P: check creat, replete lytes as needed cautious w K+ repletion ^ diet and ativity. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RN7</CAREGIVER>
+      <TITLE>NPN 2300-0700</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>Diffusion-weighted imaging was also obtained. We were unable to actually close his calvarium due to the massive amount of cerebral edema, therefore he did receive a craniectomy and had skin closure over his brain parenchyma. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RN4</CAREGIVER>
+      <TITLE>Nursing Progress Note 1900-0700</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>No changes. hydration/bicarb gtt completed as ordered. PT WITH TRACE EDEMA LE, SKIN IS WARM BUT PALE. PT consult tomorrow, ECHO today or tomorrow, c/o to floor when stable. Family History: non-contributory  After the inner cannula was removed, the PICC was then advanced over the wire through the sheath under fluoroscopic guidance. Frequent ABGs. Other past med. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RRT8</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>RADIOLOGY_REPORT</CATEGORY>
+      <TEXT>There is no evidence of chronic lung disease or nodules. GU: condom foley intact, urine clear yellow. ID- abx's unchanged, pt afebrile. wo co sob/ dyspnea. The posterior tibial artery is demonstrated about its proximal one- third, though attenuated and irregular. Preop for brain biopsy. Multifocal high grade disease right superficial femoral artery, which occludes at the level of the popliteal artery,  Admitting Diagnosis: INTRAPARENCHYMAL BLEED  FINAL REPORT (Cont)  </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>NP8</CAREGIVER>
+      <TITLE>NPNOte</TITLE>
+      <CATEGORY>MD Notes</CATEGORY>
+      <TEXT>Will continue to follow closely. TECHNIQUE: Non-contrast head CT. JP draining 30cc bloody drg. General surgery was consulted. ID: MRSA AND VRE IN WOUND- AFEBRILE. NS bolus 500cc infused and NS at 125cc/hr x2 liters infusing at this time. FINAL REPORT HISTORY: 64-year-old man with a left temporal astrocytoma. </TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>NNP2</CAREGIVER>
+      <TITLE>Neonatology Attending</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT></TEXT>
+    </NOTEEVENT>
+    <NOTEEVENT>
+      <CAREUNIT>NICU</CAREUNIT>
+      <CAREGIVER>RNC2</CAREGIVER>
+      <TITLE>None</TITLE>
+      <CATEGORY>Nursing/Other</CATEGORY>
+      <TEXT>rr teens to high 20's pt had few episodes of sob with shallow quick breathing noted,  ABP RANGING 116-150'S SYSTOLIC. The hepatic veins, left portal vein and main/left hepatic arteries were poorly visualized. IVF decreased to 125cc x1L then KVO. Social: Significant other. pt turned wside to side every 2 hours 2nd to back discomfort which was relieved with repositioning. FINAL REPORT PICC LINE PLACEMENT INDICATION: Left temporal astrocytoma, hemorrhage, bradycardia, need for IV therapy, failed bedside attempt. Presented with elevated INR. Note that the outside CT scan images were reviewed by the resident only, prior to the interpretation of this study, as they have not been digitized and made available on PACS. sign for pulm. respiratory care pt was extubated tol poorly pt was placed on mask vent tol well. PT RECEIVED 1X DOSE OF UNASYN AND A BAG OF PLTS. A precarinal lymph node measuring approximately 1 cm in diameter is noted, a nonspecific finding. POTASSIUM 3.2 AND REPLETED 40MEQ PO. Zaraxalyn 5mg po given at 1500 and Lasix 120mg IV to be given at 1530. VOIDING CLEAR YELLOW URINE. </TEXT>
+    </NOTEEVENT>
+  </ADMISSION>
+</DOCUMENT>
+
+</DOCUMENTS>

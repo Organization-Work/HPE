@@ -1,0 +1,193 @@
+.circle-node {
+    stroke: #fff;
+    fill-rule: evenodd;
+}
+
+#text-filter-form {
+    font-size: 12px;
+    font-family: Verdana;
+    padding: 2px;
+    margin: 0;
+}
+
+#querytextbox {
+    font-size: 12px;
+    display: inline-block;
+    width: 158px;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    color: gray;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border-radius: 3px;
+    line-height: 20px;
+    height: 20px;
+    padding: 4px 6px;
+    vertical-align: middle;
+    margin: 1px 1px 0 0;
+}
+
+#querytextbox.outdated {
+    color: black;
+}
+
+#searchbtn {
+    font-size: 13px;
+    height: 30px;
+    width: 62px;
+}
+
+.draggable-filter {
+    font-size: 12px;
+    font-weight: bold;
+    list-style-type: none;
+    margin: 0 2px 0 2px;
+    float: left;
+    padding: 1px 2px 2px 2px;
+    border-radius: 0 0 4px 4px;
+    border: 1px dashed white;
+    border-top: none;
+    font-family: Verdana;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;     /* IE 10 only */
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.draggable-filter-active {
+    margin: 0 10px 0 2px;
+}
+
+.draggable-filter li {
+    margin: 1px 1px; padding: 5px 2px;
+    border-radius: 2px;
+    background: #a8a9ac;
+    text-align: center;
+    width: 100px;
+    color: white;
+}
+
+li.draggable-filter-label {
+    background: #00457c;
+}
+
+li.draggable-filter-endmarker {
+    background: white;
+    border: 1px dashed #5f8aab;
+    border-radius: 4px;
+    color: #5f8aab;
+    margin-top: 2px;
+}
+
+.draggable-filter-separator {
+    height: 6px;
+    background: url("../images/bullet_arrow_down.png") center no-repeat;
+}
+
+.draggable-filter-active .draggable-filter-filter, .draggable-filter-type {
+    position: relative;
+    z-index: 1002;
+    text-overflow: ellipsis;
+}
+
+.draggable-filter-filter.isFiltering, .filter-option.isFiltering {
+    background: orange;
+}
+
+.draggable-filter-filter.isFiltering.sector-hovered, .filter-option:hover {
+    background: #f6d05e;
+}
+
+.draggable-filter-filter.isQueryTextType.isFiltering {
+    background: #E6550D;
+}
+
+.draggable-filter-filter.isViewing, .filter-option.isFiltering.isViewing {
+    background: #6BAED6
+}
+
+.draggable-filter-filter.isViewing.sector-hovered, .filter-option.isViewing:hover {
+    background: #66c3fb
+}
+
+.draggable-filter-filter, .draggable-filter-type {
+    font-size: 1.2em;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.draggable-filter-popup {
+    position: absolute;
+    z-index: 1001;
+}
+
+.draggable-filter-popup input {
+    width: 100px;
+}
+
+.filter-option {
+    background: lightgray;
+    border: 1px solid black;
+    padding: 2px;
+    text-align: center;
+    width: 100px;
+    border-top: none;
+}
+
+.debugonly {
+    display: none;
+}
+
+#timegraph {
+    width: 500px;
+    height: 100px;
+    padding: 10px 0 0 0;
+    position: relative;
+}
+
+.timegraph-label {
+    position: absolute;
+    font-size: 11px;
+    padding: 2px;
+    background: white;
+    border: 1px solid orange;
+}
+
+#chart {
+    width: 960px;
+    height: 700px;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.idolview-tooltip {
+    position: absolute;
+    text-align: center;
+    text-overflow: ellipsis;
+    pointer-events: none;
+}
+
+.idolview-tooltip-filter { color: #eee; font-size: smaller;}
+
+.idolview-tooltip-name { color: white; }
+
+.idolview-tooltip-size { color: black; }
+
+.labels {
+    text-anchor: middle;
+    font-size: 10px;
+    pointer-events: none;
+}
+
+#load-indicator {
+    position:fixed;
+    top: 5px;
+    left: 5px;
+    width: 18px;
+    height: 15px;
+    background-image: url(../images/ajax-loader.gif)
+}
+
+.ui-menu-item {
+    font-size: 12px;
+}

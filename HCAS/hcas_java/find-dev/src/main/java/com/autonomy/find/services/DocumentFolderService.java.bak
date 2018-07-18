@@ -1,0 +1,994 @@
+package com.autonomy.find.services;
+
+/*
+ * $Id: //depot/scratch/frontend/find-healthcare/src/main/java/com/autonomy/find/services/DocumentFolderService.java#30 $
+ *
+ * Copyright (c) 2013, Autonomy Systems Ltd.
+ *
+ * Last modified by $Author: wo $ on $Date: 2014/05/13 $ 
+ */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang.StringUtils;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.autonomy.aci.actions.idol.query.Document;
+import com.autonomy.aci.actions.idol.query.QueryResponse;
+import com.autonomy.aci.client.services.AciService;
+import com.autonomy.aci.client.util.AciParameters;
+import com.autonomy.aci.content.identifier.reference.ReferencesBuilder;
+import com.autonomy.find.api.database.DocumentFolder;
+import com.autonomy.find.config.SearchConfig;
+import com.autonomy.find.config.SearchView;
+import com.autonomy.find.dto.SearchRequestData;
+import com.autonomy.find.dto.Parametric.BoolOp;
+import com.autonomy.find.dto.Parametric.DocExportData;
+import com.autonomy.find.dto.Parametric.DocImportData;
+import com.autonomy.find.dto.Parametric.DocImportType;
+import com.autonomy.find.dto.Parametric.ExportFormat;
+import com.autonomy.find.dto.Parametric.FieldParams;
+import com.autonomy.find.dto.Parametric.FilterGroup;
+import com.autonomy.find.fields.FilterField;
+import com.autonomy.find.fields.FilterOperator;
+import com.autonomy.find.fields.FilterType;
+import com.autonomy.find.processors.StoreStateProcessor;
+import com.autonomy.find.services.search.PrintFieldsResultIterator;
+import com.autonomy.find.services.search.ReferenceResultsIterator;
+import com.autonomy.find.util.CollUtils;
+import com.autonomy.find.util.FieldTextUtil;
+import com.autonomy.find.util.FieldUtil;
+import com.autonomy.find.util.StateResult;
+import com.autonomy.find.util.audit.AuditActions;
+import com.autonomy.find.util.audit.AuditLogger;
+import com.autonomy.vertica.service.SearchVerticaService;
+
+
+@Service
+public class DocumentFolderService {
+
+    @Autowired
+    private SearchConfig searchConfig;
+
+    @Autowired
+    private AciService searchAciService;
+
+    @Autowired
+    private ParametricService parametricService;
+
+    @Autowired
+    private SearchService searchService;
+
+    @Autowired
+    @Qualifier("findSessionFactory")
+    private SessionFactory sessionFactory;
+
+    @Value("${discoverSearch.docfolder.maxResults}")
+    private int docfolderMaxResults;
+
+    @Value("${discoverSearch.import.delimiter}")
+    private String importDelimiter;
+
+    @Value("${discoverSearch.export.batchsize}")
+    private Integer exportBatchSize;
+
+    @Value("${discoverSearch.import.batchsize}")
+    private Integer importBatchSize;
+    
+    @Autowired
+    private SearchVerticaService verticaService;
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(DocumentFolderService.class);
+
+    private static final int DEFAULT_EXPORT_BATCH = 200;
+    private static final int DEFAULT_IMPORT_BATCH = 1000;
+
+    @Transactional(readOnly = false)
+    public DocumentFolder add(final DocumentFolder folder) {
+        final Session session = sessionFactory.getCurrentSession();
+
+        if (getFolderByLabel(folder.getSearchView(), folder.getLabel(), folder.getOwner(), session) != null) {
+            throw new IllegalArgumentException("Name already in use");
+        }
+        
+        for(Map.Entry<String, DocImportType> entry : getDocImportTypes(folder.getSearchView()).entrySet()) {
+        	if(entry.getKey().equalsIgnoreCase(folder.getFolderType())) {        		
+        		if(parametricService.getFilterFieldNames(folder.getSearchView()).get(entry.getValue().getImportField().trim()).isReferenceType()) {
+        			// this is a primary folder
+            		folder.setPrimaryFolder(true);
+            		break;
+        		}        		
+        	}
+        }
+
+        session.persist(folder);
+        return folder;
+    }
+
+    @Transactional(readOnly = false)
+    public void delete(final int id, final String loginUser) {
+        final Session session = sessionFactory.getCurrentSession();
+        session.delete(getFolder(id, session, loginUser));
+    }
+
+    @Transactional(readOnly = false)
+    public DocumentFolder edit(final int id, final String tooltip, final String newLabel, final String loginUser, final boolean isShared) {
+        final Session session = sessionFactory.getCurrentSession();
+        final DocumentFolder folder = getFolder(id, session, loginUser);
+
+        final boolean labelChange = StringUtils.isNotEmpty(newLabel) && !folder.getLabel().equals(newLabel);
+
+        if (labelChange && getFolderByLabel(folder.getSearchView(), newLabel, loginUser, session) != null) {
+            throw new IllegalArgumentException("Name already in use");
+        }
+
+        if (labelChange) {
+            folder.setLabel(newLabel);
+        }
+
+        if (tooltip != null) {
+            folder.setTooltip(tooltip);
+        }
+
+        if (loginUser.equals(folder.getOwner()))  {
+            folder.setIsShared(isShared);
+        }
+
+        session.update(folder);
+
+        return folder;
+    }
+
+    @Transactional(readOnly = false)
+    public boolean tag(final String loginUser, final int id, final boolean canChangeRestricted, final String... references) {
+        final Session session = sessionFactory.getCurrentSession();
+        final DocumentFolder folder = getFolder(id, session, loginUser);
+
+        if (!canChangeRestricted && folder.isRestricted()) {
+            throw new IllegalArgumentException("Restricted folders cannot be edited unless canChangeRestricted is set");
+        }
+
+        final boolean changed = folder.getRefs().addAll(Arrays.asList(references));
+        folder.setDocCount(folder.getRefs().size());
+        sessionFactory.getCurrentSession().update(folder);
+        return changed;
+    }
+
+    private DocumentFolder getFolder(final int id, final Session session, final String loginUser) {
+        final DocumentFolder folder =  (DocumentFolder) session.get(DocumentFolder.class, id);
+
+        if (!folder.getOwner().equals(loginUser) && !folder.getIsShared()) {
+            throw new IllegalArgumentException("Current user is not the owner of this folder.");
+        }
+
+        return folder;
+    }
+
+    private DocumentFolder getFolderByLabel(final String searchView, final String label, final String loginUser, final Session session) {
+        final Query query = session.getNamedQuery(DocumentFolder.GET_BY_LABEL);
+        Set<String> listTypes = getDocImportTypes(searchView).keySet();
+        
+        query.setParameterList("folderTypeList", listTypes);
+        query.setParameter("searchView", searchView);
+        query.setParameter("label", label);
+        query.setParameter("owner", loginUser);
+
+        //noinspection unchecked
+        return (DocumentFolder) query.uniqueResult();
+    }
+
+    @Transactional(readOnly = false)
+    public boolean untag(final String loginUser, final int id, final boolean canChangeRestricted, final String... references) {
+        final Session session = sessionFactory.getCurrentSession();
+
+        final DocumentFolder folder = getFolder(id, session, loginUser);
+
+        if (!canChangeRestricted && folder.isRestricted()) {
+            throw new IllegalArgumentException("Restricted folders cannot be edited unless canChangeRestricted is set");
+        }
+
+        final boolean changed = folder.getRefs().removeAll(Arrays.asList(references));
+        folder.setDocCount(folder.getRefs().size());
+        sessionFactory.getCurrentSession().update(folder);
+        return changed;
+    }
+
+    @Transactional(readOnly = true)
+    public Set<String> getTags(final int id, final String loginUser) {
+        // we create a new object to
+        //   a) ensure this copy is not modified
+        //   b) prefetch the lazy-loaded collection
+        return new HashSet<>(getFolder(id, sessionFactory.getCurrentSession(), loginUser).getRefs());
+    }
+
+    @Transactional(readOnly = true)
+    public Set<String> getFilterFolderTags(final int id) {
+        final Session session = sessionFactory.getCurrentSession();
+        // we create a new object to
+        //   a) ensure this copy is not modified
+        //   b) prefetch the lazy-loaded collection
+        final DocumentFolder folder =  (DocumentFolder) session.get(DocumentFolder.class, id);
+        return new HashSet<>(folder.getRefs());
+    }
+    
+    @Transactional(readOnly = true)
+    public String getFilterFieldByFolderId(final int id, final String searchView) {
+        final Session session = sessionFactory.getCurrentSession();        
+        final DocumentFolder folder =  (DocumentFolder) session.get(DocumentFolder.class, id);
+        for(Map.Entry<String, DocImportType> entry : getDocImportTypes(searchView).entrySet()) {
+        	if(entry.getKey().equalsIgnoreCase(folder.getFolderType())) {
+        		return entry.getValue().getImportField();        		
+        	}
+        }
+        return null;
+    }
+
+    @Transactional(readOnly = true)
+    public List<DocumentFolder> getFolders(final String searchView, final String loginUser) {
+        final Session session = sessionFactory.getCurrentSession();
+
+        final Query query = session.getNamedQuery(DocumentFolder.GET_FOLDERS);
+        
+        Set<String> listTypes = getDocImportTypes(searchView).keySet();        
+        query.setParameterList("folderTypeList", listTypes);
+        query.setParameter("searchView", searchView);
+        query.setParameter("owner", loginUser);
+
+        //no inspection unchecked
+         return (List<DocumentFolder>) query.list();        
+    }
+
+    @Transactional(readOnly = true)
+    public List<DocumentFolder> getFoldersByRef(final String searchView, final String ref, final String loginUser) {
+        final Session session = sessionFactory.getCurrentSession();
+
+        final Query query = session.getNamedQuery(DocumentFolder.GET_BY_REF_AND_VIEW);
+        Set<String> listTypes = new HashSet<String>();
+        if(getDocImportTypes(searchView) != null) {
+        	listTypes = getDocImportTypes(searchView).keySet();
+        }
+        
+        query.setParameterList("folderTypeList", listTypes);
+        query.setParameter("searchView", searchView);
+        query.setParameter("ref", ref);
+        query.setParameter("owner", loginUser);
+
+        //no inspection unchecked
+        return (List<DocumentFolder>) query.list();
+    }
+    
+    @Transactional(readOnly = true)
+    public boolean isRefInFolder(final int id, final String ref) {
+        Set<String> refs = getFilterFolderTags(id);
+        if(refs != null) {
+        	return refs.contains(ref) ? true : false;
+        }
+        return false;
+    }
+
+    @Transactional(readOnly = false)
+    public boolean tagResults(final DocExportData docExportData, final String loginUser, final String securityInfo) {
+        AuditLogger.log(loginUser, AuditActions.RESULTS_TAG, docExportData.getAuditData(AuditLogger.getDataMap()));
+
+        final Session session = sessionFactory.getCurrentSession();
+        final DocumentFolder folder = getFolder(docExportData.getExportDocFolderId(), session, loginUser);
+
+        if (folder == null) {
+            throw new IllegalArgumentException("Cannot find folder [" + docExportData.getExportDocFolderId() + "] for current user.");
+        }
+       
+        
+        final ReferenceResultsIterator iterator = searchService.getTagResults(docExportData, securityInfo);     	
+       
+
+        boolean changed = false;
+        
+        final int batchSize = importBatchSize != null ? importBatchSize : DEFAULT_IMPORT_BATCH;
+        
+        
+        if (iterator !=  null) {
+            iterator.setMaxBatchDocs(batchSize);
+            final Set<String> folderRefs = folder.getRefs();
+            while (iterator.hasNext()) {
+                folderRefs.addAll(iterator.next());
+            }
+            folder.setDocCount(folderRefs.size());
+            session.update(folder);
+            changed = true;
+
+            iterator.destroy();
+
+        }
+
+        return changed;
+    }
+    
+    @Transactional(readOnly = false)
+    public boolean tagResultsVertica(final DocExportData docExportData, final String loginUser, final String securityInfo) throws Exception {
+        AuditLogger.log(loginUser, AuditActions.RESULTS_TAG, docExportData.getAuditData(AuditLogger.getDataMap()));
+
+        final Session session = sessionFactory.getCurrentSession();
+        final DocumentFolder folder = getFolder(docExportData.getExportDocFolderId(), session, loginUser);
+
+        if (folder == null) {
+            throw new IllegalArgumentException("Cannot find folder [" + docExportData.getExportDocFolderId() + "] for current user.");
+        }
+        String filterFieldName = getDocImportTypes(docExportData.getSearchView()).get(folder.getFolderType().trim()).getImportField();
+        
+        if(filterFieldName == null) {
+        	LOGGER.error("Folder [" + docExportData.getExportDocFolderId() + "] is missing the primary field for tagging");
+        	throw new IllegalArgumentException("Folder [" + docExportData.getExportDocFolderId() + "] is missing the primary field for tagging");
+        }
+        
+        final List<String> tagResults = searchService.getTagResultsVertica(docExportData, securityInfo, filterFieldName);     	
+       
+        
+        boolean changed = false; 
+        int maxSize = docfolderMaxResults > 0 ? docfolderMaxResults : 10000;
+        if(tagResults.size() < maxSize) {
+        	maxSize = tagResults.size();
+        }
+        
+        final List<String> iterator = new ArrayList<String>(tagResults.subList(0, maxSize));
+        if (iterator !=  null) {           
+            final Set<String> folderRefs = folder.getRefs();          
+            folderRefs.addAll(iterator);           
+            folder.setDocCount(folderRefs.size());
+            session.update(folder);
+            changed = true;
+        }
+        return changed;
+    }
+
+    @Transactional(readOnly = true)
+    public void exportResults(final DocExportData docExportData, final String loginUser, final PrintWriter writer, final String securityInfo) {
+        AuditLogger.log(loginUser, AuditActions.RESULTS_EXPORT, docExportData.getAuditData(AuditLogger.getDataMap()));
+
+        final PrintFieldsResultIterator iterator = searchService.getExportResultsFields(docExportData, securityInfo);
+
+        printResultsFields(iterator, writer, docExportData);
+
+        if (iterator != null) {
+            iterator.destroy();
+        }
+
+    }
+    
+    @Transactional(readOnly = true)
+    public void exportResultsVertica(final DocExportData docExportData, final String loginUser, final PrintWriter writer, final String securityInfo) throws Exception {
+        AuditLogger.log(loginUser, AuditActions.RESULTS_EXPORT, docExportData.getAuditData(AuditLogger.getDataMap()));
+
+        final com.autonomy.vertica.query.QueryResponse iterator = searchService.getExportResultsFieldsVertica(docExportData, securityInfo);
+
+        printResultsFieldsVertica(iterator, writer, docExportData);
+
+       /* if (iterator != null) {
+            iterator.destroy();
+        }*/
+
+    }
+
+    @Transactional(readOnly = true)
+    public void exportDocFolder(final DocExportData docExportData, final String loginUser, final PrintWriter writer, final String securityInfo) {
+        AuditLogger.log(loginUser, AuditActions.DOCFOLDER_EXPORT, docExportData.getAuditData(AuditLogger.getDataMap()));
+
+        Set<String> tags = getTags(docExportData.getExportDocFolderId(), loginUser);
+
+        final String docRefFieldname = searchConfig.getSearchViews().get(docExportData.getSearchView()).getDocRefField();
+        final String[] printFields = docExportData.getExportSourceFields().split(",");
+
+        PrintFieldsResultIterator iterator = null;
+        if (!tags.isEmpty()) {
+            iterator = getFolderExportFields(docRefFieldname, tags.size(), docExportData.getSearchView(), tags, Arrays.asList(printFields), securityInfo);
+        }
+
+        printResultsFields(iterator, writer, docExportData);
+
+        if (iterator != null) {
+            iterator.destroy();
+        }
+
+    }
+    
+    @Transactional(readOnly = true)
+    public void exportDocFolderVertica(final DocExportData docExportData, final String loginUser, final PrintWriter writer, final String securityInfo) throws Exception {
+        AuditLogger.log(loginUser, AuditActions.DOCFOLDER_EXPORT, docExportData.getAuditData(AuditLogger.getDataMap()));
+
+        Set<String> tags = getTags(docExportData.getExportDocFolderId(), loginUser);
+
+        final String docRefFieldname = searchConfig.getSearchViews().get(docExportData.getSearchView()).getDocRefField();
+        final String[] printFields = docExportData.getExportSourceFields().split(",");
+
+        com.autonomy.vertica.query.QueryResponse iterator = null;
+        if (!tags.isEmpty()) {
+            iterator = getFolderExportFieldsVertica(docExportData, docRefFieldname, tags.size(), docExportData.getSearchView(), tags, Arrays.asList(printFields), securityInfo);
+        }
+
+        printResultsFieldsVertica(iterator, writer, docExportData);
+
+       /* if (iterator != null) {
+            iterator.destroy();
+        }*/
+
+    }
+
+
+    private void printResultsFields(final PrintFieldsResultIterator iterator, final PrintWriter writer, final DocExportData docExportData) {
+        final String[] sourceFields = docExportData.getExportSourceFields().split(",");
+        final String[]  targetFields = docExportData.getExportTargetFields().split(",");
+        final ExportFormat exportFormat = docExportData.getExportFormat();
+
+        final String exportHeader = setExportOutputHeader(targetFields, exportFormat);
+        writer.write(exportHeader);
+
+        if (iterator != null)  {
+            final int maxBatchDocs = exportBatchSize != null ? exportBatchSize : DEFAULT_EXPORT_BATCH;
+            iterator.setMaxBatchDocs(maxBatchDocs);
+
+            while(iterator.hasNext()) {
+                final QueryResponse response = iterator.next();
+                if (response != null) {
+                    convertOutput(response.getDocuments(), exportFormat, sourceFields, targetFields, writer);
+                } else {
+                    LOGGER.error("Export results: NULL query response.");
+                }
+            }
+        }
+        final String exportFooter = setExportOutputFooter(exportFormat);
+        writer.write(exportFooter);
+    }
+    
+    private void printResultsFieldsVertica(final com.autonomy.vertica.query.QueryResponse response, final PrintWriter writer, final DocExportData docExportData) {
+        final String[] sourceFields = docExportData.getExportSourceFields().split(",");
+        final String[]  targetFields = docExportData.getExportTargetFields().split(",");
+        final ExportFormat exportFormat = docExportData.getExportFormat();
+
+        final String exportHeader = setExportOutputHeader(targetFields, exportFormat);
+        writer.write(exportHeader);
+
+        final int maxBatchDocs = exportBatchSize != null ? exportBatchSize : DEFAULT_EXPORT_BATCH;;
+        if (response != null) {
+            convertOutputVertica(response.getDocuments(), exportFormat, sourceFields, targetFields, writer);
+        } else {
+            LOGGER.error("Export results: NULL query response.");
+        }       
+        
+        final String exportFooter = setExportOutputFooter(exportFormat);
+        writer.write(exportFooter);
+    }
+    
+    private void convertOutputVertica(final List<com.autonomy.vertica.query.Document> documents, final ExportFormat exportFormat, final String[] sourceFields, final String[] targetFields, final PrintWriter writer) {
+        for( final com.autonomy.vertica.query.Document doc : documents) {
+            final StringBuilder contentBuilder = new StringBuilder();
+            setDocHeader(exportFormat, contentBuilder);
+            //LOGGER.debug("Exporting idol doc field keys {}", doc.getDocumentFields().keySet());
+            final StringBuilder docOutput = new StringBuilder();
+            for (int j = 0; j < sourceFields.length; j++) {
+                final String sourceField = sourceFields[j];
+                final String targetField = targetFields[j];
+
+                final String values = StringUtils.join(doc.getDocumentFieldValues(sourceField), ",");
+                LOGGER.trace("Exporting field [{}]: values: {}", sourceField, values);
+                if (ExportFormat.CSV == exportFormat) {
+                    outputCsv(values, docOutput);                    
+                } else {
+                    outputXml(targetField, values, docOutput);
+                }
+            }
+            setDocFooter(exportFormat, docOutput);
+            contentBuilder.append(docOutput.toString());
+
+            writer.write(contentBuilder.toString());
+        }
+
+
+    }
+
+    private void convertOutput(final List<Document> documents, final ExportFormat exportFormat, final String[] sourceFields, final String[] targetFields, final PrintWriter writer) {
+        for( final Document doc : documents) {
+            final StringBuilder contentBuilder = new StringBuilder();
+            setDocHeader(exportFormat, contentBuilder);
+            LOGGER.debug("Exporting idol doc field keys {}", doc.getDocumentFields().keySet());
+            final StringBuilder docOutput = new StringBuilder();
+           /* if (ExportFormat.CSV == exportFormat) {
+                docOutput.append("\"");        
+            }*/
+            for (int j = 0; j < sourceFields.length; j++) {
+                final String sourceField = sourceFields[j];
+                final String targetField = targetFields[j];
+
+                final String values = StringUtils.join(doc.getDocumentFieldValues(sourceField), ",");
+                LOGGER.trace("Exporting field [{}]: values: {}", sourceField, values);
+                if (ExportFormat.CSV == exportFormat) {
+                    outputCsv(values, docOutput);
+                } else {
+                    outputXml(targetField, values, docOutput);
+                }
+            }
+            setDocFooter(exportFormat, docOutput);
+            contentBuilder.append(docOutput.toString());
+
+            writer.write(contentBuilder.toString());
+        }
+
+
+    }
+
+    private void setDocFooter(final ExportFormat exportFormat, final StringBuilder outputBuilder) {
+        if (ExportFormat.XML == exportFormat) {
+            outputBuilder.append("\t").append("</doc>");
+        }
+        outputBuilder.append("\n");
+    }
+
+    private void setDocHeader(final ExportFormat exportFormat, final StringBuilder outputBuilder) {
+        if (ExportFormat.XML == exportFormat) {
+            outputBuilder.append("\t").append("<doc>").append("\n");
+        }
+    }
+
+    private String setExportOutputHeader(final String[] targetFields, final ExportFormat exportFormat) {
+        final StringBuilder outputBuilder = new StringBuilder();
+        if (ExportFormat.CSV == exportFormat) {
+            for(final String field : targetFields) {
+                outputBuilder.append(StringEscapeUtils.escapeCsv(field)).append(",");
+            }
+            outputBuilder.deleteCharAt(outputBuilder.length() - 1);
+            outputBuilder.append("\n");
+        } else {
+            outputBuilder.append("<export>").append("\n");
+        }
+
+        return outputBuilder.toString();
+    }
+
+    private String setExportOutputFooter(final ExportFormat exportFormat) {
+        final StringBuilder outputBuilder = new StringBuilder();
+        if (ExportFormat.XML == exportFormat) {
+            outputBuilder.append("</export>");
+        }
+
+        return outputBuilder.toString();
+
+    }
+
+
+    private void outputCsv(final String fieldVal, final StringBuilder outputBuilder) {
+
+        if (outputBuilder.length() > 0 ) {
+            outputBuilder.append(",");
+        }
+        String outputVal=StringEscapeUtils.escapeCsv(fieldVal);
+        if (!outputVal.startsWith("\"")) {
+        	outputVal="\"\t"+outputVal+"\"";
+        }
+        outputBuilder.append(outputVal);
+    }
+
+    private void outputXml(final String targetField, final String fieldVal, final StringBuilder outputBuilder) {
+        String fieldTag = targetField.replaceAll("\\s+", "_");
+        outputBuilder.append("\t\t").append("<").append(fieldTag).append(">");
+        outputBuilder.append(StringEscapeUtils.escapeXml(fieldVal));
+        outputBuilder.append("</").append(fieldTag).append(">").append("\n");
+    }
+
+    @Transactional
+    public Integer importData(final DocImportData fieldImport, final String loginUser, final String securityInfo) {
+        if (fieldImport.getFolderId() == 0) {
+            throw new IllegalArgumentException("Missing folder id");
+        }
+
+        Set<String> matchedDocs = new HashSet<String>();
+
+
+        final String data = fieldImport.getImportData();
+        final Set<String> importedValues = new HashSet<String>();
+
+        if (data != null) {
+            final BufferedReader reader = new BufferedReader( new StringReader(data));
+            try {
+                String line = reader.readLine();
+                if (fieldImport.isIgnoreFirstRow()) {
+                    line = reader.readLine();
+                }
+                while( line != null ) {
+                    line = line.trim().replaceAll("[,;]$", "");
+                    if (StringUtils.isNotEmpty(line)) {
+                        importedValues.add(line);
+                    }
+                    line = reader.readLine();
+                }
+
+            } catch (IOException ex) {
+                throw new Error("Parsing import file error: " + ex.getMessage());
+            } finally {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                  // do nothing;
+                }
+            }
+
+            // do a search to get the doc ids
+            final ReferenceResultsIterator iterator = getDocReferences(fieldImport.getImportType().getImportField(), fieldImport.getSearchView(), importedValues, securityInfo);
+            final int batchSize = importBatchSize != null ? importBatchSize : DEFAULT_IMPORT_BATCH;
+            if (iterator != null) {
+                iterator.setMaxBatchDocs(batchSize);
+                while(iterator.hasNext()) {
+                    matchedDocs.addAll(iterator.next());
+                }
+
+                iterator.destroy();
+            }
+        }
+
+        if (!matchedDocs.isEmpty()) {
+            importDataToFolder(fieldImport.getFolderId(), matchedDocs, loginUser, fieldImport.getImportType(), fieldImport.getSearchView());
+        }
+
+        final Map<String, Object> auditData = AuditLogger.getDataMap();
+        auditData.put("importType", fieldImport.getImportType());
+        auditData.put("matchedDocs", matchedDocs.size());
+
+        AuditLogger.log(loginUser, AuditActions.DOCFOLDER_IMPORT, auditData);
+
+        return matchedDocs.size();
+    }
+    
+    @Transactional
+    public Integer importDataVertica(final DocImportData fieldImport, final String loginUser, final String securityInfo) {
+        if (fieldImport.getFolderId() == 0) {
+            throw new IllegalArgumentException("Missing folder id");
+        }
+
+        Set<String> matchedDocs = new HashSet<String>();
+
+
+        final String data = fieldImport.getImportData();
+        final Set<String> importedValues = new HashSet<String>();
+
+        if (data != null) {
+            final BufferedReader reader = new BufferedReader( new StringReader(data));
+            try {
+                String line = reader.readLine();
+                if (fieldImport.isIgnoreFirstRow()) {
+                    line = reader.readLine();
+                }
+                while( line != null ) {
+                    line = line.trim().replaceAll("[ \"\t,;]", "");
+                    if (StringUtils.isNotEmpty(line)) {
+                        importedValues.add(line);
+                    }
+                    line = reader.readLine();
+                }
+
+            } catch (IOException ex) {
+                throw new Error("Parsing import file error: " + ex.getMessage());
+            } finally {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                  // do nothing;
+                }
+            }
+
+            // do a search to get the doc ids
+            // TODO query Vertica to match the references... 
+            // final com.autonomy.vertica.query.QueryResponse response = getDocReferencesVertica(fieldImport.getImportType().getImportField(), fieldImport.getSearchView(), importedValues, securityInfo);
+            final int batchSize = importBatchSize != null ? importBatchSize : DEFAULT_IMPORT_BATCH;
+            if (importedValues != null) {
+            	Iterator<String> iterator = importedValues.iterator();
+                while(iterator.hasNext()) {
+                    matchedDocs.add(iterator.next());
+                }
+
+                //iterator.destroy();
+            }
+        }
+
+        if (!matchedDocs.isEmpty()) {
+        	importDataToFolder(fieldImport.getFolderId(), matchedDocs, loginUser, fieldImport.getImportType(), fieldImport.getSearchView());
+        }
+
+        final Map<String, Object> auditData = AuditLogger.getDataMap();
+        auditData.put("importType", fieldImport.getImportType());
+        auditData.put("matchedDocs", matchedDocs.size());
+
+        AuditLogger.log(loginUser, AuditActions.DOCFOLDER_IMPORT, auditData);
+
+        return matchedDocs.size();
+    }
+
+    @Transactional
+    private DocumentFolder importDataToFolder(final int folderId, final Set<String> docs, final String loginUser, DocImportType docImportType, String searchView) {
+        final Session session = sessionFactory.getCurrentSession();
+        final DocumentFolder folder = getFolder(folderId, session, loginUser);
+
+        if (folder == null) {
+            throw new IllegalArgumentException("Folder id [" + folderId + "] not found.");
+        }
+        String importType=null;
+        for(final Map.Entry<String, DocImportType> entry : getDocImportTypes(searchView).entrySet()) {
+        	if(entry.getValue().equals(docImportType)) {
+        		importType = entry.getKey();
+        		break;
+        	}
+        }
+        if(importType == null || !folder.getFolderType().equalsIgnoreCase(importType)) {
+        	LOGGER.error("***** IMPORT FAILED *****");
+        	LOGGER.error("Import type [" + importType + "] does not match the folder type [" + folder.getFolderType() + "] for Folder id [" + folderId + "]");
+        	throw new IllegalArgumentException("Import type [" + importType + "] does not match the folder type [" + folder.getFolderType() + "] for Folder id [" + folderId + "]");
+        }
+        if (!docs.isEmpty())  {
+            // add the tags
+            folder.getRefs().addAll(docs);
+            folder.setDocCount(folder.getRefs().size());
+            session.update(folder);
+        }
+
+        return folder;
+
+    }
+
+    public Map<String, DocImportType> getDocImportTypes(final String searchView) {
+        final SearchView view = searchConfig.getSearchViews().get(searchView);
+        final String importTypeFile = view.getDocImportFile();
+
+        if (importTypeFile == null) {
+            return Collections.<String, DocImportType>emptyMap();
+        }
+
+        try {
+            return CollUtils.<String, DocImportType>jsonToMap(FieldUtil.loadFieldValuesJSON(importTypeFile), String.class, DocImportType.class);
+        } catch (final IOException e) {
+            throw new Error(String.format("Error reading file: %s", importTypeFile), e);
+        }
+    }
+
+    private ReferenceResultsIterator getDocReferences(final String idolField,
+                                                      final String searchView,
+                                                      final Set<String> fieldValues,
+                                                      final String securityInfo) {
+
+        if (fieldValues == null || fieldValues.isEmpty()) {
+            return null;
+        }
+
+        final Map<String, FilterField> filterFields = parametricService.getFilterFieldNames(searchView);
+        final FilterField importField = filterFields.get(idolField);
+        final boolean isReferenceType = importField != null && importField.isReferenceType();
+
+        final AciParameters params = new AciParameters("query");
+        params.add("databasematch", searchConfig.getDatabase(searchView));
+        params.add("text", "*");
+        params.add("combine", "simple");
+        params.add("maxresults", fieldValues.size());
+        params.add("storestate", true);
+        params.add("print", "noresults");
+
+        if(StringUtils.isNotBlank(securityInfo)) {
+            params.add("securityinfo", securityInfo);
+        }
+
+        if(isReferenceType) {
+            params.add("matchreference", ReferencesBuilder.from(fieldValues));
+            params.add("referencefield", idolField);
+        } else {
+            params.add("fieldtext", FieldTextUtil.buildFieldMatch(idolField, fieldValues, importField));
+        }
+
+        final StateResult stateResult = searchAciService.executeAction(params, new StoreStateProcessor());
+
+        return new ReferenceResultsIterator(stateResult,
+                                            searchAciService,
+                                            searchConfig,
+                                            searchView,
+                                            securityInfo);
+
+
+    }
+    
+    private com.autonomy.vertica.query.QueryResponse getDocReferencesVertica(final String idolField,
+            final String searchView,
+            final Set<String> fieldValues,
+            final String securityInfo) throws Exception {
+
+		if (fieldValues == null || fieldValues.isEmpty()) {
+			return null;
+		}
+		
+		final Map<String, FilterField> filterFields = parametricService.getFilterFieldNames(searchView);
+		final FilterField importField = filterFields.get(idolField);
+		final boolean isReferenceType = importField != null && importField.isReferenceType();
+		
+		final AciParameters params = new AciParameters("query");
+		params.add("databasematch", searchConfig.getDatabase(searchView));
+		params.add("text", "*");
+		params.add("combine", "simple");
+		params.add("maxresults", fieldValues.size());
+		params.add("storestate", true);
+		params.add("print", "noresults");
+		
+		if(StringUtils.isNotBlank(securityInfo)) {
+			params.add("securityinfo", securityInfo);
+		}
+		
+		if(isReferenceType) {
+			params.add("matchreference", ReferencesBuilder.from(fieldValues));
+			params.add("referencefield", idolField);
+		} else {
+			params.add("fieldtext", FieldTextUtil.buildFieldMatch(idolField, fieldValues, importField));
+		}
+		
+		params.add("printfields", idolField);
+		
+		 FilterGroup group = new FilterGroup();
+	        Map<String, List<FieldParams>> paraFilters = new HashMap<>();
+	        List<FieldParams> listParams = new ArrayList<FieldParams>();        
+	        FieldParams fieldParam = new FieldParams();
+	        fieldParam.setOp(FilterOperator.CONTAINS);
+	        char type = importField.getParametric() == null ? 'I' : 'P';
+	        fieldParam.setType(type);
+	        fieldParam.setVal(fieldValues.toString());
+	        listParams.add(fieldParam);
+	        paraFilters.put(idolField, listParams);
+	        group.setFilterFields(paraFilters);
+	        group.setBoolOperator(BoolOp.AND);
+	       
+		
+		com.autonomy.vertica.query.QueryResponse response = verticaService.searchResultsDoc(params, searchView,
+        		null, group, true, null);
+		return response;
+	
+	}
+
+    private PrintFieldsResultIterator getFolderExportFields(final String docRefFieldname,
+                                         final int maxResults,
+                                         final String searchView,
+                                         final Set<String> docRefIds,
+                                         final List<String> printFields,
+                                         final String securityInfo)
+    {
+        final StringBuilder strBuilder = new StringBuilder();
+
+        for(final String pfield : printFields) {
+            strBuilder.append(pfield).append(',');
+        }
+
+        final String printFieldsStr = StringUtils.chop(strBuilder.toString());
+
+        final Map<String, FilterField> filterFields = parametricService.getFilterFieldNames(searchView);
+        final FilterField docField = filterFields.get(docRefFieldname);
+        final boolean isReferenceType = docField != null && docField.isReferenceType();
+
+        final AciParameters params = new AciParameters("query");
+      		params.add("databasematch", searchConfig.getDatabase(searchView));
+            params.add("text", "*");
+            params.add("combine", "simple");
+      		params.add("maxresults", maxResults);
+            params.add("storestate", true);
+            params.add("print", "noresults");
+
+            if(StringUtils.isNotBlank(securityInfo)) {
+                params.add("securityinfo", securityInfo);
+            }
+
+            if(isReferenceType) {
+                params.add("matchreference", ReferencesBuilder.from(docRefIds));
+                params.add("referencefield", docRefFieldname);
+
+            } else {
+                params.add("fieldtext", FieldTextUtil.buildFieldMatch(docRefFieldname, docRefIds, docField));
+            }
+
+            final StateResult stateResult = searchAciService.executeAction(params, new StoreStateProcessor());
+
+            return new PrintFieldsResultIterator(stateResult,
+                                                 searchAciService,
+                                                 searchConfig,
+                                                 searchView,
+                                                 printFieldsStr,
+                                                 securityInfo);
+
+    }
+
+    private com.autonomy.vertica.query.QueryResponse getFolderExportFieldsVertica(final DocExportData docExportData,
+    		final String docRefFieldname,
+            final int maxResults,
+            final String searchView,
+            final Set<String> docRefIds,
+            final List<String> printFields,
+            final String securityInfo
+            ) throws Exception
+		{
+			final StringBuilder strBuilder = new StringBuilder();
+			
+			for(final String pfield : printFields) {
+				strBuilder.append(pfield).append(',');
+			}
+			
+			final String printFieldsStr = StringUtils.chop(strBuilder.toString());
+			        
+			
+			final Map<String, FilterField> filterFields = parametricService.getFilterFieldNames(searchView);
+			final FilterField docField = filterFields.get(docRefFieldname);
+			final boolean isReferenceType = docField != null && docField.isReferenceType();
+			
+			final AciParameters params = new AciParameters("query");
+			params.add("databasematch", searchConfig.getDatabase(searchView));
+			params.add("text", "*");
+			params.add("combine", "simple");
+			params.add("maxresults", maxResults);
+			params.add("storestate", true);
+			params.add("print", "noresults");
+			
+			if(StringUtils.isNotBlank(securityInfo)) {
+				params.add("securityinfo", securityInfo);
+			}
+			
+			if(isReferenceType) {
+				params.add("matchreference", ReferencesBuilder.from(docRefIds));
+				params.add("referencefield", docRefFieldname);			
+			} else {
+				params.add("fieldtext", FieldTextUtil.buildFieldMatch(docRefFieldname, docRefIds, docField));
+			}
+			
+			params.add("printfields", printFieldsStr);
+	        
+	        final SearchRequestData requestData = new SearchRequestData();
+	        requestData.setSearchView(searchView);
+	        String docFieldName = "";
+	        for(final Map.Entry<String, FilterField> filterFieldColl : filterFields.entrySet()) {
+	        	if(filterFieldColl.getValue().getCustom() != null 
+	        			&& filterFieldColl.getValue().getCustom().getMappedField().equalsIgnoreCase(docRefFieldname)) {
+	        		docFieldName = filterFieldColl.getKey();
+	        	}
+	        }        
+	        FilterGroup group = new FilterGroup();
+	        Map<String, List<FieldParams>> paraFilters = new HashMap<>();
+	        List<FieldParams> listParams = new ArrayList<FieldParams>();        
+	        FieldParams fieldParam = new FieldParams();
+	        fieldParam.setOp(FilterOperator.IS);
+	        fieldParam.setType('C');
+	        fieldParam.setVal(String.valueOf(docExportData.getExportDocFolderId()));
+	        listParams.add(fieldParam);
+	        paraFilters.put(docFieldName, listParams);
+	        group.setFilterFields(paraFilters);
+	        group.setBoolOperator(BoolOp.AND);
+	        requestData.setFilterGroup(group);
+	             
+	        searchService.addSearchParamsVertica(params, requestData, String.valueOf(maxResults));
+	        
+	        requestData.setRetrieveResultDocs(true);
+	        
+	        final com.autonomy.vertica.query.QueryResponse response = verticaService.searchResultsDoc(params, requestData.getSearchView(),
+	        		requestData.getUserSearchSettings(), requestData.getFilterGroup(), requestData.isRetrieveResultDocs(), null);
+	        return response;
+		
+		
+		}
+
+
+}

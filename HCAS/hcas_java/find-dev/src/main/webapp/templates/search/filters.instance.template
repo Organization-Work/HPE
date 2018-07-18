@@ -1,0 +1,9 @@
+<div class="filter lastAdded" data-id="<%- item.id %>" data-field-name="<%- item.field.name %>">
+    <p>
+        <label> <span> <%- item.field.displayName %>: </span>
+            <input type="text" class="span3"
+                    data-items="6">
+        </label>
+    </p>
+    <a class="close">&times;</a>
+</div>

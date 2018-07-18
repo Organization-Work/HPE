@@ -1,0 +1,30 @@
+﻿<div class="filter-item lastAdded">
+    <div class="input-prepend input-append filter-contextmenu">
+        <span tabIndex="-1" class="filter-label"><%- displayName %></span>
+        <select class="input-small btn-inverse field-operator">
+            <% _.each(typeOperators, function (operators, type) { %>
+                <% _.each(operators, function (operator) { %>
+                    <option value="<%-operator.value%>" data-fieldtype="<%-type%>" <% if (operator.dataType){ %>data-type="<%-operator.dataType%>" <%}%>><%-operator.label%></option>
+                 <% }); %>
+            <% }); %>
+        </select>
+        
+        <div class="btn-group pull-right group-editable">
+        
+            <a class="grouping dropdown-toggle" tabIndex="-1" data-toggle="dropdown"> <i class="icon icon-arrow-right" data-toggle="tooltip" title="Group/Ungroup" ></i> </a>
+            <ul class="dropdown-menu grouping">
+                <li><a class="add-subgroup" data-toggle="tooltip" title="Move the filter to a new subgroup"><i class="icon icon-indent-left"></i>Group</a></li>
+                <li><a class="ungroup" data-toggle="tooltip" title="Move the filter to the parent of this group"><i class="icon icon-indent-right"></i>Ungroup</a></li>
+            </ul>
+            <a class="filter-close" tabIndex="-1">&times;</a>
+            
+        </div>
+        
+    </div>
+ 
+	<a id="add" class="addMultifilter filterButton btn btn-default btn-mini" style="margin-right:12px">
+            	<span class="icon-chevron-down"></span> 
+        </a>
+   
+</div> 
+

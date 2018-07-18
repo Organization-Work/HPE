@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<docview xmlns="http://www.autonomy.com/find/docview"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.autonomy.com/find/docview hca_docview.xsd"
+    docRoot="DOCUMENT">
+	<viewtab name="Patient Info" defaultActive="true">
+        <field name="PATIENT/subject_id" label="Patient ID"></field>        
+        <field name="PATIENT/DEMOGRAPHICS/DEMO/religion_descr" label="Religion"></field>
+        <field name="PATIENT/DEMOGRAPHICS/DEMO/marital_status_descr" label="Marital Status"></field>
+        <field name="PATIENT/DEMOGRAPHICS/DEMO/overall_payor_group_descr" label="Payer Group"></field>
+        <field name="PATIENT/DEMOGRAPHICS/DEMO/ethnicity_descr" label="Ethnicity"></field>
+    </viewtab>
+    <viewtab name="Admissions" defaultActive="false">
+		<header styleClass="section-header">Admissions:</header>
+		<section name="PATIENT/ADMISSIONS/INPATIENT" styleClass="data-section">			
+			<sfield childName="hadm_id" label="Encounter ID"></sfield>
+			<sfield childName="subject_id" label="Patient ID"></sfield> 
+			<sfield childName="admit_dt" label="Admission Date"></sfield>
+			<sfield childName="disch_dt" label="Discharge Date"></sfield>	
+			<header styleClass="section-header">Diagnosis codes:</header>
+			<section name="CODES/CODE" styleClass="data-section">
+				<sectionheader styleClass="sub-section-header">Code:</sectionheader>
+				<sfield childName="code" label="Clinical Code"></sfield>
+				<sfield childName="description" label="Description"></sfield>			
+			</section>
+			<header styleClass="section-header">DRGs:</header>			
+			<section name="DRGEVENTS/DRG" styleClass="data-section">
+			    <sectionheader styleClass="sub-section-header">Code:</sectionheader>
+				<sfield childName="itemid" label="ID"></sfield>        
+				<sfield childName="cost_weight" label="Cost Weight"></sfield>                    
+			</section>
+			<header styleClass="section-header">ICU Visits:</header>	
+			<section name="ICUVISITS/ICUSTAY" styleClass="data-section">
+				<sectionheader styleClass="sub-section-header">Visit:</sectionheader>
+				<sfield childName="icustay_first_careunit" label="First Care Unit"></sfield>
+				<sfield childName="icustay_last_careunit" label="Last Care Unit"></sfield>
+				<sfield childName="icustay_los" label="Length of Stay"></sfield>
+				<sfield childName="icustay_intime" label="In Time"></sfield>
+				<sfield childName="icustay_outtime" label="Out Time"></sfield>			          
+			</section>
+			<header styleClass="section-header">POE(s):</header>
+			<section name="POEEVENTS/EVENT" styleClass="list-section horizontal-list">
+				<sectionheader styleClass="sub-section-header">POE:</sectionheader>
+				<list>
+					<sfield childName="medication" label="Med"></sfield>            
+					<sfield childName="procedure_type" label="Procedure Type"></sfield>
+					<sfield childName="status" label="Status"></sfield>
+					<sfield childName="route" label="Route"></sfield>
+					<sfield childName="frequency" label="Frequency"></sfield>
+					<sfield childName="dispense_sched" label="Dispense Sched"></sfield>
+				</list>
+			</section>
+			<header styleClass="section-header">NOTES:</header>
+			<section name="NOTES/NOTE" styleClass="data-section">
+				<sectionheader styleClass="sub-section-header">NOTE:</sectionheader>
+				<sfield childName="title" label="Title"></sfield>
+				<sfield childName="category" label="Type"></sfield>
+				<sfield childName="charttime" label="Chart Time"></sfield>
+				<sfield childName="cuid" label="Care Unit ID"></sfield>
+				<sfield childName="cgid" label="Care Giver ID"></sfield>
+				<sfield childName="text" label="Note"></sfield>
+			</section>
+		</section>	
+    </viewtab>	    
+</docview>    

@@ -1,0 +1,268 @@
+html, body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+circle.node {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+line.link {
+    stroke: #888;
+    stroke-opacity: .9;
+    stroke-width: 1.5px;
+}
+
+.textlabel {
+    pointer-events: none;
+    font-size: 11px;
+    text-anchor: middle;
+}
+
+#themesLabel, #relationshipsLabel, #peopleLabel {
+    top: 40px;
+    text-align: center;
+    position: fixed;
+}
+
+.label {
+    font-size: 34px;
+}
+
+#slidercontainer {
+    font-size: 12px;
+}
+
+.sliderside {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    top: -2px;
+}
+
+#peopleLabel {
+    left: 0;
+    width: 300px;
+}
+
+#relationshipsLabel {
+    left: 300px;
+    right: 400px;
+}
+
+#themesLabel {
+    pointer-events: none;
+    right: 0;
+    width: 400px;
+    bottom: 0;
+}
+
+#aqgcontainer {
+    overflow: hidden;
+}
+
+#legend {
+    bottom: 2px;
+    overflow-y: hidden;
+    left: 2px;
+    top: 80px;
+}
+
+#legend {
+    font: 16px Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+    position: fixed;
+    width: 300px;
+}
+
+#samplescontainer {
+    display: none;
+    position: absolute;
+    top: 42px;
+    bottom: 0;
+    text-align: center;
+    width: 400px;
+}
+
+#samples {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    width: 400px;
+    overflow-y: hidden;
+}
+
+.ideascloud {
+    background: no-repeat url(../images/ideascloud.jpg);
+    margin: 0 auto;
+    padding: 0;
+    width: 127px;
+    height: 46px;
+}
+
+#legend > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#legend > ul > li {
+    height: 23px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.legendpad {
+    width: 5px;
+    height: 4px;
+    margin-right: 3px;
+    border: 1px solid white;
+}
+
+#paper {
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+}
+
+#load-indicator {
+    display: inline-block;
+    width: 18px;
+    height: 15px;
+    background-image: url(../images/ajax-loader.gif);
+}
+
+#controls {
+    font-size: 12px;
+    width: 100%;
+}
+
+#query {
+    height: 17px;
+    color: lightgray;
+    border: none;
+}
+
+#query:focus {
+    outline: 0;
+}
+
+.magnifier {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    background: url(../images/magnifier.png) no-repeat 0 2px;
+}
+
+.cloud1 {
+    color: #666666;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 10px;
+}
+.cloud2 {
+    color: #2678A7;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+.cloud3 {
+    color: #2678A7;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+}
+.cloud4 {
+    color: #2678A7;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.cloud5 {
+    color: #2678A7;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.queryterms {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 10px;
+}
+
+.sampledoc {
+    margin: 2px 5px 10px;
+}
+
+.sampledoc-title {
+    font-size: 14px;
+    color: black;
+}
+
+.sampledoc-title a {
+    color: black;
+}
+
+.sampledoc-body {
+    font-size: 12px;
+    color: black;
+    text-align: left;
+}
+
+.profile {
+    padding: 5px;
+    margin-bottom: 2px;
+    border: 1px solid;
+}
+
+.profile-header {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.profiledoc {
+}
+
+.profiledoc-header {
+}
+
+.profiledoc-title {
+    margin-bottom: 2px;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+
+.profiledoc-body {
+    margin: 2px 2px 0 10px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+    text-overflow: ellipsis;
+    min-height: 1.4em;
+}
+
+.profiledoc-link {
+    margin-left: 2px;
+    vertical-align:text-bottom;
+    border: none;
+}
+
+.profile-collapsed {
+    min-height: 0;
+    padding-bottom: 0;
+    color: gray;
+    height: 0;
+    overflow-y: hidden;
+}
+
+.sharedterms {
+    margin-left: 10px;
+    color: gray;
+    font-size: smaller;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

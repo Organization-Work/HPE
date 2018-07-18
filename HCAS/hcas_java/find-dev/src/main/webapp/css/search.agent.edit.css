@@ -1,0 +1,101 @@
+#editAgentDialog
+{ margin: auto;
+  left: 20px; right: 20px;
+  top: 20px; bottom: 20px;
+  width: 800px; }
+
+#editAgentDialog .modal-body
+{ padding-bottom: 5px;
+  max-height: none; }
+
+#editAgentDialog .notifications
+{ float: left;
+  width: 550px; }
+
+#editAgentDialog .notifications .alert
+{ position: absolute;
+  padding: 4px 8px;
+  left: 15px; }
+
+#editAgentDialog .notifications .progress
+{ margin: 5px 0 0; }
+
+#editAgentDialog .step
+{ padding: 30px;
+  position: relative; }
+
+#editAgentDialog .agentName,
+#editAgentDialog .documentSearch
+{ width: 98%; }
+
+#editAgentDialog .conceptSearch
+{ width: 560px; }
+
+#editAgentDialog .conceptListBox
+{ height: 160px; }
+
+#editAgentDialog .documentListBox
+{ height: 320px; }
+
+#editAgentDialog .listBox
+{ margin-top: 10px;
+  border: 1px solid #DDD;
+  background: white;
+  padding: 10px;
+  overflow: scroll;
+  overflow-x: hidden; }
+
+#editAgentDialog .listBox ul
+{ margin: 0; }
+
+#editAgentDialog .conceptList
+{ list-style: none; }
+
+#editAgentDialog .conceptList li
+{ display: block;
+  float: left;
+  margin: 2px; }
+
+#editAgentDialog .agentDocument
+{ position: relative; }
+
+#editAgentDialog .tickbox
+{ position: absolute; }
+
+#editAgentDialog .agentDocContent
+{ margin-left: 55px;
+  margin-bottom: 30px; }
+
+#editAgentDialog .modal-body
+{ overflow: auto; }
+
+#editAgentDialog .tog-box         + .tog-left { opacity: 0; margin-left: -100%; -webkit-transition: all 0.5s ease; }
+#editAgentDialog .tog-box:checked + .tog-left { opacity: 1; margin-left:    0%; }
+
+#editAgentDialog .step h3 { padding-bottom: 15px; }
+
+#editAgentDialog .agent-tree.tree-container {
+    min-width: 50%;
+    overflow: auto;
+    max-height: 300px;
+    max-width: 100%;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+#editAgentDialog .agent-tree .tree-node {
+    display: none;
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+}
+#editAgentDialog .agent-tree .tree-node:before {
+    content: " ";
+    position: absolute;
+    left: 0; top: 0.5em;
+    height: 2px; width: 1.2em;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.1);
+}
+#editAgentDialog .agent-tree .tree-node.visible {
+    display: block;
+}

@@ -1,0 +1,22 @@
+<span title="" id="docCountBadge" class="mini badge" data-original-title=""></span>
+<span class="dropdown" style="float:right;margin-right: 10px;bottom: 1px;">
+    <button style="width:10px; height:15px" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="caret-right"></span></button>
+    <ul class="dropdown-menu" style="left:20px; top:4px">
+      <li><a class="docfolderListimport" tabindex="-1"><i class="icon icon-download-alt"></i> Import</a></li>
+      <li><a class="docfolderListexport" tabindex="-1"><i class="icon icon-share"></i> Export</a></li>
+      <li><a class="documentfolderListedit" tabindex="-1"><i class="icon-edit"></i> Edit</a></li>
+      <li><a class="documentfolderListdelete" tabindex="-1"><i class="icon-trash"></i> Delete</a></li>
+      <li><a class="documentfolderListaddfilter" tabindex="-1"><i class="icon-filter"></i> Add Filter</a></li>
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1"><i class="icon-tasks"></i> Misc. Action</a>
+        <ul class="dropdown-menu">
+          <li><a class="documentfolderCut" tabindex="-1"> Cut</a></li>
+      	  <li><a class="documentfolderCopy" tabindex="-1"> Copy</a></li>
+        </ul>
+      </li>
+    </ul>
+  </span>
+  
+  
+  

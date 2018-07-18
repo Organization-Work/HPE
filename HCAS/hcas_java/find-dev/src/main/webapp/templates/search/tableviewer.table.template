@@ -1,0 +1,77 @@
+<div class="tableviewer-container">
+    <table>
+        <th></th>
+<%
+    // only show the '...' columns/rows on the x- and y- axes if they're non-negative, since that would imply
+    // there's documents which have been tagged with more than one value
+    var showXMisc = _.compact(ctx.xmisc).length && !_.find(ctx.xmisc, function(a){return a < 0;});
+    var showYMisc = _.compact(ctx.ymisc).length && !_.find(ctx.ymisc, function(a){return a < 0;});
+
+    _.each(ctx.xvalues, function(val){
+        %><th class="fieldvalue-x"><%=val.value%></th><%
+    });
+
+    if(showYMisc){
+        %><th class="misc y-misc">&hellip;</th><%
+    }
+%>
+        <th class="total total-x">Tagged</th>
+<%  _.each(ctx.table, function(yArr, yIdx){
+        %><tr class="fieldvalue-xy"><%
+        var ySummary = ctx.yvalues[yIdx];
+            %><th class="fieldvalue-y"><%=ySummary.value%></th><%
+            _.each(yArr, function(count, xIdx) {
+                var totalPct = count ? (count/ctx.totalResults * 100).toFixed(2) : 0;
+                %><td class="fieldvalue-xy c-<%=xIdx%>" data-count="<%=count%>" data-pct="<%=totalPct%>"><%=count%></td><%
+            });
+
+            if (showYMisc) {
+                var miscTotalY = ctx.ymisc[yIdx];
+                var totalMiscPct = miscTotalY ? (miscTotalY/ctx.totalResults * 100).toFixed(2) : 0;
+                %><td class="misc y-misc c-<%=yArr.length%>" data-count="<%=miscTotalY%>" data-pct="<%=totalMiscPct%>"><%=miscTotalY%></td><%
+            }
+            var totalPct = ySummary.count ? (ySummary.count/ctx.totalResults * 100).toFixed(2) : 0;
+%>
+                <td class="total total-y" data-count="<%=ySummary.count%>" data-pct="<%=totalPct%>"><%=ySummary.count%></td>
+        </tr><%
+    });
+
+    if(showXMisc){
+%>
+        <tr class="x-misc">
+            <th class="misc x-misc">&hellip;</th>
+<%     _.each(ctx.xmisc, function(val, idx){
+            var totalPct = val ? (val/ctx.totalResults * 100).toFixed(2) : 0;
+            %><td class="misc x-misc c-<%=idx%>" data-count="<%=val%>" data-pct="<%=totalPct%>"><%=val%></td><%
+        });
+
+        if (showYMisc) {
+            %><td class="misc-misc x-misc y-misc"></td><%
+        }
+        var miscTotalX = _.reduce(ctx.xmisc, function(a,b){return a+b}, 0) 
+        var totalMiscPct = miscTotalX ? (miscTotalX/ctx.totalResults * 100).toFixed(2) : 0;
+        
+        %>
+            <td class="misc-total x-misc" data-count="<%=miscTotalX%>" data-pct="<%=totalMiscPct%>"><%=miscTotalX%></td>
+        </tr>
+
+<% } %>
+        <tr class="total-x">
+            <th class="total total-y">Tagged</th>
+<%      _.each(ctx.xvalues, function(val, idx){
+            var totalPct = val.count ? (val.count/ctx.totalResults * 100).toFixed(2) : 0;
+            %><td class="total total-x" data-count="<%=val.count%>" data-pct="<%=totalPct%>" data-col="<%=idx%>"><%=val.count%></td><%
+        });
+
+        if (showYMisc) {
+            var miscTotalY = _.reduce(ctx.ymisc, function(a,b){return a+b}, 0);
+            var totalMiscPct =  miscTotalY ? (miscTotalY/ctx.totalResults * 100).toFixed(2) : 0;
+        %>
+            <td class="misc-total y-misc" data-count="<%=miscTotalY%>" data-pct="<%=totalMiscPct%>" data-col="<%=ctx.xvalues.length%>"><%= miscTotalY %></td>
+<%
+        }
+%>
+            <td class="supertotal"></td>
+        </tr>
+    </table>
+</div>

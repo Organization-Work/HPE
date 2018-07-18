@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<docview xmlns="http://www.autonomy.com/find/docview"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.autonomy.com/find/docview hca_docview.xsd"
+    docRoot="DOCUMENT">
+    <viewtab name="Encounter Info">
+        <field name="INPATIENT/hadm_id" label="Encounter ID"></field>
+		<field name="INPATIENT/subject_id" label="Patient ID"></field> 
+        <field name="INPATIENT/admit_dt" label="Admission Date"></field>
+        <field name="INPATIENT/disch_dt" label="Discharge Date"></field>
+        <field name="INPATIENT/admit_mnth" label="Admission Month"></field>
+        <field name="INPATIENT/admit_week" label="Admission Week"></field>
+    </viewtab>
+    <viewtab name="Patient Info">
+        <field name="INPATIENT/subject_id" label="Patient ID"></field>        
+        <!--field name="INPATIENT/GENDER/VALUE/sex" label="Gender"></field-->
+		<field name="INPATIENT/AGE/VALUE/age_at_admission" label="Age At Admission"></field>
+        <!--field name="INPATIENT/DEMOGRAPHICS/DEMO/dob" label="Date of Birth"></field>
+        <field name="INPATIENT/DEMOGRAPHICS/DEMO/dod" label="Date of Death"></field>
+        <field name="INPATIENT/DEMOGRAPHICS/DEMO/AGE_AT_ADMISSION_GRP" label="Admission Age Group"></field>
+        <field name="INPATIENT/DEMOGRAPHICS/DEMO/AGE_AT_DEATH" label="Death Age Group"></field-->
+        <field name="INPATIENT/EXPIRE/VALUE/hospital_expire" label="Expired in Hospital"></field>
+        <field name="INPATIENT/DEMO/religion_descr" label="Religion"></field>
+        <field name="INPATIENT/DEMO/admission_source_descr" label="Admission Source"></field>
+        <field name="INPATIENT/DEMO/admission_type_descr" label="Admission Type"></field>
+        <field name="INPATIENT/DEMO/marital_status_descr" label="Marital Status"></field>
+        <field name="INPATIENT/DEMO/overall_payor_group_descr" label="Payer Group"></field>
+        <field name="INPATIENT/DEMO/ethnicity_descr" label="Ethnicity"></field>
+    </viewtab>
+    <viewtab name="Diagnosis Codes">
+       	<section name="INPATIENT/CODES/CODE" styleClass="data-section">
+			<sfield childName="codedesc" label="Clinical Code Description"></sfield>
+			<!--sfield childName="description" label="Description"></sfield-->			
+		</section>
+    </viewtab>
+    <viewtab name="Procedures Codes">
+        <section name="INPATIENT/DRGEVENTS/DRG" styleClass="list-section horizontal-list">
+            <sfield childName="itemid" label="ID"></sfield>        
+            <sfield childName="cost_weight" label="Cost Weight"></sfield>                    
+        </section>
+    </viewtab>
+    <viewtab name="ICU Visits">
+        <section name="INPATIENT/ICUVISITS/ICUSTAY" styleClass="data-section">
+            <header styleClass="section-header">ICU Visit:</header>
+            <sfield childName="icustay_first_careunit" label="First Care Unit"></sfield>
+            <sfield childName="icustay_last_careunit" label="Last Care Unit"></sfield>
+            <sfield childName="icustay_los" label="Length of Stay"></sfield>
+            <sfield childName="icustay_intime" label="In Time"></sfield>
+            <sfield childName="icustay_outtime" label="Out Time"></sfield>             
+            <sectionheader styleClass="section-header">Medications:</sectionheader>
+            <section name="MEDEVENTS/EVENT" styleClass="data-section">
+					<sfield childName="charttime" label="Chart time"></sfield>
+					<sfield childName="medication" label="Medication"></sfield>
+					<sfield childName="realtime" label="Real time"></sfield>
+					<sfield childName="caregiver" label="Care Giver"></sfield>
+					<sfield childName="careunit" label="Care Unit"></sfield>
+					<sfield childName="volume" label="Volume"></sfield>
+					<sfield childName="dose" label="Dose"></sfield>
+					<sfield childName="doseuom" label="Dose UOM"></sfield>                  
+              
+            </section>            
+        </section>
+    </viewtab>
+    <viewtab name="POE Events">
+        <section name="INPATIENT/POEEVENTS/EVENT" styleClass="data-section">
+			<header styleClass="section-header">POE Order:</header>
+			<sfield childName="start_dt" label="Start Date"></sfield>
+			<sfield childName="stop_dt" label="Stop Date"></sfield>
+			<sfield childName="enter_dt" label="Enter Date"></sfield>
+			<sfield childName="medication" label="Med"></sfield>            
+			<sfield childName="procedure_type" label="Procedure Type"></sfield>
+			<sfield childName="status" label="Status"></sfield>
+			<sfield childName="route" label="Route"></sfield>
+			<sfield childName="frequency" label="Frequency"></sfield>
+			<sfield childName="dispense_sched" label="Dispense Sched"></sfield>        
+			<sfield childName="iv_fluid" label="IV fluid"></sfield>
+			<sfield childName="iv_rate" label="IV rate"></sfield>
+			<sfield childName="infusion_type" label="Infusion Type"></sfield>
+			<sfield childName="sliding_scale" label="Sliding Scale"></sfield>
+			<sfield childName="doses_per_24hrs" label="Doses/24Hrs"></sfield>
+			<sfield childName="duration" label="Duration"></sfield>
+			<sfield childName="duration_intvl" label="Duration Interval"></sfield>
+			<sfield childName="expiration_val" label="Expiration Value"></sfield>
+			<sfield childName="expiration_unit" label="Expiration Unit"></sfield>
+			<sfield childName="expiration_dt" label="Expiration Date"></sfield>
+			<sfield childName="label_instr" label="Label Instruction"></sfield>
+			<sfield childName="additional_instr" label="Additional Instruction"></sfield>
+			<sfield childName="md_add_instr" label="MD Additional Instruction"></sfield>
+			<sfield childName="rnurse_add_instr" label="Nurse Additional Instruction"></sfield>
+        </section>
+    </viewtab>
+    <!--viewtab name="Lab Events">
+        <section name="INPATIENT/LABEVENTS/EVENT" styleClass="list-section horizontal-list">
+            <list>
+                <sfield childName="itemid" label="Lab Item ID"></sfield>
+				<sfield childName="charttime" label="Charttime"></sfield>
+				<sfield childName="valuenum" label="Value"></sfield>
+				<sfield childName="valueuom" label="Value UOM"></sfield>
+				<sfield childName="flag" label="Flag"></sfield>
+            </list>
+        </section>
+    </viewtab-->
+    <viewtab name="Notes" defaultActive="true">
+        <section name="INPATIENT/NOTES/NOTE" styleClass="data-section">
+            <sfield childName="title" label="Title"></sfield>
+            <sfield childName="category" label="Type"></sfield>
+            <sfield childName="charttime" label="Chart Time"></sfield>
+            <sfield childName="cuid_label" label="Care Unit"></sfield>
+            <sfield childName="cgid_label" label="Care Giver"></sfield>
+            <sfield childName="text" label="Note"></sfield>
+        </section>
+    </viewtab>    
+</docview>    

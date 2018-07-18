@@ -1,0 +1,29 @@
+.viewer {
+    overflow: hidden;
+}
+
+.viewer-results {
+    height: 98%;
+    overflow-y: auto;
+}
+
+.viewer-iframe {
+    height: 98%;
+    float: left;
+    width: 50%;
+}
+
+.viewer-doc {
+    font-size: 12px;
+    padding: 2px 20px 10px 0;
+}
+
+.viewer-title { font-size: 14px; padding-bottom: 2px; }
+
+.viewer-title a { color: #0088CC; }
+
+.viewer-date { font-size: 13px; color: #aaa;}
+
+.viewer-doccount {
+    font-size: 10px; color: gray;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Using VirtualWebappLoader, an additional path is being added to the find-hc webapp. 
+This is done so that the configuration can be externalized from the .war itself. This works for 
+Tomcat version 7 or below.
+In Tomcat 8, the VirtualWebappLoader was deprecated and classpath can be modified / added to 
+by using the Resources element.  
+
+ <Resources> 
+   <PreResources className="org.apache.catalina.webresources.FileResourceSet" base="/app/files/special.txt" webAppMount="/static/special. txt" /> 
+   <PostResources className="org.apache.catalina.webresources.DirResourceSet" base="/app/files/static" webAppMount="/static" /> 
+ </Resources> 
+-->
+
+<Context path="/discover"> 
+        <!-- <Loader className="org.apache.catalina.loader.VirtualWebappLoader" 
+                  virtualClasspath="C:\Program Files (x86)\Hewlett-Packard\Healthcare Analytics Web Application/find-hc/hca_config"/> --> 
+
+                <Resources>
+                                <PreResources className="org.apache.catalina.webresources.DirResourceSet"
+                                                base="C:\Program Files\HEWLETT-PACKARD\Healthcare Analytics Web Application\find-hc\hca_config"
+                                                internalPath="/"
+                                                webAppMount="/WEB-INF/classes" />
+                </Resources>
+</Context>

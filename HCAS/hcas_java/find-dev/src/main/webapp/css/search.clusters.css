@@ -1,0 +1,109 @@
+.Headline {
+	background: #0ad;
+}
+
+.Popular {
+	background: #d00;
+}
+
+.Breaking {
+	background: #da0;
+}
+
+.Headline,.Popular,.Breaking {
+	padding: 5px 10px;
+	border-radius: 3px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom-width: 2px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.para {
+	float: left;
+	position: relative;
+	width: 99.99999998999999%;
+	margin: 0;
+	padding: 25px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: width 0.2s ease;
+	-moz-transition: width 0.2s ease;
+	-o-transition: width 0.2s ease;
+	transition: width 0.2s ease;
+}
+
+@media ( min-width : 1200px) and (max-width: 1599px) {
+	.para {
+		width: 48.93617020799999%;
+	}
+	.colsPlus .para:nth-of-type(1) {
+		width: 99.99999998999999%;
+	}
+	.cols .para:nth-of-type(2n+1),.colsPlus .para:nth-of-type(2n) {
+		clear: left;
+	}
+}
+
+@media ( min-width : 1600px) and (max-width: 1999px) {
+	.para {
+		width: 31.914893614%;
+	}
+	.colsPlus .para:nth-of-type(-n+2) {
+		width: 48.93617020799999%;
+	}
+	.cols .para:nth-of-type(3n+1),.colsPlus .para:nth-of-type(3n) {
+		clear: left;
+	}
+}
+
+@media ( min-width : 2000px) and (max-width: 2399px) {
+	.para {
+		width: 23.404255317%;
+	}
+	.colsPlus .para:nth-of-type(-n+3) {
+		width: 31.914893614%;
+	}
+	.cols .para:nth-of-type(4n+1),.colsPlus .para:nth-of-type(4n) {
+		clear: left;
+	}
+}
+
+@media ( min-width : 2400px) {
+	.para {
+		width: 14.89361702%;
+	}
+	.colsPlus .para:nth-of-type(-n+4) {
+		width: 23.404255317%;
+	}
+	.cols .para:nth-of-type(5n+1),.colsPlus .para:nth-of-type(5n) {
+		clear: left;
+	}
+}
+
+.btn.summary-expand {
+	padding: 0;
+}
+
+.summary-expand i {
+	-webkit-transform: scale(0.7) rotate(0deg);
+	-moz-transform: scale(0.7) rotate(0deg);
+	-o-transform: scale(0.7) rotate(0deg);
+	transform: scale(0.7) rotate(0deg);
+	
+	-webkit-transition: -webkit-transform 0.5s ease;
+	-moz-transition: -moz-transform 0.5s ease;
+	-ms-transition: -moz-transform 0.5s ease;
+	-o-transition: -o-transform 0.5s ease;
+	transition: transform 0.5s ease;
+}
+
+.summary-expand.toggler-active i {
+	-webkit-transform: scale(0.7) rotate(45deg);
+	-moz-transform: scale(0.7) rotate(45deg);
+	-ms-transform: scale(0.7) rotate(45deg);
+	-o-transform: scale(0.7) rotate(45deg);
+	transform: scale(0.7) rotate(45deg);
+}

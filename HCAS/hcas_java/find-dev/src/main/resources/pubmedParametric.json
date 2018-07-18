@@ -1,0 +1,39 @@
+{
+    "AUTHOR-GIVEN": { "displayName": "Author Given", "type": "match" },
+
+    "AUTHOR-SURNAME": { "displayName": "Author Surname", "type": "match" },
+
+    "GIVEN-NAMES": { "displayName": "Given Names", "type": "match" },
+
+    "JOURNAL-TITLE": { "displayName": "Journal Title", "type": "match" },
+
+    "P-PUBLISHED": { "displayName": "P Published", "type": "match" },
+
+    "P-PUBLISHED-YEAR": { "displayName": "P Published Year", "type": "range" },
+
+    "PUBLISHER-NAME": { "displayName": "Publisher Name", "type": "match" },
+
+    "SUBJECT": { "displayName": "Subject", "type": "match" },
+
+    "SURNAME": { "displayName": "Surname", "type": "match" },
+
+    "ACCEPTED": { "displayName": "Accepted", "type": "match" },
+
+    "ACCEPTED-YEAR": { "displayName": "Accepted Year", "type": "range" },
+
+    "E-PUBLISHED": { "displayName": "E Published", "type": "match" },
+
+    "E-PUBLISHED-YEAR": { "displayName": "E Published Year", "type": "range" },
+
+    "RECEIVED": { "displayName": "Received", "type": "match" },
+
+    "RECEIVED-YEAR": { "displayName": "Received Year", "type": "range" },
+
+    "CITATIONS": { "displayName": "Citations", "type": "match" },
+
+    "CITATIONPMID": { "displayName": "CITATIONPMID", "type": "match", "parametric": false },
+
+    "PUBMEDID": { "displayName": "PUBMEDID", "type": "match", "parametric": false },
+
+    "KEYWORDS": { "displayName": "Keywords", "type": "match" }
+}

@@ -1,0 +1,29 @@
+<div class="filter-field filter-contextmenu">
+     <div class="date-input">
+        <div class="input-append control-group datetimepicker1">
+            <input type="text" data-items="6" class="span3" />
+            <input type="checkbox" class="peepCheck"/>
+            <span class="add-on group-editable"><i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+        </div>
+        <div class="operand hide" >
+            <label>and</label>
+            <div class="input-append control-group datetimepicker2">
+                <input type="text" data-items="7" class="span3" />
+                <span class="add-on group-editable"><i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="control-group date-period hide">
+        <select class="input-large">
+            <option value="THIS_WEEK">THIS WEEK</option>
+            <option value="THIS_MONTH">THIS MONTH</option>
+            <option value="THIS_YEAR">THIS YEAR</option>
+            <option value="LAST_YEAR_TODATE">LAST YEAR TO DATE</option>
+            <option value="LAST_2_YEARS_TODATE">LAST 2 YEARS TO DATE</option>
+            <option value="LAST_4_YEARS_TODATE">LAST 4 YEARS TO DATE</option>
+        </select>
+    </div>
+ 
+</div>
+
+  

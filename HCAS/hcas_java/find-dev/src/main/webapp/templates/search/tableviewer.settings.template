@@ -1,0 +1,62 @@
+<div>
+    <form>
+        <div class="btn-toolbar">
+            <div class="btn-group">
+                <button class="btn btn-mini btn-info tableviewer-refresh"><i class="icon-white icon-refresh"></i> Refresh</button>
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span></button>
+    
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="tableviewer-settings form-horizontal">
+                            <div class="control-group">
+                                <label class="control-label" for="tableviewer-max-cols">Max Columns</label>
+                                <div class="controls">
+                                    <input type="number" id="tableviewer-max-cols" value="20" min="1" step="1">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="tableviewer-max-rows">Max Rows</label>
+                                <div class="controls">
+                                    <input type="number" id="tableviewer-max-rows" value="20" min="1" step="1">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="tableviewer-sort">Sort</label>
+                                <div class="controls">
+                                    <select id="tableviewer-sort">
+                                        <option value="DocumentCount">Count</option>
+                                        <option value="Alphabetical">Alphabetic</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="control-group">
+                                <label class="control-label" for="tableviewer-include-parent">Show Concept parent when filtering Concept categories</label>
+                                <div class="controls">
+                                    <input type="checkbox" id="tableviewer-include-parent" checked>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <span class="btn-info btn-mini format-label">Format </span>
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span id="formatSelector">Select</span><span class="caret"></span></button>
+                <ul class="dropdown-menu table-formats">
+                    <li><a name="count" class="table-format-options" href="#"> Records Count</a></li>
+                    <li><a name="pct_total" class="table-format-options" href="#"> % of Total Records</a></li>
+                    <li><a name="pct_row" class="table-format-options" href="#"> % of Row</a></li>
+                    <li><a name="pct_col" class="table-format-options" href="#"> % of Column</a></li>
+                    <li class="divider"/>
+                    <li><a name="default" class="table-format-options selected" href="#"> Default</a></li>
+                </ul>
+                
+            </div>
+        </div>
+        <button id="tviewResetButton" class="btn btn-danger btn-mini hide" type="reset">
+        	<i class="icon-white icon-remove"></i> Reset Table
+        </button>
+    </form>
+</div>

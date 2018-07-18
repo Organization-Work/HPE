@@ -1,0 +1,19 @@
+<% _.each(items, function (item) { %>
+  <div>
+    <div class="row-fluid">
+      <h3 class="clusterTitle">
+        <%= _.map(item.title.split(/,\s*/g), function (link) {
+          return '<a class="setSearch" href="#' + link + '">' + link + '</a>';
+        }).join(', ') %>
+      </h3>
+      <% _.each(item.documents, function (doc) { %>
+        <div class="clusterDoc">
+          <h4 class="clusterChildTitle">
+            <a class="clusterChildLink lightbox" href="<%= doc.url || doc.reference %>" rel="cluster-child"><%= doc.title %></a>
+          </h4>
+          <%= doc.summary %>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+<% }); %>

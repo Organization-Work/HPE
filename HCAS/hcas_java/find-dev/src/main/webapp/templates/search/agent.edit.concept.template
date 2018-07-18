@@ -1,0 +1,3 @@
+<% _.each(items, function (item) { %>
+  <li><button class="btn" data-concept="<%= item %>"><%= item %></button></li>
+<% }); %>

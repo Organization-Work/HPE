@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<autnresponse xmlns:autn='http://schemas.autonomy.com/aci/'>
+    <action>CATEGORYGETHIERDETAILS</action>
+    <response>SUCCESS</response>
+    <responsedata>
+        <autn:category>
+            <autn:numchildren>0</autn:numchildren>
+            <autn:id>D013317_2</autn:id>
+            <autn:name>Strikes, Employee</autn:name>
+            <autn:active>true</autn:active>
+            <autn:location>
+                <autn:node>
+                    <autn:id>0</autn:id>
+                    <autn:name>root category</autn:name>
+                    <autn:node>
+                        <autn:id>MeSH</autn:id>
+                        <autn:name>MeSH</autn:name>
+                        <autn:node>
+                            <autn:id>D006298_2</autn:id>
+                            <autn:name>Health Services Administration</autn:name>
+                            <autn:node>
+                                <autn:id>D009934_1</autn:id>
+                                <autn:name>Organization and Administration</autn:name>
+                                <autn:node>
+                                    <autn:id>D010559_1</autn:id>
+                                    <autn:name>Personnel Management</autn:name>
+                                </autn:node>
+                            </autn:node>
+                        </autn:node>
+                    </autn:node>
+                </autn:node>
+            </autn:location>
+        </autn:category>
+    </responsedata>
+</autnresponse>

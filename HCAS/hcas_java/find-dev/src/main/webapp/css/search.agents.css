@@ -1,0 +1,168 @@
+#agentslist .btn {
+	z-index: initial;
+}
+
+#addAgentDialog.modal .modal-body {
+	position: absolute;
+	overflow: hidden;
+	bottom: 57px;
+	left: 0;
+	right: 0;
+	top: 46px;
+	max-height: 100%;
+	padding: 0;
+}
+
+#addAgentDialog.modal .modal-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#addAgentDialog.modal {
+	left: 10px;
+	right: 10px;
+	margin: auto;
+	top: 10px;
+	bottom: 10px;
+	width: auto;
+}
+
+#addAgentDialog .leftPanel {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	overflow: scroll;
+	overflow-x: hidden;
+	width: 380px;
+}
+
+#addAgentDialog .rightPanel {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 380px;
+	right: 0;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+#addAgentDialog #agentTraining {
+	height: 100px;
+}
+
+#addAgentDialog label.heading {
+	font-weight: bold;
+}
+
+#addAgentDialog ul {
+	list-style: none;
+	margin: 0;
+}
+
+#addAgentDialog ul li {
+	list-style: none;
+	margin: 5px 0;
+}
+
+#addAgentDialog .nonform {
+	padding: 20px;
+}
+
+#addAgentDialog .agentDocument {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+@media (min-width: 1200px) and (max-width: 1599px) {
+  #addAgentDialog .agentDocument  {
+    width: 48.93617020799999%;
+  }
+  #addAgentDialog .agentDocument:nth-of-type(2n+1) {
+    clear: left;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1999px) {
+  #addAgentDialog .agentDocument  {
+    width: 31.914893614%;
+  }
+  #addAgentDialog .agentDocument:nth-of-type(3n+1) {
+    clear: left;
+  }
+}
+
+@media (min-width: 2000px) and (max-width: 2399px) {
+  #addAgentDialog .agentDocument  {
+    width: 23.404255317%;
+  }
+  #addAgentDialog .agentDocument:nth-of-type(4n+1) {
+    clear: left;
+  }
+}
+
+@media (min-width: 2400px) {
+  #addAgentDialog .agentDocument  {
+    width: 19.89361702%;
+  }
+  #addAgentDialog .agentDocument:nth-of-type(5n+1) {
+    clear: left;
+  }
+}
+
+#addAgentDialog .agentDocContent {
+  margin-left: 55px;
+  margin-bottom: 30px;
+}
+
+#addAgentDialog .tickbox {
+  position: absolute;
+}
+
+#addAgentDialog .relatedConceptsList button {
+  margin-right: 5px;
+}
+
+.agentResultsHeading {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.agentToolbar {
+	position: fixed;
+	right: 5px;
+	z-index: 1;
+	top: 45px;
+}
+
+
+.spin-icon i {
+	-webkit-transition: -webkit-transform 1s linear;
+	-moz-transition: -moz-transform 1s linear;
+	-ms-transition: -ms-transform 1s linear;
+	-o-transition: -o-transform 1s linear;
+	transition: transform 1s linear;
+	
+	-webkit-transform: rotate3d(0,0,0, 360deg);
+	-moz-transform: rotate3d(0,0,0, 360deg);
+	-ms-transform: rotate3d(0,0,0, 360deg);
+	-o-transform: rotate3d(0,0,0, 360deg);
+	transform: rotate3d(0,0,0, 360deg);
+}
+
+.agentsGrid { }
+.agentTable { margin: 20px 0 0; }
+.agentTable th { width: 70px; }
+.agentGridItem
+{   overflow: scroll;
+    overflow-x: hidden;
+    margin-right: 20px;
+    width: 385px; }
+
+
+.agentbar button {
+	height: 29px;
+	overflow: visible;
+}
+

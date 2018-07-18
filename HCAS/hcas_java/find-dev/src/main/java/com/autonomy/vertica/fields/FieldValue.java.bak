@@ -1,0 +1,49 @@
+package com.autonomy.vertica.fields;
+
+import java.util.Date;
+
+public class FieldValue {
+	
+	  private String value;
+		private double count;
+
+	    private Date date;
+
+	   public String getValue() {
+		return value;
+	}
+	    
+	    public FieldValue(final String value, final double count, final Date date) {
+	        this.value = value;
+	        this.count = count;
+	        this.date = (date == null) ? null : new Date(date.getTime());
+	    }
+
+
+	public FieldValue() {
+		
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	public double getCount() {
+		return count;
+	}
+
+	public void setCount(double count) {
+		this.count = count;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	
+
+}

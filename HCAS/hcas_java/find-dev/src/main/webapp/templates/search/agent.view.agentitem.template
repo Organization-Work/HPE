@@ -1,0 +1,25 @@
+<% _.each(agents, function (agent) { %>
+  <div class="well agentGridItem" data-aid="<%= agent.aid %>">
+    <h3>
+      <div class="pull-right btn-group">
+        <button class="agentButton-delete btn btn-small btn-danger" title="Delete"><i class="icon-white icon-remove"></i></button>
+        <button class="agentButton-rename btn btn-small btn-warning" title="Rename"><i class="icon-white icon-font"></i></button>
+        <button class="agentButton-edit btn btn-small btn-info" title="Edit"><i class="icon-white icon-pencil"></i></button>
+        <button class="agentButton-open btn btn-small btn-inverse" title="Open"><i class="icon-white icon-folder-open"></i></button>
+      </div>
+      <%= agent.name %>
+    </h3>
+    <table class="agentTable table table-striped table-bordered">
+      <tbody>
+        <tr>
+          <th>Training Concepts:</th>
+          <td><%- agent.concepts.join(', ') %></td>
+        </tr>
+        <tr>
+          <th>Training Documents:</th>
+          <td><%- agent.documents ? agent.documents.join(', ') : 'None specified.' %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<% }); %>

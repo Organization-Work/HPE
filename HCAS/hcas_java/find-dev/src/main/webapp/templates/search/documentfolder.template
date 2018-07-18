@@ -1,0 +1,306 @@
+<div class="modal hide" tabindex="-1" id="addDocumentFolderDialog" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3></h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="addDocumentFolderLabel">Name</label>
+                <div class="controls">
+                    <input type="text" id="addDocumentFolderLabel" placeholder="Name" name="label"><br>
+                    <span id="alertNewFolder" style="color: #b94a48;"></span>
+                </div>
+            </div>
+             <div class="control-group" id="folderType">
+                <label class="control-label" for="folderTypeSelect">Type</label>
+                <div class="controls">
+                    <select id="folderTypeSelect">
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="addDocumentFolderTooltip">Description</label>
+                <div class="controls">
+                    <input type="text" id="addDocumentFolderTooltip" placeholder="Description" name="tooltip">
+                </div>
+            </div>
+            <div class="control-group">
+            	<label class="control-label" for="addDocumentFolderRole">Share With:</label>
+            	<div class="controls">
+            		<select id="rolesList" type="text" placeholder="Edit roles" multiple>
+            		</select>
+            	</div>
+            </div>
+            <div class="contorl-group">
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox" id="addReadOnly"> Readonly
+                    </label>
+                </div>
+            </div>
+            <button class="hide" type="submit" value="Submit"></button>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal"><i class="icon-remove"></i> Cancel</button>
+        <button class="btn btn-primary confirm "><i class="icon-plus"></i> <span class="add-text"></span></button>
+        <div id="addFolderloader" class="import-loader-gif"></div>
+    </div>
+</div>
+
+<div class="modal hide fade" id="editDocumentFolderListDialog" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3>Edit Document List</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+        	<div class="control-group">
+                <label class="control-label " for="editDocumentFolderOwner">Owner</label>
+                <div class="controls ">
+                    <input type="text" id="editDocumentFolderOwner" placeholder="owner" name="owner" ReadOnly>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label " for="editDocumentFolderLabel">Name</label>
+                <div class="controls ">
+                    <input type="text" id="editDocumentFolderLabel" placeholder="Name" name="label"><br>
+                     <span id="alertEditList"></span>
+                </div>
+            </div>
+            <div class="control-group" style="display:none;">
+                <label class="control-label" for="importTypeSelect">Type</label>
+                <div class="controls">
+                    <select id="importTypeSelect">
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="editDocumentFolderTooltip">Description</label>
+                <div class="controls">
+                    <input type="text" id="editDocumentFolderTooltip" placeholder="Description" name="tooltip">
+                </div>
+            </div>
+            <div class="control-group">
+            	<label class="control-label" for="addDocumentFolderRole">Share With:</label>
+            	<div class="controls">
+            		<select id="rolesList" type="text" placeholder="Edit roles" multiple>
+            		</select>
+            	</div>
+            </div>     
+            <div class="control-group">
+                <label class="control-label" for="editListFiles">Search/Add</label>
+                <div class="controls">
+	                <textarea placeholder="Search or add to list" id="name" type="text" style="width: 148px;"></textarea>
+		            <button id="check" type="button" title="Search items" value="Search" class="btn btn-default btn-sm" style="padding: 4px 5px 4px 5px;height: 27px;width: 27px;vertical-align: top;">
+		            	<span class="icon-search"></span> 
+		            </button>
+		            <button id="nextValue" type="button" value="Next" title="Move to next search items" class="btn btn-default btn-sm" style="padding: 4px 5px 4px 5px;height: 27px;width: 27px;vertical-align: top;display:none">
+		            	<span class="icon-arrow-down"></span> 
+		            </button>
+		            <button id="add" class="btn btn-default btn-sm" title="Add new item" style="padding: 4px 5px 4px 5px;height: 27px;width: 27px;vertical-align: top;">
+		            	<span class="icon-plus"></span> 
+		            </button><br>	            
+		            <div id="alertSearch" class="alert alert-info" style="display:none">
+					</div>		           
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="textareaBox">Items List</label>
+                <div class="controls">                        	 
+		             <div class="textareaBox">
+		            	<p id="loadinggif-importedValuesId" style="display:none" class="loadinggif-importedValues">Loading...</p>
+						<ul id="importedValues" class="textarea_importedValues"></ul>
+					</div>
+               </div>
+            </div>           
+            <div class="contorl-group">
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox" id="addReadOnly"> Readonly
+                    </label>
+                </div>
+            </div>
+            <input type="hidden" id="editDocumentFolderId">
+            <button class="hide" type="submit" value="Submit"></button>
+        </form>
+    </div>
+    <div class="modal-footer">
+    	<button class="btn btn-default pull-left clearItems">Clear Items List</button>
+    	<div id="clearItemloader" class="import-loader-gif" style="float: left"></div>
+        <button class="btn cancel" data-dismiss="modal"><i class="icon-remove"></i> Cancel</button>
+        <button class="btn btn-primary confirm"><i class="icon-edit"></i> Save</button>
+        <div id="edit-loader" class="import-loader-gif"></div>
+    </div>
+</div>   
+</div>
+<div class="modal hide fade" id="deleteDocumentFolderDialog" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3>Delete <span></span></h3>
+    </div>
+    <div class="modal-body">
+        Are you sure you want to delete <strong></strong><span name="label"></span>?
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal"><i class="icon-remove"></i> Cancel</button>
+        <button class="btn btn-danger confirm"><i class="icon-trash"></i> Delete </button>
+        <div id="delete-loader" class="import-loader-gif"></div>
+    </div>
+</div>
+
+<div class="modal hide fade" id="preventDeleteDocumentFolderDialog" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3>Delete Document List</h3>
+    </div>
+    <div class="modal-body">
+        Delete not allowed!!! First remove all document List filters!! '<span name="label"></span>'
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal"><i class="icon-remove"></i> OK</button>
+    </div>
+</div>
+
+<div class="modal hide" id="documentImportDialog" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3>Document List Import</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="importTypeSelect">Type</label>
+                <div class="controls">
+                    <select id="importTypeSelect">
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="importListFilename">Csv File</label>
+                <div class="controls">
+                    <Input type="text" class="uneditable-input" id="importListFilename" placeholder="Select a file" name="tooltip" readonly></input>
+                    <button class="btn" id="importFileControl">Browse</button>
+                    <input class="hidden" type="file" id="hiddenImportSelector" accept="text/*">
+                    <div class="importFile">Please Select a CSV file to Import</div>
+                </div>
+                
+            </div>
+             
+            <div class="control-group">
+                <div class="controls">
+                    <label class="checkbox"> 
+                        <input type="checkbox" id="ignoreHeaderCheck">Ignore first header row
+                    </label>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal"><i class="icon-remove"></i> Cancel</button>
+        <button class="btn btn-primary confirm"><i class="icon-download-alt"></i> Import</button>
+        <div id="import-loader" class="import-loader-gif"></div>
+    </div>
+</div>
+
+<div class="modal hide" id="resultsTagDialog" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close cancel" data-dismiss="modal">&times;</button>
+        <h3>Tag Results</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="control-group results-tagging-control">
+                <label class="control-label" for="resultsTagFolderSelect">Tag to document list</label>
+                <div class="controls">
+                    <div class="input-append folder-select">
+                        <select id="resultsTagFolderSelect" name="resultsTagFolderSelect" title="Select a document list to tag the records"  tabIndex="-1">
+                            <option value="">Choose a document list</option>
+                        </select>
+                        <!--<button class="btn btn-inverse" id="resultTagFolderCreate">New</button>-->
+                    </div>
+                </div>
+            </div>
+            <div class="control-group  results-tagging-control maxdocs hide">		
+                <label class="control-label" for="tagMaxDocs">Maximum Rows</label>
+                <div class="controls">
+                    <div class="input-append">
+                        <input type="text" name="tagMaxDocs" id="tagMaxDocs" tabIndex="-1"></input>
+                        <span id="tagTotalResults"></span>
+                        <div class="tag-doc-slider" id="tagDocSlider"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn cancel" data-dismiss="modal"><i class="icon-remove"></i> Cancel</button>
+        <button class="btn btn-primary confirm"><i class="icon-tags"></i> Tag</button>
+        <div id="tagDocument-loader" class="import-loader-gif"></div>
+    </div>
+</div>
+
+<div class="modal hide fade" id="editDocumentFolderDialog" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3></h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+        	<div class="control-group">
+                <label class="control-label " for="editDocumentFolderOwner">Owner</label>
+                <div class="controls ">
+                    <input type="text" id="editDocumentFolderOwner" placeholder="owner" name="owner" ReadOnly>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label " for="editDocumentFolderLabel">Name</label>
+                <div class="controls ">
+                    <input type="text" id="editDocumentFolderLabel" placeholder="Name" name="label"><br>
+                     <span id="alertEdit"></span>
+                </div>
+            </div>
+            <div class="control-group" style="display:none;">
+                <label class="control-label" for="importTypeSelect">Type</label>
+                <div class="controls">
+                    <select id="importTypeSelect">
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="editDocumentFolderTooltip">Description</label>
+                <div class="controls">
+                    <input type="text" id="editDocumentFolderTooltip" placeholder="Description" name="tooltip">
+                </div>
+            </div>
+			<div class="control-group">
+            	<label class="control-label" for="addDocumentFolderRole">Share With:</label>
+            	<div class="controls">
+            		<select id="rolesList" type="text" placeholder="Edit roles" multiple>
+            		</select>
+            	</div>
+            </div>         
+            <div class="contorl-group">
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox" id="addReadOnly"> Readonly
+                    </label>
+                </div>
+            </div>   
+            
+            <input type="hidden" id="editDocumentFolderId">
+            <button class="hide" type="submit" value="Submit"></button>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn cancel" data-dismiss="modal"><i class="icon-remove"></i> Cancel</button>
+        <button class="btn btn-primary confirm"><i class="icon-edit"></i> Save</button>
+        <div id="editFolder-loader" class="import-loader-gif"></div>
+    </div>
+</form>
+</div>   
+</div>
+<div class="folder-loader-gif" id="folder-loader"></div>
+<div class="text-info">[Click the <b>Add</b> button to create folder]</div>

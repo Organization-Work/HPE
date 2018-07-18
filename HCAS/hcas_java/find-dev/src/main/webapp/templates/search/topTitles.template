@@ -1,0 +1,11 @@
+<% var limit = 15; %>
+<ul>
+    <% _.each(items, function (value) {
+        var words = value.summary.split(/\s+/);
+    %>
+        <li>
+            <h4><%- value.title %></h4>
+            <p><%- words.length > limit ? words.slice(0, limit - 1).join(' ') + '\u2026' : words.join(' ') %></p>
+        </li>
+    <% }); %>
+</ul>

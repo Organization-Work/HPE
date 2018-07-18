@@ -1,0 +1,782 @@
+package com.autonomy.find.util;
+
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.apache.commons.lang.StringUtils;
+
+import com.autonomy.aci.actions.idol.tag.FieldValue;
+import com.autonomy.aci.client.util.AciParameters;
+import com.autonomy.aci.content.fieldtext.EQUAL;
+import com.autonomy.aci.content.fieldtext.EXISTS;
+import com.autonomy.aci.content.fieldtext.FieldText;
+import com.autonomy.aci.content.fieldtext.FieldTextWrapper;
+import com.autonomy.aci.content.fieldtext.GREATER;
+import com.autonomy.aci.content.fieldtext.LESS;
+import com.autonomy.aci.content.fieldtext.MATCH;
+import com.autonomy.aci.content.fieldtext.NOTEQUAL;
+import com.autonomy.aci.content.fieldtext.STRING;
+import com.autonomy.aci.content.fieldtext.Specifier;
+import com.autonomy.find.api.idol.RANGE;
+import com.autonomy.find.dto.Parametric.BoolOp;
+import com.autonomy.find.dto.Parametric.DatePeriod;
+import com.autonomy.find.dto.Parametric.FieldParams;
+import com.autonomy.find.dto.Parametric.FilterGroup;
+import com.autonomy.find.fields.FilterField;
+import com.autonomy.find.fields.FilterOperator;
+import com.autonomy.find.fields.FilterType;
+import com.autonomy.find.fields.IdolField;
+import com.autonomy.find.fields.ParaField;
+import com.autonomy.find.services.DocumentFolderService;
+import com.autonomy.idolview.Filter;
+
+public class FieldTextUtil {
+
+	public static final String MATCH_TYPE = "match";
+	public static final String NUMERIC_TYPE = "numeric";
+	public static final String RANGE_TYPE = "range";
+	public static final String DATE_TYPE = "date";
+	public static final String DOCUMENTFOLDER_TYPE = "documentfolder";
+
+	public static final String FIELD_TEXT = "FieldText";
+
+	// They've confirmed that they want AND behaviour, but keep this flag to remind self when merging
+	public static final boolean AND = true;
+
+    /**
+     * Generates a field text expression from a map of filters.
+     *
+     * @param filters
+     * @param fieldNames
+     * @return
+     */
+    public static FieldText buildFilterExpression(
+            final Map<String, List<String>> filters,
+            final Map<String, FieldTextDetail> fieldNames
+    ) {
+        FieldText fieldText = null;
+
+        for (final Map.Entry<String, List<String>> filter : filters.entrySet()) {
+            final FieldTextDetail details = fieldNames.get(filter.getKey());
+            final FieldText filterFieldText = filterTextFromValue(filter.getKey(), details, filter.getValue());
+            if (filterFieldText != null) {
+                fieldText = (fieldText == null) ? filterFieldText : fieldText.AND(filterFieldText);
+            }
+        }
+
+        return fieldText;
+    }
+
+    public static FieldText buildFilterExpression(
+            final DocumentFolderService documentFolderService,
+            final FilterGroup filterGroup,
+            final Map<String, FilterField> filterFieldNames,
+            final boolean filterCohort) {
+        FieldText fieldText = null;
+
+        if (filterGroup == null || filterGroup.getBoolOperator() == null || filterGroup.isDeactivated()) {
+            return null;
+        }
+
+        final boolean isAND = BoolOp.AND == filterGroup.getBoolOperator() | BoolOp.NOT_AND == filterGroup.getBoolOperator();
+        final boolean isNOT = BoolOp.NOT_OR == filterGroup.getBoolOperator() | BoolOp.NOT_AND == filterGroup.getBoolOperator();
+        final boolean isWHEN = BoolOp.WHEN == filterGroup.getBoolOperator();
+
+        FieldText childFiltersText = null;
+
+        final Map<String, List<FieldParams>> fieldValuesList = filterGroup.getFilterFields();
+        if (fieldValuesList != null) {
+            for(final Map.Entry<String, List<FieldParams>> fieldValuesEntry : fieldValuesList.entrySet()) {
+
+                final Map<FieldTypeNamePair, List<FieldParams>> typeFieldsMap = new HashMap<FieldTypeNamePair, List<FieldParams>>();
+                final FilterField details = filterFieldNames.get(fieldValuesEntry.getKey());
+
+                for (final FieldParams fieldParam : fieldValuesEntry.getValue()) {
+                    final FieldTypeNamePair type = getFieldTypeName(fieldParam.getType(), details);
+                    List<FieldParams> fieldList = typeFieldsMap.get(type);
+                    if (fieldList == null) {
+                        fieldList = new ArrayList<FieldParams>();
+                        typeFieldsMap.put(type, fieldList);
+                    }
+                    fieldList.add(fieldParam);
+                }
+
+                for (final Map.Entry<FieldTypeNamePair, List<FieldParams>> typeFieldEntry : typeFieldsMap.entrySet()) {
+                    final FieldText filterFieldText = filterFieldTextFromValue(documentFolderService, typeFieldEntry.getKey(), details, typeFieldEntry.getValue(), isAND);
+                    if (filterFieldText != null) {
+                        if (!isWHEN) {
+                            childFiltersText = (childFiltersText == null) ? filterFieldText : (isAND ? childFiltersText.AND(filterFieldText) : childFiltersText.OR(filterFieldText));
+                        } else {
+                            if(childFiltersText == null) {
+                                childFiltersText = filterFieldText;
+                            } else {
+                                final int level = getWhenLevel(filterGroup.getWhenOp());
+                                childFiltersText = level == 0 ? childFiltersText.WHEN(filterFieldText) : childFiltersText.WHEN(level, filterFieldText);
+
+                            }
+                        }
+                    }
+
+                }
+
+
+
+            }
+        }
+
+        FieldText childGroupText = null;
+        if (filterGroup.getChildGroups() != null) {
+            for (final FilterGroup childGroup : filterGroup.getChildGroups()) {
+                if (!filterCohort || childGroup.getCohortOp() == null)  {
+                    // Only support cohort at the first child level
+                    final FieldText groupFieldText = buildFilterExpression(documentFolderService, childGroup, filterFieldNames, false);
+                    if (groupFieldText != null) {
+                        childGroupText = (childGroupText == null) ? groupFieldText : (isAND ? childGroupText.AND(groupFieldText) : childGroupText.OR(groupFieldText));
+                    }
+                }
+            }
+        }
+
+
+        if (childFiltersText != null) {
+            fieldText = (childGroupText == null) ? childFiltersText : (isAND ? childFiltersText.AND(childGroupText) : childFiltersText.OR(childGroupText));
+
+        }  else {
+            fieldText = childGroupText;
+        }
+
+        if (isNOT && fieldText != null) {
+            fieldText = fieldText.NOT();
+        }
+
+        return fieldText;
+
+    }
+
+    public static FieldText filterTextFromValue(
+            final String idolField,
+            final FieldTextDetail details,
+            final List<String> value
+    ) throws IllegalArgumentException {
+        return filterParaTextFromValue(idolField, details, value, AND);
+    }
+
+
+    /**
+     * Generates a field text from a single filter, potentially with multiple values.
+     *
+     * Null indicates the FieldText Unit
+     *
+     * @param idolField
+     * @param details
+     * @param values
+     * @return
+     * @throws IllegalArgumentException
+     */
+    public static FieldText filterParaTextFromValue(
+            final String idolField,
+            final FieldTextDetail details,
+            final List<String> values,
+            final boolean isAND
+    ) throws IllegalArgumentException {
+        final String type = details.getType();
+
+        final List<String> nonEmptyValues = new ArrayList<String>();
+        for (final String val : values) {
+            if (StringUtils.isNotEmpty(val)) {
+                nonEmptyValues.add(val);
+            }
+        }
+
+        if (nonEmptyValues.size() == 0) {
+            return null; //  unit
+        }
+
+        if (type.equals(MATCH_TYPE))   { return buildMatch(idolField, nonEmptyValues, isAND, null); }
+        if (type.equals(NUMERIC_TYPE)) { return buildEqual(idolField, CollUtils.stringsToDoubles(nonEmptyValues), isAND); }
+        if (type.equals(RANGE_TYPE))   { return buildRange(idolField, nonEmptyValues, isAND, false); }
+        //...
+
+        throw new IllegalArgumentException(String.format("Type not recognised: `%s`", type));
+    }
+
+    public static FieldTypeNamePair getFieldTypeName(final char fieldType, final FilterField details) {
+        FieldTypeNamePair pair = null;
+        String fieldName;
+
+        switch (fieldType) {
+            case 'P':
+                fieldName = details.getParametric().getName() == null ? details.getName() : details.getParametric().getName();
+                pair = new FieldTypeNamePair(details.getParametric().getType(), fieldName);
+                break;
+            case 'I':
+                fieldName = details.getIndexed().getName() == null ? details.getName() : details.getIndexed().getName();
+                pair = new FieldTypeNamePair(details.getIndexed().getType(), fieldName);
+                break;
+            case 'C':
+                fieldName = details.getName();
+                pair = new FieldTypeNamePair(details.getCustom().getType(), fieldName);
+                break;
+        }
+
+        return pair;
+    }
+
+    public static FieldText  filterFieldTextFromValue(
+            final DocumentFolderService documentFolderService,
+            final FieldTypeNamePair typeNamePair,
+            final FilterField details,
+            final List<FieldParams> valuesList,
+            final boolean isAND
+    ) throws IllegalArgumentException {
+
+        FieldText fieldText = null;
+
+        if (valuesList.size() == 0) {
+            return null; //  unit
+        }
+
+        switch (typeNamePair.getType()) {
+            case TEXT:
+                boolean isMatchType = true;
+                for (final FieldParams entry : valuesList ) {
+                    if (FilterOperator.IS != entry.getOp() && FilterOperator.IS_NOT != entry.getOp()) {
+                        isMatchType = false;
+                        break;
+                    }
+                }
+
+                if (isMatchType) {
+                    final FieldTypeNamePair matchPair = new FieldTypeNamePair(FilterType.MATCH, typeNamePair.getName());
+                    return  filterFieldTextFromValue(documentFolderService, matchPair, details, valuesList, isAND);
+                }
+
+                for (final FieldParams entry : valuesList ) {
+                    if (StringUtils.isNotEmpty(entry.getVal())) {
+                        final FilterOperator fieldOp = entry.getOp();
+                        final FieldText textFieldText = buildText(typeNamePair.getName(), fieldOp, entry.getVal(), isAND);
+                        if (textFieldText != null) {
+                            fieldText =  (fieldText == null) ? textFieldText : (isAND ? fieldText.AND(textFieldText) : fieldText.OR(textFieldText));
+                        }
+                    }
+                }
+                break;
+            case MATCH:
+                final List<String> isValues = new ArrayList<String>();
+                final List<String> isNotValues = new ArrayList<String>();
+
+                final String matchSpecifier = getMatchSpecifier(details, typeNamePair.getName());
+
+                for (final FieldParams entry : valuesList ) {
+                    if (StringUtils.isNotEmpty(entry.getVal())) {
+                        if (FilterOperator.IS == entry.getOp()) {
+                            isValues.add(entry.getVal());
+                        } else {
+                             isNotValues.add(entry.getVal());
+                        }
+                    }
+                }
+                if (!isValues.isEmpty())  {
+                    fieldText =  buildMatch(typeNamePair.getName(), isValues, isAND, matchSpecifier);
+                }
+
+                if (!isNotValues.isEmpty()) {
+                    FieldText isNotFieldText = buildMatch(typeNamePair.getName(), isNotValues, isAND, matchSpecifier);
+                    if (isNotFieldText != null) {
+                        isNotFieldText = isNotFieldText.NOT();
+                        fieldText = (fieldText == null) ? isNotFieldText : (isAND ? fieldText.AND(isNotFieldText) : fieldText.OR(isNotFieldText));
+                    }
+                }
+
+                break;
+
+            case PARARANGES:
+                final List<String> isRangeValues = new ArrayList<String>();
+                final List<String> isNotRangeValues = new ArrayList<String>();
+
+                for (final FieldParams entry : valuesList ) {
+                    if (StringUtils.isNotEmpty(entry.getVal())) {
+                        if (FilterOperator.IS_RANGE == entry.getOp()) {
+                            isRangeValues.add(entry.getVal());
+                        } else {
+                            isNotRangeValues.add(entry.getVal());
+                        }
+                    }
+                }
+                if (!isRangeValues.isEmpty())  {
+                    fieldText =  buildRange(typeNamePair.getName(), isRangeValues, isAND, false);
+                }
+
+                if (!isNotRangeValues.isEmpty()) {
+                    FieldText isNotFieldText = buildRange(typeNamePair.getName(), isNotRangeValues, isAND, true);
+                    if (isNotFieldText != null) {
+                        fieldText = (fieldText == null) ? isNotFieldText : (isAND ? fieldText.AND(isNotFieldText) : fieldText.OR(isNotFieldText));
+                    }
+                }
+
+                break;
+
+            case NUMERIC:
+                for (final FieldParams entry : valuesList) {
+                    if (StringUtils.isNotEmpty(entry.getVal())) {
+                        final FilterOperator fieldOp = entry.getOp();
+                        FieldText numericFieldText = null;
+
+                        if (FilterOperator.RANGE != fieldOp) {
+                            final Double fieldValue = CollUtils.stringsToDoubles(Collections.singletonList(entry.getVal())).get(0);
+                            numericFieldText = buildNumeric(typeNamePair.getName(), fieldOp, fieldValue);
+                        } else {
+                            numericFieldText = buildRange(typeNamePair.getName(), Collections.singletonList(entry.getVal()));
+                        }
+                        if (numericFieldText != null) {
+                            fieldText =  (fieldText == null) ? numericFieldText : (isAND ? fieldText.AND(numericFieldText) : fieldText.OR(numericFieldText));
+                        }
+                    }
+
+                }
+                break;
+
+            case DATE:
+                final DateFormat dateFormat = new SimpleDateFormat(details.getIndexed().getFormat());
+                for (final FieldParams entry : valuesList) {
+                    if (StringUtils.isNotEmpty(entry.getVal())) {
+                        final FilterOperator fieldOp = entry.getOp();
+                        final FieldText dateFieldText = buildDate(typeNamePair.getName(), fieldOp, entry.getVal(), dateFormat);
+                        if (dateFieldText != null) {
+                            fieldText =  (fieldText == null) ? dateFieldText : (isAND ? fieldText.AND(dateFieldText) : fieldText.OR(dateFieldText));
+                        }
+                    }
+                }
+                break;
+            
+            case ASOFDATE:
+                break;
+
+            case DOCUMENTFOLDER:
+                final String mappedIdolField = details.getCustom().getMappedField();
+                final String specifier = details.getCustom().getSpecifier();
+                for (final FieldParams entry : valuesList) {
+                    final String folderId = entry.getVal();
+
+                    if (StringUtils.isNotEmpty(folderId)) {
+                        // todo: how do you want to handle deleted document folders?
+                        final FilterOperator fieldOp = entry.getOp();
+                        final FieldText textFieldText = buildDocumentFolder(specifier, mappedIdolField, fieldOp, documentFolderService.getFilterFolderTags(Integer.parseInt(folderId)));
+                        if (textFieldText != null) {
+                            fieldText =  (fieldText == null) ? textFieldText : (isAND ? fieldText.AND(textFieldText) : fieldText.OR(textFieldText));
+                        }
+                    }
+
+                }
+                break;
+            default:
+                throw new IllegalArgumentException(String.format("Type not recognised: `%s`", typeNamePair.getType()));
+        }
+
+
+        return fieldText;
+
+    }
+
+    public static String getMatchSpecifier(final FilterField details, final String fieldname) {
+        String specifier = null;
+        final IdolField indexField = details.getIndexed();
+        final String indexName = indexField != null && indexField.getName() != null ? indexField.getName() : fieldname;
+        final ParaField paraField = details.getParametric();
+        final String paraName = paraField != null && paraField.getName() != null ? paraField.getName() : fieldname;
+
+        if (paraField != null && FilterType.MATCH == paraField.getType())
+        {
+           if (fieldname.equals(paraName)) {
+               specifier = paraField.getMatchSpecifier();
+           } else {
+               if (indexField != null && FilterType.MATCH == indexField.getType()) {
+                   specifier = fieldname.equals(indexName) ? indexField.getMatchSpecifier() : null;
+               }
+           }
+
+        } else if (indexField != null && FilterType.MATCH == indexField.getType()) {
+            specifier = fieldname.equals(indexName) ? indexField.getMatchSpecifier() : null;
+        }
+
+        return specifier;
+
+    }
+
+
+    public static FieldText buildText(final String idolField, final FilterOperator fieldOp, final String fieldValue, final boolean isAnd) {
+        FieldText fieldText = null;
+        switch (fieldOp) {
+            case IS:
+                fieldText = new MATCH(idolField, fieldValue);
+                break;
+            case IS_NOT:
+                fieldText = (new MATCH(idolField, fieldValue)).NOT();
+                break;
+            case CONTAINS:
+                fieldText = new STRING(idolField, fieldValue);
+                break;
+            case NOT_CONTAINS:
+                fieldText = (new STRING(idolField, fieldValue)).NOT();
+                break;
+
+        }
+
+        return fieldText;
+    }
+
+    public static FieldText buildFieldMatch(final String idolField, final Set<String> fieldValues, final FilterField details) {
+        final String matchSpecifier = getMatchSpecifier(details, idolField);
+
+        return matchSpecifier == null ? new MATCH(idolField, fieldValues) : new Specifier(matchSpecifier, idolField, fieldValues);
+    }
+
+    public static FieldText buildDocumentFolder(final String specifier, final String idolField, final FilterOperator fieldOp, final Set<String> fieldValue) {
+        // we only support IS and IS_NOT, but might as well reuse the enum
+        switch (fieldOp) {
+            case IS:
+                return new Specifier(specifier, idolField, fieldValue);
+            case IS_NOT:
+                return (new Specifier(specifier, idolField, fieldValue)).NOT();
+            default:
+                return null;
+        }
+    }
+
+    public static FieldText buildDate(final String idolField, final FilterOperator fieldOp, final String submittedValue, final DateFormat dateFormat) {
+        FieldText fieldText = null;
+        final String[] values;
+
+        if (FilterOperator.PERIOD == fieldOp) {
+            values = getPeriodValues(submittedValue, dateFormat);
+
+        } else {
+            values = submittedValue.split(",");
+            if (values.length == 0) {
+                return fieldText;
+            }
+            if (FilterOperator.BETWEEN == fieldOp && (values.length < 2 || StringUtils.isEmpty(values[0]) || StringUtils.isEmpty(values[1]))) {
+                return fieldText;
+            }
+
+            try {
+                for(final String value : values) {
+                    if (dateFormat.parse(value) == null) {
+                        throw new IllegalArgumentException("Bad date format [" + dateFormat.toString() + "].");
+                    };
+                }
+            } catch (ParseException e ) {
+                throw new IllegalArgumentException("Bad date format [" + dateFormat.toString() + "].");
+            }
+
+        }
+
+        switch (fieldOp) {
+            case AFTER:
+                fieldText = new RANGE(idolField, values[0], ".");
+                break;
+            case BEFORE:
+                fieldText = new RANGE(idolField, ".", values[0]);
+                break;
+            case BETWEEN:
+            case PERIOD:
+                fieldText = new RANGE(idolField, values[0], values[1]);
+                break;
+        }
+
+        return fieldText;
+    }
+
+    
+    public static String[] getPeriodValues(final String periodValue, final DateFormat dateFormat) {
+        final String[] values = new String[2];
+
+        if (StringUtils.isEmpty(periodValue)) {
+            throw new IllegalArgumentException("Empty date period value.");
+        }
+
+        final DatePeriod datePeriod = DatePeriod.valueOf(periodValue.toUpperCase());
+
+        final Calendar toDate = Calendar.getInstance();
+        final Calendar fromDate = Calendar.getInstance();
+
+        switch (datePeriod) {
+            case THIS_WEEK:
+                final int firstDayOfWeek = toDate.getFirstDayOfWeek();
+                final int dayOfWeek = toDate.get(Calendar.DAY_OF_WEEK);
+                fromDate.set(fromDate.get(Calendar.YEAR), fromDate.get(Calendar.MONTH), fromDate.get(Calendar.DAY_OF_MONTH), 0, 0, 0);
+                fromDate.roll(Calendar.DAY_OF_MONTH, firstDayOfWeek - dayOfWeek);
+                break;
+            case THIS_MONTH:
+                fromDate.set(fromDate.get(Calendar.YEAR), fromDate.get(Calendar.MONTH), 1, 0, 0, 0);
+                break;
+            case THIS_YEAR:
+                fromDate.set(fromDate.get(Calendar.YEAR), Calendar.JANUARY, 1, 0, 0, 0);
+                break;
+            case LAST_YEAR_TODATE:
+                fromDate.set(fromDate.get(Calendar.YEAR) - 1, Calendar.JANUARY, 1, 0, 0, 0);
+                break;
+            case LAST_2_YEARS_TODATE:
+                fromDate.set(fromDate.get(Calendar.YEAR) - 2, Calendar.JANUARY, 1, 0, 0, 0);
+                break;
+            case LAST_4_YEARS_TODATE:
+                fromDate.set(fromDate.get(Calendar.YEAR) - 4, Calendar.JANUARY, 1, 0, 0, 0);
+                break;
+
+        }
+
+        values[0] = dateFormat.format(fromDate.getTime());
+        values[1] = dateFormat.format(toDate.getTime());
+
+        return values;
+    }
+
+    public static FieldText buildNumeric(final String idolField, final FilterOperator fieldOp, final Double value ) {
+        FieldText fieldText = null;
+
+        switch (fieldOp) {
+            case GT:
+            case GE:
+
+                fieldText = (FilterOperator.GE == fieldOp) ? buildGreaterEqual(idolField, value) : new GREATER(idolField, value);
+                break;
+            case LT:
+            case LE:
+                fieldText = (FilterOperator.LE == fieldOp) ? buildLessEqual(idolField, value) : new LESS(idolField, value);
+                break;
+            case EQ:
+                fieldText = new EQUAL(idolField, value);
+                break;
+            case NE:
+                fieldText = new NOTEQUAL(idolField, value);
+                break;
+        }
+
+
+        return fieldText;
+    }
+
+    public static FieldText buildMatchValues(final String idolField, final List<FieldValue> fieldValues, final boolean isAND, final FilterField details) {
+        FieldText fieldText = null;
+
+        final String matchSpecifier = getMatchSpecifier(details, idolField);
+
+        if (idolField != null && fieldValues != null) {
+            final List<String> values = new ArrayList<String>();
+            for(final FieldValue fval : fieldValues) {
+                values.add(fval.getValue());
+            }
+
+            if (!values.isEmpty())  {
+                fieldText = buildMatch(idolField, values, isAND, matchSpecifier);
+            }
+        }
+
+        return fieldText;
+    }
+
+    public static FieldText buildGreaterEqual(final String idolField, final Double value) {
+        return (new GREATER(idolField, value)).OR(new EQUAL(idolField, value));
+    }
+
+    public static FieldText buildLessEqual(final String idolField, final Double value) {
+        return (new LESS(idolField, value)).OR(new EQUAL(idolField, value));
+    }
+
+    public static FieldText buildMatch(final String idolField, final List<String> value, final String specifier) {
+        return buildMatch(idolField, value, AND, specifier);
+    }
+
+    public static FieldText buildMatch(final String idolField, final List<String> value, final boolean isAND, final String specifier) {
+        if (!isAND) {
+            return specifier == null ? new MATCH(idolField, value) : new Specifier(specifier, idolField, value);
+        }
+
+        FieldText fieldText = null;
+
+        for (final String val : value) {
+            final FieldText toAdd = specifier == null ? new MATCH(idolField, val) : new Specifier(specifier, idolField, val);
+            fieldText = fieldText == null ? toAdd : fieldText.AND(toAdd);
+        }
+
+        return fieldText;
+	}
+
+    public static FieldText buildEqual(final String idolField, final List<Double> value) {
+        return buildEqual(idolField, value, AND);
+    }
+
+
+    public static FieldText buildEqual(final String idolField, final List<Double> value, final boolean isAND) {
+		if (!isAND) {
+			return new EQUAL(idolField, value);
+		}
+
+		FieldText fieldText = null;
+
+		for (final Double number : value) {
+			final FieldText toAdd = new EQUAL(idolField, number);
+			fieldText = fieldText == null ? toAdd : fieldText.AND(toAdd);
+		}
+
+		return fieldText;
+	}
+
+
+    public static FieldText buildRange(
+            final String idolField,
+            final List<String> values
+    ) {
+        return buildRange(idolField, values, AND, false);
+    }
+
+
+    /**
+     * Makes a range field text value (Filter.NRANGE).
+     *
+     * Null indicates FieldText Unit
+     *
+     * @param idolField
+     * @param values
+     * @return
+     */
+    public static FieldText buildRange(
+            final String idolField,
+            final List<String> values,
+            final boolean isAND,
+            final boolean isNot
+    ) {
+        FieldText result = null;
+
+        for (final String value : values) {
+			// split on arrows and commas
+            final String[] rangeStrs = value.split("[,\\u2192]");
+
+            final Number lower = getRangeNumber(rangeStrs[0]);
+            final Number upper = rangeStrs.length > 1 ? getRangeNumber(rangeStrs[1]) : null;
+
+            FieldText fieldText = null;
+
+            if (lower != null) {
+                if (upper != null) {
+                    // nRange{lower, upper} and less {upper}, only need this nrange workaround until IDOL 10.7, which will support nrange{lower, <upper} etc. new syntax. (IAHCA-145)
+                    fieldText = !isNot ?
+                            new Filter.NRANGE(idolField, lower, upper).AND(new LESS(idolField, upper)) :
+                            new LESS(idolField, lower).OR(new GREATER(idolField, upper)).OR(new EQUAL(idolField, upper));
+
+                } else {
+                    // GE lower
+                    fieldText = !isNot ?
+                            new GREATER(idolField, lower).OR(new EQUAL(idolField, lower)) :
+                            new LESS(idolField, lower);
+
+                }
+
+            } else {
+                if (upper != null) {
+                    //LESS than  upper
+                    fieldText = !isNot ?
+                            new LESS(idolField, upper) :
+                            new GREATER(idolField, upper).OR(new EQUAL(idolField, upper));
+
+                } else {
+                    fieldText = !isNot ?
+                            new EXISTS(idolField) :
+                            new EXISTS(idolField).NOT();
+                }
+
+            }
+
+
+            if (fieldText != null) {
+                result = (result == null) ? fieldText : isAND ? result.AND(fieldText) : result.OR(fieldText);
+            }
+        }
+
+        return result;
+    }
+
+    public static Float getRangeNumber(final String value) {
+        try {
+            return Float.valueOf(value);
+
+        } catch (final Exception e) {
+            return null;
+        }
+    }
+
+	public static void appendFieldText(final AciParameters params, final FieldText fieldText) {
+		if (fieldText == null) {
+			return;
+		}
+
+		final String existing = params.get(FIELD_TEXT);
+		if (StringUtils.isBlank(existing)) {
+			params.put(FIELD_TEXT, fieldText);
+		}
+		else {
+			params.put(FIELD_TEXT, new FieldTextWrapper(existing).AND(fieldText));
+		}
+	}
+
+	public static int getWhenLevel(final String whenop) {
+        int level = 0;
+
+        if (whenop != null) {
+            final String num = whenop.substring(4);
+            if (StringUtils.isNotEmpty(num)) {
+                level = Integer.valueOf(num);
+            }
+        }
+
+        return level;
+    }
+
+
+    public static class FieldTypeNamePair {
+        private FilterType type;
+        private String name;
+
+        public FieldTypeNamePair(final FilterType type, final String name) {
+            this.type = type;
+            this.name = name;
+        }
+
+        public FilterType getType() {
+            return type;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        @Override
+        public boolean equals(final Object obj) {
+            if (obj instanceof FieldTypeNamePair) {
+                final FieldTypeNamePair other = (FieldTypeNamePair) obj;
+                return (this.type == other.getType() && this.name.equals(other.getName()));
+            }
+
+            return false;
+        }
+
+        @Override
+        public int hashCode() {
+            int hash = 5;
+            hash = 89 * hash + (this.name != null ? this.name.hashCode() : 0);
+            hash = 89 * hash + (this.type != null ? this.type.hashCode() : 0);
+
+            return hash;
+
+        }
+    }
+}

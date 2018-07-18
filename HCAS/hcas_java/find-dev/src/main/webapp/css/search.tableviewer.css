@@ -1,0 +1,172 @@
+#tableviewer-totals {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+.tableviewer-settings {
+    margin: 10px;
+}
+
+.tableviewer-settings-title {
+    border-bottom: 1px;
+}
+
+.tableviewer-settings input, .tableviewer-settings select {
+    width: 100px;
+}
+
+.fieldpicker {
+    margin: 5px;
+    position: relative;
+    max-width: 300px;
+}
+
+.fieldpicker .dropdown-menu {
+    max-width: 450px;
+}
+
+.fieldpicker .dropdown-menu a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tableviewer-container {
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.tableviewer-container > table {
+    max-width: 99%;
+}
+
+#tableviewer td {
+    width: 40px;
+    height: 40px;
+    background-color: #d0d8e8;
+    border: 1px solid darkgray;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.x-misc, .y-misc  {
+    cursor: crosshair;
+}
+
+#tableviewer.hide-y-misc .y-misc, #tableviewer.hide-x-misc .x-misc {
+    width: 1px;
+    height: 1px;
+    color: transparent;
+    font-size: 1px;
+    line-height: 1px;
+    text-overflow: clip;
+    cursor: zoom-in;
+}
+
+#tableviewer tr:nth-child(odd) td {
+    background-color: #e9edf4;
+}
+
+#tableviewer tr th.misc {
+    background-color: #d9d9d9;
+}
+
+#tableviewer tr td.misc {
+    background-color: #e0ffd2;
+}
+
+#tableviewer tr:nth-child(odd) td.misc {
+    background-color: #ebffda;
+}
+
+#tableviewer tr th.total {
+    color: orange;
+}
+
+#tableviewer tr td.total {
+    background-color: #ffdda7;
+}
+
+#tableviewer tr:nth-child(odd) td.total {
+    background-color: #ffeda9;
+}
+
+#tableviewer tr td.misc-misc {
+    background-color: #f9f9f9;
+}
+
+#tableviewer tr td.misc-total {
+    background-color: #e8ffef;
+}
+
+#tableviewer tr td.supertotal {
+    border: none;
+    background: transparent;
+}
+
+.fieldvalue-y, .fieldvalue-x, .fieldvalue-xy {
+    cursor: pointer;
+}
+
+.fieldvalue-y:hover, .fieldvalue-x:hover, .fieldvalue-xy:hover {
+    color: #005580;
+    text-decoration: underline;
+}
+
+.tableviewer-fieldpicker-snomed input {
+    margin: 0px 0px 2px;
+}
+
+a.table-format-options {
+    padding-left: 10px;
+}
+
+.table-format-options:before {
+    content: "\3000";
+}
+
+.table-format-options.selected:before {
+    content: "\2713";
+}
+
+th.selected {
+    color: #DD0707;
+}
+
+.format-label {
+    position: relative;
+    float: left;
+    margin-bottom: 0;
+    border: 1px solid;
+    text-align: center;
+    line-height: 14px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);    
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+}
+
+#formatSelector {
+    margin-right: 5px;
+}
+
+#tableviewer td.row-pct {
+    border-bottom-style: double;
+    border-bottom-color: #656565;
+    border-bottom-width: 3px;
+}
+
+#tableviewer td.col-pct {
+    border-right-style: double;
+    border-right-color: #656565;
+    border-right-width: 3px;
+}

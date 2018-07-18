@@ -1,0 +1,51 @@
+<li><a id="customFilterSet" data-toggle="tooltip" title="Insert custom filter set">Custom Filter Set</a></li>
+<li class="divider"/>
+
+<% if (fields && fields.length >0) { %>
+    <% _.each(fields, function (entry, key) {%>
+        <%  if (entry.displayName !== '') { 
+        	var catWhenOp = entry.whenOperator ? "data-whenop=" + entry.whenOperator : "";
+        	var catWhenGroup = entry.whenOperator ? "data-whengrp=" + entry.displayName.replace(/\s+/g,'_') : "";
+        %>
+            <li class="dropdown-submenu fieldslist-group" <%- catWhenOp %> <%- catWhenGroup %>>
+            	<a tabindex="-1" href="javascript:void(0);">
+            		<% if (entry.whenOperator) { %><i class="icon icon-time" data-toggle="tooltip" title="Configured with WHEN operator"></i> <% } %><span><%- entry.displayName %></span>
+            	</a>
+            <ul class="dropdown-menu field-list">
+        <% } %>
+
+            <% _.each(entry.groups, function (items, key) { 
+		        	var groupWhenOp = items.whenOperator ? "data-whenop=" + items.whenOperator : "";
+		        	var groupWhenGroup = items.whenOperator ? "data-whengrp=" + key.replace(/\s+/g,'_') : "";
+            %>
+	            <li class="dropdown-submenu fieldslist-group" <%- groupWhenOp %> <%- groupWhenGroup %>>
+	            	<a tabindex="-1" href="javascript:void(0);">
+	            		<% if (items.whenOperator) { %><i class="icon icon-time" data-toggle="tooltip" title="Configured with WHEN operator"></i> <% } %><span><%- key %></span>
+	            	</a>
+	            <ul class="dropdown-menu field-list group-submenu">
+
+	            <% _.each(items.values, function (item, key) { %>
+	              <%  if (!item.restricted) { %>
+	              	<%  if (item.vertica == null || item.vertica.filterSection == null || !item.vertica.filterSection.hidden) { %>
+	                	<li><a class="field-item" data-id="<%= item.name %>" <%- groupWhenGroup %>><%- item.displayName %></a></li>
+	                 <% } %>
+	              <% } %>
+	            <% }); %>
+              
+              </ul>
+							</li>
+            <% }); %>
+
+            <% _.each(entry.values, function (item, key) { %>
+              <%  if (!item.restricted) { %>
+              	<%  if (item.vertica == null || item.vertica.filterSection == null || !item.vertica.filterSection.hidden) { %>
+                	<li><a class="field-item" data-id="<%= item.name %>" <%- catWhenGroup %>><%- item.displayName %></a></li>
+                <% } %>
+              <% } %>
+            <% }); %>
+        <% if (entry.displayName !== '') { %>
+            </ul>
+            </li>
+    <% } %>
+<% }); %>
+<% } %>

@@ -1,0 +1,221 @@
+#SSO Server
+cas.server.url.prefix=https://localhost/cas
+cas.server.login.url=${cas.server.url.prefix}/login
+cas.server.logout.url=${cas.server.url.prefix}/logout
+
+filter.ssoPattern=/login.do
+
+# Spring profile
+spring.profile=
+
+#Logging
+log.level.autn=warn
+log.level.spring=warn
+log.level.ehcache=warn
+log.level.root=warn
+
+# For search
+content.host=10.2.21.80
+content.aciPort=9050
+#content.host=10.2.1.91
+#content.aciPort=9002
+
+# For voronoi
+idol.host=10.2.21.80
+idol.port=9050
+#idol.databases=news,video,wikipedia
+idol.databases=news
+idol.sentimentfield=
+idol.combine=simple
+idol.maxresults=100
+
+# Find
+discover.brandName=Discover
+discover.version=1.0.0.0_b1143875
+discover.redirectURL=p/search.do
+discover.showTopicmap=false
+discover.showVisualiser=false
+discover.showThemetracker=false
+discover.showIdolview=false
+discover.showDocGraph=false
+discover.showNodeGraph=false
+discover.showNews=true
+discover.useAgents=true
+discover.useSearchSettings=true
+discover.sso=false
+discover.userpass=true
+discover.canRegister=false
+discover.cookieMessageDisplayed=false
+discover.cookieMessage=[Cookie Message]
+discover.auditFilePattern=.+_audit.*\.log(\.gz)?$
+discover.auditLogDir=../logs/apps
+
+# Find-Search
+discoverSearch.summary=quick
+discoverSearch.languageType=englishUTF8
+discoverSearch.outputEncoding=utf8
+discoverSearch.maxSearchResults=25
+discoverSearch.maxPreviewResults=3
+discoverSearch.maxSuggestionResults=100
+discoverSearch.maxSuggestionChildren=3
+discoverSearch.minScore=0
+discoverSearch.databases=news,video,wikipedia
+discoverSearch.searchViews={"admissions":{"name":"admissions", "displayName":"Encounters", "database":"admissions", "snomedTag":"ADMISSION/CONCEPTS/SM", "snomedParentTag":"ADMISSION/CONCEPTS/SM_ISA", "filterFieldsFile": "fields_admissions.xml", "docImportFile": "docImportTypes_admissions.json", "docviewFile": "docview_admissions.xml", "defaultView":true, "idolRootElement":"DOCUMENTS/DOCUMENT", "docRefField":"ADMISSION/HADM_ID", "ptCohortField":"ADMISSION/PATIENT/SUBJECT_ID", "resultView":{"simple":"Encounter", "fieldCheck":"Patient"}}}
+discoverSearch.filters.schema=hca_fields_13.xsd
+discoverSearch.suggestionDatabases=news,wikipedia
+discoverSearch.displayCharacters=500
+discoverSearch.termsHost=?
+discoverSearch.termsIndexPort=?
+# Field which is used to link to other fields, e.g. CITATIONPMID
+discoverSearch.linkToField=
+# Field which identifies this document when linked to by the linkToField, e.g. PUBMEDID
+discoverSearch.linkIdField=
+# Document meta-data to show :: JSON Object, format = { "Display Name": "XML Tag Name" }
+discoverSearch.meta={}
+# IDOL fields to display
+discoverSearch.displayFields={"Admission Id":{"fields":["ADMISSION/HADM_ID","PATIENT/ADMISSION/HADM_ID","NOTEEVENT/ADMISSION/HADM_ID"],"icon":"icon-book"},"Patient ID":{"fields":["ADMISSION/PATIENT/SUBJECT_ID","PATIENT/SUBJECT_ID","NOTEEVENT/ADMISSION/PATIENT/SUBJECT_ID"],"icon":"icon-user"},"Admission Date":{"fields":["ADMISSION/PATIENT/ADMISSION_DATE","PATIENT/ADMISSION/PATIENT/ADMISSION_DATE","NOTEEVENT/ADMISSION/PATIENT/ADMISSION_DATE"],"icon":"icon-time"},"Discharge Date":{"fields":["ADMISSION/PATIENT/DISCHARGE_DATE","PATIENT/ADMISSION/PATIENT/DISCHARGE_DATE","NOTEEVENT/ADMISSION/PATIENT/DISCHARGE_DATE"],"icon":"icon-download"},"Admission Type":{"fields":["ADMISSION/PATIENT/ADMISSION_TYPE","PATIENT/ADMISSION/PATIENT/ADMISSION_TYPE","NOTEEVENT/ADMISSION/PATIENT/ADMISSION_TYPE"],"icon":"icon-tag"},"Admission Source":{"fields":["ADMISSION/PATIENT/ADMISSION_SOURCE","PATIENT/ADMISSION/PATIENT/ADMISSION_SOURCE","NOTEEVENT/ADMISSION/PATIENT/ADMISSION_SOURCE"],"icon":"icon-comment"}}
+# Display field to use as the key to decide if we have to censor the document, can be set blank to disable censoring
+discoverSearch.censor.redactionField=
+# Display fields which don't need to be censored
+discoverSearch.censor.permittedFields=Admission Id
+# Whitelist of userFields which are safe to display information about
+discoverSearch.censor.whitelist=whitelist.txt
+# Token to use when delimiting imported files
+discoverSearch.import.delimiter=,
+discoverSearch.import.batchsize=1000
+discoverSearch.export.batchsize=200
+# Number of documents to search for when importing files
+discoverSearch.docfolder.maxResults=10000
+discoverSearch.showScore=true
+discoverSearch.totalResults=false
+# By default, content has predict=true when using totalResults=true, which is faster but can give the wrong answers
+# Set this false to disable prediction
+discoverSearch.totalResultsPredict=true
+# Maximum number of FieldDependence field pairs to return when building the tableview output. -1 will leave it unspecified.
+# If it's anything other than infinite, there may zeroes in the table which aren't meant to be there, but the idea is
+# to limit the size of the response.
+discoverSearch.tableview.maxFieldPairValues=-1
+# Whether we should show the network map
+discoverSearch.networkmap.show=true
+# The amount to multiply the skip factor; should be the number of supercategories in the data set
+#  e.g. for SNOMED tag 'HEPARIN CONTROL TEST (PROCEDURE)', the supercategory is 'PROCEDURE'.
+# If the tag has multiple brackets, we only consider the last one, so the supercategory for
+#  'ENTIRE GREAT BLOOD VESSEL (ORGAN) (BODY STRUCTURE)' is just 'BODY STRUCTURE'
+discoverSearch.networkmap.skipPadMultiplier=14
+# The server used to look up agentstore references (SNOMEDIDS) to the highlighting text
+discoverSearch.viewDoc.agentstore.host=localhost
+discoverSearch.viewDoc.agentstore.port=9050
+# XPath configs for the viewDoc XSLT processing
+discoverSearch.viewDoc.xPath.docRoot=/autnresponse/responsedata/hit/content/*
+discoverSearch.viewDoc.xPath.agentstoreRef=//SMID
+# JSON of string list of supercategories which should be removed
+discoverSearch.culledSuperCategories=["SUBSTANCE"]
+# Default topicmap branch, currently supported values: 'SNOMED', 'FIELDS'
+discoverSearch.topicBranch.default=SNOMED
+discoverSearch.viewDoc.xPath.conceptRef=//CONCEPTS/SM
+discoverSearch.viewDoc.xPath.conceptPlusRef=//CONCEPTS/SM_ISA
+discoverSearch.aci.transport.protocol=HTTP
+discoverSearch.default.linkContentTemplate=classpath:xsl/defaultLinkContent.xsl
+discoverSearch.topicmap.maxValues=-1
+discoverSearch.sunburst.maxValues=1000
+discoverSearch.parametric.threads=2
+discoverSearch.parametric.retries=1
+discoverSearch.parametric.singleQueryFieldname=false
+discoverSearch.sunburst.singleQueryFieldname=false
+discoverSearch.parametric.preloadValues=true
+
+taxonomy.host=10.2.4.200
+taxonomy.port=9000
+taxonomy.active=false
+taxonomy.database=test
+taxonomy.fieldName=MESHTREENUMS
+taxonomy.rootCategory=MeSH
+taxonomy.requestDepth=1
+
+parametric.active=true
+
+# Admin Console
+adminConsole.superUserDefaultPassword=R3d93nB1u3L1d
+
+# Community
+community.host=10.2.112.222
+community.aciPort=9200
+community.databases=news
+community.agentstore.host=${community.host}
+community.agentstore.port=9100
+community.repository.type=autonomy
+
+# Agents
+agents.defaultMaxResults=101
+agents.defaultMinScore=60
+agents.defaultUnreadOnly=true
+agents.defaultUseMinScore=true
+agents.databaseOptions=news+wikipedia
+
+# For clusters
+category.host=10.2.21.47
+#category.host=maindemo-category.autonomy.com
+category.aciPort=9120
+# We expect the category documents to be available from ${content.host}:${content.port} on this database
+category.databases=news
+category.hot.jobName=CAT_1DAY_HOT
+category.hot.numClusters=6
+category.hot.numResults=3
+category.hot.anyLanguage=false
+category.hot.outputEncoding=utf8
+category.breaking.jobName=CAT_1DAY_NEW
+category.breaking.numClusters=6
+category.breaking.numResults=3
+category.breaking.anyLanguage=false
+category.breaking.outputEncoding=utf8
+
+# Category engine used for theme tracker spectrographs
+themetracker.category.host=10.2.21.47
+themetracker.category.aciPort=9120
+themetracker.category.jobs={"MDN_CEN":"All","CAT_UK_CEN":"UK","CAT_EUROPE_CEN":"Europe","CAT_USA_CEN":"USA","CAT_SPORT_CEN":"Sport","CAT_BUSINESS_CEN":"Business","CAT_POLITICS_CEN":"Politics","CAT_SCITECH_CEN":"Scitech","CAT_ENTERTAINMENT_CEN":"Entertainment","CAT_FINANCE_CEN":"Finance"}
+# Default time span shown by the themetracker (in seconds)
+themetracker.defaultTimeSpan=604800
+# Whether to show the UI to allow the user to change the date ranges
+themetracker.timeSpanUI=false
+# Content engine which category queries against
+themetracker.categoryDRE.host=10.2.21.85
+themetracker.categoryDRE.aciPort=9002
+themetracker.categoryDRE.databases=moreover,archive
+themetracker.categoryDRE.minScore=50
+
+# The field to be displayed on the docgraph nodes and to choose a cluster colour.
+# If set to autn:clustertitle, will do a=cluster to get the cluster titles, but this only works against content
+# and won't work through a DAH
+docgraph.clusterField=autn:clustertitle
+# If discoverSearch.linkIdField and discoverSearch.linkToField aren't configured, we'll fall back to sizing by autn:weight
+# and linking with a=suggest using this minscore
+docgraph.fallbackSuggestMinScore=40
+
+findNews.host=10.2.21.47
+findNews.aciPort=9120
+findNews.clusterNamesFile=clusterDisplayNames.json
+findNews.appVersionFile=appVersion.json
+findNews.defaultMaxResults=3
+findNews.numResults=3
+findNews.defaultHeadlines=false
+findNews.clusterAnyLanguage=false
+findNews.clusterOutputEncoding=utf8
+findNews.searchDatabase=news
+findNews.searchMaxResults=50
+findNews.agentDatabases=news
+findNews.profileTopicsVoronoiEngine=0
+
+
+history.host=10.2.112.222
+history.aciPort=9000
+history.indexPort=9001
+history.database=History
+
+
+# PostgreSQL Database & Hibernate
+find-db.driver=org.postgresql.Driver
+hibernate.show_sql=true
+hibernate.hbm2ddl.auto=none
+
+users.filter.enabled=false
+users.whitelist.csv=tungj

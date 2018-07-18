@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <schema  xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:autn="http://schemas.autonomy.com/aci/"
+  targetNamespace="http://schemas.autonomy.com/aci/">     
+         <element name="autnresponse">
+                <complexType>
+                     <sequence>
+                           <element name="action" type="string"></element>
+                           <element name="response" type="string"></element> 
+                           <element name = "responsedata" type="autn:responsedata" ></element>                      
+                     </sequence>                   
+               </complexType>
+         </element>
+            <complexType name="responsedata">
+                   <sequence>
+                         <element name="numhits" type="int"></element>
+                         <element name="hit" type="autn:hit">              
+                         </element>
+                   </sequence>
+             </complexType>
+             <complexType name="hit">
+                 <sequence>
+                       <element name="reference" type="int"></element>
+                       <element name="id" type="int"></element>
+                       <element name="section" type="int"></element>
+                       <element name="title" type="int"></element>
+                       <element name="content" type="autn:content"></element>
+                 </sequence>
+              </complexType>
+                            
+          <complexType name="content">
+                <sequence>
+                      <element name="DOCUMENT" type="autn:DOCUMENT"></element>
+                </sequence>
+          </complexType>
+	            
+	      <complexType name="DOCUMENT">
+                <sequence>
+                      <element name="DREREFERENCE" type="int"></element>
+                      <element name="ADMISSION" type="autn:ADMISSION"></element>
+                      <element name="AUTN_IDENTIFIER" type="string"></element>
+                      <element name="AUTN_TASK_BATCH_ID" type="string"></element>
+                      <element name="DOCTRACKINGID" type="string"></element>
+                      <element name="DREDBNAME" type="string"></element>
+                </sequence>
+          </complexType>
+          
+          <complexType name="ADMISSION">
+               <sequence>
+                     <element name="CONCEPTS" type="autn:CONCEPTS"></element>
+                     <element name="DRG" type="autn:DRG"> </element>
+                     <element name="HADM_ID" type="int"></element>
+                     <element name="ICD9" type="string" maxOccurs="unbounded"></element>
+                     <element name="ICD9_H" type="string" maxOccurs="unbounded"></element>
+                     <element name="ICU" type="autn:ICU"> </element>
+                     <element name="LABEVENTS" type="autn:LABEVENTS"></element>
+                     <element name="NOTEEVENT" type="autn:NOTEEVENT" maxOccurs="unbounded"></element>
+                     <element name="PATIENT" type="autn:PATIENT"></element>
+                     <element name="POEEVENTS" type="autn:POEEVENTS"></element>
+               </sequence>
+         </complexType>
+         
+         <complexType name="ICU">
+               <sequence>
+                     <element name="COUNT" type="int"></element>
+                     <element name="ICUDETAILS" type="autn:ICUDETAILS"></element>
+               </sequence>
+         </complexType>
+         
+        <complexType name="ICUDETAILS">
+              <sequence>
+                    <element name="FIRST_CAREUNIT" type="string"></element>
+                    <element name="ICUSTAY_ID" type="int"></element>
+                    <element name="INTIME" type="string"></element>
+                    <element name="LAST_CAREUNIT" type="string"></element>
+                    <element name="LOS" type="int"></element>
+                    <element name="LOS_GRP" type="string"></element>
+                    <element name="MEDEVENTS" type="autn:MEDEVENTS"></element>
+                    <element name="OUTTIME" type="string"></element>
+              </sequence>
+        </complexType>
+          
+          <complexType name="MEDEVENTS">
+                  <sequence>
+                        <element name="EVENT" type="autn:EVENT"></element>
+                  </sequence>
+            </complexType>
+                          
+          <complexType name="PATIENT">
+                <sequence>
+                      <element name="ADMISSION_DATE" type="string"></element>
+                      <element name="ADMISSION_DATE_DAYMON_GRP" type="int"></element>
+                      <element name="ADMISSION_DATE_DAYWEEK_GRP" type="string"></element>
+                      <element name="ADMISSION_DATE_MON_GRP" type="int"></element>
+                      <element name="ADMISSION_DATE_WEEK_GRP" type="int"></element>
+                      <element name="ADMISSION_DATE_YRMON" type="string"></element>
+                      <element name="ADMISSION_SOURCE" type="string"></element>
+                      <element name="ADMISSION_TYPE" type="string"></element>
+                      <element name="AGE_AT_ADMISSION" type="int"></element>
+                      <element name="AGE_AT_ADMISSION_GRP" type="string"></element>
+                      <element name="AGE_AT_DEATH" type="string"></element>
+                      <element name="AGE_AT_DEATH_GRP" type="string"></element>
+                      <element name="DISCHARGE_DATE" type="string"></element>
+                      <element name="DOB" type="date"></element>
+                      <element name="DOD" type="string"></element>
+                      <element name="ETHNICITY" type="string"></element>
+                      <element name="HOSPITAL_EXPIRE" type="string"></element>
+                      <element name="MARITAL_STATUS" type="string"></element>
+                      <element name="OVERALL_PAYOR_GROUP" type="string"></element>
+                      <element name="RELIGION" type="string"></element>
+                      <element name="SEX" type="string"></element>
+                      <element name="SUBJECT_ID" type="int"></element>
+                </sequence>
+          </complexType>
+         
+          <complexType name="POEEVENTS">
+                 <sequence>
+                       <element name="EVENT" type="autn:EVENT" maxOccurs="unbounded"></element>
+                 </sequence>
+           </complexType>
+         
+          <complexType name="NOTEEVENT">
+                  <sequence>
+                        <element name="CAREGIVER" type="string"></element>
+                        <element name="CAREUNIT" type="string"></element>
+                        <element name="CATEGORY" type="string"></element>
+                        <element name="TEXT" type="string"></element>
+                        <element name="TEXT_H" type="string"></element>
+                        <element name="TITLE" type="string"></element>
+                  </sequence>
+            </complexType>
+            
+             <complexType name="EVENT">
+                   <sequence>
+                         <element name="NAME" type="string"></element>
+                         <element name="NAME_H" type="string"></element>
+                         <element name="OCCURRENCES" type="int"></element>
+                   </sequence>
+             </complexType>
+         
+         <complexType name="LABEVENTS">
+               <sequence>
+                     <element name="EVENT" type="autn:EVENT" maxOccurs="unbounded"></element>
+               </sequence>
+         </complexType>
+         
+          <complexType name="DRG">
+                <sequence>
+                      <element name="CODE" type="int"></element>
+                      <element name="COST_WEIGHT" type="double"></element>
+                      <element name="COST_WEIGHT_GRP" type="string"></element>
+                      <element name="DESC" type="string"></element>
+                      <element name="DISPLAY" type="string"></element>
+                      <element name="ITEMID" type="int"></element>
+                </sequence>
+          </complexType>
+                            
+		<complexType name="CONCEPTS">
+              <sequence>
+                    <element name="SM" type="autn:SM" maxOccurs="unbounded"></element>
+                    <element name="SM_ISA" maxOccurs="unbounded"> </element>
+              </sequence>
+              <attribute name="VERSION" type="string"></attribute>
+        </complexType>
+         <complexType name="SM">
+               <attribute name="L" type="string"></attribute>
+               <attribute name="CID" type="string"></attribute>
+         </complexType>
+          <complexType name="SMISA">
+                <attribute name="L" type="string"></attribute>
+                <attribute name="CID" type="string"></attribute>
+                <attribute name="SID" type="string"></attribute>
+          </complexType>
+                     
+</schema>

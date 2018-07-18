@@ -1,0 +1,37 @@
+.tree { margin: 0; }
+.tree-node { position: relative; margin-top: 0.2em; }
+.tree-node .node-label, .tree-node .tree-handle { cursor: pointer; }
+.tree-node .node-label { padding-left: 1.5em; padding-right: 1.5em; color: #555; white-space: nowrap }
+.tree-node .node-label.tree-leaf { color: #333; font-style: italic;  }
+.tree-node.unimportant .node-label { color: #aaa; }
+.tree-node .node-label.active { color: #06C; font-weight: 700; }
+.tree-node .tree-handle { position: absolute; left: 1px; top: 1px; margin: 0; padding: 0; }
+.tree, .tree-subtree { list-style: none; padding: 0; }
+.tree-subtree { display: none;  }
+.tree-subtree.show { display: block; }
+.tree.expanded .tree-subtree,
+.tree-handle:checked + .tree-subtree,
+.tree-handle.checked + .tree-subtree { display: block; }
+.tree-handle:after,
+.tree-handle:checked:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.tree-handle:after {
+    background: #fff;
+    border-radius: 20%;
+    box-shadow: 0 0 0px 2px #eee, inset 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.tree-handle:active:after { background: #eee; }
+.tree-handle:checked::before {
+    margin: auto;
+    width: 4px;
+    height: 4px;
+    border-radius: 10%;
+    background: #555;
+    z-index: 1; }
+.tree-handle:disabled:after { background: #ddd; }

@@ -1,0 +1,6 @@
+<div class='tree-item squishable <%= item.classes || '' %> db-<%- item.database.toLowerCase() %>'>
+  <p>
+    <a class='setSearch' href='#<%- item.name %>'><%- item.name %></a>
+  </p>
+  <%= item.children.join('') %>
+</div>

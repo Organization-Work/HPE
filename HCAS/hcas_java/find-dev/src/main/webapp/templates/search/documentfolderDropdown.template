@@ -1,0 +1,24 @@
+<span class="dropdown" style="float:right;margin-right: 10px;bottom: 1px;">
+    <button style="width:10px; height:15px" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="caret-right"></span></button>
+    <ul class="dropdown-menu" style="left:20px; top:4px">
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1"><i class="icon-plus"></i> Add </a>
+        <ul class="dropdown-menu">
+          <li><a class="addDocFolderChild" tabindex="-1"><i class="icon-folder-close"></i> Folder</a></li>
+      	  <li><a class="addDocFolderList" tabindex="-1"><i class="icon-list"></i>Document List</a></li>
+        </ul>
+      </li>
+      <li><a class="documentfolderdelete" tabindex="-1"><i class="icon-trash"></i> Delete</a></li>
+      <li><a class="documentfolderedit" tabindex="-1"><i class="icon-edit"></i> Edit</a></li>
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1"><i class="icon-tasks"></i> Misc. Action</a>
+        <ul class="dropdown-menu">
+          <li><a class="documentfolderCut" tabindex="-1"> Cut</a></li>
+      	  <li><a class="documentfolderCopy" tabindex="-1"> Copy</a></li>
+      	  <li><a class="documentfolderPaste disable-paste" tabindex="-1"> Paste</a></li>
+        </ul>
+      </li>
+    </ul>
+  </span>
+  

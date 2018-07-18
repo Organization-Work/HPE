@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- from http://tungj-notebook:9100/a=getquerytagvalues&text=*&fieldname=/XML/PATIENT/ETHNICITY,/XML/PATIENT/RELIGION&documentcount=true&databasematch=patients&FieldDependence=true&valuedetails=true-->
+<autnresponse xmlns:autn='http://schemas.autonomy.com/aci/'>
+    <action>GETQUERYTAGVALUES</action>
+    <response>SUCCESS</response>
+    <responsedata>
+        <autn:number_of_fields>2</autn:number_of_fields>
+        <autn:field>
+            <autn:name>XML/PATIENT/ETHNICITY</autn:name>
+            <autn:name>XML/PATIENT/RELIGION</autn:name>
+            <autn:number_of_values>35</autn:number_of_values>
+            <autn:value>WHITE</autn:value>
+            <autn:values>18</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>UNKNOWN/NOT SPECIFIED</autn:value>
+            <autn:values>10</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>ASIAN</autn:value>
+            <autn:values>4</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>WHITE</autn:value>
+            <autn:values>77</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>OTHER</autn:value>
+            <autn:values>3</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:values>5</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>WHITE</autn:value>
+            <autn:values>16</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>ASIAN</autn:value>
+            <autn:values>6</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>WHITE</autn:value>
+            <autn:values>13</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>HISPANIC OR LATINO</autn:value>
+            <autn:values>3</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>UNKNOWN/NOT SPECIFIED</autn:value>
+            <autn:values>9</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:values>1</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>WHITE</autn:value>
+            <autn:values>7</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:values>7</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>OTHER</autn:value>
+            <autn:values>1</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>HISPANIC OR LATINO</autn:value>
+            <autn:values>1</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:values>4</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>UNKNOWN/NOT SPECIFIED</autn:value>
+            <autn:values>3</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>OTHER</autn:value>
+            <autn:values>1</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:values>1</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>HISPANIC/LATINO - GUATEMALAN</autn:value>
+            <autn:values>1</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>ASIAN</autn:value>
+            <autn:values>1</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>PATIENT DECLINED TO ANSWER</autn:value>
+            <autn:values>1</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:values>2</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>PATIENT DECLINED TO ANSWER</autn:value>
+            <autn:values>1</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>WHITE</autn:value>
+            <autn:values>1</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>UNKNOWN/NOT SPECIFIED</autn:value>
+            <autn:values>2</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+            <autn:value>ASIAN</autn:value>
+            <autn:values>1</autn:values>
+            <autn:valuesum>0.00</autn:valuesum>
+            <autn:valueaverage>0.00</autn:valueaverage>
+            <autn:valuemin>0.00</autn:valuemin>
+            <autn:valuemax>0.00</autn:valuemax>
+        </autn:field>
+    </responsedata>
+</autnresponse>

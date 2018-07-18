@@ -1,0 +1,64 @@
+#suggestions .setSearch {
+	display: block;
+	padding: inherit;
+	margin: 2px 0;
+	text-decoration: none;
+}
+#suggestions .setSearch.alert {
+	margin: 0px 0;
+}
+#suggestions .setSearch.highlight { color: black; }
+
+#suggestions { display: none; }
+#suggestions.active { display: block; }
+
+#taxonomy { display: none; }
+#taxonomy.active { display: block; }
+
+.search-options .tabpage {
+    padding: 0 5px;
+}
+#advancedFilters .toolbar {
+    padding-bottom: 5px;
+}
+button.add-filter {
+    margin-left: 5px;
+}
+.filter-tabs {
+    margin: 0 5px 5px;
+}
+.filter {
+    border-top: 1px solid #ddd;
+    position: relative;
+    padding: 5px 5px 0;
+    -webkit-transition: background 1s ease;
+    -moz-transition: background 1s ease;
+    -ms-transition: background 1s ease;
+    -o-transition: background 1s ease;
+    transition: background 1s ease;
+}
+.filter label span {
+    display: block;
+    margin-bottom: 5px;
+}
+.filter label {
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+.filter.lastAdded,
+.filter.selected {
+    background: rgb(255, 255, 200);
+}
+.filter p {
+    margin: 0;
+}
+.filter .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.group-submenu {
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

@@ -1,0 +1,1933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables xmlns="http://www.autonomy.com/vertica/fields"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.autonomy.com/vertica/fields mapping_table_1.xsd">
+	<table>
+		<tableName>patient_master</tableName>
+		<schema>mimic2v26</schema>
+		<!--defaultFilter><![CDATA[([admissions_new_temp].admit_dt <= sysdate)]]></defaultFilter-->
+		<joinRelation>
+				<relationName>patient_masterToadmissions_new_temp</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>				
+				<joinExpression>inner join mimic2v26.admissions_new_temp  ON patient_master.subject_id = admissions_new_temp.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_master_To_admissions_new_temp_hasfilter</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>				
+				<joinExpression>left join mimic2v26.admissions_new_temp  ON patient_master.subject_id = admissions_new_temp.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTodemographic_detail</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>demographic_detail</toTableName>				
+				<joinExpression>inner join mimic2v26.demographic_detail  ON patient_master.subject_id = demographic_detail.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_master_To_demographic_detail</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>demographic_detail</toTableName>				
+				<joinExpression>inner join mimic2v26.demographic_detail  ON  admissions_new_temp.subject_id = demographic_detail.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterToage</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterToicustay_detail_new</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_master_To_icustay_detail_new</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<joinExpression>inner join mimic2v26.icustay_detail_new ON patient_master.subject_id = icustay_detail_new.subject_id</joinExpression>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTosex</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTosexDocView</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<joinExpression>inner join mimic2v26.sex ON patient_master.subject_id = sex.subject_id</joinExpression>	
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterToexpire</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTonoteevents_new</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<joinExpression>inner join mimic2v26.noteevents_new on patient_master.subject_id = noteevents_new.subject_id</joinExpression>				
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterToicd9</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTosnomedplus</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTod_patients_new</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_master_To_d_patients_new</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<joinExpression>inner join mimic2v26.d_patients_new ON patient_master.subject_id = d_patients_new.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTod_careunits</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>d_careunits</toTableName>
+				<joinExpression>inner join mimic2v26.d_careunits on noteevents_new.cuid = d_careunits.cuid</joinExpression>
+				<parentRelationName>patient_masterTonoteevents_new</parentRelationName>				
+		</joinRelation>	
+		<joinRelation>
+				<relationName>patient_masterTod_caregivers</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>d_caregivers</toTableName>
+				<joinExpression>inner join mimic2v26.d_caregivers on noteevents_new.cgid = d_caregivers.cgid</joinExpression>
+				<parentRelationName>patient_masterTonoteevents_new</parentRelationName>				
+		</joinRelation>	
+		<joinRelation>
+				<relationName>patient_masterTolabevents_new</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>labevents_new</toTableName>				
+				<joinExpression>inner join mimic2v26.labevents_new  ON  patient_master.subject_id = labevents_new.subject_id</joinExpression>				
+		</joinRelation>		
+		<joinRelation>
+				<relationName>patient_masterTod_labitems</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>d_labitems</toTableName>				
+				<joinExpression>inner join mimic2v26.d_labitems  ON  labevents_new.itemid = d_labitems.itemid</joinExpression>
+				<parentRelationName>patient_masterTolabevents_new</parentRelationName>
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTomedevents_new</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>medevents_new</toTableName>				
+				<joinExpression>inner join mimic2v26.medevents_new  ON  patient_master.subject_id = medevents_new.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTod_meditems</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>d_meditems</toTableName>				
+				<joinExpression>inner join mimic2v26.d_meditems  ON  medevents_new.itemid = d_meditems.itemid</joinExpression>
+				<parentRelationName>patient_masterTomedevents_new</parentRelationName>
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTopoe_order_new_temp</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>				
+				<joinExpression>inner join mimic2v26.poe_order_new_temp  ON  patient_master.subject_id = poe_order_new_temp.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTopoe_med</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>poe_med</toTableName>				
+				<joinExpression>inner join mimic2v26.poe_med  ON  poe_order_new_temp.poe_id = poe_med.poe_id</joinExpression>
+				<parentRelationName>patient_masterTopoe_order_new_temp</parentRelationName>
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTodrgevents</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>drgevents</toTableName>				
+				<joinExpression>inner join mimic2v26.drgevents  ON  patient_master.subject_id = drgevents.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>patient_masterTod_codeditems</relationName>
+				<fromTableName>patient_master</fromTableName>
+				<toTableName>d_codeditems</toTableName>				
+				<joinExpression>inner join mimic2v26.d_codeditems  ON  drgevents.itemid = d_codeditems.itemid</joinExpression>
+				<parentRelationName>patient_masterTodrgevents</parentRelationName>
+		</joinRelation>
+	</table>
+	<table>
+		<tableName>admissions_new_temp</tableName>
+		<schema>mimic2v26</schema>
+		<!--defaultFilter><![CDATA[([admissions_new_temp].admit_dt <= sysdate)]]></defaultFilter-->
+		<joinRelation>
+				<relationName>admissions_new_tempTopatient_master</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>patient_master</toTableName>				
+				<joinExpression>inner join mimic2v26.patient_master  ON  admissions_new_temp.subject_id = patient_master.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTodemographic_detail</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>demographic_detail</toTableName>				
+				<joinExpression>inner join mimic2v26.demographic_detail  ON  admissions_new_temp.hadm_id = demographic_detail.hadm_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_temp_To_demographic_detail</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>demographic_detail</toTableName>				
+				<joinExpression>inner join mimic2v26.demographic_detail  ON  admissions_new_temp.hadm_id = demographic_detail.hadm_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempToage</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempToicustay_detail_new</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_temp_To_icustay_detail_new</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<joinExpression>inner join mimic2v26.icustay_detail_new ON admissions_new_temp.hadm_id = icustay_detail_new.hadm_id</joinExpression>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTosex</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTosexDocView</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<joinExpression>inner join mimic2v26.sex ON admissions_new_temp.subject_id = sex.subject_id</joinExpression>	
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempToexpire</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTonoteevents_new</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<joinExpression>inner join mimic2v26.noteevents_new on admissions_new_temp.hadm_id = noteevents_new.hadm_id</joinExpression>				
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempToicd9</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTosnomed</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>inpatient_tags</toTableName>
+				<joinExpression>inner join mimic2v26.inpatient_tags ON (admissions_new_temp.hadm_id = inpatient_tags.ref) and (inpatient_tags.ctype='Concept')</joinExpression>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTosnomedplus</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>inpatient_tags</toTableName>
+				<joinExpression>inner join mimic2v26.inpatient_tags ON (admissions_new_temp.hadm_id = inpatient_tags.ref) and (inpatient_tags.ctype='Concept+')</joinExpression>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTod_patients_new</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_temp_To_d_patients_new</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<joinExpression>inner join mimic2v26.d_patients_new ON admissions_new_temp.subject_id = d_patients_new.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTod_careunits</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>d_careunits</toTableName>
+				<joinExpression>inner join mimic2v26.d_careunits on noteevents_new.cuid = d_careunits.cuid</joinExpression>
+				<parentRelationName>admissions_new_tempTonoteevents_new</parentRelationName>				
+		</joinRelation>	
+		<joinRelation>
+				<relationName>admissions_new_tempTod_caregivers</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>d_caregivers</toTableName>
+				<joinExpression>inner join mimic2v26.d_caregivers on noteevents_new.cgid = d_caregivers.cgid</joinExpression>
+				<parentRelationName>admissions_new_tempTonoteevents_new</parentRelationName>				
+		</joinRelation>	
+		<joinRelation>
+				<relationName>admissions_new_tempTolabevents_new</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>labevents_new</toTableName>				
+				<joinExpression>inner join mimic2v26.labevents_new  ON  admissions_new_temp.hadm_id = labevents_new.hadm_id</joinExpression>				
+		</joinRelation>		
+		<joinRelation>
+				<relationName>admissions_new_tempTod_labitems</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>d_labitems</toTableName>				
+				<joinExpression>inner join mimic2v26.d_labitems  ON  labevents_new.itemid = d_labitems.itemid</joinExpression>
+				<parentRelationName>admissions_new_tempTolabevents_new</parentRelationName>
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTomedevents_new</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>medevents_new</toTableName>				
+				<joinExpression>inner join mimic2v26.medevents_new  ON  admissions_new_temp.subject_id = medevents_new.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTod_meditems</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>d_meditems</toTableName>				
+				<joinExpression>inner join mimic2v26.d_meditems  ON  medevents_new.itemid = d_meditems.itemid</joinExpression>
+				<parentRelationName>admissions_new_tempTomedevents_new</parentRelationName>
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTopoe_order_new_temp</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>				
+				<joinExpression>inner join mimic2v26.poe_order_new_temp  ON  admissions_new_temp.subject_id = poe_order_new_temp.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTopoe_med</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>poe_med</toTableName>				
+				<joinExpression>inner join mimic2v26.poe_med  ON  poe_order_new_temp.poe_id = poe_med.poe_id</joinExpression>
+				<parentRelationName>admissions_new_tempTopoe_order_new_temp</parentRelationName>
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTodrgevents</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>drgevents</toTableName>				
+				<joinExpression>inner join mimic2v26.drgevents  ON  admissions_new_temp.hadm_id = drgevents.hadm_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>admissions_new_tempTod_codeditems</relationName>
+				<fromTableName>admissions_new_temp</fromTableName>
+				<toTableName>d_codeditems</toTableName>				
+				<joinExpression>inner join mimic2v26.d_codeditems  ON  drgevents.itemid = d_codeditems.itemid</joinExpression>
+				<parentRelationName>admissions_new_tempTodrgevents</parentRelationName>
+		</joinRelation>
+	</table>
+	<table>
+		<tableName>demographic_detail</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>demographic_detailTopatient_master</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>patient_master</toTableName>				
+				<joinExpression>inner join mimic2v26.patient_master  ON  demographic_detail.subject_id = patient_master.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>demographic_detailTod_demographicitems1</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>d_demographicitems</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>marital_status_itemid</fromColumnName>
+				<toColumnName>itemid</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>demographic_detailTod_demographicitems2</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>d_demographicitems</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>marital_status_itemid</fromColumnName>
+				<toColumnName>itemid</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>demographic_detailToadmissions_new_temp</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>demographic_detailTosex</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>demographic_detailToexpire</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>demographic_detailToicustay_detail_new</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>demographic_detailTonoteevents_new</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>demographic_detailToicd9</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>demographic_detailTopoe_order_new_temp</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>demographic_detailTomedevents_new</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>demographic_detailTolabevents_new</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>demographic_detailTodrgevents</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	 	
+		<joinRelation>
+				<relationName>demographic_detailTosnomedplus</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>demographic_detailToage</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>demographic_detailTod_patients_new</relationName>
+				<fromTableName>demographic_detail</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+	</table>
+	<table>
+		<tableName>sex</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>sexTopatient_master</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>patient_master</toTableName>				
+				<joinExpression>inner join mimic2v26.patient_master  ON  sex.subject_id = patient_master.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>sexToadmissions_new_temp</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>sexTodemographic_detail</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>sexToexpire</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>sexToicustay_detail_new</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>sexTonoteevents_new</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>sexToicd9</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>sexTopoe_order_new_temp</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>sexTomedevents_new</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>sexTolabevents_new</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>sexTodrgevents</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>sexTosnomedplus</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>sexToage</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation> 	
+		<joinRelation>
+				<relationName>sexTod_patients_new</relationName>
+				<fromTableName>sex</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation> 		
+	</table>
+	<table>
+		<tableName>expire</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>expireTopatient_master</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>patient_master</toTableName>				
+				<joinExpression>inner join mimic2v26.patient_master  ON  expire.subject_id = patient_master.subject_id</joinExpression>
+		</joinRelation>
+		<joinRelation>
+				<relationName>expireToadmissions_new_temp</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>expireTodemographic_detail</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>expireTosex</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>expireToicustay_detail_new</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>expireTonoteevents_new</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>expireToicd9</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>expireTopoe_order_new_temp</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>expireTomedevents_new</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>expireTolabevents_new</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>expireTodrgevents</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	 	
+		<joinRelation>
+				<relationName>expireTosnomedplus</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>expireToage</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>expireTod_patients_new</relationName>
+				<fromTableName>expire</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+	</table>
+	<table>
+		<tableName>icustay_detail_new</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>icustay_detail_newTopatient_master</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>patient_master</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>icustay_detail_newToadmissions_new_temp</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>icustay_detail_newTodemographic_detail</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>icustay_detail_newTosex</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>icustay_detail_newToexpire</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>icustay_detail_newTonoteevents_new</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>icustay_detail_newToicd9</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>icustay_detail_newTopoe_order_new_temp</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>icustay_detail_newTomedevents_new</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>icustay_detail_newTolabevents_new</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>icustay_detail_newTodrgevents</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	 	
+		<joinRelation>
+				<relationName>icustay_detail_newTosnomedplus</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>icustay_detail_newToage</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>icustay_detail_newTod_patients_new</relationName>
+				<fromTableName>icustay_detail_new</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+	</table>	
+	<table>
+		<tableName>noteevents_new</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>noteevents_newTopatient_master</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>patient_master</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>noteevents_newToadmissions_new_temp</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>noteevents_newTod_careunits</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>d_careunits</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>cuid</fromColumnName>
+				<toColumnName>cuid</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>noteevents_newTod_caregivers</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>d_caregivers</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>cgid</fromColumnName>
+				<toColumnName>cgid</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>noteevents_newTodemographic_detail</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>noteevents_newTosex</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>noteevents_newToexpire</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>noteevents_newToicustay_detail_new</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>			
+		<joinRelation>
+				<relationName>noteevents_newToicd9</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>noteevents_newTopoe_order_new_temp</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>noteevents_newTomedevents_new</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>noteevents_newTolabevents_new</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>noteevents_newTodrgevents</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	 	
+		<joinRelation>
+				<relationName>noteevents_newTosnomedplus</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>noteevents_newToage</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>noteevents_newTod_patients_new</relationName>
+				<fromTableName>noteevents_new</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+	</table>
+	<table>
+		<tableName>icd9</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>icd9Topatient_master</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>patient_master</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>icd9Toadmissions_new_temp</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>icd9Todemographic_detail</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>icd9Tosex</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>icd9Toexpire</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>icd9Toicustay_detail_new</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>icd9Tonoteevents_new</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>			
+		<joinRelation>
+				<relationName>icd9Topoe_order_new_temp</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>icd9Tomedevents_new</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>icd9Tolabevents_new</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>icd9Todrgevents</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	 	
+		<joinRelation>
+				<relationName>icd9Tosnomedplus</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>icd9Toage</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>icd9Tod_patients_new</relationName>
+				<fromTableName>icd9</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+	</table>
+	<table>
+		<tableName>poe_order_new_temp</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>poe_order_new_tempTopatient_master</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>patient_master</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>poe_order_new_tempToadmissions_new_temp</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>poe_order_new_tempTopoe_med</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>poe_med</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>poe_id</fromColumnName>
+				<toColumnName>poe_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>poe_order_new_tempTodemographic_detail</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>poe_order_new_tempTosex</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>poe_order_new_tempToexpire</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>poe_order_new_tempToicustay_detail_new</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>poe_order_new_tempTonoteevents_new</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>poe_order_new_tempToicd9</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>poe_order_new_tempTomedevents_new</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>poe_order_new_tempTolabevents_new</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>poe_order_new_tempTodrgevents</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	 	
+		<joinRelation>
+				<relationName>poe_order_new_tempTosnomedplus</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>poe_order_new_tempToage</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>poe_order_new_tempTod_patients_new</relationName>
+				<fromTableName>poe_order_new_temp</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>		
+	</table>
+	<table>
+		<tableName>medevents_new</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>medevents_newTopatient_master</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>patient_master</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>medevents_newToadmissions_new_temp</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>medevents_newTod_meditems</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>d_meditems</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>itemid</fromColumnName>
+				<toColumnName>itemid</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>medevents_newTodemographic_detail</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>medevents_newTosex</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>medevents_newToexpire</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>medevents_newToicustay_detail_new</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>medevents_newTonoteevents_new</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>medevents_newToicd9</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>medevents_newTopoe_order_new_temp</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>			
+		<joinRelation>
+				<relationName>medevents_newTolabevents_new</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>medevents_newTodrgevents</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	 	
+		<joinRelation>
+				<relationName>medevents_newTosnomedplus</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>medevents_newToage</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>medevents_newTod_patients_new</relationName>
+				<fromTableName>medevents_new</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+	</table>
+	<table>
+		<tableName>labevents_new</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>labevents_newTopatient_master</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>patient_master</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>labevents_newToadmissions_new_temp</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>labevents_newTod_labitems</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>d_labitems</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>itemid</fromColumnName>
+				<toColumnName>itemid</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>labevents_newTodemographic_detail</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>labevents_newTosex</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>labevents_newToexpire</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>labevents_newToicustay_detail_new</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>labevents_newTonoteevents_new</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>labevents_newToicd9</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>labevents_newTopoe_order_new_temp</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>labevents_newTomedevents_new</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>					
+		<joinRelation>
+				<relationName>labevents_newTodrgevents</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	 	
+		<joinRelation>
+				<relationName>labevents_newTosnomedplus</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>labevents_newToage</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>labevents_newTod_patients_new</relationName>
+				<fromTableName>labevents_new</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+	</table>
+	<table>
+		<tableName>drgevents</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>drgeventsTopatient_master</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>patient_master</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>drgeventsToadmissions_new_temp</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>drgeventsTod_codeditems</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>d_codeditems</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>itemid</fromColumnName>
+				<toColumnName>itemid</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>drgeventsTodemographic_detail</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>drgeventsTosex</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>drgeventsToexpire</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>drgeventsToicustay_detail_new</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>drgeventsTonoteevents_new</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>drgeventsToicd9</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>drgeventsTopoe_order_new_temp</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>drgeventsTomedevents_new</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>drgeventsTolabevents_new</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>			
+		<joinRelation>
+				<relationName>drgeventsTosnomedplus</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>drgeventsToage</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>drgeventsTod_patients_new</relationName>
+				<fromTableName>drgevents</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+	</table>
+	<table>
+		<tableName>snomedplus</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>snomedplusTopatient_master</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>patient_master</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>snomedplusToadmissions_new_temp</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>snomedplusTodemographic_detail</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>snomedplusTosex</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>snomedplusToexpire</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>snomedplusToicustay_detail_new</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>snomedplusTonoteevents_new</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>snomedplusToicd9</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>snomedplusTopoe_order_new_temp</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>snomedplusTomedevents_new</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>snomedplusTolabevents_new</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>snomedplusTodrgevents</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>snomedplusToage</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation> 
+		<joinRelation>
+				<relationName>snomedplusTod_patients_new</relationName>
+				<fromTableName>snomedplus</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+	</table>
+	<table>
+		<tableName>age</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>ageTopatient_master</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>patient_master</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>ageToadmissions_new_temp</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>ageTodemographic_detail</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>ageTosex</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>ageToexpire</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>ageToicustay_detail_new</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>ageTonoteevents_new</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>ageToicd9</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>ageTopoe_order_new_temp</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>ageTomedevents_new</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>ageTolabevents_new</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>ageTodrgevents</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>ageTosnomedplus</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>ageTod_patients_new</relationName>
+				<fromTableName>age</fromTableName>
+				<toTableName>d_patients_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+	</table>
+	<table>
+		<tableName>d_patients_new</tableName>
+		<schema>mimic2v26</schema>
+		<joinRelation>
+				<relationName>d_patients_newTotagged_documents</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>tagged_documents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>hadm_id</fromColumnName>
+				<toColumnName>hadm_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>d_patients_newTopatient_master</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>patient_master</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>d_patients_newToadmissions_new_temp</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>admissions_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>d_patients_newTodemographic_detail</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>demographic_detail</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>d_patients_newTosex</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>sex</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>d_patients_newToexpire</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>expire</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>d_patients_newToicustay_detail_new</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>icustay_detail_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>d_patients_newTonoteevents_new</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>noteevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>d_patients_newToicd9</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>icd9</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>d_patients_newTopoe_order_new_temp</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>poe_order_new_temp</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>		
+		<joinRelation>
+				<relationName>d_patients_newTomedevents_new</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>medevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>d_patients_newTolabevents_new</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>labevents_new</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>d_patients_newTodrgevents</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>drgevents</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+		<joinRelation>
+				<relationName>d_patients_newTosnomedplus</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>snomedplus</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>	
+		<joinRelation>
+				<relationName>d_patients_newToage</relationName>
+				<fromTableName>d_patients_new</fromTableName>
+				<toTableName>age</toTableName>
+				<relationType>Inner join</relationType>
+				<fromColumnName>subject_id</fromColumnName>
+				<toColumnName>subject_id</toColumnName>		
+		</joinRelation>
+	</table>
+</tables>

@@ -1,0 +1,73 @@
+<DOCUMENT>
+  <ADMISSION>
+    <DocumentTextSummary></DocumentTextSummary>
+    <HADM_ID schema="mimic2v26" table="admissions_new_temp" column="hadm_id"></HADM_ID>
+    <PATIENT table="admissions_new_temp" schema="mimic2v26">
+      <SUBJECT_ID column="subject_id"></SUBJECT_ID>
+      <SEX schema="mimic2v261" table="sex" column="sex" parentRelationKey="admissions_new_tempTosexDocView"></SEX>
+      <AGE_AT_ADMISSION table="age" column="age_at_admission"></AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP></AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE table="admissions_new_temp" column="admit_dt"></ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON></ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP></ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP></ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP></ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP></ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE></DISCHARGE_DATE>
+      <DOB></DOB>
+      <HOSPITAL_EXPIRE table="expire" column="hospital_expire"></HOSPITAL_EXPIRE>
+      <ETHNICITY table="demographic_detail" column="ethnicity_descr" parentRelationKey="admissions_new_temp_To_demographic_detail"></ETHNICITY>
+      <ADMISSION_TYPE></ADMISSION_TYPE>
+      <RELIGION table="demographic_detail" column="religion_descr" parentRelationKey="admissions_new_temp_To_demographic_detail"></RELIGION>
+      <ADMISSION_SOURCE></ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP></OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS></MARITAL_STATUS>
+      <DOD></DOD>
+      <AGE_AT_DEATH table="d_patients_new" column="icustay_detail_new.dod, dob" miscOperator="age_in_years" parentRelationKey="admissions_new_temp_To_d_patients_new" columnTableRelationKey="admissions_new_temp_To_icustay_detail_new"></AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP></AGE_AT_DEATH_GRP>
+    </PATIENT>
+    <DRG row="true" schema="mimic2v26">
+      <CODE></CODE>
+      <ITEMID></ITEMID>
+      <DESC></DESC>
+      <COST_WEIGHT table="drgevents" column="cost_weight"></COST_WEIGHT>
+      <COST_WEIGHT_GRP table="drgevents" column="cost_weight"></COST_WEIGHT_GRP>
+      <DISPLAY table="d_codeditems" column="code"></DISPLAY>
+    </DRG>
+    <ICD9 table="icd9" column="code,description" schema="mimic2v26" miscOperator="concat"></ICD9>
+    <ICU schema="mimic2v26" table="icustay_detail_new">      
+        <ICUSTAY_ID column="icustay_id" table="icustay_detail_new"></ICUSTAY_ID>
+        <FIRST_CAREUNIT column="icustay_first_careunit"></FIRST_CAREUNIT>
+        <LAST_CAREUNIT column="icustay_last_careunit"></LAST_CAREUNIT>
+        <INTIME></INTIME>
+        <OUTTIME></OUTTIME>
+        <LOS column="icustay_los"></LOS>
+        <LOS_GRP></LOS_GRP>
+        <MEDEVENTS parentID="ICUSTAY_ID">
+          <EVENT row="true" schema="mimic2v26">
+            <NAME table="medevents_new" column="label" dimensionTable="d_meditems"></NAME>
+            <OCCURRENCES></OCCURRENCES>
+          </EVENT>
+		</MEDEVENTS>
+    </ICU>
+    <POEEVENTS>
+      <EVENT schema="mimic2v26">
+        <NAME table="poe_order_new_temp" dimensionTable="poe_med" column="drug_name"></NAME>
+        <OCCURRENCES></OCCURRENCES>
+      </EVENT>      
+    </POEEVENTS>
+    <LABEVENTS schema="mimic2v26">
+      <EVENT row="true">
+        <NAME table="admissions_new_temp" dimensionTable="d_labitems" column="loinc_description" parentRelationKey="admissions_new_tempTod_labitems"></NAME>
+        <OCCURRENCES></OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT schema="mimic2v26" row="true">
+      <CAREUNIT table="admissions_new_temp" dimensionTable="d_careunits" column="label" parentRelationKey="admissions_new_tempTod_careunits"></CAREUNIT>
+      <CAREGIVER table="admissions_new_temp" dimensionTable="d_caregivers" column="label" parentRelationKey="admissions_new_tempTod_caregivers"></CAREGIVER>
+      <TITLE table="noteevents_new" column="title"></TITLE>
+      <CATEGORY table="admissions_new_temp" dimensionTable="noteevents_new" column="category"></CATEGORY>
+      <TEXT  table="noteevents_new" column="text"></TEXT>
+    </NOTEEVENT>    	
+  </ADMISSION>
+</DOCUMENT>

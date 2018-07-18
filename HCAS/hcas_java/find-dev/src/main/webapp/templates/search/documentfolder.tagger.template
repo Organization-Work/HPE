@@ -1,0 +1,11 @@
+<h5>Tags</h5>
+<ul>
+    <% _.each(ctx.folders, function(folder){
+    %><li>
+    <div class="documentfolder <%-folder.existing ? 'existing' : ''%>" data-documentfolder="<%-JSON.stringify(folder)%>">
+        <input type="checkbox" title="Tag document" <%=ctx.checked.hasOwnProperty(folder.id) ? 'checked' : ''%>  <%=folder.restricted ? 'disabled' : ''%>>
+        <span title="<%- folder.tooltip || '' %>"><%- folder.label %></span>
+    </div>
+</li><%
+    })%>
+</ul>

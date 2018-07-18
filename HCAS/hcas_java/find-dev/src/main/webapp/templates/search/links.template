@@ -1,0 +1,30 @@
+<div>
+<%
+    var hasLinks = false;
+    if (ctx.from && ctx.from.length) {
+        hasLinks = true;
+        %><h4>Cited by</h4><ul><%
+        _.each(ctx.from, function(doc){
+            %><li><a class="lightbox" href="<%-doc.url || doc.reference%>"><%-doc.title%></a></li><%
+        })
+        %></ul><%
+    }
+    if (ctx.to && ctx.to.length) {
+        hasLinks = true;
+        %><h4>Cites</h4><ul><%
+        _.each(ctx.to, function(doc){
+            if (doc.reference) {
+                %><li><a class="lightbox" href="<%-doc.url || doc.reference%>"><%-doc.title%></a></li><%
+            }
+            else {
+                %><li>Document with pubmed ID <a class="lightbox" href="http://www.ncbi.nlm.nih.gov/pubmed/<%-doc.title%>"><%-doc.title%></a> is not in your dataset</li><%
+            }
+        })
+        %></ul><%
+    }
+
+    if (!hasLinks) {
+        %>This document does not cite and is not cited by other documents in the corpus.<%
+    }
+%>
+</div>

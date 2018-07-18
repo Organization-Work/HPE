@@ -1,0 +1,18 @@
+<div class="filter-field filter-contextmenu">
+    <div class="date-input">
+        <div class="input-append control-group datetimepicker1">
+            <input type="text" data-items="6" class="span3" />
+            <span class="add-on group-editable"><i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+        </div>
+    </div>
+    <div class="control-group partition-period">
+    	<label>include up to</label>
+        <select class="input-large">
+            <option value="THREE_MONTHS">3 MONTHS</option>
+            <option value="SIX_MONTHS">6 MONTHS</option>
+            <option value="ONE_YEAR">1 YEAR</option>
+            <option value="TWO_YEARS">2 YEARS</option>
+            <option value="THREE_YEARS">3 YEARS</option>
+        </select>
+    </div>
+</div>

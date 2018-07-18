@@ -1,0 +1,16 @@
+	<span class="btn btn-info btn-mini timeline-datepicker-label">Date Field </span>
+	<button class="btn btn-mini dropdown-toggle timeline-datepicker-btn" data-toggle="dropdown" title="<%=ctx.label%>"><span class="fieldlabel"><%=ctx.label%></span> <span class="caret"></span></button>
+
+	<ul class="dropdown-menu">
+<%
+    _.each(ctx.fields, function (value) {
+        if (value.displayName === 'Concept+') {
+    %><li>
+        <a href="javascript:void(0)" data-fieldname="<%- value.name %>" class="timeline-fieldpicker-snomed" ><%- value.displayName %> <input type="text" value="<%-ctx.snomedFilter || ''%>"></a>
+    </li><%
+        } else {
+  %><li><a href="javascript:void(0)" data-toggle="tooltip" title="<%- value.displayName %>"  data-fieldname="<%- value.name %>"><%- value.displayName %></a></li><%
+        }
+    })
+%>
+	</ul>

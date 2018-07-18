@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+              http://www.springframework.org/schema/context
+              http://www.springframework.org/schema/context/spring-context-3.1.xsd
+              http://www.springframework.org/schema/tx
+              http://www.springframework.org/schema/tx/spring-tx.xsd
+              http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring
+              http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.2.xsd
+              http://www.springframework.org/schema/task
+              http://www.springframework.org/schema/task/spring-task-3.1.xsd
+              http://www.springframework.org/schema/util
+              http://www.springframework.org/schema/util/spring-util.xsd
+              http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+              http://www.springframework.org/schema/mvc 
+              http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+					 
+ 
+    <context:component-scan base-package="com.autonomy"
+                            use-default-filters="false">
+        <context:include-filter type="annotation"
+                                expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>
+
+    <context:component-scan base-package="autn.voronoi" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>
+
+
+
+   	<mvc:annotation-driven/> 
+
+    <!--Prevent browsers from caching contents except the static resources content--> 
+    <mvc:interceptors> 
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="lang"/> 
+         <mvc:interceptor> 
+           <mvc:mapping path="/**"/> 
+            <mvc:exclude-mapping path="/docs/**"/>
+            <mvc:exclude-mapping path="/font/**"/>
+            <mvc:exclude-mapping path="/resources/**"/>
+           <mvc:exclude-mapping path="/img/**"/>
+           <bean id="webContentInterceptor" class="org.springframework.web.servlet.mvc.WebContentInterceptor"> 
+                 <property name="cacheSeconds" value="0"/> 
+                 <property name="useExpiresHeader" value="true"/> 
+                 <property name="useCacheControlHeader" value="true"/> 
+                 <property name="useCacheControlNoStore" value="true"/> 
+             </bean> 
+       </mvc:interceptor> 
+     </mvc:interceptors> 
+
+
+
+    <task:annotation-driven executor="myExecutor" scheduler="myScheduler"/>
+    <task:executor id="myExecutor" pool-size="5"/>
+    <task:scheduler id="myScheduler" pool-size="10"/>
+
+    <task:scheduled-tasks>
+        <!-- Update the docGraph getquerytagvalues cache on startup and once a day -->
+        <task:scheduled ref="docGraph" method="prefetch" fixed-delay="86400000"/>
+
+        <!-- Initiate the loading of the taxonomy data -->
+        <task:scheduled ref="taxonomyService" method="getCategoryData" fixed-delay="86400000"/>
+    </task:scheduled-tasks>
+
+     <bean id="cacheManager"
+          class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"
+          p:configLocation="classpath:/ehcache.xml"/>
+
+    <context:property-placeholder location="classpath:idol.properties,classpath:/hca.properties"/>
+    
+    <!-- <bean
+     class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+          <list>
+                <value>WEB-INF/classes/config/properties/database.properties</value>
+                <value>classpath:config/properties/database.properties</value>
+            </list>
+        </property>
+       
+    </bean> -->
+    
+    
+    <!-- <context:property-placeholder location="classpath:passkey.properties" ignore-resource-not-found="true" /> -->
+
+    <!-- Define the resource bundle being used by the system... -->
+    <bean id="messageSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>com.autonomy.find.i18n</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="resourceResolver" class="com.autonomy.find.api.view.ResourceResolver"/>
+    
+    <bean id="admissionsView" class="com.autonomy.find.api.view.SaxonXsltView">
+        <property name="url" value="classpath:xsl/admissions.xsl"/>
+        <property name="sourceKey" value="doc"/>
+        <property name="uriResolver" ref="resourceResolver"/>
+        <property name="contentType" value="text/html;charset=utf-8"/>
+    </bean>
+    
+    <bean id="linkContentTransformerFactory" class="net.sf.saxon.TransformerFactoryImpl"/>
+    
+
+    <bean id="findSessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <qualifier value="findSessionFactory"/>
+        <property name="dataSource" ref="findDbDatasource"/>
+        <property name="packagesToScan">
+            <list>
+                <value>com.autonomy.find</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.${find-db.dialect}</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.jdbc.batch_size"> 50 </prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="findDbDatasource" p:driverClassName="${find-db.driver}"
+    	p:url="${find-db.url}" p:maxActive="${find-db.maxActive}"
+    	p:maxIdle="${find-db.maxIdle}" p:username="${find-db.username}"
+    	p:password="${find-db.password}"
+    	p:validationQuery="${find-db.validationQuery}"
+    	class="com.autonomy.find.api.datasource.EncryptionAwareDataSource">
+        <qualifier value="find-DbDatasource"/>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="findSessionFactory" />
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean id="searchAciService" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient" p:usePostMethod="true"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${content.host}" p:port="${content.aciPort}" p:protocol="${discoverSearch.aci.transport.protocol}"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="userFilter" class="com.autonomy.idolview.UserFilter"></bean>
+    <bean id="userService" class="com.autonomy.find.services.UserService"></bean>
+    <bean id="timeHelper" class="com.autonomy.find.util.TimeHelper"/>
+    <bean id="taxonomyService" class="com.autonomy.find.services.TaxonomyService"></bean>
+    <bean id="docCountService" class="com.autonomy.find.services.TaxonomyDocCountService"></bean>
+    <bean id="categoryTrainingService" class="com.autonomy.find.services.CategoryTrainingService"></bean>
+    <bean id="parametricService" class="com.autonomy.find.services.ParametricService"></bean>
+    <bean id="userPropertiesService" class="com.autonomy.find.services.UserPropertiesService"></bean>
+    <bean id="filterService" class="com.autonomy.find.services.FilterService"></bean>
+
+    <bean id="agentOptionsService" class="com.autonomy.find.services.AgentOptionsService"></bean>
+    <bean id="agentConfig" class="com.autonomy.find.config.AgentConfig">
+        <property name="defaultMaxResults" value="${agents.defaultMaxResults}"/>
+        <property name="defaultMinScore" value="${agents.defaultMinScore}"/>
+        <property name="defaultUnreadOnly" value="${agents.defaultUnreadOnly}"/>
+        <property name="defaultUseMinScore" value="${agents.defaultUseMinScore}"/>
+        <property name="databasesString" value="${agents.databaseOptions}"></property>
+    </bean>
+
+    <bean id="ssoConfig" class="com.autonomy.find.config.SSOConfig">
+        <property name="casClientService" value="${cas.client.service}"/>
+        <property name="casServerLoginUrl" value="${cas.server.login.url}"/>
+        <property name="casServerLogoutUrl" value="${cas.server.logout.url}"/>
+    </bean>
+
+    <bean id="findConfig" class="com.autonomy.find.config.FindConfig">
+        <property name="redirectURL" value="${discover.redirectURL}"/>
+        <property name="showNews" value="${discover.showNews}"/>
+        <property name="useAgents" value="${discover.useAgents}"/>
+        <property name="useSearchSettings" value="${discover.useSearchSettings}"/>
+        <property name="showDocGraph" value="${discover.showDocGraph}"/>
+        <property name="showNodeGraph" value="${discover.showNodeGraph}"/>
+        <property name="brandName" value="${discover.brandName}"/>
+        <property name="version" value="${discover.version}"/>
+        <property name="auditFilePattern" value="${discover.auditFilePattern}"/>
+        <property name="auditLogDir" value="${discover.auditLogDir}"/>
+        <property name="displayTnCMessage" value="${discover.displayTnCMessage}"/>
+        <property name="helpFile" value="${discover.helpFile}"/>
+        <property name="showBrandLogo" value="${discover.showBrandLogo}"/>
+        <property name="loginSettings">
+            <bean class="com.autonomy.find.config.LoginSettings">
+                <property name="sso" value="${discover.sso}"/>
+                <property name="userpass" value="${discover.userpass}"/>
+                <property name="canRegister" value="${discover.canRegister}"/>
+                <property name="cookieMessageDisplayed" value="${discover.cookieMessageDisplayed}"/>
+                <property name="cookieMessage" value="${discover.cookieMessage}"/>
+                <property name="communityRepositoryType" value="${community.repository.type}"/>
+            </bean>
+        </property>
+        <property name="uiLabelNames">
+            <bean class="com.autonomy.find.config.UILabelNames">
+                <property name="measurementVariableDropdownLabel" value="${discover.ui.measurement.variable.dropdown.label}"/>
+                <property name="resultsActionTagLabel" value="${discover.ui.results.action.tag.label}"/>               
+            </bean>
+        </property>
+    </bean>
+
+   <bean id="allowedUsers" class="org.springframework.core.io.ClassPathResource">
+      <constructor-arg index="0" value="${discoverSearch.censor.whitelist}" />
+   </bean>
+
+    <bean id="taxonomy" class="com.autonomy.find.config.TaxonomyConfig">
+        <property name="active" value="${taxonomy.active}"/>
+        <property name="database" value="${taxonomy.database}"/>
+        <property name="fieldName" value="${taxonomy.fieldName}"/>
+        <property name="rootCategory" value="${taxonomy.rootCategory}"/>
+        <property name="requestDepth" value="${taxonomy.requestDepth}"/>
+    </bean>
+
+    <bean id="parametric" class="com.autonomy.find.config.ParametricConfig">
+        <property name="active" value="${parametric.active}"/>
+    </bean>
+
+    <bean id="searchConfig" class="com.autonomy.find.config.SearchConfig">
+        <constructor-arg type="java.lang.String" value="${discoverSearch.languageType}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.linkToField}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.linkIdField}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.outputEncoding}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.maxSearchResults}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.maxPreviewResults}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.maxSuggestionResults}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.searchViews}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.suggestionDatabases}"/>
+        <constructor-arg type="int" value="${discoverSearch.maxSuggestionChildren}"/>
+        <constructor-arg type="int" value="${discoverSearch.displayCharacters}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.meta}"/>
+        <!-- <constructor-arg type="java.lang.String" value="${discoverSearch.displayFields}"/> -->
+        <constructor-arg type="double" value="${discoverSearch.minScore}"/>
+        <constructor-arg type="boolean" value="${discoverSearch.showScore}"/>
+        <constructor-arg type="boolean" value="${discoverSearch.totalResults}"/>
+        <constructor-arg type="boolean" value="${discoverSearch.totalResultsPredict}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.culledSuperCategories}"/>
+        <constructor-arg type="boolean" value="${discoverSearch.networkmap.show}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.topicBranch.default}"/>
+        <constructor-arg type="int" value="${discoverSearch.docfolder.maxResults}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.combine}"/>        
+        <constructor-arg type="java.lang.String" value="${discoverSearch.summary}"/>        
+        <constructor-arg type="java.lang.String" value="${adminConsole.superUserDefaultPassword}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.default.linkContentTemplate}"/>
+        <constructor-arg type="int" value="${discoverSearch.topicmap.maxValues}"/>
+        <constructor-arg type="int" value="${discoverSearch.sunburst.maxValues}"/>
+        <constructor-arg type="boolean" value="${discoverSearch.parametric.singleQueryFieldname}"/>
+        <constructor-arg type="boolean" value="${discoverSearch.sunburst.singleQueryFieldname}"/>
+        <constructor-arg type="boolean" value="${discoverSearch.parametric.preloadValues}"/>
+        <constructor-arg type="java.lang.String" value="${discoverSearch.groupingFields}"/> 
+        <constructor-arg type="boolean" value="${discoverSearch.textSearch.enabled}"/> 
+        <constructor-arg type="java.lang.String" value="${find-db.url}"/>                       
+    </bean>
+
+    <bean id="categoryAciService" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${category.host}" p:port="${category.aciPort}" p:protocol="${discoverSearch.aci.transport.protocol}"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="category.databases" class="com.autonomy.aci.content.database.Databases">
+        <constructor-arg value="${category.databases}"/>
+    </bean>
+
+    <bean id="themeTrackerConfig" class="autn.voronoi.ThemeTrackerConfig">
+        <constructor-arg type="boolean" value="${themetracker.timeSpanUI}"/>
+        <constructor-arg type="long" value="${themetracker.defaultTimeSpan}"/>
+        <constructor-arg type="java.lang.String" value="${themetracker.category.jobs}"/>
+    </bean>
+
+    <bean id="categoryConfig" class="com.autonomy.find.config.CategoryConfig">
+        <property name="host" value="${category.host}"/>
+        <property name="aciPort" value="${category.aciPort}"/>
+        <property name="hot_jobName" value="${category.hot.jobName}"/>
+        <property name="hot_numClusters" value="${category.hot.numClusters}"/>
+        <property name="hot_numResults" value="${category.hot.numResults}"/>
+        <property name="hot_anyLanguage" value="${category.hot.anyLanguage}"/>
+        <property name="hot_outputEncoding" value="${category.hot.outputEncoding}"/>
+        <property name="breaking_jobName" value="${category.breaking.jobName}"/>
+        <property name="breaking_numClusters" value="${category.breaking.numClusters}"/>
+        <property name="breaking_numResults" value="${category.breaking.numResults}"/>
+        <property name="breaking_anyLanguage" value="${category.breaking.anyLanguage}"/>
+        <property name="breaking_outputEncoding" value="${category.breaking.outputEncoding}"/>
+    </bean>
+
+    <bean id="findNewsConfig" class="com.autonomy.find.config.FindNewsConfig">
+        <property name="host" value="${findNews.host}"/>
+        <property name="aciPort" value="${findNews.aciPort}"/>
+        <property name="clusterNamesFile" value="${findNews.clusterNamesFile}"/>
+        <property name="appVersionFile" value="${findNews.appVersionFile}"/>
+        <property name="defaultMaxResults" value="${findNews.defaultMaxResults}"/>
+        <property name="numResults" value="${findNews.numResults}"/>
+        <property name="defaultHeadlines" value="${findNews.defaultHeadlines}"/>
+        <property name="clusterAnyLanguage" value="${findNews.clusterAnyLanguage}"/>
+        <property name="clusterOutputEncoding" value="${findNews.clusterOutputEncoding}"/>
+        <property name="searchDatabase" value="${findNews.searchDatabase}"/>
+        <property name="searchMaxResults" value="${findNews.searchMaxResults}"/>
+        <property name="agentDatabases" value="${findNews.agentDatabases}"/>
+        <property name="profileTopicsVoronoiEngine" value="${findNews.profileTopicsVoronoiEngine}"/>
+    </bean>
+
+
+    <bean id="httpClientFactory"
+          class="com.autonomy.aci.client.transport.impl.HttpClientFactory"
+          p:maxConnectionsPerRoute="20" p:maxTotalConnections="120"
+          p:staleCheckingEnabled="true" p:soTimeout="90000"/>
+
+    <bean id="httpClient" factory-bean="httpClientFactory"
+          factory-method="createInstance"/>
+
+    <bean class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${content.host}" p:port="${content.aciPort}" p:protocol="${discoverSearch.aci.transport.protocol}"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="idol.properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <value>classpath:idol.properties</value>
+                <value>classpath:/hca.properties</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="processFactory" class="com.autonomy.aci.client.annotations.IdolAnnotationsProcessorFactoryImpl" p:properties-ref="idol.properties"/>
+
+    <bean id="contentAciService" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <qualifier value="contentAciService"/>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${idol.host}" p:port="${idol.port}" p:protocol="${discoverSearch.aci.transport.protocol}"/>
+        </constructor-arg>
+    </bean>
+
+    <bean class="com.autonomy.aci.content.database.Databases">
+        <qualifier value="databases"/>
+        <constructor-arg value="${discoverSearch.databases}"/>
+    </bean>
+
+    <!-- Defines the engine which Voronoi.java uses; you can use different instances
+		by using different engine parameters -->
+    <bean class="autn.voronoi.Voronoi$Engine">
+        <constructor-arg index="0"
+                         type="com.autonomy.aci.client.services.impl.AciServiceImpl" ref="contentAciService"/>
+        <constructor-arg index="1">
+            <bean class="com.autonomy.aci.content.database.Databases">
+                <constructor-arg value="${idol.databases}"/>
+            </bean>
+        </constructor-arg>
+        <constructor-arg index="2" type="int" value="${idol.maxresults}"/>
+        <constructor-arg index="3" value="${idol.sentimentfield}"/>
+        <constructor-arg index="4" value="${idol.combine}"/>
+    </bean>
+
+    <bean id="mailAciService" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <qualifier value="mailAciService"/>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="127.0.0.1" p:port="30000"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="themeTrackerAciService" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <qualifier value="themeTrackerAciService"/>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${themetracker.category.host}" p:port="${themetracker.category.aciPort}" p:protocol="${discoverSearch.aci.transport.protocol}"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="themeTrackerCategoryDREAciService" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <qualifier value="themeTrackerCategoryDREAciService"/>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient"/>
+        </constructor-arg>
+        <constructor-arg>
+            <!--<bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="10.2.1.91" p:port="9002"/>-->
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${themetracker.categoryDRE.host}" p:port="${themetracker.categoryDRE.aciPort}" p:protocol="${discoverSearch.aci.transport.protocol}"/>
+        </constructor-arg>
+    </bean>
+
+    <bean class="com.autonomy.aci.content.database.Databases">
+        <qualifier value="clustersDatabase"/>
+        <constructor-arg value="${themetracker.categoryDRE.databases}"/>
+    </bean>
+
+    <bean class="java.lang.Double">
+        <qualifier value="clustersMinScore"/>
+        <constructor-arg value="${themetracker.categoryDRE.minScore}"/>
+    </bean>
+
+
+    <bean id="taxonomyAciService" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${taxonomy.host}" p:port="${taxonomy.port}" p:protocol="${discoverSearch.aci.transport.protocol}"/>
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="communityAgentStoreAciService" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <qualifier value="communityAgentStoreAciService"/>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+          p:httpClient-ref="httpClient"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${community.agentstore.host}"
+                  p:port="${community.agentstore.port}"
+                  p:protocol="${discoverSearch.aci.transport.protocol}"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="communityAciService" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${community.host}" p:port="${community.aciPort}" p:protocol="${discoverSearch.aci.transport.protocol}"/>
+        </constructor-arg>
+    </bean>
+
+    <bean class="com.autonomy.aci.content.database.Databases">
+        <qualifier value="communityDatabase"/>
+        <constructor-arg value="${community.databases}"></constructor-arg>
+    </bean>
+
+    <bean id="historyAciService" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${history.host}" p:port="${history.aciPort}" p:protocol="${discoverSearch.aci.transport.protocol}"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="historyIndexingService" class="com.autonomy.nonaci.indexing.impl.IndexingServiceImpl">
+        <constructor-arg ref="httpClient"/>
+        <constructor-arg>
+            <bean class="com.autonomy.nonaci.ServerDetails" p:host="${history.host}"
+                  p:port="${history.indexPort}"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="historyConfig" class="com.autonomy.find.config.HistoryConfig">
+        <property name="host" value="${history.host}"/>
+        <property name="aciPort" value="${history.aciPort}"/>
+        <property name="indexPort" value="${history.indexPort}"/>
+        <property name="database" value="${history.database}"/>
+    </bean>
+    
+    <bean id="searchExecutorService" class="java.util.concurrent.Executors"
+        factory-method="newFixedThreadPool" destroy-method="shutdown">
+        <constructor-arg type="int" value="${discoverSearch.parametric.threads}"/>
+    </bean>
+    
+    <bean id="dataSourceTransactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="vdataSource" />
+	</bean>
+    
+    
+	  <bean id="vdataSource" destroy-method="close" class="org.apache.tomcat.jdbc.pool.DataSource">
+           <property name="driverClassName" value="${vertica.driverClassName}"/>
+           <property name="connectionProperties" value="${vertica.connectionProperties}"/>
+           <property name="url" value="${vertica.url}"/>			
+           <property name="username" value="${vertica.username}"/>
+           <property name="password" value="${vertica.password}"/>
+            <property name="removeAbandoned" value="${vertica.removeAbandoned}"/> <!-- Tomcat 7 -->
+           <!--  <property name="removeAbandonedOnBorrow" value="${vertica.removeAbandonedOnBorrow}"/> Tomcat8
+            <property name="removeAbandonedOnMaintenance" value="${vertica.removeAbandonedOnMaintenance}"/>  --><!-- Tomcat8 -->
+            <property name="removeAbandonedTimeout" value="${vertica.removeAbandonedTimeout}"/>
+   	 		<property name="initialSize" value="${vertica.initialSize}"/>
+    		<property name="maxActive" value="${vertica.maxActive}" />  <!-- Tomcat 7 -->
+    		<!-- <property name="maxTotal" value="${vertica.maxTotal}" />  --> <!-- Tomcat8 -->
+    		<property name="maxIdle" value="${vertica.maxIdle}" /> 
+    		<property name="minIdle" value="${vertica.minIdle}" />  
+    		<property name="testOnBorrow" value="${vertica.testOnBorrow}" />
+    		<property name="testOnConnect" value="${vertica.testOnConnect}" />
+    		<property name="testWhileIdle" value="${vertica.testWhileIdle}" />
+    		<property name="validationQuery" value="${vertica.validationQuery}" />
+    		<property name="timeBetweenEvictionRunsMillis" value="${vertica.timeBetweenEvictionRunsMillis}" />
+    		<property name="logAbandoned" value="${vertica.logAbandoned}" />
+      </bean>
+      <!-- org.apache.tomcat.jdbc.pool.DataSource  org.apache.commons.dbcp.BasicDataSource -->
+
+       <bean id="filterTemplate" class="com.autonomy.vertica.templates.FilterTemplate">
+           <property name="dataSource" ref="vdataSource"/>
+       </bean>
+       
+       <bean id="requestTracker" class="com.autonomy.find.util.RequestTracker" scope="session">
+       	<aop:scoped-proxy/>
+       </bean>
+
+    <beans profile="default">
+        <!--Definition of valid filters -->
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="Category"/>
+            <constructor-arg value="ADMISSION/SNOMEDTAGS"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="Sex"/>
+            <constructor-arg value="ADMISSION/PATIENT/SEX"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$ParametricRangeFilter">
+            <constructor-arg value="Age"/>
+            <constructor-arg value="ADMISSION/PATIENT/AGE_AT_ADMISSION"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="Religion"/>
+            <constructor-arg value="ADMISSION/PATIENT/RELIGION"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="Marriage"/>
+            <constructor-arg value="ADMISSION/PATIENT/MARITAL_STATUS"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="Ethnicity"/>
+            <constructor-arg value="ADMISSION/PATIENT/ETHNICITY"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="PROPOFOL"/>
+            <constructor-arg value="ADMISSION/ICU/MEDEVENTS/EVENT/PROPOFOL/OCCURRENCES"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="HEPARIN"/>
+            <constructor-arg value="ADMISSION/ICU/MEDEVENTS/EVENT/HEPARIN/OCCURRENCES"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="MedEvents"/>
+            <constructor-arg value="ADMISSION/ICU/MEDEVENTS/EVENT/NAME"/>
+        </bean>
+
+        <bean class="com.autonomy.aci.content.printfields.PrintFields">
+            <qualifier value="queryPrintFields"/>
+            <constructor-arg value="SNOMEDTAGS,SEX,AGE_AT_ADMISSION,RELIGION,MARITAL_STATUS,ETHNICITY,OCCURRENCES,NAME"/>
+        </bean>
+    </beans>
+
+    <beans profile="pubmed">
+        <!--Definition of valid filters -->
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="AUTHOR SURNAME"/>
+            <constructor-arg value="AUTHOR-SURNAME"/>
+        </bean>
+
+        <!--bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="AUTHOR-GIVEN"/>
+        </bean-->
+
+        <!--bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="KEYWORDS"/>
+        </bean-->
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="AFFILIATION"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+			<constructor-arg value="ARTICLE TYPE"/>
+            <constructor-arg value="SUBJECT"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="PUBLISHER"/>
+            <constructor-arg value="PUBLISHER-NAME"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="JOURNAL"/>
+            <constructor-arg value="JOURNAL-TITLE"/>
+        </bean>
+
+        <!--bean class="com.autonomy.idolview.Filter$StringFilter">
+            <constructor-arg value="CITATIONS"/>
+        </bean-->
+
+        <bean class="com.autonomy.idolview.Filter$ParametricRangeFilter">
+            <constructor-arg value="PRINT PUBLISH YEAR"/>
+            <constructor-arg value="P-PUBLISHED-YEAR"/>
+        </bean>
+
+        <bean class="com.autonomy.idolview.Filter$ParametricRangeFilter">
+            <constructor-arg value="E-PUBLISH YEAR"/>
+            <constructor-arg value="E-PUBLISHED-YEAR"/>
+        </bean>
+
+        <bean class="com.autonomy.aci.content.printfields.PrintFields">
+            <qualifier value="queryPrintFields"/>
+            <constructor-arg value="AUTHOR-SURNAME,AFFILIATION,SUBJECT,PUBLISHER-NAME,P-PUBLISHED-YEAR,E-PUBLISHED-YEAR,JOURNAL-TITLE"/>
+        </bean>
+    </beans>
+     
+</beans>

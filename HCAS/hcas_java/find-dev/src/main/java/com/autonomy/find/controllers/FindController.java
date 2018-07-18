@@ -1,0 +1,621 @@
+package com.autonomy.find.controllers;
+
+import java.io.IOException;
+import java.io.StringWriter;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.xpath.XPathExpressionException;
+
+import net.sf.saxon.trans.XPathException;
+
+import org.codehaus.jackson.map.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.ApplicationContext;
+import org.springframework.core.io.Resource;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+
+import autn.voronoi.ThemeTrackerConfig;
+
+import com.autonomy.common.lang.StringUtils;
+import com.autonomy.find.api.response.ResponseWithErrorNo;
+import com.autonomy.find.api.response.ResponseWithResult;
+import com.autonomy.find.api.response.ResponseWithSuccessError;
+import com.autonomy.find.api.view.SaxonXsltView;
+import com.autonomy.find.config.AgentConfig;
+import com.autonomy.find.config.FindConfig;
+import com.autonomy.find.config.LoginSettings;
+import com.autonomy.find.config.ParametricConfig;
+import com.autonomy.find.config.SSOConfig;
+import com.autonomy.find.config.SearchConfig;
+import com.autonomy.find.config.SearchView;
+import com.autonomy.find.config.TaxonomyConfig;
+import com.autonomy.find.dto.UserDetailAndRoles;
+import com.autonomy.find.fields.FilterField;
+import com.autonomy.find.fields.FilterOperator;
+import com.autonomy.find.services.ParametricService;
+import com.autonomy.find.services.SearchService;
+import com.autonomy.find.services.WebAppUserService;
+import com.autonomy.find.services.admin.AdminService;
+import com.autonomy.find.util.LoginResult;
+import com.autonomy.find.util.LoginStatus;
+import com.autonomy.find.util.SessionHelper;
+import com.autonomy.find.util.audit.AuditActions;
+import com.autonomy.find.util.audit.AuditLogger;
+
+@Controller
+@RequestMapping("/")
+public class FindController {
+    private static final Logger LOGGER = LoggerFactory.getLogger(FindController.class);
+
+    private static final int USER_ALREADY_EXISTS_ID = 1;
+    private static final String USER_ALREADY_EXISTS = "User already exists.";
+
+    private static final int REGISTRATION_FAILED_ID = 2;
+    private static final String REGISTRATION_FAILED = "Registration failed.";
+
+    private static final int LOGIN_FAILED_ID = 4;
+    private static final String LOGIN_FAILED = "Login failed.";
+
+    private static final int SETTINGS_READ_ERROR_ID = 8;
+    private static final String SETTINGS_READ_ERROR = "Could not read settings.";
+
+    private static final int LOGIN_NOT_ALLOWED_ID = 16;
+    private static final String LOGIN_NOT_ALLOWED = "Login is not allowed.";
+
+    private static final int REGISTRATION_NOT_ALLOWED_ID = 32;
+    private static final String REGISTRATION_NOT_ALLOWED = "Registration is not allowed.";
+
+    private static final String SSO_LOGIN_KEY = "SSOLogin";
+
+    private final ObjectMapper mapper = new ObjectMapper();
+
+
+    @Autowired
+    private WebAppUserService users;
+
+    @Autowired
+    private AdminService adminService;
+
+    @Autowired
+    private SessionHelper sessionHelper;
+
+    @Autowired
+    private SearchService searchService;
+
+	@Autowired
+	private AgentConfig agentConfig;
+
+    @Autowired
+    private FindConfig config;
+
+	@Autowired
+ 	private SearchConfig searchConfig;
+
+    @Autowired
+    @Qualifier("taxonomy")
+    private TaxonomyConfig taxonomyConfig;
+
+    @Autowired
+    private ParametricConfig parametricConfig;
+
+	@Autowired
+	private ParametricService parametricService;
+
+	@Autowired
+	private ThemeTrackerConfig themeTrackerConfig;
+
+	@Autowired
+	private SaxonXsltView admissionsView;
+
+	@Autowired
+	private ApplicationContext context;
+
+    @Autowired
+    private SSOConfig ssoConfig;
+
+    @Autowired
+    private TransformerFactory linkContentTransformerFactory;
+
+    /**
+     * Login
+     * Stores the logged in person's username in the session
+     *
+     * @param request
+     * @param response
+     * @param session
+     * @throws IOException
+     */
+    @RequestMapping({"/login.do"})
+    public void ssoLogin(final HttpServletRequest request,
+                         final HttpServletResponse response, final HttpSession session)
+            throws IOException {
+
+        //  Prevent sso login if configuration disallows it
+        final LoginSettings settings = config.getLoginSettings();
+        if (settings == null || !settings.ssoLoginAllowed()) {
+            return;
+        }
+
+        final String username = request.getRemoteUser();
+
+        AuditLogger.log(username, AuditActions.USER_LOGIN_SSO);
+
+        if (username != null && !"".equals(username)) {
+            sessionHelper.setRemoteUser(session, username);
+            session.setAttribute(SSO_LOGIN_KEY, Boolean.TRUE);
+            users.registerIfNeeded(username);
+        }
+        else {
+            sessionHelper.removeRemoteUser(session, username);
+        }
+        response.sendRedirect(config.getRedirectURL());
+    }
+
+    /**
+     * LoginA
+     * Logs in user silently from portal
+     *
+     * @param request
+     * @param response
+     * @param session
+     * @throws IOException
+     */
+/*    
+    @RequestMapping(value = {"/loginA.json"}, method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseWithSuccessError loginA_post(
+            final HttpSession session,
+            final @RequestParam(value = "username", required = false) String username,
+            final @RequestParam(value = "password", required = false) String password,
+            final HttpServletRequest request,
+            final HttpServletResponse response
+    ) throws IOException {
+*/    
+    @RequestMapping(value = {"/loginA.do"}, method = RequestMethod.POST)
+    public void ssoLoginA( 
+    		final HttpSession session,
+		    final @RequestParam(value = "username", required = false) String username,
+		    final @RequestParam(value = "password", required = false) String password,
+		    final HttpServletRequest request,
+		    final HttpServletResponse response) throws IOException {
+
+        //  Prevent login if configuration disallows it
+        final LoginSettings settings = config.getLoginSettings();
+        if (settings == null || !settings.userPassLoginAllowed()) {
+           	response.sendRedirect("loginpage.do");
+            return;
+        }
+
+        AuditLogger.log(username, AuditActions.USER_LOGIN_SSO);
+
+        LoginResult loginResult = users.userLogin(username, password);
+        LoginStatus loginStatus = loginResult.getLoginStatus();
+        //  If login successful
+        if (LoginStatus.SUCCESS == loginStatus) {
+        	this.sessionHelper.setUserSecurityInfo(session, loginResult.getSecurityInfo());
+            //  Set the user's session name
+            String redirect = sessionHelper.setRemoteUser(session, username);
+            //  Respond with success
+            if(username.equals(AdminService.SUPER_USER) && password.equals(searchConfig.getSuperUserDefaultPassword())) {
+                // Super has default password, warn them and ask them to change it.
+                redirect += "?defaultSuperUserWarn=true";
+            }
+            response.sendRedirect("p/search.do");
+            return;
+        } else if(LoginStatus.FAIL == loginStatus){
+        	response.sendRedirect("loginpage.do");
+        } 
+        return;
+  
+     }
+
+    @RequestMapping({"/logout.do"})
+    public void logout(
+            final HttpServletRequest request,
+            final HttpServletResponse response
+    ) throws IOException {
+        final HttpSession session = request.getSession(false);
+
+        String redirectLink = "loginpage.do";
+        if (session != null) {
+            final boolean sessionSSO = session.getAttribute(SSO_LOGIN_KEY) != null ? (Boolean) session.getAttribute(SSO_LOGIN_KEY) : false;
+            if (sessionSSO) {
+                redirectLink = ssoConfig.getCasServerLogoutUrl() + "?url=" + URLEncoder.encode(ssoConfig.getCasClientService(), "UTF-8");
+                AuditLogger.log(sessionHelper.getRemoteUser(session), AuditActions.USER_LOGOUT_SSO, redirectLink);
+            } else {
+                AuditLogger.log(sessionHelper.getRemoteUser(session), AuditActions.USER_LOGOUT);
+            }
+            session.invalidate();
+        }
+        response.sendRedirect(redirectLink);
+    }
+
+
+    @RequestMapping(value = {"/getLoginSettings.json"}, method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseWithSuccessError getLoginSettings() {
+        final LoginSettings result = config.getLoginSettings();
+        if (result != null) {
+            return new ResponseWithResult<LoginSettings>(result);
+        }
+        return new ResponseWithErrorNo(SETTINGS_READ_ERROR_ID, SETTINGS_READ_ERROR);
+    }
+
+
+    /**
+     * Attempts to login a community user with username and password.
+     *
+     * @param session - The http session - for assigning a user to on success
+     * @param username - The user's username
+     * @param password - The user's password
+     * @return - A json response with either true or false and an error and error number
+     * @throws IOException
+     */
+    @RequestMapping(value = {"/login.json"}, method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseWithSuccessError login_post(
+            final HttpSession session,
+            final @RequestParam(value = "username", required = false) String username,
+            final @RequestParam(value = "password", required = false) String password,
+            final HttpServletRequest request,
+            final HttpServletResponse response
+    ) throws IOException {
+
+        //  Prevent login if configuration disallows it
+        final LoginSettings settings = config.getLoginSettings();
+        if (settings == null || !settings.userPassLoginAllowed()) {
+            return new ResponseWithErrorNo(LOGIN_NOT_ALLOWED_ID, LOGIN_NOT_ALLOWED);
+        }
+
+        AuditLogger.log(username, AuditActions.USER_LOGIN);
+        LoginResult loginResult = users.userLogin(username, password);
+        LoginStatus loginStatus = loginResult.getLoginStatus();
+        //  If login successful
+        if (LoginStatus.SUCCESS == loginStatus) {
+        	this.sessionHelper.setUserSecurityInfo(session, loginResult.getSecurityInfo());
+            //  Set the user's session name
+            String redirect = sessionHelper.setRemoteUser(session, username);
+            //  Respond with success
+            if(username.equals(AdminService.SUPER_USER) && password.equals(searchConfig.getSuperUserDefaultPassword())) {
+                // Super has default password, warn them and ask them to change it.
+                redirect += "?defaultSuperUserWarn=true";
+            }
+            //response.sendRedirect(request.getContextPath() + redirect);
+            return new ResponseWithResult<>( request.getContextPath() + redirect,true, null);
+        } else if(LoginStatus.FAIL == loginStatus){
+        	return new ResponseWithErrorNo(LOGIN_FAILED_ID, LOGIN_FAILED);
+        } else {
+        	return new ResponseWithErrorNo(10, loginResult.getMessage());
+        }
+        
+    }
+
+
+    /**
+     * Attempts to register a user in community with username and password.
+     *
+     * @param session - The http session - for assigning a user to on success
+     * @param username - The user's username
+     * @param password - The user's password
+     * @return - A json response with either true or false and an error and error number
+     * @throws IOException
+     */
+    @RequestMapping(value = {"/register.json"}, method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseWithSuccessError register_post(
+            final HttpSession session,
+            final @RequestParam(value = "username", required = false) String username,
+            final @RequestParam(value = "password", required = false) String password,
+            final HttpServletRequest request,
+            final HttpServletResponse response
+    ) throws IOException {
+
+        //  Prevent registration if configuration disallows it
+        final LoginSettings settings = config.getLoginSettings();
+        if (settings == null || !settings.userPassLoginAllowed() || !settings.registrationAllowed()) {
+            return new ResponseWithErrorNo(REGISTRATION_NOT_ALLOWED_ID, REGISTRATION_NOT_ALLOWED);
+        }
+
+        //  If a user with that name already exists
+        if (users.userExists(username)) {
+            //  Error, user already exists
+            return new ResponseWithErrorNo(USER_ALREADY_EXISTS_ID, USER_ALREADY_EXISTS);
+        }
+        //  Otherwise: Attempt to register the user.
+        //  If successful
+        else if (users.registerUser(username, password)) {
+            AuditLogger.log(username, AuditActions.USER_REGISTER);
+            //  Login the user
+            return login_post(session, username, password, request, response);
+        }
+        //  Otherwise: Error, Registration failed.
+        else {
+            return new ResponseWithErrorNo(REGISTRATION_FAILED_ID, REGISTRATION_FAILED);
+        }
+    }
+
+    /**
+     * Login page
+     *
+     * @return
+     */
+    @RequestMapping({"/loginpage.do"})
+    public ModelAndView loginpage_get(
+            final HttpServletRequest request,
+            final HttpServletResponse response,
+            final HttpSession session
+    ) throws IOException {
+        final String username = sessionHelper.getRemoteUser(session);
+        //  Not yet logged in
+        if (username == null || "".equals(username)) {
+            //  Display the login page
+            final ModelAndView mv = new ModelAndView();
+            mv.addObject("config", config);
+            return mv;
+        }
+        //  Already logged in
+        else {
+            //  Redirect to the main page
+            response.sendRedirect("p/search.do");
+            return null;
+        }
+    }
+
+    /**
+     * Login page
+     *
+     * @return
+     */
+    @RequestMapping({"/loginpageA.do"})
+    public ModelAndView loginpage_getA(
+            final HttpServletRequest request,
+            final HttpServletResponse response,
+            final HttpSession session
+    ) throws IOException {
+        final String username = sessionHelper.getRemoteUser(session);
+        //  Not yet logged in
+        if (username == null || "".equals(username)) {
+            //  Display the login page
+            final ModelAndView mv = new ModelAndView("loginpageA");
+            return mv;
+        }
+        //  Already logged in
+        else {
+            //  Redirect to the main page
+            response.sendRedirect("p/search.do");
+            return null;
+        }
+    }
+
+    /**
+     * For each valid page, just show render the jsp
+     *
+     * @return
+     */
+    @RequestMapping({"/p/search.do", "/p/topicmap.do", "/p/visualiser.do", "/p/themetracker.do", "/p/nodegraph.do", "/p/docgraph.do", "/p/idolview.do"})
+    public ModelAndView findPages(final HttpSession session) {
+        try {
+            final ModelAndView mv = new ModelAndView();
+
+            final String username = sessionHelper.getRemoteUser(session);
+            final UserDetailAndRoles userDetailAndRoles = adminService.getUserWithPrivileges(username);
+
+            final Map<String, SearchView> allowedSearchViews = new HashMap<String, SearchView>();
+            final List<String> privileges = userDetailAndRoles.getPrivileges();
+            
+            // TODO remove this after testing, should be set in IDOL user settings
+            //privileges.add("view:vertica");
+            
+            for(final SearchView view : searchConfig.getSearchViews().values()) {
+                final String viewPrivilege = adminService.getViewPrivilegeName(view.getName());
+                if (privileges.contains(viewPrivilege)) {
+                    allowedSearchViews.put(view.getName(), view);
+                }
+            }
+
+            final SearchConfig userSearchConfig = SearchConfig.cloneConfig(searchConfig);
+            if (userSearchConfig != null) {
+
+                userSearchConfig.setSearchViews(allowedSearchViews);
+            }
+
+            mv.addObject("config", config);
+            mv.addObject("agentConfig", agentConfig);
+            mv.addObject("searchConfig", userSearchConfig);
+            mv.addObject("taxonomy", taxonomyConfig);
+            mv.addObject("parametric", parametricConfig);
+            mv.addObject("themeTracker", themeTrackerConfig);
+
+            if (parametricConfig.isActive()) {
+                final Map<String, Map<String, FilterField>> searchViewParametricFieldNames = new HashMap<String, Map<String, FilterField>>();
+                final Map<String, Map<String, FilterField>> searchViewFilterFieldNames = new HashMap<String, Map<String, FilterField>>();
+                for(SearchView view : allowedSearchViews.values()) {
+                    searchViewFilterFieldNames.put(view.getName(), parametricService.getFilterFieldNames(view.getName()));
+                }
+
+                mv.addObject("filterFields", searchViewFilterFieldNames);
+            }
+
+            mv.addObject("filterTypeOperators", FilterOperator.getFilterTypeOperatorsMap());
+
+            return mv;
+        }  catch (final Throwable e) {
+            final ModelAndView mv = new ModelAndView("p/error");
+            mv.addObject("errorDetails", e);
+
+            return mv;
+
+        }
+    }
+
+	@RequestMapping("/p/viewRecord.do")
+	public ModelAndView viewRecord(
+			@RequestParam(value="ref") final String ref,
+			@RequestParam(value="db") final String database,
+            @RequestParam(value="searchView") final String searchView,
+			@RequestParam(value="links", required = false) final String links,
+			@RequestParam(value="selectedNodes", required = false) final String[] selectedNodes,
+            final HttpServletRequest request,
+            final HttpSession session
+	) throws XPathExpressionException, XPathException, IOException {
+         final String user = sessionHelper.getRemoteUser(session);
+         AuditLogger.log(user, AuditActions.DOCVIEW, request.getParameterMap());
+
+        try {
+            final String docviewFile = searchConfig.getSearchViews().get(searchView).getDocviewFile();
+
+            final ModelAndView mv = new ModelAndView(admissionsView);
+            final Node docNode = searchService.viewDoc(database, searchView, ref, links, user, sessionHelper.getUserSecurityInfo(session), selectedNodes);
+
+            mv.addObject("doc", docNode);
+            mv.addObject("docviewfile", docviewFile);
+
+            return mv;
+        } catch (final RuntimeException e) {
+            final ModelAndView mv = new ModelAndView("p/error");            
+            mv.addObject("errorDetails", e);
+
+            return mv;
+        } catch (final Exception e) {
+        	 final ModelAndView mv = new ModelAndView("p/error");            
+             mv.addObject("errorDetails", e);
+
+             return mv;
+		}
+	}
+
+    @RequestMapping("p/error.do")
+    public @ResponseBody ModelAndView getErrorPage(@ModelAttribute("exception") final RuntimeException e ) {
+        final ModelAndView mv = new ModelAndView("p/error");
+        mv.addObject("errorDetails", e);
+
+        return mv;
+    }
+
+    @RequestMapping("/p/getLinkedDbContent.do")
+    public @ResponseBody
+    ResponseWithSuccessError getLinkedDbContent(
+            @RequestParam(value="linkDb") final String linkDb,
+            @RequestParam(value="linkId") final String linkId,
+            @RequestParam(value="linkQParams", required=false) final String linkQParams,
+            @RequestParam(value="linkTemplate", required=false) final String linkTemplate,
+            final HttpSession session
+    ) {
+        final String linkedContent = getLinkedContent(linkDb, linkId, linkQParams, linkTemplate, sessionHelper.getUserSecurityInfo(session));
+
+        return linkedContent != null ? new ResponseWithResult<String>(linkedContent) : new ResponseWithSuccessError("Failed to retrieve content. Please see server log for details.");
+    }
+
+    @RequestMapping("/p/getLinkedSearchViewContent.do")
+    public @ResponseBody
+    ResponseWithSuccessError getLinkedSearchViewContent(
+            @RequestParam(value="linkSearchView") final String linkSearchView,
+            @RequestParam(value="linkId") final String linkId,
+            @RequestParam(value="linkQParams", required=false) final String linkQParams,
+            @RequestParam(value="linkTemplate", required=false) final String linkTemplate,
+            final HttpSession session
+    ) {
+        final String user = sessionHelper.getRemoteUser(session);
+
+        ResponseWithSuccessError result;
+
+        final SearchView searchView = searchConfig.getSearchViews().get(linkSearchView);
+        if (searchView == null) {
+            throw new IllegalArgumentException("Invalid linkSearchView [" + linkSearchView + "].");
+        }
+
+        final UserDetailAndRoles userDetailAndRoles = adminService.getUserWithPrivileges(user);
+        final List<String> privileges = userDetailAndRoles.getPrivileges();
+        final String viewPrivilege = adminService.getViewPrivilegeName(searchView.getName());
+
+        if (privileges.contains(viewPrivilege)) {
+            final String linkedContent = getLinkedContent(searchView.getDatabase(), linkId, linkQParams, linkTemplate, sessionHelper.getUserSecurityInfo(session));
+            result = linkedContent != null ? new ResponseWithResult<String>(linkedContent) : new ResponseWithSuccessError("Failed to retrieve content. Please see server log for details.");
+
+        } else {
+            result = new ResponseWithSuccessError("User has no permission to access data in [" + linkSearchView + "] view.");
+        }
+
+        return result;
+    }
+
+
+    private String getLinkedContent(final String linkDb, final String linkId, final String linkQParams, final String linkTemplate, String securityInfo) {
+        try {
+            final String template = StringUtils.isNotEmpty(linkTemplate) ? linkTemplate : searchConfig.getDefaultLinkContentTemplate();
+
+            final Document content = searchService.getLinkedContent(linkDb, linkId, linkQParams, securityInfo);
+
+            return transformLinkContent(content, template);
+
+        } catch (final RuntimeException e) {
+            LOGGER.error("getLinkedContent error.", e);
+
+            return null;
+        }
+
+    }
+
+    private String transformLinkContent(final Document content, final String template) {
+        final StringWriter outputWriter = new StringWriter();
+        try {
+            final Source templateSource = getTemplateSource(template);
+            if (templateSource == null) {
+                return null;
+            }
+            final Transformer transformer = linkContentTransformerFactory.newTransformer(templateSource);
+            transformer.transform(new DOMSource(content.getDocumentElement()), new StreamResult(outputWriter));
+
+            return outputWriter.toString();
+
+        } catch (final TransformerConfigurationException e) {
+            LOGGER.error("Unable to read template: " + template, e);
+            return null;
+
+        } catch (final TransformerException e) {
+            LOGGER.error("Unable to transform linked content", e);
+            return null;
+        }
+
+    }
+
+
+    private Source getTemplateSource(final String template) {
+        try {
+            Resource resource = context.getResource(template);
+
+      		return new StreamSource(resource.getInputStream(), resource.getURI().toASCIIString());
+
+      	} catch (IOException ex) {
+      			LOGGER.error("Can't load xslt template '" + template + "'", ex);
+      	}
+
+        return null;
+    }
+
+}

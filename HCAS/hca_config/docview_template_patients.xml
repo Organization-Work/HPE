@@ -1,0 +1,73 @@
+<DOCUMENT>
+  <PATIENT schema="mimic2v26">
+    <DocumentTextSummary></DocumentTextSummary>
+    <SUBJECT_ID table="patient_master" column="subject_id"></SUBJECT_ID>
+    <ADMISSION table="admissions_new_temp" schema="mimic2v26" parentID="SUBJECT_ID" row="true">
+	  <HADM_ID table="admissions_new_temp" column="hadm_id"></HADM_ID>      
+      <SEX table="sex" column="sex" parentRelationKey="admissions_new_tempTosexDocView"></SEX>
+      <AGE_AT_ADMISSION table="age" column="age_at_admission"></AGE_AT_ADMISSION>
+      <AGE_AT_ADMISSION_GRP></AGE_AT_ADMISSION_GRP>
+      <ADMISSION_DATE field="PATIENT/ADMISSION/ADMISSION_DATE"></ADMISSION_DATE>
+      <ADMISSION_DATE_YRMON></ADMISSION_DATE_YRMON>
+      <ADMISSION_DATE_MON_GRP></ADMISSION_DATE_MON_GRP>
+      <ADMISSION_DATE_DAYMON_GRP></ADMISSION_DATE_DAYMON_GRP>
+      <ADMISSION_DATE_DAYWEEK_GRP></ADMISSION_DATE_DAYWEEK_GRP>
+      <ADMISSION_DATE_WEEK_GRP></ADMISSION_DATE_WEEK_GRP>
+      <DISCHARGE_DATE></DISCHARGE_DATE>
+      <DOB></DOB>
+      <HOSPITAL_EXPIRE field="PATIENT/ADMISSION/HOSPITAL_EXPIRE"></HOSPITAL_EXPIRE>
+      <ETHNICITY field="PATIENT/ETHNICITY"></ETHNICITY>
+      <ADMISSION_TYPE></ADMISSION_TYPE>
+      <RELIGION field="PATIENT/RELIGION"></RELIGION>
+      <ADMISSION_SOURCE></ADMISSION_SOURCE>
+      <OVERALL_PAYOR_GROUP></OVERALL_PAYOR_GROUP>
+      <MARITAL_STATUS></MARITAL_STATUS>
+      <DOD></DOD>
+      <AGE_AT_DEATH field="PATIENT/ADMISSION/AGE_AT_DEATH"></AGE_AT_DEATH>
+      <AGE_AT_DEATH_GRP></AGE_AT_DEATH_GRP>
+    </ADMISSION>
+    <DRG row="true" parentID="SUBJECT_ID">
+      <CODE></CODE>
+      <ITEMID></ITEMID>
+      <DESC></DESC>
+      <COST_WEIGHT field="PATIENT/DRG/COST_WEIGHT_GRP"></COST_WEIGHT>
+      <COST_WEIGHT_GRP field="PATIENT/DRG/COST_WEIGHT_GRP"></COST_WEIGHT_GRP>
+      <DISPLAY field="PATIENT/DRG/DISPLAY"></DISPLAY>
+    </DRG>
+    <ICD9 row="true" table="icd9" column="code,description" schema="mimic2v26" miscOperator="concat" parentID="SUBJECT_ID"></ICD9>
+    <ICU row="true" schema="mimic2v26" table="icustay_detail_new" parentID="SUBJECT_ID">      
+        <ICUSTAY_ID column="icustay_id" table="icustay_detail_new"></ICUSTAY_ID>
+        <FIRST_CAREUNIT column="icustay_first_careunit"></FIRST_CAREUNIT>
+        <LAST_CAREUNIT column="icustay_last_careunit"></LAST_CAREUNIT>
+        <INTIME></INTIME>
+        <OUTTIME></OUTTIME>
+        <LOS column="icustay_los"></LOS>
+        <LOS_GRP></LOS_GRP>
+        <MEDEVENTS parentID="ICUSTAY_ID">
+          <EVENT row="true" schema="mimic2v26">
+            <NAME table="medevents_new" column="label" dimensionTable="d_meditems"></NAME>
+            <OCCURRENCES></OCCURRENCES>
+          </EVENT>
+		</MEDEVENTS>
+    </ICU>
+    <POEEVENTS parentID="SUBJECT_ID">
+      <EVENT row="true" schema="mimic2v26">
+        <NAME table="poe_order_new_temp" dimensionTable="poe_med" column="drug_name"></NAME>
+        <OCCURRENCES></OCCURRENCES>
+      </EVENT>      
+    </POEEVENTS>
+    <LABEVENTS parentID="SUBJECT_ID">
+      <EVENT row="true">
+        <NAME field="PATIENT/LABEVENTS/EVENT/NAME"></NAME>
+        <OCCURRENCES></OCCURRENCES>
+      </EVENT>
+    </LABEVENTS>
+    <NOTEEVENT schema="mimic2v26" row="true" parentID="SUBJECT_ID">
+      <CAREUNIT field="PATIENT/NOTEEVENT/CAREUNIT"></CAREUNIT>
+      <CAREGIVER field="PATIENT/NOTEEVENT/CAREGIVER"></CAREGIVER>
+      <TITLE table="noteevents_new" column="title"></TITLE>
+      <CATEGORY field="PATIENT/NOTEEVENT/CATEGORY"></CATEGORY>
+      <TEXT  table="noteevents_new" column="text"></TEXT>
+    </NOTEEVENT>    	
+  </PATIENT>
+</DOCUMENT>

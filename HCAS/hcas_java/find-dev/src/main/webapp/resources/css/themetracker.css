@@ -1,0 +1,147 @@
+#paper {
+    width: 1280px;
+    height: 1600px;
+    background: black;
+}
+
+#themetracker {
+    position: relative;
+    font: 10px sans-serif;
+}
+
+.jobname-menu {
+    display: none;
+    background: teal;
+    list-style: none;
+    margin: 0;
+    padding: 2px;
+    position: absolute;
+    z-index: 1;
+}
+
+.jobname-menu-item {
+    clear: left;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.jobname-menu-item a {
+    display: block;
+    line-height: 1.5;
+    padding: 0.2em 0.4em;
+    color: white;
+    text-decoration: none;
+    margin: 1px;
+}
+
+.jobname-menu-item.selected a {
+    background-color: #1cb57f;
+    border: 1px inset black;
+    font-weight: bold;
+    margin: 0;
+}
+
+.jobname-menu-item a:hover {
+    background-color: orange;
+    border: 1px inset orange;
+    margin: 0;
+}
+
+.textwrap {
+    color: white;
+    position: absolute;
+    text-align: center;
+    padding: 1px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+/*border: 1px solid black;*/
+/*border-radius: 4px;*/
+}
+
+.textwrap:hover {
+    overflow-x: visible;
+}
+
+.cluster-popup {
+    min-width: 80px;
+}
+
+.cluster-popup, .cluster-documents {
+    color: white;
+    position: absolute;
+    background: black;
+    border: 1px solid blue;
+}
+
+.cluster-documents-body {
+    max-height: 600px;
+    overflow: auto;
+}
+
+.cluster-popup-numresults {
+    float: right;
+    margin: 4px 3px 2px 1px;
+}
+
+.cluster-documents {
+    background: rgba(0,0,0,0.95);
+}
+
+.cluster-documents-title {
+    background: none repeat scroll 0 0 #151515;
+    border-bottom: 1px solid #151515;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.cluster-documents-doc {
+    border-bottom: 1px solid #151515;
+}
+
+.cluster-email, .cluster-viewdocs, .cluster-chart {
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+    vertical-align: middle;
+}
+
+.cluster-timeline-paper {
+    width: 600px;
+    height: 300px;
+    margin: 20px;
+    border: 1px white solid;
+}
+
+.cluster-timeline-docs {
+    float: right;
+    margin: 20px 20px 20px 0;
+    width: 600px;
+    height: 300px;
+    overflow: auto;
+}
+
+.dateheader {
+    top: 8px;
+    color: white;
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#datesPicker {
+    position:absolute;
+    z-index:1;
+    border: 1px solid orange;
+    padding: 2px;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+input.from, input.to {
+    text-align: center;
+}

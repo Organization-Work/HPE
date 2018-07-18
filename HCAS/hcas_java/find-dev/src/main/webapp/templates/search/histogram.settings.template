@@ -1,0 +1,42 @@
+<div class="btn-group">
+                <button class="btn btn-mini btn-info histogram-refresh"><i class="icon-white icon-refresh"></i> Refresh</button>
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span></button>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="histogram-settings form-horizontal">
+
+                            <div class="control-group">
+                                <label class="control-label" for="histogram-max-rows">Max Rows</label>
+                                <div class="controls">
+                                    <input type="number" id="histogram-max-rows" value="500" min="1" max="2000" step="1">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="histogram-sort">Sort</label>
+                                <div class="controls">
+                                    <select id="histogram-sort" style="float:left">
+                                        <option value="DocumentCount">Count</option>
+                                        <option value="Alphabetical">Label</option>
+                                    </select>
+                                </div>
+                                <div class="asc-arrow1">
+                                    <button style="margin-top: 0px" class="btn btn-info arrow-box arrow-box-hover histogram-refresh-order" data-order="desc">
+                                    	<span class="icon icon-arrow-down icon-white"></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                  <input type="checkbox" id="histogram-include-parent">
+                                <div class="controls">
+
+
+                                 <label class="control-label" for="histogram-include-parent">Show Count values as % of records</label>
+                                 </div>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+</div>

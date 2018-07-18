@@ -1,0 +1,17 @@
+<% _.each(items, function (doc) { %>
+	<div class="agentDocument" data-document="<%- doc.reference %>">
+		<button class="tickbox"></button>
+		<div class="agentDocContent">
+			<h2>
+				<a class="lightbox" href="<%- doc.url || doc.reference %>"><%- doc.title %></a>
+			</h2>
+			<p><%- doc.summary %></p>
+			<table class="table table-bordered" style="width: auto;">
+				<tr>
+					<th>Weight:</th>
+					<td><%- doc.weight %></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+<% }); %>

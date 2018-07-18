@@ -1,0 +1,22 @@
+#CAS SSO settings for your machine
+cas.client.service=http://lmandrioli-z600.autonomy.com:8080/find-dev
+cas.client.serverName=http://lmandrioli-z600.autonomy.com:8080
+
+#Logging
+log.file.name=../logs/${project.artifactId}
+
+
+# PostgreSQL Database
+find-db.url=jdbc:postgresql://localhost:5432/find
+#find-db.url=jdbc:postgresql://find-demo:5432/find
+find-db.username=find
+find-db.password=jd62uend7639gmnd
+# If you want to update/create tables in the server
+hibernate.hbm2ddl.auto=update
+
+# To create the find user, database and schema on an empty PostgreSQL server, use the following commands:
+# sudo -u postgres psql
+#   create user find CREATEDB password 'jd62uend7639gmnd';
+#   create database find with owner find;
+#   \c find
+#   CREATE SCHEMA find AUTHORIZATION find;

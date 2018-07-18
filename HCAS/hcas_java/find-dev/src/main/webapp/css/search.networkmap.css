@@ -1,0 +1,63 @@
+.networkmap-node {
+    stroke: #fff;
+    stroke-width: 1.5px;
+    stroke-opacity: .3;
+}
+
+.networkmap-link {
+    stroke: #999;
+    stroke-opacity: .2;
+}
+
+.networkmap-link.hover {
+    stroke: orange;
+    stroke-opacity: 1;
+}
+
+.networkmap-link.hidden {
+    stroke: none;
+}
+
+.networkmap-label {
+    opacity: 0;
+    pointer-events: none;
+    font-size: 9px;
+    text-anchor: middle;
+}
+
+.networkmap-label.target {
+    opacity: 1;
+    fill: green;
+}
+
+span.target {
+    color: green;
+}
+
+.networkmap-label.source {
+    opacity: 1;   ;
+    fill: red;
+}
+
+span.source {
+    color: red;
+}
+
+.networkmap-tooltip {
+    color: white;
+    border: 1px solid white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 2px;
+    position:absolute;
+    pointer-events: none;
+    text-align: center;
+    z-index: 1;
+}
+
+#networkmap-totals {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}

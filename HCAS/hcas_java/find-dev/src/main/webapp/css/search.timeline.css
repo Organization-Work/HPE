@@ -1,0 +1,333 @@
+#timeline {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 1057;
+    height:500;
+}
+.timeline-settings
+{
+     padding-left: 10px;
+     padding-right: 10px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+}
+
+#timeline-legendarea {
+	position: absolute;
+	top: 400px;
+	right: 0;
+	z-index: 1;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	max-width: 240px;
+	background-color: white;
+}
+#timeline-btnbar {
+	position: relative; 
+	text-anchor: middle; 
+	font-weight: bold; 
+	right: 0;
+	z-index: 1;
+	margin-bottom: 0px;
+	max-width: 240px;
+}
+
+
+#timeline-legend {
+	position: relavtive;
+	right: 10;
+	z-index: 1;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-top: 5px;
+	max-width: 240px;
+	max-height: 300px;
+	overflow: auto;
+	outline: 1px solid rgb(128,128,128);
+}
+
+#timeline-legendvallist {
+	position: relavtive;
+	width: auto;
+	height:auto;
+}
+
+#timeline-legendtitle {
+		dy: 20px;
+		text-anchor: middle;
+		font-weight: bold;
+		position: relative;
+}
+
+#timeline-filters {
+	position: absolute;
+	top: 30px;
+	right: 0;
+	z-index: 1;
+	margin-bottom: 40px;
+	width: 240px;
+}
+
+#timeline-filters li {
+	list-style: none;
+	margin: 1px 2px;
+	padding: 5px 2px;
+	border-radius: 2px;
+	background: #E6DFCA;
+	text-align: center;
+	color: black;
+}
+
+#timeline-filters li.active {
+	background: #94d2f7;
+}
+
+#timeline-filters li:hover {
+	background: #66c3fb;
+}
+
+ul.tfield-group-list {
+	margin: 0;
+}
+
+button.tfield-group-header {
+	width: 100%;
+	/*    
+    background-color: #e21313;
+    
+background-color: #f5f5f5;
+*/
+	font-size: 15px;
+	line-height: 22px;
+	/*color: #fff;*/
+	background-image: -ms-linear-gradient(top,#929292, #575454);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff),
+		to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top, #929292, #575454);
+	background-image: -o-linear-gradient(top,#929292, #575454);
+	background-image: linear-gradient(top,#929292, #575454);
+	background-image: -moz-linear-gradient(top, #929292, #575454)
+}
+
+#timeline button.tfield-group-header:hover {
+	background-position: 0;
+}
+
+
+#timeline text.shadow {
+    stroke: #fff;
+    stroke-width: 2.5px;
+    opacity: 0.9;
+}
+#timeline path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+#timeline line {
+    stroke: grey;
+    opacity: 0.5;
+}
+#timeline .axis path,
+#timeline .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+#timeline .grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+#timeline  .grid path {
+    stroke-width: 0;
+}
+#timeline .area {
+    fill: lightsteelblue;
+    stroke-width: 0;
+  	clip-path: url(#clip);
+}
+#timeline .overlay {
+    fill: none;
+    pointer-events: all;
+}
+#timeline .focus circle {
+    fill: green;
+    stroke: steelblue;
+}
+
+
+#timeline  .brush .extent {
+  stroke: #fff;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+
+
+
+#timeline-chart {
+	margin: auto;
+}
+
+#timeline_svg a.timeline-interval-options {
+    padding-left: 10px;
+}
+
+#timeline_svg .timeline-interval-options:before {
+    content: "\3000";
+}
+
+#timeline_svg .timeline-interval-options.selected:before {
+    content: "\2713";
+}
+#timeline_svg .grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+#timeline_svg .grid path {
+      stroke-width: 0;
+}
+#timeline_svg .grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+#timeline_svg .grid path {
+      stroke-width: 0;
+}
+
+#timeline_svg th.selected {
+    color: #DD0707;
+}
+
+#timeline_svg .timeine-interval-label {
+    position: relative;
+    float: left;
+    margin-bottom: 0;
+    border: 1px solid;
+    text-align: center;
+    line-height: 14px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);    
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+}
+
+#formatSelector {
+    margin-right: 5px;
+}
+
+#timeline_svg  .axis path,
+#timeline_svg .axis line {
+  fill: none;
+  stroke: #011;
+  shape-rendering: crispEdges;
+}
+
+#timeline_svg .x.axis path {
+  display: show;
+}
+
+#timeline_svg .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+#timeline-totals {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#timeline_svg  .idolview-tooltip {
+	position: absolute;
+	text-align: center;
+	text-overflow: ellipsis;
+	pointer-events: none;
+}
+
+#timeline_svg .idolview-tooltip-filter {
+	color: #eee;
+	font-size: smaller;
+}
+
+#timeline_svg .idolview-tooltip-name {
+	color: white;
+	font-weight: bold;
+}
+
+#timeline_svg .idolview-tooltip-size {
+	color: black;
+}
+#timeline_svg .timeline-tooltip {
+    color: white;
+    border: 1px solid white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 2px;
+    position:absolute;
+    pointer-events: none;
+    text-align: center;
+    z-index: 1;
+}
+
+#timeline_svg .timeline-btn {
+    margin: 0 5px 5px 0;
+    float: left;
+}
+
+#timeline_svg .timeline-tooltip-label {
+    font-weight: bold;
+}
+
+#timeline_svg .timeline-ul {
+    margin-bottom: 0;
+}
+
+
+#timeline_svg .timeline-header-input {
+    float: right;
+    margin-right: 5px !important;
+}
+
+#timeline_svg .timeline-input {
+    white-space: nowrap;
+}
+
+#timeline_svg .timeline-menu {
+    min-width: 350px;
+    max-width: 450px;
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#timeline_svg .timeline-menu label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#timeline_svg.multiselect-group {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#timeline_svg .timeline-btn-left
+{
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    margin-left: -1px !important;
+}
+
+#timeline_svg .timeline-btn-right
+{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}

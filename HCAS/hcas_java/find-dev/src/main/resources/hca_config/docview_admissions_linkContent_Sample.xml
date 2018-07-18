@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<docview xmlns="http://www.autonomy.com/find/docview"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.autonomy.com/find/docview hca_docview.xsd"
+    docRoot="DOCUMENT">
+    <viewtab name="Encounter Info">
+        <field name="ADMISSION/HADM_ID" label="Encounter ID"></field>
+        <field name="ADMISSION/PATIENT/ADMISSION_DATE" label="Admission Date"></field>
+        <field name="ADMISSION/PATIENT/DISCHARGE_DATE" label="Discharge Date"></field>
+        <field name="ADMISSION/PATIENT/ADMISSION_DATE_YRMON" label="Admission YearMonth"></field>
+        <field name="ADMISSION/PATIENT/ADMISSION_DATE_MON_GRP" label="Admission Month"></field>
+        <field name="ADMISSION/PATIENT/ADMISSION_DATE_WEEK_GRP" label="Admission Week"></field>
+    </viewtab>
+    <viewtab name="Patient Info">
+        <field name="ADMISSION/PATIENT/SUBJECT_ID" label="Patient ID" contentView="patients" contentQParams="print=fields&amp;printfields=PATIENT/ADMISSION/PATIENT/*" contentTemplate="/WEB-INF/xsl/defaultLinkContent2.xsl"></field>        
+    </viewtab>
+    
+</docview>    

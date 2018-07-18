@@ -1,0 +1,82 @@
+html, body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+circle.node {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+line.link {
+    stroke: #999;
+    stroke-opacity: .6;
+}
+
+.textlabel {
+    pointer-events: none;
+    font-size: 11px;
+    text-anchor: middle;
+}
+
+#legend {
+    bottom: 2px;
+    font: 16px Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+    overflow-y: auto;
+    position: fixed;
+    right: 2px;
+    top: 42px;
+    width: 350px;
+}
+
+#legend > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#legend > ul > li {
+    height: 23px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.legendpad {
+    width: 5px;
+    height: 4px;
+    margin-right: 3px;
+    border: 1px solid white;
+}
+
+#paper {
+    width: 100%;
+    height: 100%;
+}
+
+#load-indicator {
+    display: inline-block;
+    width: 18px;
+    height: 15px;
+    background-image: url(../images/ajax-loader.gif);
+}
+
+#controls {
+    font-size: 12px;
+    position: fixed;
+    top: 42px;
+    left: 2px;
+}
+
+.metatext {
+    margin-left: 10px;
+    color: gray;
+    font-size: smaller;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

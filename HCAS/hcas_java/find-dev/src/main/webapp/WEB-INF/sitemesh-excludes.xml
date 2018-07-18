@@ -1,0 +1,8 @@
+<decorators>
+    <excludes>
+        <pattern>/viewer.do*</pattern>
+        <pattern>/p/viewRecord.do*</pattern>
+        <pattern>/resources/js/tpl/*.htm</pattern>
+        <pattern>/docs/*.htm</pattern>
+    </excludes>
+</decorators>

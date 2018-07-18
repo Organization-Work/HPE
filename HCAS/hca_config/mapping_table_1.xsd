@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:vertica="http://www.autonomy.com/vertica/fields"
+  targetNamespace="http://www.autonomy.com/vertica/fields"
+  elementFormDefault="qualified">
+
+		
+<complexType name="relation">
+         <sequence>
+				<element name="relationName" type="string"></element>
+				<element name="fromTableName" type="string"></element>
+				 <element name="toTableName" type="string"></element>
+				 <element name="relationType" type="string" minOccurs="0"></element>
+				 <element name="fromColumnName" type="string" minOccurs="0"></element>
+				 <element name="toColumnName" type="string" minOccurs="0"></element>
+				 <element name="joinExpression" type="string" minOccurs="0"></element>
+				 <element name="parentRelationName" type="string" minOccurs="0"></element>
+		</sequence>
+    </complexType>
+		 
+	<complexType name="table">
+         <sequence>
+				 <element name="tableName" type="string"></element>
+				 <element name="schema" type="string"></element>
+				  <element name="defaultFilter" type="string" minOccurs="0"></element>
+				 <element name="joinRelation" type="vertica:relation" minOccurs="0" maxOccurs="unbounded"/>				 
+		</sequence>
+    </complexType>
+		 
+	<element name="tables">
+        <complexType>
+            <sequence>
+                <element name="table" type="vertica:table" minOccurs="1" maxOccurs="unbounded">
+                </element>
+            </sequence>
+        </complexType>
+    </element> 
+	
+   </schema>

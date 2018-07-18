@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:vertica="http://www.autonomy.com/vertica/fields"
+  targetNamespace="http://www.autonomy.com/vertica/fields"
+  elementFormDefault="qualified">
+
+
+	<complexType name="TableRelationObject">
+         <sequence>
+				
+				<element name="joinNumber" type="int"></element>
+				<element name="table" type="string"></element>
+				 <element name="refCol" type="string"></element>
+				 <element name="joinCol" type="string"></element>
+				 <element name="parentTable" type="string"></element>
+				 <element name="parentCol" type="string"></element>
+				 <element name="extraColumns" type="string"></element>				 
+				 <element name="extraParentColumns" type="string"></element>
+				 <element name="joinExp" type="string"></element>
+				  <element name="whereExp" type="string" minOccurs="0"></element>
+		</sequence>
+    </complexType>
+
+		 
+	<complexType name="TableRelationList">
+         <sequence>
+				 <element name="view" type="string"></element>				 
+				 <element name="relation" type="vertica:TableRelationObject" minOccurs="0" maxOccurs="unbounded"/>               
+		</sequence>
+    </complexType>
+		 
+	<element name="TableRelations">
+        <complexType>
+            <sequence>
+                <element name="tableRelationList" type="vertica:TableRelationList" minOccurs="1" maxOccurs="unbounded">
+                </element>
+            </sequence>
+        </complexType>
+    </element> 
+	
+   </schema>

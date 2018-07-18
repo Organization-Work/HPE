@@ -1,0 +1,26 @@
+<div class="btn-group">
+    <button class="btn btn-mini btn-info" id="updatebtn" data-toggle="tooltip" title="Refresh Topic Map"><i class="icon-white icon-refresh"></i> Refresh</button>
+    <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown" title="Select Fields for Topic Map">Select Fields<span class="caret"></span></button>
+    <ul class="nav dropdown-menu topicmap-menu">
+    <li class="nav-header" id="clearAll">
+	   <div align="center" style="cursor: pointer;">Clear All</div>
+	</li>
+    <li class="nav-header" id="snomedTopicBranch" ><button class="btn" style="width: 100%"><i class="icon-plus icon-minus pull-left"/>Concept Branches</button>
+        <ul class="nav topicmap-ul" id="snomedList">
+        <% _.each(categories, function (value) { %>
+            <li class="topicmap-input"><a href="javascript:void(0)" data-toggle="tooltip" title="<%- value %>"><label><input type="checkbox" value="<%- value %>" style="float:right"> <%- value %> </label></a></li>
+        <% }) %>
+        </ul>
+    </li>
+    <li class="nav-header" id="fieldsTopicBranch"  style="margin-top: 0px;"><button class="btn" style="width: 100%"><i class="icon-plus icon-minus pull-left"/>Fields</button>
+        <ul class="nav topicmap-ul" id="fieldList">
+        <% _.each(fieldNames, function (value) { 
+        	var defaultSelectedClass = value.defaultSelect ? 'class=default-selected' : '';
+        %>
+        
+            <li class="topicmap-input"><a href="javascript:void(0)" data-toggle="tooltip" title="<%- value.displayName %>"><label><input type="checkbox" value="<%- value.fieldName %>" <%- defaultSelectedClass %> style="float: right;"> <%- value.displayName %> </label></a></li>
+        <% }) %>
+        </ul>
+    </li>
+    </ul>
+</div>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebHelpSystem DefaultUrl="Content/hcaoh00020Introduction.htm" Toc="Data/Toc.js" Index="Data/Index.js" Concepts="Data/Concepts.xml" BrowseSequence="Data/BrowseSequence.js" SearchDatabase="Data/Search.xml" Synonyms="Data/Synonyms.xml" SkinName="_HP_HTML5_Exp" Skins="_HP_HTML5_Exp,_HP_HTML5_Exp_Gloss,_HP_HTML5_Exp_Index,_HP_HTML5_Exp_Index_Gloss" BuildTime="11/6/2014 11:19:13 AM" BuildVersion="9.1.2.0" TargetType="WebHelp2" SkinTemplateFolder="Skin/" InPreviewMode="false" MoveOutputContentToRoot="false" MakeFileLowerCase="false" UseCustomTopicFileExtension="false">
+    <CatapultSkin Version="2" SkinType="WebHelp2" Comment="HTML5 skin" Anchors="Width,Height" Width="800" Height="600" Top="0" Left="0" Bottom="0" Right="0" Tabs="TOC" DefaultTab="TOC" UseBrowserDefaultSize="True" UseDefaultBrowserSetup="true" NavigationLinkTop="true" AutoSyncTOC="true" Title="" NavigationLinkBottom="false" Name="_HP_HTML5_Exp">
+        <Toolbar EnableCustomLayout="true" Buttons="PreviousTopic|NextTopic|ExpandAll|RemoveHighlight|Print"> //QCCR1K4347, QCCR1K3864, QCCR1K4294
+ 
+    <Script>$(document).ready(function () {
+ 
+
+
+  
+
+
+			var $myfloat = "left" 
+
+			if ($('html.right-layout').length &gt; 0) { 
+			var $myfloat = "right" 
+			}
+
+
+			//get the contents of the second header line and assign to variable//
+			var $div = $('&lt;div&gt;');
+			$div.load('Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm #header-title2', function () {
+
+			//remove all spaces and returns from the result//
+			test = $(this).text()
+			test = test.replace(/\s+/g, '');
+			test = test.replace(/[\n\r]/g, '');
+
+			//set the base format for the header text//
+			$("#header-content").css({
+			"visibility": "visible",
+			"float": "left",
+			"left": "20px",
+			"padding-left": "1em",
+			"font-family": "'HP Simplified', HPSimplifiedLocal, Arial, Tahoma, 'Lucida Sans Unicode', sans-serif;",
+			//"font-weight": "bold",//
+			"float" : $myfloat
+			 
+			});
+
+			if (test != "") { //if the second header variable is null, set formats for a one-line banner//
+			// add styles for header text //
+			$("#header-content").css({
+			"margin-top": "0.8em",
+			"font-size": "1.2em"
+			});
+
+			} else { //if the second header variable is not null, set formats for a two-line banner//
+			// add styles for header text //
+			$("#header-content").css({
+			"margin-top": "0.5em",
+			"font-size": "2em"
+			});
+			}
+			});
+
+
+			// add divs for header text and for logo //
+			$("#header&gt;a").after('&lt;div id="header-content"&gt;&lt;/div&gt;');
+			$("#header&gt;a").after('&lt;div id="header-logo"&gt;&lt;/div&gt;');
+
+			// load the contents of the #header-content from Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm file into #header-content //
+			$("#header-content").load("Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm #header-content  &gt; *");
+
+			//write the link to the standard logo file//
+			$("#header-logo").html("&lt;img src='Content/Resources/MasterPages/_HPb_banner_graphic.png' /&gt;"); //write the call to the bannar graphic and format the div.
+
+
+			// add styles to position the logo //
+			$("#header-logo").css({
+			"visibility": "visible",
+			"float" : $myfloat,
+			"left": "20px",
+			"padding-left": "1em",
+			"margin-top": "1em"
+			});
+
+
+			
+
+			$("span.tabs-nav-text").css({"cursor": "default"}); //QCCR1K4337
+			$("#contentBodyInner").css({
+			"border-left-color":"white",
+			"border-right-color":"white",
+			"margin-top":"0.5em",
+			  }); 
+
+ 			$("#contentBody").css({"margin-left": "1.5em"}); //QCCR1K4337
+
+
+			$("div.search-filter-content").css({"border":"1px solid #E5E8E8"});   /*QCCR1K4340*/
+
+			//Get the name of the helpset's default file name
+			var url = window.location.pathname;
+			var defaultFile = url.substring(url.lastIndexOf('/')+1);
+
+			if (defaultFile  != "Default.htm") {//If the default filename is not Default.htm, reset the link using the correct default file name
+				var link = document.getElementById("searchLink");
+				var path= "./" + defaultFile + "#Resources/MasterPages/_HP_aboutSearch.htm";
+				link.setAttribute("href", path);
+}
+
+});
+
+
+
+		</Script></Toolbar>
+        <WebHelpOptions NavigationPanePosition="Left" />
+    </CatapultSkin>
+    <CatapultSkin Version="2" SkinType="WebHelp2" Comment="HTML5 skin" Anchors="Width,Height" Width="800" Height="600" Top="0" Left="0" Bottom="0" Right="0" Tabs="TOC,Glossary" DefaultTab="TOC" UseBrowserDefaultSize="True" UseDefaultBrowserSetup="true" NavigationLinkTop="true" AutoSyncTOC="true" Title="" NavigationLinkBottom="false" Name="_HP_HTML5_Exp_Gloss">
+        <Toolbar EnableCustomLayout="true" Buttons="PreviousTopic|NextTopic|ExpandAll|RemoveHighlight|Print"> //QCCR1K4347, QCCR1K3864
+		<Script>$(document).ready(function () {
+ 
+			var $myfloat = "left" 
+
+			if ($('html.right-layout').length &gt; 0) { 
+			var $myfloat = "right" 
+			}
+
+
+			//get the contents of the second header line and assign to variable//
+			var $div = $('&lt;div&gt;');
+			$div.load('Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm #header-title2', function () {
+
+			//remove all spaces and returns from the result//
+			test = $(this).text()
+			test = test.replace(/\s+/g, '');
+			test = test.replace(/[\n\r]/g, '');
+
+			//set the base format for the header text//
+			$("#header-content").css({
+			"visibility": "visible",
+			"float": "left",
+			"left": "20px",
+			"padding-left": "1em",
+			"font-family": "'HP Simplified', HPSimplifiedLocal, Arial, Tahoma, 'Lucida Sans Unicode', sans-serif;",
+			//"font-weight": "bold",//
+			"float" : $myfloat
+			});
+
+			if (test != "") { //if the second header variable is null, set formats for a one-line banner//
+			// add styles for header text //
+			$("#header-content").css({
+			"margin-top": "0.8em",
+			"font-size": "1.2em"
+			});
+
+			} else { //if the second header variable is not null, set formats for a two-line banner//
+			// add styles for header text //
+			$("#header-content").css({
+			"margin-top": "0.5em",
+			"font-size": "2em"
+			});
+			}
+			});
+
+
+			// add divs for header text and for logo //
+			$("#header&gt;a").after('&lt;div id="header-content"&gt;&lt;/div&gt;');
+			$("#header&gt;a").after('&lt;div id="header-logo"&gt;&lt;/div&gt;');
+
+			// load the contents of the #header-content from Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm file into #header-content //
+			$("#header-content").load("Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm #header-content  &gt; *");
+
+			//write the link to the standard logo file//
+			$("#header-logo").html("&lt;img src='Content/Resources/MasterPages/_HPb_banner_graphic.png' /&gt;"); //write the call to the bannar graphic and format the div.
+
+
+			// add styles to position the logo //
+			$("#header-logo").css({
+			"visibility": "visible",
+			"float" : $myfloat,
+			"left": "20px",
+			"padding-left": "1em",
+			"margin-top": "1em"
+			});
+
+
+			$("span.tabs-nav-text").css({"cursor": "default"}); //QCCR1K4337
+			$("#contentBodyInner").css({
+			"border-left-color":"white",
+			"border-right-color":"white",
+			"margin-top":"0.5em",
+			  }); 
+
+ 			$("#contentBody").css({"margin-left": "1.5em"}); //QCCR1K4337
+
+
+			$("div.search-filter-content").css({"border":"1px solid #E5E8E8"});   /*QCCR1K4340*/
+
+ 			//Get the name of the helpset's default file name
+			var url = window.location.pathname;
+			var defaultFile = url.substring(url.lastIndexOf('/')+1);
+
+			if (defaultFile  != "Default.htm") {//If the default filename is not Default.htm, reset the link using the correct default file name
+				var link = document.getElementById("searchLink");
+				var path= "./" + defaultFile + "#Resources/MasterPages/_HP_aboutSearch.htm";
+				link.setAttribute("href", path);
+			}
+
+});
+
+
+
+		</Script></Toolbar>
+        <WebHelpOptions NavigationPanePosition="Left" />
+    </CatapultSkin>
+    <CatapultSkin Version="2" SkinType="WebHelp2" Comment="HTML5 skin" Anchors="Width,Height" Width="800" Height="600" Top="0" Left="0" Bottom="0" Right="0" Tabs="TOC,Index" DefaultTab="TOC" UseBrowserDefaultSize="True" UseDefaultBrowserSetup="true" NavigationLinkTop="true" AutoSyncTOC="true" Title="" NavigationLinkBottom="false" Name="_HP_HTML5_Exp_Index">
+        <Toolbar EnableCustomLayout="true" Buttons="PreviousTopic|NextTopic|ExpandAll|RemoveHighlight|Print"> //QCCR1K4347, QCCR1K3864
+		<Script>$(document).ready(function () {
+ 
+			var $myfloat = "left" 
+
+			if ($('html.right-layout').length &gt; 0) { 
+			var $myfloat = "right" 
+			}
+
+
+			//get the contents of the second header line and assign to variable//
+			var $div = $('&lt;div&gt;');
+			$div.load('Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm #header-title2', function () {
+
+			//remove all spaces and returns from the result//
+			test = $(this).text()
+			test = test.replace(/\s+/g, '');
+			test = test.replace(/[\n\r]/g, '');
+
+			//set the base format for the header text//
+			$("#header-content").css({
+			"visibility": "visible",
+			"float": "left",
+			"left": "20px",
+			"padding-left": "1em",
+			"font-family": "'HP Simplified', HPSimplifiedLocal, Arial, Tahoma, 'Lucida Sans Unicode', sans-serif;",
+			//"font-weight": "bold",//
+			"float" : $myfloat
+			});
+
+			if (test != "") { //if the second header variable is null, set formats for a one-line banner//
+			// add styles for header text //
+			$("#header-content").css({
+			"margin-top": "0.8em",
+			"font-size": "1.2em"
+			});
+
+			} else { //if the second header variable is not null, set formats for a two-line banner//
+			// add styles for header text //
+			$("#header-content").css({
+			"margin-top": "0.5em",
+			"font-size": "2em"
+			});
+			}
+			});
+
+
+			// add divs for header text and for logo //
+			$("#header&gt;a").after('&lt;div id="header-content"&gt;&lt;/div&gt;');
+			$("#header&gt;a").after('&lt;div id="header-logo"&gt;&lt;/div&gt;');
+
+			// load the contents of the #header-content from Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm file into #header-content //
+			$("#header-content").load("Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm #header-content  &gt; *");
+
+			//write the link to the standard logo file//
+			$("#header-logo").html("&lt;img src='Content/Resources/MasterPages/_HPb_banner_graphic.png' /&gt;"); //write the call to the bannar graphic and format the div.
+
+
+			// add styles to position the logo //
+			$("#header-logo").css({
+			"visibility": "visible",
+			"float" : $myfloat,
+			"left": "20px",
+			"padding-left": "1em",
+			"margin-top": "1em"
+			});
+
+
+			$("span.tabs-nav-text").css({"cursor": "default"}); //QCCR1K4337
+			$("#contentBodyInner").css({
+			"border-left-color":"white",
+			"border-right-color":"white",
+			"margin-top":"0.5em",
+			  }); 
+
+ 			$("#contentBody").css({"margin-left": "1.5em"}); //QCCR1K4337
+
+
+			$("div.search-filter-content").css({"border":"1px solid #E5E8E8"});   /*QCCR1K4340*/
+
+ 			//Get the name of the helpset's default file name
+			var url = window.location.pathname;
+			var defaultFile = url.substring(url.lastIndexOf('/')+1);
+
+			if (defaultFile  != "Default.htm") {//If the default filename is not Default.htm, reset the link using the correct default file name
+				var link = document.getElementById("searchLink");
+				var path= "./" + defaultFile + "#Resources/MasterPages/_HP_aboutSearch.htm";
+				link.setAttribute("href", path);
+			}
+
+});
+
+
+
+		</Script></Toolbar>
+        <WebHelpOptions NavigationPanePosition="Left" />
+    </CatapultSkin>
+    <CatapultSkin Version="2" SkinType="WebHelp2" Comment="HTML5 skin" Anchors="Width,Height" Width="800" Height="600" Top="0" Left="0" Bottom="0" Right="0" Tabs="TOC,Index,Glossary" DefaultTab="TOC" UseBrowserDefaultSize="True" UseDefaultBrowserSetup="true" NavigationLinkTop="true" AutoSyncTOC="true" Title="" NavigationLinkBottom="false" Name="_HP_HTML5_Exp_Index_Gloss">
+        <Toolbar EnableCustomLayout="true" Buttons="PreviousTopic|NextTopic|ExpandAll|RemoveHighlight|Print"> //QCCR1K4347, QCCR1K3864
+		<Script>$(document).ready(function () {
+ 
+			var $myfloat = "left" 
+
+			if ($('html.right-layout').length &gt; 0) { 
+			var $myfloat = "right" 
+			}
+
+
+			//get the contents of the second header line and assign to variable//
+			var $div = $('&lt;div&gt;');
+			$div.load('Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm #header-title2', function () {
+
+			//remove all spaces and returns from the result//
+			test = $(this).text()
+			test = test.replace(/\s+/g, '');
+			test = test.replace(/[\n\r]/g, '');
+
+			//set the base format for the header text//
+			$("#header-content").css({
+			"visibility": "visible",
+			"float": "left",
+			"left": "20px",
+			"padding-left": "1em",
+			"font-family": "'HP Simplified', HPSimplifiedLocal, Arial, Tahoma, 'Lucida Sans Unicode', sans-serif;",
+			//"font-weight": "bold",//
+			"float" : $myfloat
+			});
+
+			if (test != "") { //if the second header variable is null, set formats for a one-line banner//
+			// add styles for header text //
+			$("#header-content").css({
+			"margin-top": "0.8em",
+			"font-size": "1.2em"
+			});
+
+			} else { //if the second header variable is not null, set formats for a two-line banner//
+			// add styles for header text //
+			$("#header-content").css({
+			"margin-top": "0.5em",
+			"font-size": "2em"
+			});
+			}
+			});
+
+
+			// add divs for header text and for logo //
+			$("#header&gt;a").after('&lt;div id="header-content"&gt;&lt;/div&gt;');
+			$("#header&gt;a").after('&lt;div id="header-logo"&gt;&lt;/div&gt;');
+
+			// load the contents of the #header-content from Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm file into #header-content //
+			$("#header-content").load("Content/Resources/MasterPages/_HP_HTML5_bannerTitle.htm #header-content  &gt; *");
+
+			//write the link to the standard logo file//
+			$("#header-logo").html("&lt;img src='Content/Resources/MasterPages/_HPb_banner_graphic.png' /&gt;"); //write the call to the bannar graphic and format the div.
+
+
+			// add styles to position the logo //
+			$("#header-logo").css({
+			"visibility": "visible",
+			"float" : $myfloat,
+			"left": "20px",
+			"padding-left": "1em",
+			"margin-top": "1em"
+			});
+
+
+			$("span.tabs-nav-text").css({"cursor": "default"}); //QCCR1K4337
+			$("#contentBodyInner").css({
+			"border-left-color":"white",
+			"border-right-color":"white",
+			"margin-top":"0.5em",
+			  }); 
+
+ 			$("#contentBody").css({"margin-left": "1.5em"}); //QCCR1K4337
+
+
+			$("div.search-filter-content").css({"border":"1px solid #E5E8E8"});   /*QCCR1K4340*/
+
+ 			//Get the name of the helpset's default file name
+			var url = window.location.pathname;
+			var defaultFile = url.substring(url.lastIndexOf('/')+1);
+
+			if (defaultFile  != "Default.htm") {//If the default filename is not Default.htm, reset the link using the correct default file name
+				var link = document.getElementById("searchLink");
+				var path= "./" + defaultFile + "#Resources/MasterPages/_HP_aboutSearch.htm";
+				link.setAttribute("href", path);
+			}
+
+});
+
+
+
+		</Script></Toolbar>
+        <WebHelpOptions NavigationPanePosition="Left" />
+    </CatapultSkin>
+</WebHelpSystem>

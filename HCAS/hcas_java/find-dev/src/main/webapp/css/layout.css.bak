@@ -1,0 +1,613 @@
+@CHARSET "UTF-8";
+
+/*--
+  Layout
+  -- */
+html,body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	padding: 20px 0;
+}
+
+.navbar-fixed-top .navbar-inner {
+	padding: 0 10px;
+}
+
+.mainNav :first-child a {
+    border-left: 1px solid #373737;
+}
+
+.mainNav a {
+    border-right: 1px solid #373737;
+}
+
+.content {
+	position: absolute;
+	top: 40px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	zoom: 1; /* Trigger HasLayout in IE7 */
+}
+
+.sidebar {
+    position: relative;
+    float: left;
+    width: 28%;
+    height: 100%;
+}
+
+.visual-results {
+    position: relative;
+    float: right;
+    width: 72%;
+    height: 100%;
+}
+
+@media (min-width: 1500px) {
+    .sidebar {
+        width: 25%;
+    } 
+    .visual-results {
+        width: 75%;
+    }
+}
+
+
+.pagesnav {
+	position: absolute;
+	left: 0;
+	top: 4px;
+	right: 0;
+	height: 30px;
+	z-index: 1;
+}
+
+.main-side {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.tabpage {
+	display: none;
+	position: relative;
+}
+
+.tabpage.active {
+	display: block;
+}
+
+.top-bar {
+	width: auto;
+	display: block;
+	overflow: hidden;
+}
+
+.main-content {
+	top: 40px;
+	bottom: 0;
+	left: 0;
+	right: 0
+}
+
+.top-bar.right-search {
+	float: right;
+	width: 250px;
+	padding: 4px 7px 5px;
+}
+
+.nav.nav-right {
+	float: right;
+	margin: 0;
+}
+
+.hideoverflow {
+	overflow: hidden;
+}
+
+.scrollable-y {
+	overflow-y: scroll;
+}
+
+.scrollable-auto {
+	overflow: scroll;
+}
+
+.span2_5 {
+	width: 170px
+}
+
+.leftfloat {
+	float: left;
+	margin-right: 10px;
+}
+
+.rightfloat {
+	float: right;
+	margin-left: 10px;
+}
+
+.top-notification {
+	background: #EEE;
+	margin: 0;
+	padding: 10px;
+	display: block;
+}
+
+.badge-list {
+	overflow: hidden;
+	padding: 10px 0 0;
+}
+
+.badge-list .label {
+	float: left;
+	margin: 5px;
+}
+
+h3 .icon {
+	margin-top: 3px;
+	margin-right: 3px;
+}
+
+/*.pagesnav .nav.nav-tabs {
+	float: left;
+}
+*/
+.nav.nav-tabs a {
+	color: black;
+}
+
+.hidden {
+	display: none;
+}
+
+.menubar {
+	padding: 5px;
+}
+
+.screen-form-container {
+	padding: 20px;
+}
+
+.height200px {
+	height: 200px;
+}
+
+.width100 {
+	width: 100%;
+}
+
+.width60 {
+	width: 60%;
+}
+
+.max-width-900 {
+	margin: 0 auto 18px;
+	max-width: 900px;
+}
+
+.top-margin-50 {
+	margin-top: 50px;
+}
+
+.modal-body {
+	max-height: 315px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.nav li a.nav-btn {
+	padding: 5px 7px 4px;
+	margin: 5px 0;
+	background: whitesmoke;
+}
+
+.nav li a.nav-btn:hover {
+	background: white;
+}
+
+.navbar .brand {
+	padding: 8px 10px 12px 20px;
+}
+
+/*--
+  Emulate .form-horizontal for wide screens
+  -- */
+@media ( min-width : 600px) {
+	form.form-collapsable label {
+		float: left;
+		width: 140px;
+		padding-top: 5px;
+		text-align: right;
+	}
+	form.form-collapsable .control-group {
+		margin-bottom: 18px;
+	}
+	form.form-collapsable .controls {
+		margin-left: 160px;
+	}
+}
+
+@media ( max-width : 599px) {
+	.modal {
+		margin: auto;
+		left: 5px;
+		right: 5px;
+		top: 5px;
+		width: auto;
+	}
+}
+
+/*--
+  Effects
+  -- */
+label {
+	cursor: pointer;
+}
+
+textarea {
+	resize: none;
+}
+
+select {
+	cursor: pointer;
+}
+
+hr {
+	border-top-color: #ccc;
+	border-bottom: 0 none;
+}
+
+.shadow {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.light-gray {
+	background-color: #efefef;
+}
+
+.main-side,.main-content {
+	background: #fff;
+}
+
+.top-notification {
+	background: #EEE;
+	border-bottom: 1px solid #DDD;
+	font-size: 12px;
+}
+
+.poweredByIdol {
+	height: 20px;
+	width: 131px;
+	max-width: none;
+	margin: 10px 5px 0 0;
+}
+
+a {
+	cursor: pointer;
+}
+
+#scrollToTop {
+	position: fixed;
+	bottom: 60px;
+	right: 50px;
+	opacity: 0;
+	max-height: 0;
+	-webkit-transition: opacity 0.5s, max-height 0.5s;
+	-moz-transition: opacity 0.5s, max-height 0.5s;
+	-ms-transition: opacity 0.5s, max-height 0.5s;
+	-o-transition: opacity 0.5s, max-height 0.5s;
+	transition: opacity 0.5s, max-height 0.5s;
+}
+
+#scrollToTop.shown {
+	opacity: 1;
+	max-height: 30px;
+}
+
+
+.filter-item .typeahead.dropdown-menu {
+    max-width: 90%;
+    overflow-x: auto;
+}
+
+
+.sidebar-content {
+	overflow: auto;
+	padding: 10px 12px 5px 12px;
+	height: 250px;
+    background: #eee;
+	-webkit-transition: top 0.25s ease 0.25s;
+	-moz-transition: top 0.25s ease 0.25s;
+	-o-transition: top 0.25s ease 0.25s;
+	transition: top 0.25s ease 0.25s;
+	border-top: 1px solid #BBB;
+	box-shadow: inset -5px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.with-options .sidebar-content {
+	top: 405px;
+	-webkit-transition: top 0.25s ease;
+	-moz-transition: top 0.25s ease;
+	-o-transition: top 0.25s ease;
+	transition: top 0.25s ease;
+}
+
+#settingsContent {
+	opacity: 0;
+	-webkit-transition: opacity 0.25s ease;
+	-moz-transition: opacity 0.25s ease;
+	-o-transition: opacity 0.25s ease;
+	transition: opacity 0.25s ease;
+	overflow: hidden;
+	max-height: 0px;
+}
+
+.with-options #settingsContent {
+	opacity: 1;
+	-webkit-transition: opacity 0.25s ease 0.25s;
+	-moz-transition: opacity 0.25s ease 0.25s;
+	-o-transition: opacity 0.25s ease 0.25s;
+	transition: opacity 0.25s ease 0.25s;
+	max-height: 500px;
+}
+
+#settings {
+	margin-top: 5px;
+}
+
+#documentFoldersAddControl {
+    margin-left: 0;
+}
+
+/* #settings {
+display: block;
+background-color: #F8F8F8;
+position: relative;
+z-index: 1;
+border: 1px solid rgba(0, 0, 0, 0.1);
+padding: 10px;
+border-radius: 3px;
+box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+} */
+.results {
+	display: none;
+}
+
+[class^="big-icon-"],[class*=" big-icon-"] {
+	background-position: 20px 26px;
+	display: inline-block;
+	height: 26px;
+	line-height: 26px;
+	vertical-align: text-top;
+	width: 20px;
+}
+
+.big-icon-fire {
+	background-image: url(../img/glyphicons_022_fire.png);
+}
+
+.big-icon-exclamation-sign {
+	background-image: url(../img/glyphicons_196_circle_exclamation_mark.png);
+	width: 26px;
+	background-position: 26px 26px;
+}
+
+.big-icon-wifi {
+	background-image: url(../img/glyphicons_032_wifi_alt.png);
+	width: 26px;
+	background-position: 26px 26px;
+}
+
+.navbar .nav li p {
+	padding: 10px 5px 0;
+}
+
+.notify.btn {
+	pointer-events: none;
+}
+
+.btn .tooltip-arrow {
+	top: 50%;
+	border-style: solid;
+	margin-top: -8px;
+	border-width: 8px 8px 8px 0;
+	right: 100%;
+	display: block;
+	border-color: transparent;
+	border-right-color: #DA4F49;
+}
+
+.resultsList .squishable {
+    margin-bottom: 30px;
+}
+.squishable {
+	overflow: hidden;
+	opacity: 1;
+	max-height: 1000px;
+	-webkit-transition: opacity 0.25s ease, max-height 0.25s
+		cubic-bezier(1, 0, 1, 0);
+	-moz-transition: opacity 0.25s ease, max-height 0.25s
+		cubic-bezier(1, 0, 1, 0);
+	-o-transition: opacity 0.25s ease, max-height 0.25s
+		cubic-bezier(1, 0, 1, 0);
+	transition: opacity 0.25s ease, max-height 0.25s
+		cubic-bezier(1, 0, 1, 0);
+}
+
+.squishable.squish {
+	opacity: 0;
+	max-height: 0px;
+	-webkit-transition: opacity 0.25s ease, max-height 0.5s
+		cubic-bezier(0, 1, 0, 1);
+	-moz-transition: opacity 0.25s ease, max-height 0.5s
+		cubic-bezier(0, 1, 0, 1);
+	-o-transition: opacity 0.25s ease, max-height 0.5s
+		cubic-bezier(0, 1, 0, 1);
+	transition: opacity 0.25s ease, max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    margin-bottom: 0;
+}
+
+.row-fluid .span4.slim {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#topNews {
+	padding-bottom: 30px;
+}
+
+/* headlines */
+ul.otherDocs {
+	list-style: none;
+	margin-left: 10px;
+}
+
+ul.otherDocs li button {
+	padding: 0 4px;
+	margin-top: -2px;
+	margin-right: 5px;
+}
+
+p.moreAbout {
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.clusterDocSummary {
+	margin-bottom: 10px;
+}
+
+.clusterTitle a:not  (:hover ){
+	color: #000;
+}
+
+.hiddenSummary {
+	-webkit-transition: opacity 0.5s ease, max-height 0.5s ease;
+	-moz-transition: opacity 0.5s ease, max-height 0.5s ease;
+	-o-transition: opacity 0.5s ease, max-height 0.5s ease;
+	transition: opacity 0.5s ease, max-height 0.5s ease;
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	margin-left: 25px;
+}
+
+.hiddenSummary.showHiddenSummary {
+	-webkit-transition: opacity 0.5s ease 0.1s, max-height 1.5s ease;
+	-moz-transition: opacity 0.5s ease 0.1s, max-height 1.5s ease;
+	-o-transition: opacity 0.5s ease 0.1s, max-height 1.5s ease;
+	transition: opacity 0.5s ease 0.1s, max-height 1.5s ease;
+	opacity: 1;
+	max-height: 500px;
+}
+
+.mainHeading {
+	text-align: center;
+}
+/* .span6:nth-child(3n) {
+  clear: left;
+} */
+
+/*  required extra specificity :[
+  this version of bootstrap seems
+  to have contradictory rules.
+  Doesn't look like it's present
+  in the latest version. */
+.row-fluid [class*="span"].middle.middle {
+	margin: auto;
+	display: block;
+	float: none;
+}
+
+.maxWidth900 {
+	max-width: 900px;
+}
+
+.maxWidth800 {
+	max-width: 800px;
+}
+
+.maxWidth600 {
+	max-width: 600px;
+}
+
+.maxWidth400 {
+	max-width: 400px;
+}
+
+.maxWidth200 {
+	max-width: 200px;
+}
+
+.maxWidth100 {
+	max-width: 100px;
+}
+
+.middle {
+	-webkit-transition: width 0.2s ease;
+}
+
+.halfFull.span12 {
+	margin-left: 0;
+}
+
+.initialContentList {
+	overflow: hidden;
+}
+
+/**** Masonry Transitions ****/
+
+.masonry,
+.masonry .masonry-brick {
+    -webkit-transition-duration: 0.7s;
+    -moz-transition-duration: 0.7s;
+    -ms-transition-duration: 0.7s;
+    -o-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+}
+
+.masonry {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.masonry .masonry-brick {
+    -webkit-transition-property: left, right, top;
+    -moz-transition-property: left, right, top;
+    -ms-transition-property: left, right, top;
+    -o-transition-property: left, right, top;
+    transition-property: left, right, top;
+}
+
+.cookieMessage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    border-radius: 2px;
+    margin: 2px auto;
+    width: 371px;
+    z-index: 1035;
+}
+
+.help-about.modal {
+    width: 260px;
+}
+
+.help-about .modal-footer {
+    padding: 5px 15px 5px;
+}
+.transcript{overflow-y: scroll; height: 100px; width: 100%; position: relative;padding-bottom: 7px;}
+.radio.inline+.radio.inline, .checkbox.inline+.checkbox.inline{margin-left: 0px !important;}
+.radio.inline, .checkbox.inline{padding-top: 0px !important;}

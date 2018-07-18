@@ -1,0 +1,263 @@
+discover.brandName=Discover
+
+discover.showBrandLogo=true
+
+#==============
+# IDOL engines
+#==============
+content.host=localhost
+content.aciPort=9100
+
+community.host=localhost
+community.aciPort=9130
+community.agentstore.host=localhost
+community.agentstore.port=9150
+
+# Name of the configured IDOL security respository to use. User login will be authenticated against that repository.
+community.repository.type=autonomy
+
+
+#=====================
+# PostgreSQL Database
+#=====================
+find-db.url=jdbc:postgresql://localhost:5432/find
+find-db.username=find
+find-db.password=postgres
+find-db.driver=org.postgresql.Driver
+find-db.maxActive=50
+find-db.maxIdle=10
+find-db.validationQuery=select version();
+
+
+#==============
+# SSO Settings
+#==============
+cas.client.service=http://localhost:8080/find-hc/login.do
+cas.server.login.url=https://localhost/cas/login
+cas.server.logout.url=https://localhost/cas/logout
+
+#=================
+# Custom Settings
+#=================
+
+# Configuration to set TopicMap default search branch. Supported values: [SNOMED | FIELDS],
+# 'SNOMED' for snomed concepts, 'FIELDS' for filter fields.
+discoverSearch.topicBranch.default=FIELDS
+
+# Configuration to enable the text/wildcard searches in IDOL, can be used to search IDOL from Vertica views in integrated setups,
+# this should always be set to False for Vertica only setups. If enabled for an integrated setup, the vertica view database name 
+# should match the idol database name for successful searches
+discoverSearch.textSearch.enabled=true
+
+# DO NOT REMOVE - This is the Locale based date format for dates in Vertica database
+discoverSearch.vertica.date.format=yyyy-MM-dd
+
+# DO NOT REMOVE - Root directory for all documents stored in the file system
+discoverSearch.viewDoc.documentsRootDirectory=Z:\\HCAS\\idol_data\\HCAS\\apps\\OT\\output
+
+# DO NOT REMOVE - The document file extension .txt or .xml  or .gz
+discoverSearch.viewDoc.documentFileExtension=gz
+
+# Configuration for the search view (or scope). 
+# Each search view needs to have the following properties defined in the JSON format:
+#		"name": unique view id
+#		"displayName": view name to be displayed in UI
+#		"database": name of IDOL database used for this view
+#		"snomedTag": the Concept IDOL fieldname  
+#		"snomedParentTag": the Concept+ IDOL fieldname
+#		"filterFieldsFile": definition file that lists all the filter fields
+#		"docImportFile": definition file that lists fields that can be used in documentfolder data import.
+#		"docviewFile": definition file that list fields and panels to be rendered in document viewer.
+#		"defaultView": if this is the default view (for multiple views setup). Supported values: [true | false]
+#		"idolRootElement": the IDOL document root xpath. e.g., 'DOCUMENTS/DOCUMENT'
+#		"docRefField": the defined IDOL document reference field, see SetReferenceField in the sample AutonomyIDOLServer.cfg file.
+#		"ptCohortField": the defined IDOL document fieldCheck field. see SetFieldCheckFields and SetPatientReferenceFields in the sample AutonomyIDOLServer.cfg file.
+#		"resultView": names of the supported result views
+discoverSearch.searchViews={ \
+	"inpatient":{ \
+		"name":"inpatient", \
+		"displayName":"Admissions", \
+		"database":"admissions", \
+		"repository":"Vertica", \
+		"documentSource":"FILESYSTEM",\
+		"verticaSchema":"mimic2v26",\
+		"snomedTag":"", \
+		"snomedParentTag":"", \
+		"filterFieldsFile": "fields_admissions.xml", \
+		"docImportFile": "docImportTypes_admissions.json", \
+		"docviewFile": "docview_admissions.xml", \
+		"docviewMappingFile": "docview_template_admissions.xml", \
+		"defaultView":true, \
+		"idolRootElement":"DOCUMENTS/DOCUMENT", \
+		"docRefField":"INPATIENT/hadm_id", \
+		"ptCohortField":"INPATIENT/hadm_id", \
+		"resultView":{"simple":"Admission", "fieldCheck":"Patient"}, \
+		"displayFields":{ \
+			"Admission Id":{"fields":["INPATIENT/hadm_id","PATIENT/ADMISSION/HADM_ID"], "icon":"icon-book"}, \
+			"Patient ID":{"fields":["INPATIENT/subject_id","PATIENT/SUBJECT_ID"], "icon":"icon-user"}, \
+			"Admission Date":{"fields":["INPATIENT/admit_dt","PATIENT/ADMISSION/PATIENT/ADMISSION_DATE"], "icon":"icon-time"}, \
+			"Discharge Date":{"fields":["INPATIENT/disch_dt","PATIENT/ADMISSION/PATIENT/DISCHARGE_DATE"], "icon":"icon-download"}, \
+			"Admission Type":{"fields":["INPATIENT/DEMOGRAPHICS/DEMO/admission_type_descr","PATIENT/ADMISSION/PATIENT/ADMISSION_TYPE"], "icon":"icon-tag"}, \
+			"Admission Source":{"fields":["INPATIENT/DEMOGRAPHICS/DEMO/admission_source_descr","PATIENT/ADMISSION/PATIENT/ADMISSION_SOURCE"], "icon":"icon-comment"} \
+		},\
+		"totalCountDistinct":true, \
+		"topicMapMaxCount":3, \
+		"filterQueryDistinct":true, \
+		"docViewEnabled":true, \
+		"resultsListDistinct": true, \
+		"resultsListGroupBy": true, \
+		"addWhereForGroupFieldsToOuterQuery": false \
+	} \
+}
+
+discoverSearch.groupingFields={ \
+	"PATIENT/ADMISSIONS/INPATIENT/age_at_admission":{"groupType":"range", "groups":[{"groupLabel":"-Inf-1","minVal":"","maxVal":"1"},{"groupLabel":"1-<5","minVal":"1","maxVal":"5"},{"groupLabel":"5-<10","minVal":"5","maxVal":"10"}, {"groupLabel":"10-<18","minVal":"10","maxVal":"18"}, {"groupLabel":"18-<35","minVal":"18","maxVal":"35"}, {"groupLabel":"35-<65","minVal":"35","maxVal":"65"}, {"groupLabel":">65+","minVal":"65","maxVal":""}]}, \
+	"PATIENT/ADMISSIONS/INPATIENT/ICUVISITS/ICUSTAY/los":{"groupType":"range", "groups":[{"groupLabel":"-<00100","minVal":"","maxVal":"100"},{"groupLabel":"00100-<00500","minVal":"100","maxVal":"500"},{"groupLabel":"00500-<01000","minVal":"500","maxVal":"1000"}, {"groupLabel":"01000-<01500","minVal":"1000","maxVal":"1500"}, {"groupLabel":"01500-<02000","minVal":"1500","maxVal":"2000"}, {"groupLabel":"02000-<03000","minVal":"2000","maxVal":"3000"}, {"groupLabel":"03000-<04000","minVal":"3000","maxVal":"4000"},{"groupLabel":"04000-<05000","minVal":"4000","maxVal":"5000"}, {"groupLabel":"05000-<07500","minVal":"5000","maxVal":"7500"}, {"groupLabel":"07500-<10000","minVal":"7500","maxVal":"10000"},{"groupLabel":"10000-<15000","minVal":"10000","maxVal":"15000"},{"groupLabel":"15000-<20000","minVal":"15000","maxVal":"20000"}, {"groupLabel":"20000-<50000","minVal":"20000","maxVal":"50000"},	{"groupLabel":"50000+","minVal":"50000","maxVal":""}]}, \
+	"PATIENT/ADMISSIONS/INPATIENT/DRGEVENTS/DRG/cost_weight":{"groupType":"range", "groups":[{"groupLabel":"<0.5","minVal":"","maxVal":"0.5"},{"groupLabel":"0.5-<1.0","minVal":"0.5","maxVal":"1"},{"groupLabel":"1.0-<1.3","minVal":"1.0","maxVal":"1.3"}, {"groupLabel":"1.3-<1.5","minVal":"1.3","maxVal":"1.5"}, {"groupLabel":"1.5-<2.0","minVal":"1.5","maxVal":"2.0"}, {"groupLabel":"2.0-<4.0","minVal":"2.0","maxVal":"4.0"}, {"groupLabel":"4.0-<5.0","minVal":"4.0","maxVal":"5.0"}, {"groupLabel":"5.0+","minVal":"5.0","maxVal":""}]}, \
+	"PATIENT/ADMISSIONS/INPATIENT/age_at_death":{"groupType":"range", "groups":[{"groupLabel":"65+","minVal":"65","maxVal":""},{"groupLabel":"18-34","minVal":"18","maxVal":"34"},{"groupLabel":"35-64","minVal":"35","maxVal":"64"}]}, \
+	"PATIENT/ADMISSIONS/INPATIENT/ICUVISITS/ICUSTAY/admit_age":{"groupType":"range", "groups":[{"groupLabel":"-Inf-1","minVal":"","maxVal":"1"},{"groupLabel":"1-<5","minVal":"1","maxVal":"5"},{"groupLabel":"5-<10","minVal":"5","maxVal":"10"}, {"groupLabel":"10-<18","minVal":"10","maxVal":"18"}, {"groupLabel":"18-<35","minVal":"18","maxVal":"35"}, {"groupLabel":"35-<65","minVal":"35","maxVal":"65"}, {"groupLabel":">65+","minVal":"65","maxVal":""}]}, \
+	"INPATIENT/age_at_admission":{"groupType":"range", "groups":[{"groupLabel":"-Inf-1","minVal":"","maxVal":"1"},{"groupLabel":"1-<5","minVal":"1","maxVal":"5"},{"groupLabel":"5-<10","minVal":"5","maxVal":"10"}, {"groupLabel":"10-<18","minVal":"10","maxVal":"18"}, {"groupLabel":"18-<35","minVal":"18","maxVal":"35"}, {"groupLabel":"35-<65","minVal":"35","maxVal":"65"}, {"groupLabel":">65+","minVal":"65","maxVal":""}]}, \
+	"INPATIENT/ICUVISITS/ICUSTAY/icustay_los":{"groupType":"range", "groups":[{"groupLabel":"-<00100","minVal":"","maxVal":"100"},{"groupLabel":"00100-<00500","minVal":"100","maxVal":"500"},{"groupLabel":"00500-<01000","minVal":"500","maxVal":"1000"}, {"groupLabel":"01000-<01500","minVal":"1000","maxVal":"1500"}, {"groupLabel":"01500-<02000","minVal":"1500","maxVal":"2000"}, {"groupLabel":"02000-<03000","minVal":"2000","maxVal":"3000"}, {"groupLabel":"03000-<04000","minVal":"3000","maxVal":"4000"},{"groupLabel":"04000-<05000","minVal":"4000","maxVal":"5000"}, {"groupLabel":"05000-<07500","minVal":"5000","maxVal":"7500"}, {"groupLabel":"07500-<10000","minVal":"7500","maxVal":"10000"},{"groupLabel":"10000-<15000","minVal":"10000","maxVal":"15000"},{"groupLabel":"15000-<20000","minVal":"15000","maxVal":"20000"}, {"groupLabel":"20000-<50000","minVal":"20000","maxVal":"50000"},	{"groupLabel":"50000+","minVal":"50000","maxVal":""}]}, \
+	"INPATIENT/DRGEVENTS/DRG/cost_weight":{"groupType":"range", "groups":[{"groupLabel":"<0.5","minVal":"","maxVal":"0.5"},{"groupLabel":"0.5-<1.0","minVal":"0.5","maxVal":"1"},{"groupLabel":"1.0-<1.3","minVal":"1.0","maxVal":"1.3"}, {"groupLabel":"1.3-<1.5","minVal":"1.3","maxVal":"1.5"}, {"groupLabel":"1.5-<2.0","minVal":"1.5","maxVal":"2.0"}, {"groupLabel":"2.0-<4.0","minVal":"2.0","maxVal":"4.0"}, {"groupLabel":"4.0-<5.0","minVal":"4.0","maxVal":"5.0"}, {"groupLabel":"5.0+","minVal":"5.0","maxVal":""}]}, \
+	"INPATIENT/age_at_death":{"groupType":"range", "groups":[{"groupLabel":"65+","minVal":"65","maxVal":""},{"groupLabel":"18-34","minVal":"18","maxVal":"34"},{"groupLabel":"35-64","minVal":"35","maxVal":"64"}]}, \
+	"INPATIENT/ICUVISITS/ICUSTAY/icustay_admit_age":{"groupType":"range", "groups":[{"groupLabel":"-Inf-1","minVal":"","maxVal":"1"},{"groupLabel":"1-<5","minVal":"1","maxVal":"5"},{"groupLabel":"5-<10","minVal":"5","maxVal":"10"}, {"groupLabel":"10-<18","minVal":"10","maxVal":"18"}, {"groupLabel":"18-<35","minVal":"18","maxVal":"35"}, {"groupLabel":"35-<65","minVal":"35","maxVal":"65"}, {"groupLabel":">65+","minVal":"65","maxVal":""}]}, \
+	"PATIENT/ADMISSIONS/INPATIENT/hasAdmission":{"groupType":"NullCheck", "groups":[{"groupLabel":"Yes","hasNull":"false"},{"groupLabel":"No","hasNull":"true"}]} \
+}
+
+# Schema for validating the filter fields configuration defined in discoverSearch.searchViews' 'filterFieldsFile'
+discoverSearch.filters.schema=hca_fields_16.xsd
+
+# Schema for validating the vertica table mapping
+discoverSearch.mapping.table.schema=mapping_table_1.xsd
+
+discoverSearch.mapping.table.file=mapping_table.xml
+
+# Schema for validating the vertica table relations
+discoverSearch.table.relation.schema=table_relations_1.xsd
+
+discoverSearch.table.relation.file=table_relations.xml
+
+
+# Comma separated list of display fields that are allowed to be shown in a redacted document
+discoverSearch.censor.permittedFields=Admission Id
+
+# Display field to match the values in the whitelist to check if a document should be redacted.
+discoverSearch.censor.redactionField=
+
+# Whitelist file to list the document that is permitted to be viewed.
+discoverSearch.censor.whitelist=whitelist.txt
+
+# XPath of the Concept field in the indexed document
+discoverSearch.viewDoc.xPath.conceptRef=//CONCEPTS/SM
+
+# XPath of the Concept+ field in the indexed document
+discoverSearch.viewDoc.xPath.conceptPlusRef=//CONCEPTS/SM_ISA
+
+# XPath of the UIMA field in the indexed document
+discoverSearch.viewDoc.xPath.uimaRef=${discoverSearch.viewDoc.xPath.uimaRef}
+
+# XPath of the DOCUMENT root field in the vertica map-doc template
+discoverSearch.viewDoc.xPath.templateDocRoot=//DOCUMENT
+
+#=================
+# Optional config
+#=================
+
+# Admin console superuser default password.
+adminConsole.superUserDefaultPassword=R3d93nB1u3L1d
+
+# Enable single sign-on support, values: [true | false]
+discover.sso=false
+
+# Whether to allow user password login, values: [true | false]
+discover.userpass=true
+
+# Whether to allow register new user via login, values: [true | false]
+discover.canRegister=false
+
+#Logging
+log.file.name=../logs/apps/discover-dev
+
+# Regular expression pattern to generate the audit log filename
+discover.auditFilePattern=.+_audit.*\.log$
+
+# Audit log file directory. Default relative to the $tomcatDir/bin directory
+discover.auditLogDir=../logs/apps
+
+# Default maximum documents for results tagging or fields export
+discoverSearch.docfolder.maxResults=10000
+
+# The transport protocol used to communicate with IDOL components, supported values: [HTTP | HTTPS]
+discoverSearch.aci.transport.protocol=HTTP
+
+# Whether to preload all filters values. Set to false if need to enhance loading performance for large dataset. Values: [true | false]
+discoverSearch.parametric.preloadValues=false
+
+# XSLT file for formatting linked content to be shown in docview.
+discoverSearch.default.linkContentTemplate=classpath:xsl/defaultLinkContent.xsl
+
+# Display Terms and Conditions message on Login Page
+discover.displayTnCMessage=true
+
+
+#==============================================================================================================================
+# Internal search related settings. Not recommended to be changed by users without consulting Autonomy consultants or support.
+#==============================================================================================================================
+idol.combine=simple
+discoverSearch.combine=simple
+discoverSearch.summary=quick
+discoverSearch.languageType=englishUTF8
+discoverSearch.outputEncoding=utf8
+
+discoverSearch.import.delimiter=,
+discoverSearch.import.batchsize=1000
+discoverSearch.export.batchsize=200
+
+discoverSearch.tableview.maxFieldPairValues=-1
+
+discoverSearch.parametric.singleQueryFieldname=false
+discoverSearch.parametric.threads=2
+discoverSearch.parametric.retries=1
+
+discoverSearch.topicmap.maxValues=-1
+discoverSearch.timeline.maxValues=1000
+discoverSearch.sunburst.maxValues=500
+discoverSearch.sunburst.singleQueryFieldname=false
+
+discoverSearch.viewDoc.xPath.docRoot=/autnresponse/responsedata/hit/content/*
+discoverSearch.culledSuperCategories=["SUBSTANCE"]
+discoverSearch.viewDoc.xPath.agentstoreRef=//SMID
+
+# Write all SQL statements to console. Values; [true | false]
+hibernate.show_sql=true
+
+# Automatically validates or exports schema DDL to the database when the hibernate SessionFactory is created.
+# Supported values: [update | create | create-drop | validate | none]
+hibernate.hbm2ddl.auto=update
+
+parametric.active=true
+
+#=========================
+# Vertica Database
+#=========================
+vertica.driverClassName=com.vertica.jdbc.Driver
+vertica.url=jdbc:vertica://mc4t01301.itcs.softwaregrp.net:5433/rds
+vertica.username=hca
+vertica.password=hca123
+vertica.removeAbandoned=true
+vertica.initialSize=10
+vertica.maxActive=50 
+vertica.maxIdle=50
+vertica.minIdle=10
+vertica.testOnBorrow=true
+vertica.testOnConnect=true
+vertica.testWhileIdle=true
+vertica.validationQuery=SELECT 1
+vertica.timeBetweenEvictionRunsMillis=5000
+vertica.logAbandoned=true
+vertica.removeAbandonedTimeout=60
+vertica.connectionProperties=[ResultBufferSize=20000; ConnectionLoadBalance=1]
+
+#-----------------  UI Label Names ---------------#
+discover.ui.measurement.variable.dropdown.label=Record Unit
+discover.ui.results.action.tag.label=Assign

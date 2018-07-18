@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- from http://tungj-notebook:9100/a=getquerytagvalues&text=*&fieldname=/XML/PATIENT/ETHNICITY,/XML/PATIENT/RELIGION&documentcount=true&databasematch=patients&FieldDependence=true -->
+<autnresponse xmlns:autn='http://schemas.autonomy.com/aci/'>
+    <action>GETQUERYTAGVALUES</action>
+    <response>SUCCESS</response>
+    <responsedata>
+        <autn:number_of_fields>2</autn:number_of_fields>
+        <autn:field>
+            <autn:name>XML/PATIENT/ETHNICITY</autn:name>
+            <autn:name>XML/PATIENT/RELIGION</autn:name>
+            <autn:number_of_values>35</autn:number_of_values>
+            <autn:value count="18">WHITE</autn:value>
+            <autn:subvalue>NOT SPECIFIED</autn:subvalue>
+            <autn:value count="10">UNKNOWN/NOT SPECIFIED</autn:value>
+            <autn:subvalue>CATHOLIC</autn:subvalue>
+            <autn:value count="1">ASIAN</autn:value>
+            <autn:subvalue>CATHOLIC</autn:subvalue>
+            <autn:value count="3">ASIAN</autn:value>
+            <autn:subvalue>UNOBTAINABLE</autn:subvalue>
+            <autn:value count="20">WHITE</autn:value>
+            <autn:subvalue>UNOBTAINABLE</autn:subvalue>
+            <autn:value count="3">WHITE</autn:value>
+            <autn:subvalue>EPISCOPALIAN</autn:subvalue>
+            <autn:value count="54">WHITE</autn:value>
+            <autn:subvalue>CATHOLIC</autn:subvalue>
+            <autn:value count="3">OTHER</autn:value>
+            <autn:subvalue>UNOBTAINABLE</autn:subvalue>
+            <autn:value count="5">BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:subvalue>UNOBTAINABLE</autn:subvalue>
+            <autn:value count="16">WHITE</autn:value>
+            <autn:subvalue>JEWISH</autn:subvalue>
+            <autn:value count="6">ASIAN</autn:value>
+            <autn:subvalue>NOT SPECIFIED</autn:subvalue>
+            <autn:value count="11">WHITE</autn:value>
+            <autn:subvalue>PROTESTANT QUAKER</autn:subvalue>
+            <autn:value count="2">WHITE</autn:value>
+            <autn:subvalue>GREEK ORTHODOX</autn:subvalue>
+            <autn:value count="3">HISPANIC OR LATINO</autn:value>
+            <autn:subvalue>CATHOLIC</autn:subvalue>
+            <autn:value count="9">UNKNOWN/NOT SPECIFIED</autn:value>
+            <autn:subvalue>UNOBTAINABLE</autn:subvalue>
+            <autn:value count="1">BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:subvalue>METHODIST</autn:subvalue>
+            <autn:value count="1">WHITE</autn:value>
+            <autn:subvalue>CHRISTIAN SCIENTIST</autn:subvalue>
+            <autn:value count="6">WHITE</autn:value>
+            <autn:subvalue>OTHER</autn:subvalue>
+            <autn:value count="7">BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:subvalue>NOT SPECIFIED</autn:subvalue>
+            <autn:value count="1">OTHER</autn:value>
+            <autn:subvalue>PROTESTANT QUAKER</autn:subvalue>
+            <autn:value count="1">HISPANIC OR LATINO</autn:value>
+            <autn:subvalue>NOT SPECIFIED</autn:subvalue>
+            <autn:value count="4">BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:subvalue>PROTESTANT QUAKER</autn:subvalue>
+            <autn:value count="3">UNKNOWN/NOT SPECIFIED</autn:value>
+            <autn:subvalue>OTHER</autn:subvalue>
+            <autn:value count="1">OTHER</autn:value>
+            <autn:subvalue>OTHER</autn:subvalue>
+            <autn:value count="1">BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:subvalue>CATHOLIC</autn:subvalue>
+            <autn:value count="1">HISPANIC/LATINO - GUATEMALAN</autn:value>
+            <autn:subvalue>CATHOLIC</autn:subvalue>
+            <autn:value count="1">ASIAN</autn:value>
+            <autn:subvalue/>
+            <autn:value count="1">PATIENT DECLINED TO ANSWER</autn:value>
+            <autn:subvalue>CATHOLIC</autn:subvalue>
+            <autn:value count="1">BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:subvalue/>
+            <autn:value count="1">BLACK/AFRICAN AMERICAN</autn:value>
+            <autn:subvalue>OTHER</autn:subvalue>
+            <autn:value count="1">PATIENT DECLINED TO ANSWER</autn:value>
+            <autn:subvalue>NOT SPECIFIED</autn:subvalue>
+            <autn:value count="1">WHITE</autn:value>
+            <autn:subvalue>JEHOVAH'S WITNESS</autn:subvalue>
+            <autn:value count="1">UNKNOWN/NOT SPECIFIED</autn:value>
+            <autn:subvalue>NOT SPECIFIED</autn:subvalue>
+            <autn:value count="1">UNKNOWN/NOT SPECIFIED</autn:value>
+            <autn:subvalue>PROTESTANT QUAKER</autn:subvalue>
+            <autn:value count="1">ASIAN</autn:value>
+            <autn:subvalue>BUDDHIST</autn:subvalue>
+        </autn:field>
+    </responsedata>
+</autnresponse>

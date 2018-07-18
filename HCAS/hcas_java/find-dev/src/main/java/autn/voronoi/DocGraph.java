@@ -1,0 +1,291 @@
+package autn.voronoi;
+
+import static autn.voronoi.DateUtil.formatDate;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
+import javax.xml.xpath.XPathExpressionException;
+
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.math.NumberUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import com.autonomy.aci.actions.idol.tag.Field;
+import com.autonomy.aci.actions.idol.tag.FieldValue;
+import com.autonomy.aci.client.annotations.IdolAnnotationsProcessorFactory;
+import com.autonomy.aci.client.annotations.IdolDocument;
+import com.autonomy.aci.client.annotations.IdolField;
+import com.autonomy.aci.client.annotations.ValueType;
+import com.autonomy.aci.client.services.AciServiceException;
+import com.autonomy.aci.client.util.AciParameters;
+import com.autonomy.aci.content.identifier.reference.Reference;
+import com.autonomy.aci.content.identifier.reference.ReferencesBuilder;
+import com.autonomy.aci.content.printfields.PrintFields;
+import com.autonomy.find.dto.ResultDocument;
+import com.googlecode.ehcache.annotations.Cacheable;
+import com.googlecode.ehcache.annotations.DecoratedCacheType;
+import com.googlecode.ehcache.annotations.KeyGenerator;
+import com.googlecode.ehcache.annotations.Property;
+
+/**
+ * $Id: //depot/scratch/frontend/find-healthcare/src/main/java/autn/voronoi/DocGraph.java#2 $
+ * <p/>
+ * Copyright (c) 2013, Autonomy Systems Ltd.
+ * <p/>
+ * Last modified by $Author: tungj $ on $Date: 2013/05/21 $
+ */
+@Service
+public class DocGraph {
+	public static final String
+		LINK_ID_FIELD_KEY = "discoverSearch.linkIdField",
+		LINK_TO_FIELD_KEY = "discoverSearch.linkToField",
+		DOCGRAPH_CLUSTER_FIELD_KEY = "docgraph.clusterField",
+		AUTN_CLUSTERTITLE = "autn:clustertitle";
+
+	private String linkIdField; // "PUBMEDID"
+	private String linkToField; // "CITATIONPMID"
+	private String clusterDisplayField; // "JOURNAL-TITLE"
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(DocGraph.class);
+
+	@Autowired
+	private QueryTagValuesCache tagCache;
+
+	@Autowired
+ 	private Voronoi.Engine[] engines;
+
+	@Autowired
+	@Qualifier("idol.properties")
+	private void setProperties(final Properties properties) {
+		linkIdField = properties.getProperty(LINK_ID_FIELD_KEY);
+		linkToField = properties.getProperty(LINK_TO_FIELD_KEY);
+		clusterDisplayField = properties.getProperty(DOCGRAPH_CLUSTER_FIELD_KEY);
+	}
+
+	@Autowired
+ 	private IdolAnnotationsProcessorFactory processorFactory;
+
+	public void prefetch() {
+		if (!isLinkFieldConfigured()) {
+			LOGGER.debug("Link fields not configured, prefetching not required");
+			return;
+		}
+
+		for (int ii = 0; ii < engines.length; ++ii) {
+			try {
+				LOGGER.debug("Prefetching docgraph getquerytagvalues on engine {} ...", ii);
+				tagCache.getQueryTagValues(linkToField, engines[ii]);
+				LOGGER.debug("Prefetched docgraph getquerytagvalues on engine {}", ii);
+			} catch (final RuntimeException re) {
+				LOGGER.debug("Prefetching docgraph getquerytagvalues failed on engine " + ii, re);
+			}
+		}
+	}
+
+	public boolean isLinkFieldConfigured() {
+		return StringUtils.isNotBlank(linkIdField) && StringUtils.isNotBlank(linkToField);
+	}
+
+	/**
+	 * Searches for documents and returns them as the nodes of a graph, with links between the nodes.
+	 * @param suggestMinScore if negative, we'll link by citations. If positive, we'll link by a=suggest and use this for the minscore.
+	 */
+	@Cacheable(cacheName = "docgraph.docgraph", decoratedCacheType = DecoratedCacheType.SELF_POPULATING_CACHE,
+		keyGenerator = @KeyGenerator(name = "HashCodeCacheKeyGenerator", properties = @Property( name="includeParameterTypes", value="true")))
+	public Voronoi.Graph<Map<String, String>> docgraph(
+			final String query,
+			final int engine,
+			final int maxResults,
+			final Long maxDate,
+			final Double minScore,
+			final Long minDate,
+			final boolean sizeByLinks,
+			final double suggestMinScore
+	) throws AciServiceException, XPathExpressionException {
+		final boolean linkByCitations = suggestMinScore < 0;
+
+		final Voronoi.Engine config = engines[engine];
+
+		final AciParameters params = new AciParameters("query");
+		params.add("text", StringUtils.defaultIfEmpty(query, "*"));
+		if (minDate != null) { params.add("mindate", formatDate(minDate)); }
+		if (maxDate != null) { params.add("maxdate", formatDate(maxDate)); }
+
+		// If we want to cluster by content, this is an alternative option
+		if (AUTN_CLUSTERTITLE.equalsIgnoreCase(clusterDisplayField)) {
+			params.add("cluster", true);
+		}
+
+		params.add("sort", "relevance");
+		params.add("outputencoding", "UTF8");
+		params.add("combine", config.combine);
+		params.add("print", "fields");
+
+		params.add("printfields", linkByCitations ? new PrintFields(linkIdField, linkToField, clusterDisplayField) : new PrintFields(clusterDisplayField));
+		params.add("databasematch", config.databases);
+		params.add("maxResults", maxResults);
+
+		if (minScore != null) {
+			params.add("minscore", minScore);
+		}
+
+		final List<DocGraphNode> nodes = config.aciService.executeAction(params, processorFactory.listProcessorForClass(DocGraphNode.class));
+
+		final Map<String, DocGraphNode> docGraphMap = new HashMap<>();
+
+		for (final DocGraphNode node : nodes) {
+			docGraphMap.put(linkByCitations ? node.linkId : node.reference, node);
+
+			if (sizeByLinks) {
+				node.size = 0;
+			}
+		}
+
+		if (sizeByLinks) {
+			final Map<String, DocGraphNode> linkIdMap;
+			if (linkByCitations) {
+				linkIdMap = docGraphMap;
+			}
+			else {
+				linkIdMap = new HashMap<>();
+				for (final DocGraphNode node : nodes) {
+					linkIdMap.put(node.linkId, node);
+				}
+			}
+
+			annotateSizes(linkIdMap, config);
+		}
+
+		Collections.sort(nodes, new Comparator<DocGraphNode>() {
+			 @Override
+			 public int compare(final DocGraphNode o1, final DocGraphNode o2) {
+				 return (int) Math.signum(o2.size - o1.size);
+			 }
+		 });
+
+		final List<Voronoi.GraphLink> links = new ArrayList<>();
+		int idx = 0;
+		for (final DocGraphNode node : nodes) {
+			node.idx = idx;
+			++idx;
+
+			if (linkByCitations) {
+				// linking by citations
+				for (final String linkedId : node.links) {
+					final DocGraphNode linkedDoc = docGraphMap.get(linkedId);
+					if (linkedDoc != null) {
+						final Voronoi.GraphLink link = new Voronoi.GraphLink(node, linkedDoc);
+						link.shared = 1;
+						links.add(link);
+					}
+				}
+			}
+			else {
+				// linking by a=suggest
+				final Set<String> linkedRefs = getSuggestedDocs(node.reference, suggestMinScore, docGraphMap.keySet(), config);
+				for (final String ref : linkedRefs) {
+					final DocGraphNode linkedDoc = docGraphMap.get(ref);
+					if (linkedDoc != null) {
+						final Voronoi.GraphLink link = new Voronoi.GraphLink(node, linkedDoc);
+						link.shared = 1;
+						links.add(link);
+					}
+				}
+			}
+		}
+
+		return new Voronoi.Graph<>(nodes, links, false);
+	}
+
+	private Set<String> getSuggestedDocs(final String ref, final double minScore, final Set<String> matchReferences, final Voronoi.Engine config) {
+		final AciParameters params = new AciParameters("suggest");
+		params.add("reference", new Reference(ref));
+		params.add("matchreference", ReferencesBuilder.from(matchReferences));
+		params.add("maxresults", matchReferences.size());
+		params.add("minscore", minScore);
+		params.add("print", "none");
+		params.add("outputencoding", "UTF8");
+		params.add("combine", config.combine);
+		params.add("databasematch", config.databases);
+		final List<ResultDocument> docs = config.aciService.executeAction(params, processorFactory.listProcessorForClass(ResultDocument.class));
+		final Set<String> refs = new HashSet<>();
+		for (final ResultDocument doc : docs) {
+			refs.add(doc.getReference());
+		}
+		return refs;
+	}
+
+	private void annotateSizes(final Map<String, DocGraphNode> docGraphMap, final Voronoi.Engine config) {
+		for (final Field field : tagCache.getQueryTagValues(linkToField, config)) {
+			if (("DOCUMENT/"+linkToField).equalsIgnoreCase(field.getName())) {
+				for (final FieldValue fieldValue : field.getFieldValues()) {
+					// implicit assumption that case doesn't matter, which works here since the citations seem to be numbers
+					final DocGraphNode graphNode = docGraphMap.get(fieldValue.getValue());
+					if (graphNode != null) {
+						graphNode.size = fieldValue.getCount();
+					}
+				}
+			}
+		}
+	}
+
+	@IdolDocument("autn:hit")
+	public static class DocGraphNode extends Voronoi.GraphNode<Map<String, String>> {
+		public String linkId;
+		public List<String> links = new ArrayList<String>();
+
+		public String clusterId;
+
+		public String reference;
+
+		public DocGraphNode() {
+			this(0, null, 0, null, 0);
+		}
+
+		public DocGraphNode(final int idx, final String name, final double size, final Double sentiment, final int clusterId) {
+			super(idx, name, size, sentiment, clusterId);
+		}
+
+		@IdolField("autn:title")
+		public void setName(final String name) {
+			this.name = name;
+		}
+
+		@IdolField(value = LINK_ID_FIELD_KEY, valueType = ValueType.CONFIGURED)
+		public void setLinkId(final String linkId) {
+			this.linkId = linkId;
+		}
+
+		@IdolField(value = LINK_TO_FIELD_KEY, valueType = ValueType.CONFIGURED)
+		public void addLinks(final String link) {
+			this.links.add(link);
+		}
+
+		@IdolField(value = DOCGRAPH_CLUSTER_FIELD_KEY, valueType = ValueType.CONFIGURED)
+		public void setCluster(final String cluster) {
+			this.clusterId = cluster;
+		}
+
+		@IdolField("autn:reference")
+		public void setReference(final String ref) {
+			this.reference = ref;
+		}
+
+		@IdolField("autn:weight")
+		public void setWeight(final String weight) {
+			this.size = NumberUtils.toDouble(weight);
+		}
+	}
+}
